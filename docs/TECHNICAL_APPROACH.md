@@ -2,6 +2,8 @@
 
 Status: P1.1 complete — architecture decisions only. Date: 2026-09-14.
 
+Subsequent resolution: P1.2 now defines the production workflow, tools, masters and export process in [ART_WORKFLOW.md](ART_WORKFLOW.md). References below to art workflow/tooling being deferred describe the P1.1 handoff; visual approval and actual production remain later work. The architecture and asset roots are unchanged.
+
 Authority: [PRD](../PRD.md) defines the product, [design system](DESIGN_SYSTEM.md) preserves visual rules, [roadmap](PORTFOLIO_MASTER_ROADMAP.md) controls sequencing, and [history](PROJECT_HISTORY.md) records progress. This document resolves the local-prototype part of Q-02. Hosting remains P5.3; art production remains P1.2. All paths and commands below describe future work, not existing application files.
 
 ## 1. Goals and constraints

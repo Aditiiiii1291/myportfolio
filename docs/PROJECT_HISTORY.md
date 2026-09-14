@@ -1,17 +1,17 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-14. Stage: P1.1 technical preparation complete; no implementation started.
+Last updated: 2026-09-14. Stage: P1.2 art-workflow planning complete; no implementation started.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
 - Brainstorming is complete. The user requested conversion into four product-definition documents and explicitly stopped further brainstorming/full implementation.
-- Phase 0 is complete and accepted as the baseline by Aditi's P1.1 request. P1.1 architecture planning is complete in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md). P1.2 and later tasks have not started.
+- Phase 0 and P1.1 are complete. P1.2 workflow is documented in [ART_WORKFLOW.md](ART_WORKFLOW.md); validation/status is recorded below. P1.3 and later tasks have not started.
 - Initial workspace inspection found no files, application code, original art, package manifest, or `.git` directory in `C:\Users\saksh\Desktop\portfolio`. This task creates documentation only. No framework, dependencies, hosting configuration or asset-generation workflow has been installed.
 - A preliminary Git-status command failed with a working-directory error. No clean Git status, branch, commit or initialized repository is claimed.
 - No fixed launch date. Product direction is a compact but complete V1, preceded by one playable Workshop prototype.
-- React/Vite/TypeScript with React Router and HTML/CSS/image rendering is selected for future implementation. Art-production method and hosting remain unselected.
+- React/Vite/TypeScript with React Router and HTML/CSS/image rendering is selected. P1.2 selects a human-directed hybrid art workflow with optional AI concepts, layered cleanup, Krita/Inkscape masters and Squoosh export comparison. No tools installed or artwork produced; visual approval and hosting remain open.
 - Current filesystem also contains an existing `.git` directory and a minimal `README.md`, added after the initial document creation. No Git commands were run during P1.1; branch, remote and commit state were not verified. No `.gitignore` exists yet; ignore rules must be established before later generated/private files are staged.
 - Personal content may be supplied later in stages; required launch content remains a release gate.
 
@@ -49,6 +49,16 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 
 ## DESIGN & TECHNICAL DECISIONS
 
+### P1.2 — original-art workflow, 2026-09-14
+
+- Read the five source-of-truth documents. Created ART_WORKFLOW.md covering all 17 requested topics; official tool documentation supports format/tool choices.
+- Aditi directs and approves the visual sample; actual creator and AI/manual assistance are recorded per asset. Manual drawing or optional original AI concepts feed an editable cleanup/review process; no artist imitation or copied reference assets.
+- Selected Krita `.kra` raster masters, editable Inkscape `.svg` masters and separate SVG/WebP/PNG exports; Squoosh compares raster size/quality. Installation, generator selection and actual editability checks occur only with future production.
+- Preserved P1.1 source/application asset roots and layered rendering. Sources/reference/raw captures are excluded from web delivery; public Git inclusion is separately reviewed and private/large sources require a recorded backup. No folders or ignore files created.
+- Keep asset tracking in this history initially, with source/export paths, creator, originality, approval revision, variants, dimensions/bytes and motion/still/alt information once files exist.
+- Defined the P1.3 sample approval gate and prohibited bulk locations, pose libraries and complete scenes before it. No visual details, fonts, exact colors or dimensions finalized.
+- Updated PRD Q-03 and added a subsequent-resolution note to the technical approach; design-system rules are unchanged. No Git commands, installations, generation or implementation performed.
+
 ### Confirmed product baseline
 
 | Topic | Decision |
@@ -76,7 +86,7 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 
 - Links-only Mailbox is recommended but unconfirmed (Q-01); no form is authorized by this documentation.
 - Fonts, exact hex acceptance, avatar facial details and bunny markings/name/accessories remain TBD. Candidate token values have not been accepted as final artwork.
-- Q-02 local stack/rendering is resolved in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md); hosting remains P5.3. Art workflow/sample remains Q-03/P1.2–P1.3. Numerical spacing/timing/performance/test criteria remain documented baselines pending implementation validation.
+- Q-02 local stack/rendering is resolved in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md); hosting remains P5.3. Q-03 production method is documented in ART_WORKFLOW.md; visual sample/fonts/colors remain P1.3. Numerical spacing/timing/performance/test criteria remain baselines pending validation.
 - First-delivery behavior is operationalized as once per browsing session; repeated visits keep the album open, and reduced motion bypasses the sequence. Record any refinement of session semantics.
 - Content records are shared by both navigation paths; no portfolio database/backend/CMS is assumed.
 
@@ -94,12 +104,12 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 
 ## CURRENTLY WORKING ON
 
-P1.1 architecture documentation is complete. No active implementation or art work. Next is P1.2 when authorized.
+P1.2 workflow documentation is complete and validated. No artwork or application implementation is in progress. Next is P1.3 when authorized.
 
 ## NEXT TASKS
 
-1. **P1.2 — Define original-art workflow:** creator/tools, editable source format, export process and provenance; preserve originality and selected avatar identity. Not started.
-2. P1.3: create/review the bounded Aditi/bunny + Workshop/album visual sample after the workflow is defined. Not started.
+1. **P1.3 — Create bounded visual sample:** Aditi holding bunny with a small village-scale check, Workshop/shelf, album, control/typography sample and desktop/mobile thumbnails. Review with Aditi before bulk art. Not started.
+2. Preserve the P1.2 workflow and record actual asset sources/approvals as P1.3 work occurs; no complete scene set or pose library yet.
 3. P1.7: select and record the test baseline before P2 foundation; existing budgets and acceptance criteria remain.
 4. P1.4: prepare one real Pathwise chapter with approved media and accurate demo limitations.
 5. Collect missing content progressively; resolve Q-01 before Contact implementation.
@@ -138,6 +148,7 @@ Public biography/resume/contact, exact education dates, confirmed skill list, mi
 | `docs/DESIGN_SYSTEM.md` | Created | Confirmed style rules and provisional tokens |
 | `docs/PROJECT_HISTORY.md` | Created | Current state and handoff memory |
 | `docs/TECHNICAL_APPROACH.md` | Created in P1.1 | Selected architecture and planning validation |
+| `docs/ART_WORKFLOW.md` | Created in P1.2 | Original-art production workflow and sample gate |
 | `README.md` | Existing, unchanged in P1.1 | Minimal repository title; not setup instructions |
 
 ### Planned visual/media inventory — none created locally
@@ -158,6 +169,7 @@ Browser screenshots were used for inspection but are not saved portfolio assets.
 
 ## TESTING STATUS
 
+- P1.2 documentation validation: **PASSED** on 2026-09-14. All 17 workflow sections present; checked original-art rules, creator/tool/master/export/provenance decisions, preserved Strawberry Cream/blocky direction, layered responsive assets, performance budgets, future still/motion pairs and character approval process against the five baseline documents. Relative links passed and inventory contains only seven Markdown files outside existing Git metadata. No artwork, asset folders, application code, installations or Git operations. P1.3 remains NOT STARTED; visual/runtime quality is not tested.
 - P1.1 documentation validation: **PASSED** on 2026-09-14. Reviewed architectural coverage of P-01–P-08 and V-01–V-12, all 15 technical-document sections, roadmap sequencing and remaining decisions. Checked 21 relative document links with zero missing targets. Workspace inventory contains six documentation files and existing Git metadata; no application/data files, packages, generated art or build output. This is planning support, not runtime proof. No Git commands, installations, builds or application tests were executed in P1.1.
 - Application builds/tests: **NOT RUN — no portfolio code exists.**
 - UI accessibility, responsiveness, performance and cross-browser tests: **NOT RUN — planned in roadmap.**
@@ -168,8 +180,8 @@ Browser screenshots were used for inspection but are not saved portfolio assets.
 
 ## HANDOFF FOR NEXT SESSION
 
-Read the four baseline documents and TECHNICAL_APPROACH.md before taking action. Brainstorming is closed: do not reopen the world name, artistic tagline, human host/bunny, separate Welcome, central plaza, shelves/album, notebook menu, Strawberry Cream/blocky art, or vertical mobile layout.
+Read the four baseline documents, TECHNICAL_APPROACH.md and ART_WORKFLOW.md before taking action. Brainstorming is closed: do not reopen the world name, artistic tagline, human host/bunny, separate Welcome, central plaza, shelves/album, notebook menu, Strawberry Cream/blocky art, or vertical mobile layout.
 
-This session's authorized scope was P1.1 architecture documentation, consistency checking and reporting. It is complete. The exact next task is P1.2 original-art workflow; it was explicitly excluded from this session and has not begun. Follow with P1.3 sample and P1.4 real chapter, plus the required test baseline before P2. Do not jump directly to implementation or hosting.
+This session's authorized scope is P1.2 planning/documentation only. The exact next task is P1.3 bounded visual sample; it is explicitly excluded from this session and has not begun. Follow with P1.4 real chapter and the required test baseline before P2. Do not jump directly to full artwork, implementation or hosting.
 
 Preserve TBDs. Ask for material content when its phase needs it; do not demand all personal information before preparation. Keep project-status claims accurate and all credentials out of saved material. Update this file with actual completed work, checks, open issues and the next concrete task at the end of each development session.

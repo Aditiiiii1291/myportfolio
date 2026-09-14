@@ -18,7 +18,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0 and P1.1 architecture documentation are DONE. No app, art, runtime, deployment or application test is complete. P1.2 and later work has not begun.
+Phase 0, P1.1 architecture and P1.2 original-art workflow documentation are DONE. No artwork, app, runtime, deployment or application test is complete. P1.3 and later work has not begun.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -49,7 +49,7 @@ Purpose: Resolve the few execution choices and gather enough real content/art to
 | Task | Status | Dependency | Deliverable / acceptance |
 | --- | --- | --- | --- |
 | P1.1 Define prototype technical approach | DONE | P0 + document-set review | [Technical approach](TECHNICAL_APPROACH.md) and history record React/Vite/TypeScript, HTML/CSS layers, routing, shared content, asset handling and preview. Q-02 resolved for local prototype; hosting deferred. Documentation validation only |
-| P1.2 Define original-art workflow | NOT STARTED | P0 + document-set review | Resolve Q-03 production method: creator/tools, editable source format, export process and provenance. Confirm original assets and selected avatar identity |
+| P1.2 Define original-art workflow | DONE | P0 + document-set review | [Art workflow](ART_WORKFLOW.md) defines creator roles, optional AI concepts, Krita/Inkscape masters, reviewed exports and provenance; originality and selected avatar identity preserved. Documentation validated; Q-03 visual approval remains P1.3 |
 | P1.3 Create bounded visual sample | NOT STARTED | P1.2 | One Aditi-with-bunny sample, one Workshop/shelf sample, album surface, control and typography sample; desktop/mobile composition thumbnails. Review with Aditi before bulk art |
 | P1.4 Prepare one real chapter | NOT STARTED | P0 | Pathwise content record conforming to PRD §32, source references, actual contribution, useful screenshot and known demo limitations; no invented outcome or credentials |
 | P1.5 Stage content intake | WAITING FOR CONTENT | PRD §31 | Collect resume, About/education, confirmed skills, milestones, contact and project reflection/media progressively; maintain missing/approved status |
@@ -60,13 +60,17 @@ Exit: Prototype architecture and art workflow recorded, visual sample accepted, 
 
 ### Completed preparation: P1.1
 
-P1.1 read PRD §§12–17, 24, 29–30, 32, 36–39 and selected the smallest technical approach for the Welcome → Village → Workshop → Pathwise journey and direct alternative. The decision and validation mapping are in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md), with a concise record in history. The art-production pipeline remains unselected.
+P1.1 read PRD §§12–17, 24, 29–30, 32, 36–39 and selected the smallest technical approach for the Welcome → Village → Workshop → Pathwise journey and direct alternative. The decision and validation mapping are in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md), with a concise record in history. P1.2 subsequently defined the art-production workflow; no assets have been produced.
 
 P1.1 was preparation only: no scaffolding or implementation occurred.
 
-### Exact next task: P1.2 — Define original-art workflow
+### Completed preparation: P1.2
 
-Resolve Q-03 production method: creator/tools, editable source format, export process and provenance. Confirm original assets and the selected avatar identity. Document the workflow before P1.3 creates and reviews the bounded visual sample; do not begin bulk artwork. P1.2 has not started and was outside the P1.1 authorization.
+Creator/tools, editable formats, export process, originality and provenance are documented and validated. Final visual details remain open; completion of the workflow does not approve an unseen sample.
+
+### Exact next task: P1.3 — Create bounded visual sample
+
+Create one Aditi-with-bunny sample with a simplified village-scale check, one Workshop/shelf sample, an album surface, a control and typography sample, and desktop/mobile composition thumbnails. Review with Aditi and record approved revisions before bulk art. Do not produce a finished Welcome, complete map, five-location set, pose library or coded prototype. P1.3 is not started and was explicitly excluded from P1.2 authorization.
 
 ## Phase 2 — First playable prototype
 
