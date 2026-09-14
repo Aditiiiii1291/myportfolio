@@ -18,7 +18,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Only document-definition work is DONE. No app, art, runtime, deployment or application test is complete. Phase 1 is queued for the next authorized development-preparation stage. Content tasks can proceed alongside design once that stage begins.
+Phase 0 and P1.1 architecture documentation are DONE. No app, art, runtime, deployment or application test is complete. P1.2 and later work has not begun.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -40,7 +40,7 @@ Purpose: Convert the completed brainstorm into a faithful, reviewable baseline.
 | P0.4 Write design system | DONE | P0.2 | Confirmed visual rules separated from candidate numeric values and unselected fonts |
 | P0.5 Record history and check consistency | DONE | P0.2–P0.4 | History has required handoff sections; links, scope, project status and terminology checked; documentation only |
 
-Exit: Four documents accurately represent the selected concept. Aditi has not yet reviewed this new document set; user review is the handoff checkpoint before implementation. Do not label artwork or app tests passed because document checks passed.
+Exit: Four documents accurately represent the selected concept. Aditi confirmed Phase 0 complete and authorized P1.1 planning on 2026-09-14. Do not label artwork or app tests passed because document checks passed.
 
 ## Phase 1 — Prototype preparation
 
@@ -48,7 +48,7 @@ Purpose: Resolve the few execution choices and gather enough real content/art to
 
 | Task | Status | Dependency | Deliverable / acceptance |
 | --- | --- | --- | --- |
-| P1.1 Define prototype technical approach | NOT STARTED | P0 + document-set review | Record framework, scene-rendering method, route/content approach and local preview method in history. Preserve HTML content, direct URLs, elevated 2D art and vertical mobile layout. Resolve Q-02 for local prototype; no game engine or backend by default |
+| P1.1 Define prototype technical approach | DONE | P0 + document-set review | [Technical approach](TECHNICAL_APPROACH.md) and history record React/Vite/TypeScript, HTML/CSS layers, routing, shared content, asset handling and preview. Q-02 resolved for local prototype; hosting deferred. Documentation validation only |
 | P1.2 Define original-art workflow | NOT STARTED | P0 + document-set review | Resolve Q-03 production method: creator/tools, editable source format, export process and provenance. Confirm original assets and selected avatar identity |
 | P1.3 Create bounded visual sample | NOT STARTED | P1.2 | One Aditi-with-bunny sample, one Workshop/shelf sample, album surface, control and typography sample; desktop/mobile composition thumbnails. Review with Aditi before bulk art |
 | P1.4 Prepare one real chapter | NOT STARTED | P0 | Pathwise content record conforming to PRD §32, source references, actual contribution, useful screenshot and known demo limitations; no invented outcome or credentials |
@@ -58,11 +58,15 @@ Purpose: Resolve the few execution choices and gather enough real content/art to
 
 Exit: Prototype architecture and art workflow recorded, visual sample accepted, and one honest project record/media available. Missing optional biography/milestones must not delay P2. Exact font and shade acceptance follows the sample, not silent assumptions.
 
-### Exact next task: P1.1
+### Completed preparation: P1.1
 
-Read PRD §§12–17, 24, 29–30, 32, 36–39 and this roadmap. Define the smallest technical approach for the Welcome → Village → Workshop → Pathwise chapter journey and direct Projects alternative. Record a concise technical decision in PROJECT_HISTORY.md: selected framework/rendering, routing, shared content, image handling, local preview, and rationale against the existing requirements. The framework and asset pipeline are not selected by these documents.
+P1.1 read PRD §§12–17, 24, 29–30, 32, 36–39 and selected the smallest technical approach for the Welcome → Village → Workshop → Pathwise journey and direct alternative. The decision and validation mapping are in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md), with a concise record in history. The art-production pipeline remains unselected.
 
-P1.1 is preparation only: it does not scaffold the full portfolio or add a game engine. P1.2/P1.3 then establish art sufficient for P2. Begin only after the document set is accepted as the baseline.
+P1.1 was preparation only: no scaffolding or implementation occurred.
+
+### Exact next task: P1.2 — Define original-art workflow
+
+Resolve Q-03 production method: creator/tools, editable source format, export process and provenance. Confirm original assets and the selected avatar identity. Document the workflow before P1.3 creates and reviews the bounded visual sample; do not begin bulk artwork. P1.2 has not started and was outside the P1.1 authorization.
 
 ## Phase 2 — First playable prototype
 

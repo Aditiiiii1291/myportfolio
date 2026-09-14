@@ -15,7 +15,7 @@ User selections take precedence over earlier suggestions. A requirement marked *
 | Strong preferences | Pink-led warmth; clear cocoa outlines; handmade detail; Workshop prominence; painting/crafts/tennis/candles in the Cottage; gentle bunny grooming and curiosity; professional content and direct navigation above game mechanics. |
 | Optional within V1 | Personal-object notes, candle glow, cloud/flower movement, butterfly encounter, decorative paper texture, extra contextual avatar poses. None is a prerequisite for reading content. |
 | Future/V2 | Optional character movement, click-to-walk/WASD, deer and fluffy cat residents, richer interiors, additional bunny/bug behaviors, small easter eggs, optional sound off by default. |
-| Unresolved | Exact fonts, final hex tokens, bunny markings/accessories/name, art-production method, implementation stack and hosting, final contact method, missing personal content, public demo access. See section 39. |
+| Unresolved | Exact fonts, final hex tokens, bunny markings/accessories/name, art-production method, hosting, final contact method, missing personal content, public demo access. Local implementation stack was resolved in P1.1; see section 39. |
 | Rejected/superseded | Animal-only protagonist; bunny held in every scene; strict top-down/isometric/platform world; river/bridge as the main layout; immediate village or embedded welcome replacing the title screen; pinned project sheets/cards as the main Workshop metaphor; skills hidden behind mystery plants; freeform cluttered notice board; required game movement; tiny scaled-down mobile map; branch/degree-led welcome copy; generic dark/cyberpunk/desktop/8-bit styling; copied reference/game assets. |
 
 ### Resolved interpretation conflicts
@@ -397,7 +397,7 @@ These are content contracts, not a prescribed database or implementation languag
 
 Compact but complete: separate Welcome, one plaza, five location experiences, personalized host and bunny, direct navigation, three project chapters, resume access, contact, and responsive layouts. One composed Cottage interior and Workshop shelf/album scene suffice; no multiple-room production.
 
-Accessibility, accurate content, basic error states, deep-link hosting behavior, media optimization, and a small animation set are part of V1 rather than later repairs. Exact stack and art tooling remain implementation choices. No calendar deadline is imposed.
+Accessibility, accurate content, basic error states, deep-link hosting behavior, media optimization, and a small animation set are part of V1 rather than later repairs. The local stack is recorded in the P1.1 technical approach; art tooling remains open. No calendar deadline is imposed.
 
 ## 34. V1 Non-Goals
 
@@ -488,7 +488,7 @@ Settled identity/world decisions are closed. No unanswered question prevents the
 | ID | Unresolved item | Timing / effect |
 | --- | --- | --- |
 | Q-01 | Confirm links-only Mailbox or explicitly request a form | Resolve before Contact implementation; proposed default is public email/copy/social links |
-| Q-02 | Select framework/rendering approach and eventual hosting | Resolve in first technical planning task; maintain HTML content and selected world behavior; no game engine is assumed |
+| Q-02 | Local prototype resolved by P1.1: React/Vite/TypeScript, HTML/CSS with layered images, React Router and typed static content; see [technical approach](docs/TECHNICAL_APPROACH.md). Eventual hosting remains open | Local architecture documented 2026-09-14; host and clean-route fallback configuration remain P5.3; no game engine |
 | Q-03 | Choose art-production workflow; approve final avatar/bunny sample, fonts, and exact color tokens | Resolve before bulk art/component production; preserve confirmed appearance/style |
 | Q-04 | Provide missing biography, dates, resume, public contact, skills and milestones | Staged content intake; required publication content is a launch gate |
 | Q-05 | Clarify MarketMind's current local-demo interface/version; provide project media and final case-study evidence | Resolve before final project copy/media approval |
