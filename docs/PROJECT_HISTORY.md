@@ -1,20 +1,36 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-16. Stage: P1.3 DONE — revision 03 bounded visual sample VISUALLY APPROVED; no application implementation started.
+Last updated: 2026-09-16. Stage: P1.4 DONE — Pathwise chapter content prepared; no portfolio application implementation started.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- **P1.3 DONE — revision 03 bounded visual sample VISUALLY APPROVED**, explicitly confirmed by the user on 2026-09-16. Phase 0, P1.1 and P1.2 are also complete.
-- Approved reference: [revision 03 PNG](../assets/sources/reviews/exports/p1-3-direction-v03-pixel.png), with [prompt/provenance](../assets/sources/reviews/p1-3-direction-v03-pixel.md) and [approval record](VISUAL_SAMPLE_REVIEW.md). Revisions 01/02 are preserved historical samples.
-- Intended direction: pastel baby-pink pixel art, pixel typography, cozy village, Aditi and fluffy cream bunny, Workshop shelves/album. Aditi has **a sort of long diamond-shaped face, middle-parted hair and cat-eye frame glasses**. These explicit requirements supersede earlier frame/face ambiguity; no new rendering is claimed.
-- This is bounded-sample completion only. No full production art, editable pixel master, animation sheet, website code, installed app framework or deployment exists. Exact production/font/color/mobile/motion details remain provisional as recorded in the review.
-- Selected future stack remains React/Vite/TypeScript, React Router and HTML/CSS/image rendering. Hosting and missing publication content remain open.
-- Exact next task: **P1.4 — Prepare one real chapter**, NOT STARTED. User explicitly says not to start it yet and not to commit or push. This update changes documentation only.
-- Historical work and checks below retain their original dates; earlier pending-approval language describes those past revisions, not current status.
-
+- Phase 0 and P1.1–P1.4 are DONE. P1.3 remains visually approved; P1.4 is content preparation only.
+- Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
+- Live frontend/assets and backend health were reachable on 2026-09-16 (health succeeded after an initial timeout). Protected assessment requires authentication and was not reverified. Prior missing-model error remains historical, not a fresh failure or confirmed fix. No suitable existing optional preview found; no screenshot gate.
+- Current public-source implementation differs from the local Desktop/Pathwise foundation. The chapter uses the pinned public implementation and makes no local-execution claim. Full evidence boundaries are in the chapter.
+- Approved art reference: [revision 03](../assets/sources/reviews/exports/p1-3-direction-v03-pixel.png). Preserve pastel pink pixel art, Aditi's sort of long diamond-shaped face, middle-parted hair, cat-eye frame glasses, cream fluffy bunny and all established P1.1–P1.3 decisions.
+- No full production artwork, portfolio application, packages or deployment exists. No Git commands were performed in P1.4.
+- Exact next task: **P1.5 — Stage content intake** (existing status WAITING FOR CONTENT). It was not started. Later tasks remain unchanged.
+- Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P1.4 — Prepare one real chapter, 2026-09-16 — DONE
+
+- Created [PATHWISE_CHAPTER.md](projects/PATHWISE_CHAPTER.md) as the single canonical evidence and content record: four-class claim ledger, source revision, compact chapter prose, end-to-end role, architecture/flow, ML and temporal distinctions, technical highlights, limitations, links and static-record mapping. Editorial evidence is separate from public album copy.
+- Inspected the public repository at b386704476c0b6aaffc4f6ddd69082bbe13054e1 via a temporary archive, without Git commands. The local Desktop/Pathwise folder is a different foundation-stage implementation; its planned features were not used as evidence for the public application. Neither Pathwise tree was modified.
+- Confirmed React/JSX, Vite/Tailwind/Recharts, FastAPI/SQLAlchemy, SQLite default/PostgreSQL configuration support, spreadsheet ingestion, temporal features, configurable rules, Random Forest code/artifact, combined scoring, explanations, intervention/follow-up records, backend tests and deployment configuration. Recorded synthetic-data limits, date-dependent overdue-feature gap and observational intervention comparison. Test presence is not a test-pass claim.
+- Live frontend and JS assets: HTTP 200. Backend health: initial 25-second timeout, then HTTP 200 healthy. Unauthenticated assessment: HTTP 401. GitHub page/API/source: accessible. No login or protected workflow performed; browser tool failed to initialize. Prior model error is historical and current protected inference remains unverified. Source suggests a packaging risk, not a verified live root cause.
+- No optional screenshot identified or created; no gallery or Project Moments. No necessary Aditi input blocks P1.4. Visitor-access verification remains later publication work, not a demand for administrator credentials.
+- Preserved P1.1–P1.3 decisions. Added the requested standing simplicity/code-quality rule below. Changed documentation only; no application files, packages, training, tests, deployment, data mutation, Git commands, commit or push. Exact next task is P1.5; not begun.
+
+### P1.4 requirements clarification — documentation only, 2026-09-16
+
+- Recorded confirmed Pathwise end-to-end ownership without claiming that every suggested subsystem, test or deployment is implemented/verified. Future content can describe frontend, backend/API, database, ML/risk logic, dashboard, integration, testing and deployment where evidence supports them.
+- Replaced mandatory screenshot/media gates in PRD, roadmap, technical contract and handoff notes with primary live-project/source links and one optional static preview. Removed gallery implications from art/design guidance. No media asset, content chapter, code or implementation was created.
+- Chapter topics: what Pathwise is; problem; what I built; how it works; technical architecture; ML/risk intelligence where relevant; what makes it interesting; current limitations; Live Project link; GitHub link. Keep concise for the illustrated album.
+- Prior demo limitations remain dated historical observations, not fresh runtime claims. Authorship does not erase those limitations. No external demo/repository review occurred in this requirements-only update. No commit or push.
 
 ### P1.3 — explicit bounded-sample completion, 2026-09-16
 
@@ -71,6 +87,16 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 
 ## DESIGN & TECHNICAL DECISIONS
 
+### Standing development rule — future coding phases
+
+Use the simplest correct solution that meets the documented requirement. Code must be clean, simple, readable, logically organized, and easy for Aditi to understand and explain; minimal must not mean cryptic. Prefer the more understandable solution when both are correct.
+
+- Use clear variable, function, component, type and file names. Split files only when clarity/reuse improves; avoid both dozens of tiny fragments and giant confusing files.
+- Do not add unnecessary lines, abstractions, helpers, libraries/packages, wrappers, state, duplicated logic, premature optimization, clever-but-obscure code, excessive comments, boilerplate or speculative future features.
+- Comments primarily explain why a non-obvious choice exists, not what the code already says.
+- Before finishing each future coding task, remove unused imports/variables, dead or duplicate code, redundant wrappers/comments, unnecessary dependencies and unnecessary abstractions within that task's scope.
+- This rule does not authorize coding during P1.4. No portfolio implementation was performed.
+
 ### P1.2 — original-art workflow, 2026-09-14
 
 - Read the five source-of-truth documents. Created ART_WORKFLOW.md covering all 17 requested topics; official tool documentation supports format/tool choices.
@@ -126,16 +152,13 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 
 ## CURRENTLY WORKING ON
 
-P1.3 is DONE — bounded sample visually approved. Approval documentation is complete; no next-task work or application implementation is in progress.
+P1.4 is DONE — chapter content/evidence and validation complete. No further task or portfolio implementation is in progress.
 
 ## NEXT TASKS
 
-1. Exact next roadmap task: **P1.4 — Prepare one real chapter**. Formal dependency: P0. Deliver a Pathwise content record conforming to PRD §32, source references, actual contribution, a useful screenshot and known demo limitations; no invented outcomes or credentials. Status: NOT STARTED. User explicitly says not to start it yet.
-2. Preserve revision 03's approved direction, including long diamond-shaped face, middle-parted hair and cat-eye frames. Remaining production checks do not reopen P1.3 approval.
-3. Later preparation tasks remain as listed in the roadmap: staged content intake, Mailbox method and test baseline. No later task starts in this documentation update.
-
-The Pathwise deployment issue is an external project issue, not the next authorized portfolio task. Do not fix it or modify its repository without a separate in-scope request.
-
+1. **P1.5 — Stage content intake.** Existing status: WAITING FOR CONTENT. Progressively collect resume, About/education, confirmed skills, milestones, public contact and remaining project reflections/evidence; record missing/approved status. Optional screenshots remain optional. Do not start it in the P1.4 session.
+2. Preserve the approved art and architecture. P1.6/P1.7 and P2 tasks remain as documented; P1.4 completion is not permission to implement the portfolio.
+3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
 
 DEFERRED: optional character movement, click-to-walk/WASD, deer/fluffy-cat residents, richer interiors, extra bunny/bug behaviors, small easter eggs, optional sound off by default, and possible seasonal variants. No V1 phase depends on these. NPC systems, large maps, physics, combat, multiplayer and visitor accounts are excluded from V1.
@@ -146,7 +169,7 @@ DEFERRED: optional character movement, click-to-walk/WASD, deer/fluffy-cat resid
 
 | Project | Evidence and limitation | Portfolio action |
 | --- | --- | --- |
-| [Pathwise](https://github.com/Aditiiiii1291/Pathwise) | [Demo](https://pathwise-1-sibf.onrender.com) reached login and loaded overview/interventions. Opening a sample student profile displayed: “Trained ML model artifact not found. Please run training pipeline.” Supplied account was ADMIN; signed out after inspection. Exact deployment root cause not investigated. | Resolve model availability separately or document the limitation; provide screenshots/walkthrough. Use deliberately restricted public demo access, never the reviewed admin credentials. |
+| [Pathwise](https://github.com/Aditiiiii1291/Pathwise) | [Demo](https://pathwise-1-sibf.onrender.com) reached login and loaded overview/interventions. Opening a sample student profile displayed: “Trained ML model artifact not found. Please run training pipeline.” Supplied account was ADMIN; signed out after inspection. Exact deployment root cause not investigated. | Resolve model availability separately or document the limitation beside the primary live-project link; a static preview is optional. Use deliberately restricted public demo access, never the reviewed admin credentials. |
 | [TrafficIQ](https://github.com/Aditiiiii1291/TrafficIQ) | [Hosted URL](https://ai-emergency-vehicle-priority-system.onrender.com) stayed on Render startup during the check. Source contains React/FastAPI/database integration absent from older README description; test counts conflict. | Reverify actual workflow before claiming a verified live demo; refresh project documentation separately; use media independent of demo uptime. |
 | [MarketMind](https://github.com/Aditiiiii1291/MarketMind) | Local demo per user. Reviewed React Products, Uploads and Analysis pages are placeholders; backend and other UI/prototype code exists. Local demo interface/version not yet clarified. | Distinguish backend/Streamlit/current React scope, request media, no hosted Live Demo button. |
 
@@ -154,7 +177,7 @@ No real-world retention improvement, validated traffic-control capability, comme
 
 ### Portfolio preparation gaps
 
-Public biography/resume/contact, exact education dates, confirmed skill list, milestones, approved project media and personal case-study reflections are pending. Q-01–Q-06 in PRD §39 are authoritative. These do not block the document set; relevant items gate production/publication.
+Public biography/resume/contact, exact education dates, confirmed skill list, milestones and final project reflections are pending. Pathwise end-to-end ownership is confirmed and is not an intake gap. Project preview media is optional and never gates P1.4 or publication. Q-01–Q-06 in PRD §39 govern the remaining relevant content requirements.
 
 ## ASSET INVENTORY
 
@@ -180,6 +203,7 @@ Public biography/resume/contact, exact education dates, confirmed skill list, mi
 | `docs/VISUAL_SAMPLE_REVIEW.md` | Created in P1.3 | Provisional choices, provenance, self-review and approval checkpoint |
 | `.gitignore` | Created in P1.3 | Raw/private/reference/temporary input exclusions |
 | `README.md` | Existing, unchanged in P1.1 | Minimal repository title; not setup instructions |
+| `docs/projects/PATHWISE_CHAPTER.md` | Created in P1.4 — DONE | Canonical Pathwise evidence, concise chapter copy and static-record mapping |
 
 ### P1.3 review asset inventory
 
@@ -200,12 +224,18 @@ The master groups separately identify Aditi, bunny, building, shelves, album, pa
 | Workshop | Shelves, workbench, project books, Things I've Built album | PLANNED |
 | Garden/Board/Mailbox | Packets/signs, grouped notices, mailbox/envelope/letter | PLANNED |
 | Shared UI | Notebook, controls, labels, focus/interaction states, original icons as needed | PLANNED |
-| Project media | Current Pathwise/TrafficIQ/MarketMind screenshots and optional recordings | WAITING FOR CONTENT |
+| Project media | At most one optional static preview per project, useful as fallback; no gallery/Project Moments | OPTIONAL — not a completion or publication blocker |
 | Personal assets | Resume; optional paintings/craft photos | WAITING FOR CONTENT |
 
 Earlier featured-demo browser screenshots were not saved as portfolio assets. The P1.3 PNG is a review rendering of our SVG, not a project screenshot. Existing featured repositories are not cloned in this workspace. Production exports and approvals remain pending.
 
 ## TESTING STATUS
+
+- P1.4 completion: reviewed source evidence/claim classifications, chapter scan and static-field mapping; checked relative links, pinned source-file targets and documentation-only changed-file scope. Source test files/model artifact inspected but not executed. Public HTTP checks passed on retry as recorded in the chapter; authenticated UI/inference, local full-stack execution and actual deployed DB/revision remain unverified. No portfolio runtime tests apply because no application exists.
+
+- P1.4 documentation checks: 58 relative links and 46 pinned source targets passed; all ten chapter topics/classifications present; 531 words in chapter-copy block including labels/editorial placement note. Pre/post file-hash comparison used instead of Git commands. Scope: new chapter plus roadmap/history and PRD status pointer only; no change to P1.1–P1.3 design/architecture files or artwork.
+
+- P1.4 requirements-update validation: 49 relative documentation links resolved; diff whitespace check passed. Reviewed contribution, media, phase-exit and chapter-contract wording for consistency. Documentation only; no application tests or fresh featured-project verification.
 
 - Completion-documentation validation: checked 46 relative links across all seven changed documents and confirmed P1.3 DONE plus all three explicit character requirements. No broken links. No commit or push; P1.4 remains NOT STARTED.
 
@@ -224,8 +254,10 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## HANDOFF FOR NEXT SESSION
 
-Read the four baseline documents, TECHNICAL_APPROACH.md, ART_WORKFLOW.md and VISUAL_SAMPLE_REVIEW.md before taking action. Brainstorming is closed: do not reopen the world name, artistic tagline, human host/bunny, separate Welcome, central plaza, shelves/album, notebook menu, Strawberry Cream/blocky art, or vertical mobile layout.
+P1.4 is DONE. Read [PATHWISE_CHAPTER.md](projects/PATHWISE_CHAPTER.md) for the canonical pinned evidence, concise chapter copy, model/temporal details, dated demo status and static-record mapping. Do not ask Aditi to allocate team contributions: she is the confirmed end-to-end developer/builder. Primary actions remain Open Live Project and View GitHub / Source Code. No gallery/Project Moments; a static preview is optional and currently omitted.
 
-The user explicitly approved the revised bounded sample and requested **P1.3 complete / visually approved**. P1.3 is DONE. Use pastel pink pixel art, pixel lettering, a sort of long diamond-shaped face, middle-parted hair and cat-eye frame glasses; preserve the cream fluffy bunny and established character identity. Remaining production details do not reopen this checkpoint. Exact next task: **P1.4 — Prepare one real chapter** (Pathwise; PRD §32), NOT STARTED. User explicitly requested no next-task work, commit or push. No implementation, artwork revision or hosting occurred in this update.
+Next task: **P1.5 — Stage content intake**, existing status WAITING FOR CONTENT. It was not begun. No later task is authorized by this handoff alone. Keep the standing simple/readable-code rule above for future implementation, without reopening P1.1–P1.3 decisions. P1.3 stays DONE and visually approved; its sample is not full production artwork.
 
-Preserve TBDs. Ask for material content when its phase needs it; do not demand all personal information before preparation. Keep project-status claims accurate and all credentials out of saved material. Update this file with actual completed work, checks, open issues and the next concrete task at the end of each development session.
+The current chapter distinguishes inspected source from runtime evidence. Public frontend and backend health respond; protected assessment remains unverified, and the previous missing-model error must not be described as fixed or freshly reproduced. The local Desktop/Pathwise folder differs from the public revision. Do not repair either project or expose administrator credentials.
+
+No portfolio implementation, installs, Git commands, commit or push occurred in P1.4. Preserve genuine open facts without blocking on optional media or inventing personal reflections. Update roadmap/history after future authorized work.

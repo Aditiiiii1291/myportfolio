@@ -7,7 +7,17 @@ This document defines WHAT to build and WHY. It derives from the completed brain
 
 ## Latest user direction — 2026-09-16
 
-**P1.3 DONE — bounded visual sample visually approved.** The user explicitly requests completion of revision 03's sample checkpoint. Approved direction: pastel baby-pink pixel art, pixel-style typography, cozy village atmosphere, chibi Aditi and fluffy cream bunny, and Workshop shelf/album presentation. Aditi must have **a sort of long diamond-shaped face, middle-parted hair, and cat-eye frame glasses**. These override older face/frame descriptions. Exact fonts/licenses, color tokens, pixel geometry, production poses/layers, responsive layouts and animation details remain provisional. This completes a bounded sample, not production artwork or implementation. See [approval record](docs/VISUAL_SAMPLE_REVIEW.md). P1.4 remains NOT STARTED; the user explicitly prohibits starting it in this update.
+**Current status update:** P1.4 is now DONE. [Pathwise chapter preparation](docs/projects/PATHWISE_CHAPTER.md) is the canonical evidence/copy/static-field record. The latest request authorized P1.4 content preparation only, superseding earlier “NOT STARTED / do not start” handoffs. P1.5 is the exact next task and was not begun. Product, P1.1–P1.3, art and application architecture decisions are unchanged.
+
+### P1.4 scope clarification — authoritative
+
+Aditi built Pathwise end-to-end herself. Represent her role as **end-to-end developer/builder**; ownership is confirmed, not a missing-content question. Do not request team attribution or ask her to identify which subsystems she contributed to. Break down implemented frontend, backend/API, database, ML/risk logic, dashboard, integration, testing and deployment only where project evidence supports those areas. Sole authorship does not prove that every proposed feature, test or deployment works.
+
+Primary actions: **Open Live Project** and **View GitHub / Source Code**. The live-project link is the primary demonstration, with honest access and verification/limitation notes. One static preview screenshot is optional/recommended as a fallback; its absence does not block P1.4, prototype progression or publication. No **Project Moments**, screenshot gallery, carousel or screenshot-heavy case study is required. Omit absent optional media without empty placeholders.
+
+Keep the Pathwise chapter concise enough for the illustrated album. Cover: (1) what Pathwise is, (2) the problem, (3) what I built, (4) how it works, (5) technical architecture, (6) ML/risk intelligence where relevant, (7) what makes it interesting, (8) current limitations, (9) Live Project link, (10) GitHub link. Use short sections/bullets; these topics do not require ten separate screens or long essays. Personal contribution is part of “What I built,” not a team-allocation exercise. P1.4 has now prepared this content in the linked chapter record; no application implementation has begun.
+
+**P1.3 DONE — bounded visual sample visually approved.** The user explicitly requests completion of revision 03's sample checkpoint. Approved direction: pastel baby-pink pixel art, pixel-style typography, cozy village atmosphere, chibi Aditi and fluffy cream bunny, and Workshop shelf/album presentation. Aditi must have **a sort of long diamond-shaped face, middle-parted hair, and cat-eye frame glasses**. These override older face/frame descriptions. Exact fonts/licenses, color tokens, pixel geometry, production poses/layers, responsive layouts and animation details remain provisional. This completes a bounded sample, not production artwork or implementation. See [approval record](docs/VISUAL_SAMPLE_REVIEW.md). P1.4 was later explicitly authorized and completed as content preparation; the user prohibits starting P1.5 in that task.
 
 Subsequent feedback on revision 03: “yes i like the style now”. The visual style is approved. This settles the direction, while exact fonts, production assets and animation details remain implementation/refinement work; it does not expand the sample-only scope.
 
@@ -53,7 +63,7 @@ Aditi is studying Electronics and Telecommunications engineering and pursuing fu
 ## 3. Product Goals
 
 1. Make Aditi and her work memorable through an original world and recognizable host/companion.
-2. Demonstrate full-stack capability through understandable problems, contributions, architecture, screenshots, and evidence.
+2. Demonstrate full-stack capability through understandable problems, confirmed ownership, architecture, live-project/source links, and evidence.
 3. Express painting, arts and crafts, tennis, and affection for animals through intentional details.
 4. Encourage voluntary discovery while retaining immediate Projects, Resume, and menu access.
 5. Provide thoughtful desktop, tablet, and mobile experiences.
@@ -232,7 +242,7 @@ If presented as a modal, opening moves focus inside, Escape closes, background c
 
 ## 16. Project Workshop Content
 
-The shelf/album metaphor is fixed; individual entries must still support scanning. Each entry includes title, short purpose, relevant screenshot/preview, concise solo contribution, main technologies, and a chapter link. Repository and hosted-demo actions are explicit where available. Long feature lists and technical explanation belong in chapters.
+The shelf/album metaphor is fixed; individual entries must still support scanning. Each entry includes title, short purpose, optional single static preview, concise confirmed end-to-end builder role, main technologies, and a chapter link. Primary actions are Open Live Project and View GitHub / Source Code where available, with honest access/status notes. Long feature lists and technical explanation belong in chapters.
 
 ### Initial project inventory and evidence
 
@@ -244,13 +254,13 @@ All three are solo projects according to Aditi. Suggested order is Pathwise, Tra
 | TrafficIQ | [Repository](https://github.com/Aditiiiii1291/TrafficIQ), [hosted URL](https://ai-emergency-vehicle-priority-system.onrender.com) | Traffic-video analytics and simulated emergency-priority recommendations. Current code includes React/TypeScript, FastAPI, database integration and CV processing. Hosted visit remained on Render startup; workflow not runtime-verified. README contains outdated architecture statements and inconsistent test counts. No claim of actual traffic-light control. |
 | MarketMind | [Repository](https://github.com/Aditiiiii1291/MarketMind); local demo per Aditi | Customer-review analytics and concept simulation. Backend, React auth/dashboard, and Streamlit prototype present. React Products, Uploads, Analysis are placeholders in reviewed public code. Identify the local interface being demonstrated before writing final workflow claims. No hosted Live Demo button. |
 
-Repository source review is not a full runtime test, security audit, or proof of business outcomes. No project tests were executed in this portfolio planning workspace. Account credentials supplied for inspection must not appear in documents, content, screenshots, or public demo instructions.
+Repository source review is not a full runtime test, security audit, or proof of business outcomes. No project tests were executed in this portfolio planning workspace. Account credentials supplied for inspection must not appear in documents, content, screenshots, or public demo instructions. The inventory above records earlier observations; Pathwise's current 2026-09-16 source and HTTP evidence, including the distinction between live health and unverified authenticated inference, is in the [prepared chapter](docs/projects/PATHWISE_CHAPTER.md).
 
 ## 17. Project Detail
 
 Each project opens as a chapter with a stable shareable URL and a full reading view styled as an expanded workshop document. Direct visits render the chapter without Welcome, map traversal, or album delivery. Deep-link refresh must work on the eventual host.
 
-Structure: at-a-glance summary and links; problem and intended users; solution/features; personal contribution; architecture and important decisions; screenshots; results with evidence; limitations and lessons. Allow shorter chapters for smaller projects. Do not invent metrics to fill a template.
+Structure for Pathwise: what it is; the problem; what I built (confirmed end-to-end developer/builder); how it works; technical architecture; ML/risk intelligence where relevant; what makes it interesting; current limitations; Open Live Project; View GitHub / Source Code. Keep sections concise and natural within the illustrated album. Evidence supports implemented capabilities, not a team-contribution split. One static preview is optional; no Project Moments or screenshot gallery. Other chapters follow a proportionate concise structure; never invent metrics to fill a template.
 
 Desktop may use chapter framing/bookmarks; body content must not be constrained to a tiny book spread. Mobile is continuous vertical reading. Provide Back to Workshop and Menu. A direct visitor's return control navigates deterministically to Workshop rather than depending solely on browser history.
 
@@ -368,7 +378,7 @@ Target LCP ≤2.5 s and CLS ≤0.1 in documented representative mobile testing; 
 | Background | Electronics and Telecommunications studies; full-stack direction | Institution, degree dates, graduation, opportunity wording |
 | Interests | Painting, crafts, tennis, cozy pastel room | Optional artwork/photos and personal notes |
 | Resume | Required action selected | Actual approved resume file; publication gate |
-| Projects | Three solo projects, repositories, two hosted URLs, one local demo | Final descriptions, decisions/challenges, truthful results, screenshots, updated verification |
+| Projects | Three solo projects, repositories, two hosted URLs, one local demo | Final descriptions, decisions/challenges, truthful results and updated verification; screenshots optional; Pathwise end-to-end ownership confirmed |
 | Skills | Candidate technologies observed in projects | User-confirmed claims and evidence links |
 | Board | Education category relevant | Exact education and any genuine work/events/certificates |
 | Contact | GitHub supplied | Approved public email/LinkedIn and Q-01 resolution |
@@ -385,13 +395,13 @@ These are content contracts, not a prescribed database or implementation languag
 | --- | --- |
 | id, slug | Required stable unique identifiers; slug supports a direct URL |
 | title, summary, fullDescription | Required accurate content; summary suitable for album scanning |
-| problem, solution, contribution | Required; contribution records solo ownership plus specific work |
+| problem, solution, contribution | Required; Pathwise role is confirmed end-to-end developer/builder. Describe evidenced implemented areas without asking for team attribution or treating ownership as unknown |
 | technologies, features | Required arrays of actual implemented items; distinguish planned work |
 | architecture, decisions, lessons | Required substantive chapter material before publication, proportionate to project |
 | result, limitations | Required honest account; result may be qualitative; metrics need evidence |
-| screenshots | Required useful preview before launch; each has src, alt, caption, optional width/height |
+| previewImage | Optional single static screenshot, recommended only when useful as preview/fallback; if present, src, alt, caption and optional width/height. No gallery; absence is not a completion or launch blocker |
 | githubUrl | Required for these three public repositories |
-| demo | Type: hosted/local/none; optional URL and walkthrough URL; access note; verification status, date and limitations |
+| demo | Type: hosted/local/none; hosted URL supplies the primary Open Live Project action where available; access note, verification status/date and limitations. Pathwise uses its existing hosted URL; no invented live action for local-only projects |
 | implementationStatus | Description grounded in current version; independent of whether it is hosted |
 | featuredOrder | Explicit ordering, not inferred from repository update time |
 | evidence | Sources/date for claims, measurements, screenshots or known demo issues; never credentials |
@@ -430,13 +440,13 @@ Future work must preserve direct content access, mobile usability, and original 
 
 ## 36. First Playable Prototype
 
-Prove one complete journey using **Pathwise** as the initial real chapter, with honest demo status and useful project media:
+Prove one complete journey using **Pathwise** as the initial real chapter, with honest demo status, primary live-project/source links and optional single preview media:
 
 Welcome → Enter My World → minimal plaza → Workshop → bunny album delivery → Pathwise chapter → GitHub / explicitly labeled hosted demo → Back to Workshop → Village.
 
 Also prove Welcome → View Projects → same album/chapter, and direct chapter URL → content without Welcome.
 
-Include recognizable Aditi/bunny art, notebook menu, desktop and vertical mobile layouts, keyboard access, reduced-motion alternatives, and return position behavior. Other locations may appear as clearly marked prototype destinations; they must not pretend to be finished. A demo requiring login must disclose access requirements and offer screenshots; never publish admin credentials.
+Include recognizable Aditi/bunny art, notebook menu, desktop and vertical mobile layouts, keyboard access, reduced-motion alternatives, and return position behavior. Other locations may appear as clearly marked prototype destinations; they must not pretend to be finished. A demo requiring login must disclose access requirements; a single static preview is optional as fallback; never publish admin credentials.
 
 The prototype succeeds by validating the selected visual/content/navigation approach, not by completing all five location interiors. A visual sample can precede coding; implementation starts only after this document set is accepted as accurate.
 
@@ -462,7 +472,7 @@ The following turn the brainstorm into measurable product-definition criteria.
 | ID | Check |
 | --- | --- |
 | V-01 | All five locations work through the world and Menu. No unlabeled required hotspots or movement requirement. |
-| V-02 | Pathwise, TrafficIQ and MarketMind have truthful chapters, previews, solo contributions and repository links. Hosted/local/verification status matches evidence. |
+| V-02 | Pathwise, TrafficIQ and MarketMind have truthful concise chapters, confirmed solo ownership and repository links; hosted projects have primary live-project actions and a static preview is optional. Hosted/local/verification status matches evidence. |
 | V-03 | Resume and at least one public contact method work; draft placeholders and invented personal/achievement content are absent. |
 | V-04 | Welcome remains separate; direct links bypass it; transitions are brief and skippable/instant under reduced motion. |
 | V-05 | Test 320×568, 360×800, 390×844, 768×1024, 1024×768, 1366×768 and 1920×1080 CSS px, plus text zoom/reflow. Location labels, content, controls and focus stay readable and reachable. |
@@ -483,7 +493,7 @@ Likelihood/impact are planning judgments, not measured probabilities.
 | Art styles diverge | High | High | Avatar/bunny/building sample sheet before bulk asset creation; shared outlines/perspective |
 | Decoration consumes the project | High | High | Prototype with real content first; explicit polish backlog and V1 boundaries |
 | Mobile loses clarity/charm | Medium | High | Recompose alongside desktop; evaluate labels and hit areas at smallest sizes |
-| Professional content is buried | Medium | High | Direct navigation, scannable chapters, screenshots and visible contribution |
+| Professional content is buried | Medium | High | Direct navigation, scannable chapters, live-project/source links and visible confirmed ownership |
 | Large imagery/animation slows entry | Medium | High | Budgets, asset variants, lazy loading, still alternatives |
 | Animation becomes repetitive or inaccessible | Medium | Medium/High | First-visit policy, pauses, reduced motion, motion-free content access |
 | Content/claims are overstated | Medium | High | Evidence fields, confirmed skills, no invented metrics, separate source/runtime findings |

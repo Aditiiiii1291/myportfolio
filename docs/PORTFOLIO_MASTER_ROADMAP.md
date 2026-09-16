@@ -3,9 +3,11 @@
 Status: Delivery plan defined; implementation not started.  
 Updated: 2026-09-16. No fixed launch date or assumed weekly availability.
 
-Latest checkpoint: **P1.3 DONE — revision 03 bounded visual sample visually approved**, explicitly confirmed by the user on 2026-09-16. Approved pastel pink pixel art includes Aditi's sort of long diamond-shaped face, middle-parted hair and cat-eye frame glasses. Production refinements remain; this is not full production artwork. See [approval record](VISUAL_SAMPLE_REVIEW.md). Exact next task: **P1.4 — Prepare one real chapter**, NOT STARTED; user explicitly requests no next-task work, commit or push in this update.
+Latest checkpoint: **P1.4 DONE — Prepare one real chapter**, 2026-09-16. [Pathwise chapter preparation](projects/PATHWISE_CHAPTER.md) contains the pinned evidence ledger, concise copy, verified links/status and static-record mapping. P1.3 remains DONE / visually approved; its bounded art direction is unchanged. Exact next task: **P1.5 — Stage content intake**, existing status WAITING FOR CONTENT. Do not start it in this task. No implementation or Git operations.
 
 ## Purpose and authority
+
+P1.4 scope update (2026-09-16): Aditi is the confirmed **end-to-end developer/builder of Pathwise**. Do not treat her personal contribution as unknown or request a team/subsystem attribution breakdown. Describe implemented areas only where source evidence supports them. Primary actions: **Open Live Project** and **View GitHub / Source Code**. A single static preview is optional/recommended as fallback; no Project Moments, screenshot gallery or screenshot-heavy case study. Missing optional media never blocks P1.4 or the phase exit. Keep the ten concise chapter topics specified in PRD §17 and the latest direction section. These requirements were fulfilled by P1.4 content preparation; the chapter is linked below. No implementation or Git operations.
 
 This is the HOW for [PRD.md](../PRD.md). It does not redefine the product. Use the [design system](DESIGN_SYSTEM.md) for visual rules and [project history](PROJECT_HISTORY.md) for actual progress. The PRD's confirmed decisions control scope. Candidate visual values and technical choices remain explicitly provisional until resolved.
 
@@ -21,7 +23,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0, P1.1, P1.2 and P1.3 are DONE. Revision 03 is the approved bounded raster concept; earlier SVG samples are historical. No full production artwork, app, runtime or deployment is complete. P1.4 and later work has not begun.
+Phase 0 and P1.1–P1.4 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only; no full production artwork, portfolio app or deployment is complete. No later task was started in this session.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -54,12 +56,12 @@ Purpose: Resolve the few execution choices and gather enough real content/art to
 | P1.1 Define prototype technical approach | DONE | P0 + document-set review | [Technical approach](TECHNICAL_APPROACH.md) and history record React/Vite/TypeScript, HTML/CSS layers, routing, shared content, asset handling and preview. Q-02 resolved for local prototype; hosting deferred. Documentation validation only |
 | P1.2 Define original-art workflow | DONE | P0 + document-set review | [Art workflow](ART_WORKFLOW.md) defines creator roles, optional AI concepts, Krita/Inkscape masters, reviewed exports and provenance; originality and selected avatar identity preserved. Documentation validated; Q-03 visual approval remains P1.3 |
 | P1.3 Create bounded visual sample | DONE — VISUALLY APPROVED | P1.2 | [Revision 03 approval](VISUAL_SAMPLE_REVIEW.md), 2026-09-16: bounded pastel pink pixel-art concept, Aditi/bunny, village-scale treatment, Workshop shelf/album and UI direction accepted; long diamond-shaped face, middle-parted hair and cat-eye frames explicitly intended. Raster concept, not final production assets; production/refinement and runtime checks remain later work |
-| P1.4 Prepare one real chapter | NOT STARTED | P0 | Pathwise content record conforming to PRD §32, source references, actual contribution, useful screenshot and known demo limitations; no invented outcome or credentials |
+| P1.4 Prepare one real chapter | DONE | P0 | [Pathwise chapter](projects/PATHWISE_CHAPTER.md): pinned source/claim classification, concise ten-topic copy, end-to-end role, temporal/rule/ML/fusion distinctions, architecture, primary live/source links, dated demo checks and honest limits, static-field mapping. Preview absent and optional; no gallery, code, packages or credentials |
 | P1.5 Stage content intake | WAITING FOR CONTENT | PRD §31 | Collect resume, About/education, confirmed skills, milestones, contact and project reflection/media progressively; maintain missing/approved status |
 | P1.6 Resolve Mailbox method | NOT STARTED | Q-01 | Confirm proposed public email/copy/social links before Contact implementation. A requested form requires documented scope/dependency changes |
 | P1.7 Select test baseline | NOT STARTED | P1.1 | Record tool/browser versions, viewport matrix, measured lab profile and accessible test approach. Preserve PRD budgets or document justified adjustment |
 
-Exit: Prototype architecture and art workflow recorded, visual sample accepted, and one honest project record/media available. Missing optional biography/milestones must not delay P2. Exact font and shade acceptance follows the sample, not silent assumptions.
+Exit: Prototype architecture and art workflow recorded, visual sample accepted, and one honest project record with live-project/source links available; optional preview media is not an exit requirement. Missing optional biography/milestones must not delay P2. Exact font and shade acceptance follows the sample, not silent assumptions.
 
 ### Completed preparation: P1.1
 
@@ -75,7 +77,13 @@ Creator/tools, editable formats, export process, originality and provenance are 
 
 Revision 03's bounded sample is explicitly approved and P1.3 is DONE. Intended direction: pastel baby-pink pixel art, pixel lettering, cozy village, Aditi with a sort of long diamond-shaped face, middle-parted brunette hair, cat-eye frame glasses and fluffy cream bunny; retain Workshop shelves/album. Exact fonts, color tokens, production pixels/layers/poses, final responsive layout and animation staging remain provisional. No finished Welcome, complete production map, five-location asset set, pose library or coded prototype was produced. Revision 03 is a static desktop concept, not evidence of mobile/runtime validation.
 
-Exact next task after P1.3: **P1.4 — Prepare one real chapter**. Deliver a Pathwise content record conforming to PRD §32, source references, actual contribution, a useful screenshot and known demo limitations; no invented outcomes or credentials. Formal dependency: P0. Status: NOT STARTED. Do not begin it in this update. P1.3's visual-approval dependency is now satisfied; remaining downstream dependencies are unchanged.
+### Completed preparation: P1.4 — Prepare one real chapter
+
+The [dedicated chapter record](projects/PATHWISE_CHAPTER.md) satisfies the current PRD §§17/32 content requirements. Public source revision b386704476c0b6aaffc4f6ddd69082bbe13054e1 was inspected; the different local foundation folder was not mistaken for the linked application. Confirmed Aditi's end-to-end role, actual stack and implemented flow. Live frontend and backend health responded; protected assessment was not authenticated, so the previously observed missing-model issue remains historical/unresolved rather than falsely marked fixed. Tests/artifact were inspected, not executed. No optional screenshot was required. Evidence details remain in the chapter rather than duplicated here.
+
+Validation: primary-source claim ledger, concise recruiter scan, content-field mapping, relative links/evidence targets and documentation-only scope. No application implementation, installation, later task or Git operation. Phase 1's content/art preparation gate is satisfied; other task dependencies, including P1.7 before P2.1, are unchanged.
+
+**Exact next roadmap task: P1.5 — Stage content intake.** Existing status: WAITING FOR CONTENT. Progressively gather resume, About/education, confirmed skills, milestones, contact and remaining project reflections/evidence; track missing versus approved content. Screenshots stay optional. **Not started in this session.**
 
 ## Phase 2 — First playable prototype
 
@@ -88,7 +96,7 @@ Purpose: Prove the signature experience with real content before producing all f
 | P2.3 Implement small plaza | NOT STARTED | P2.1, P1.3 | Recognizable central arrival and active Workshop; other prototype destinations visibly incomplete rather than fake links |
 | P2.4 Implement notebook navigation | NOT STARTED | P2.1 | Semantic controls, correct implemented destinations, focus/close/return behavior; P-05 |
 | P2.5 Implement shelf/album interaction | NOT STARTED | P2.3, P1.3 | Bunny delivery, skip/immediate access, first-session/revisit behavior, single-column mobile album; P-04 |
-| P2.6 Implement Pathwise chapter | NOT STARTED | P2.1, P1.4, P2.5 | Stable URL, technical content/media, repository and accurately labeled demo access; P-03 |
+| P2.6 Implement Pathwise chapter | NOT STARTED | P2.1, P1.4, P2.5 | Stable URL, concise technical content, primary live-project/source actions and accurate access notes; optional single preview, no gallery; P-03 |
 | P2.7 Implement responsive/state behavior | NOT STARTED | P2.2–P2.6 | Vertical mobile composition, sensible return/Back/scroll handling, loading and asset fallback; P-06/P-07 |
 | P2.8 Verify prototype | NOT STARTED | P2.2–P2.7 | P-01–P-08 evidence, initial transfer measurements, art/usability review, no uncaught app errors |
 
@@ -131,7 +139,7 @@ Exit: Required V1 experience passes accessibility/performance checks. Nice-to-ha
 | Task | Status | Dependency | Deliverable / acceptance |
 | --- | --- | --- | --- |
 | P5.1 Final content and identity review | NOT STARTED | P3/P4 exit + content intake | Aditi confirms biography, skills, dates, resume, public contact and project claims; no placeholder copy |
-| P5.2 Featured-demo presentation review | NOT STARTED | Project media/access supplied | Recheck Pathwise profile/model status and restricted visitor access; verify TrafficIQ startup/workflow; identify MarketMind local interface; truthful alternatives if unavailable |
+| P5.2 Featured-demo presentation review | NOT STARTED | Project links/access notes supplied; preview media optional | Recheck Pathwise profile/model status and restricted visitor access; verify TrafficIQ startup/workflow; identify MarketMind local interface; truthful alternatives if unavailable |
 | P5.3 Choose/configure release hosting | NOT STARTED | Q-02 hosting resolution, P4 exit | Document provider and direct-route fallback; no hosting provider assumed in this document stage |
 | P5.4 Validate release candidate | NOT STARTED | P5.1–P5.3 | V-01–V-12 evidence, correct URLs, metadata identifying Aditi's portfolio, no credentials, readable failure states |
 | P5.5 Publication handoff | NOT STARTED | P5.4 | Reviewable release candidate and deployment action clearly in scope before publishing |
