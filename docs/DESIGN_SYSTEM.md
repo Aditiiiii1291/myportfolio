@@ -1,7 +1,19 @@
 # Aditi's Adventure — Design System
 
-Status: Confirmed visual direction plus provisional implementation tokens; no artwork or components created.  
-Updated: 2026-09-14.
+Status: P1.3 DONE — revision 03 bounded visual sample visually approved on 2026-09-16. Production artwork and application components remain unbuilt.
+Updated: 2026-09-16.
+
+## Latest direction — 2026-09-16
+
+Explicit completion approval settles the bounded sample and intended character features: **a sort of long diamond-shaped face, middle-parted hair, cat-eye frame glasses**. Earlier softened rectangular-frame wording is historical and superseded. Pixel geometry, exact font files, shades, animation frames and responsive production assets remain provisional; these do not reopen P1.3. See the [approval record](VISUAL_SAMPLE_REVIEW.md).
+
+User approval of revision 03: “yes i like the style now”. Use this sample as the approved stylistic reference for pastel pink scenery, pixel-style lettering and cozy chibi character art. Exact font files, production geometry, incidental generated copy and animation implementation are not finalized by this approval.
+
+The user's new reference feedback supersedes the earlier smooth-vector/blocky interpretation: use visible pixel art, a cute chibi game character, pastel baby-pink scenery and pixel lettering like the supplied pink personal-web screenshot. The second supplied screenshot informs character scale and the game-like atmosphere. Preserve Aditi's identity, fluffy cream bunny, five destinations and direct access to content. The user explicitly chose **revise the design sample first**; this round does not implement a website.
+
+Revision 03 is a generated raster concept, not a production sprite sheet, an editable vector master or a functioning UI. See [current review](VISUAL_SAMPLE_REVIEW.md) for remaining refinement. Original layout and characters should express the broad cozy life-simulation feeling of the references.
+
+Motion direction for later implementation: restrained avatar blinking/idle, bunny ear twitches and small hops, flower movement and the existing album-delivery interaction. These are proposed behaviors, not animations present in the sample. Character movement is optional and not required to reach portfolio content; this feedback does not require a full game.
 
 ## Authority and use
 
@@ -11,11 +23,13 @@ This document translates [PRD.md](../PRD.md) into repeatable visual rules. The [
 
 ## 1. Visual identity — confirmed
 
+P1.3 feedback update, 2026-09-14: Aditi accepted cream bunny fur and requested more fluff, glasses between cat-eye and rectangular rather than boxy, a middle hair part, paler warm skin and pastel baby pink. These directions supersede earlier open/recommended descriptions below. Revision 02 tests them; exact geometry/shades are not yet approved. The earlier strawberry token remains a historical candidate; revision 02 tests `#F6C6D5`. See [visual review](VISUAL_SAMPLE_REVIEW.md).
+
 World name: **Aditi's Adventure**. Exact welcome line:
 
 > A little world of things I build, ideas I explore, and things I love.
 
-Identity: cute, cozy, pastel, pink-led, personal, gently magical and game-like. The user explicitly selected **chunky, blocky illustrations**. Use substantial silhouettes and softly squared corners rather than delicate realism or an aggressively pixelated look.
+Identity: cute, cozy, pastel, pink-led, personal, gently magical and game-like. The latest user feedback selects **pixel art** over the earlier smooth chunky-vector sample. Use readable chibi silhouettes, stepped contours, deliberate pixel clusters and limited shade ramps. Retain soft proportions within the pixel grid.
 
 Professional content is clear and quiet. Do not put technical paragraphs in ornamental lettering or re-theme genuine application screenshots until they stop showing the actual work.
 
@@ -29,7 +43,7 @@ Professional content is clear and quiet. Do not put technical paragraphs in orna
 - Buildings, props, labels, characters and background layers are separate assets/elements. Do not flatten all navigation into one background image.
 - Desktop and mobile share the same world identity and content, not necessarily the same asset arrangement.
 
-Reject strict isometric grids, a top-down sprite world, a platform-level composition, and a river/bridge as the organizing map structure. Small optional environmental details must not alter the central-plaza plan.
+Use an elevated sprite-world view with visible character faces and building fronts. Avoid a platform-level composition or a river/bridge as the organizing map structure. The new reference permits a pixel sprite world; the earlier blanket rejection of that treatment is superseded. Small environmental details should support the central plaza.
 
 ## 3. Illustration principles
 
@@ -53,8 +67,9 @@ Required destinations combine a readable HTML label, consistent outline/frame, a
 
 | Feature | Required direction |
 | --- | --- |
-| Hair | Long, brunette, layered; simplify into recognizable flowing shapes |
-| Face | Glasses; pale warm/yellowish skin tone; final likeness/proportions TBD |
+| Hair | Long, brunette, layered, middle-parted; simplify into recognizable flowing shapes |
+| Face | A sort of long diamond-shaped face; pale warm skin; precise pixel proportions remain provisional |
+| Glasses | Cat-eye frame glasses; preserve the lifted outer silhouette at readable scales |
 | Headphones | Pink, recognizable recurring accessory |
 | Top | Sleeveless high-neck, preferably black |
 | Trousers | Flared blue jeans |
@@ -70,7 +85,7 @@ Mandatory initial sample: Aditi holding bunny at welcome size and a simplified s
 
 Confirmed: fluffy pet bunny; curious and gently playful; held at Welcome and present nearby elsewhere; delivers the Workshop album.
 
-TBD: fur color, markings, ear shape, name, accessories, final facial style. Cream fur was recommended during brainstorming but not separately finalized. Do not add a bow, bell, collar, satchel, antlers or hybrid-species features as a requirement.
+Approved: fluffy cream fur. TBD: markings, exact ear shape, name, accessories and final pixel facial geometry. Do not add a bow, bell, collar, satchel, antlers or hybrid-species features as a requirement.
 
 Use posture, ears and brief expressions for personality. Initial idle candidate is grooming/scratching; an optional butterfly encounter can use a small hop and pause. More complex bug antics are future polish, not combat.
 
@@ -117,7 +132,7 @@ Error/success/warning surfaces are not assigned final hues yet. Use explicit tex
 
 ## 7. Typography
 
-Confirmed hierarchy: chunky/blocky display, bold clear UI, clean body. Actual font families remain TBD. Search/select appropriately licensed fonts later; never use extracted or proprietary game fonts.
+Confirmed hierarchy: squared pixel lettering for display and short UI labels, with readable body text. Actual font families remain TBD; the generated sample depicts lettering and does not select or license a font. Choose an appropriately licensed pixel font for implementation and test longer text at reading size; never extract fonts from a reference game or website.
 
 Initial family budget: one expressive display family plus one readable sans-serif family, with UI/body differentiated through weight. This is a sample baseline to limit visual and loading complexity.
 
@@ -126,7 +141,7 @@ Initial family budget: one expressive display family plus one readable sans-seri
 | Welcome title | Approximately 40–72 px desktop, 32–44 px phone | Responsive wrapping; no clipping; chunky silhouette |
 | Major section/chapter title | Approximately 28–40 px | Brief display text; enough line height for glasses/headings not to overlap art |
 | UI/sign labels | Approximately 16–18 px, bold | Readable HTML, ordinary mixed case for longer labels |
-| Body | At least 16 px starting size; line height 1.5–1.7 | Normal reading, selectable/resizable, no pixel font |
+| Body | At least 16 px starting size; line height 1.5–1.7 | Selectable/resizable HTML; use a legible pixel face only if reading tests pass, otherwise a quiet readable companion |
 | Caption/supporting label | Approximately 14–16 px | Never the only presentation of critical information |
 
 Body measure baseline: about 45–75 characters, narrower naturally on phones. Keep paragraphs off busy art. Essential information must not be shrunk to fit a drawn page. Avoid long all-caps text and decorative handwriting for project details.

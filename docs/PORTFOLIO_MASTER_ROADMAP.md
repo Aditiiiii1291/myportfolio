@@ -1,7 +1,9 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
 Status: Delivery plan defined; implementation not started.  
-Updated: 2026-09-14. No fixed launch date or assumed weekly availability.
+Updated: 2026-09-16. No fixed launch date or assumed weekly availability.
+
+Latest checkpoint: **P1.3 DONE — revision 03 bounded visual sample visually approved**, explicitly confirmed by the user on 2026-09-16. Approved pastel pink pixel art includes Aditi's sort of long diamond-shaped face, middle-parted hair and cat-eye frame glasses. Production refinements remain; this is not full production artwork. See [approval record](VISUAL_SAMPLE_REVIEW.md). Exact next task: **P1.4 — Prepare one real chapter**, NOT STARTED; user explicitly requests no next-task work, commit or push in this update.
 
 ## Purpose and authority
 
@@ -15,10 +17,11 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **READY:** Dependencies are satisfied; execution has not begun.
 - **NOT STARTED:** Planned, with dependencies outstanding.
 - **WAITING FOR CONTENT:** Requires user-supplied publication material, not invented substitutes.
+- **AWAITING USER VISUAL APPROVAL:** Sample exists and has been self-reviewed; Aditi's required visual review is outstanding. Not DONE.
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0, P1.1 architecture and P1.2 original-art workflow documentation are DONE. No artwork, app, runtime, deployment or application test is complete. P1.3 and later work has not begun.
+Phase 0, P1.1, P1.2 and P1.3 are DONE. Revision 03 is the approved bounded raster concept; earlier SVG samples are historical. No full production artwork, app, runtime or deployment is complete. P1.4 and later work has not begun.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -50,7 +53,7 @@ Purpose: Resolve the few execution choices and gather enough real content/art to
 | --- | --- | --- | --- |
 | P1.1 Define prototype technical approach | DONE | P0 + document-set review | [Technical approach](TECHNICAL_APPROACH.md) and history record React/Vite/TypeScript, HTML/CSS layers, routing, shared content, asset handling and preview. Q-02 resolved for local prototype; hosting deferred. Documentation validation only |
 | P1.2 Define original-art workflow | DONE | P0 + document-set review | [Art workflow](ART_WORKFLOW.md) defines creator roles, optional AI concepts, Krita/Inkscape masters, reviewed exports and provenance; originality and selected avatar identity preserved. Documentation validated; Q-03 visual approval remains P1.3 |
-| P1.3 Create bounded visual sample | NOT STARTED | P1.2 | One Aditi-with-bunny sample, one Workshop/shelf sample, album surface, control and typography sample; desktop/mobile composition thumbnails. Review with Aditi before bulk art |
+| P1.3 Create bounded visual sample | DONE — VISUALLY APPROVED | P1.2 | [Revision 03 approval](VISUAL_SAMPLE_REVIEW.md), 2026-09-16: bounded pastel pink pixel-art concept, Aditi/bunny, village-scale treatment, Workshop shelf/album and UI direction accepted; long diamond-shaped face, middle-parted hair and cat-eye frames explicitly intended. Raster concept, not final production assets; production/refinement and runtime checks remain later work |
 | P1.4 Prepare one real chapter | NOT STARTED | P0 | Pathwise content record conforming to PRD §32, source references, actual contribution, useful screenshot and known demo limitations; no invented outcome or credentials |
 | P1.5 Stage content intake | WAITING FOR CONTENT | PRD §31 | Collect resume, About/education, confirmed skills, milestones, contact and project reflection/media progressively; maintain missing/approved status |
 | P1.6 Resolve Mailbox method | NOT STARTED | Q-01 | Confirm proposed public email/copy/social links before Contact implementation. A requested form requires documented scope/dependency changes |
@@ -60,7 +63,7 @@ Exit: Prototype architecture and art workflow recorded, visual sample accepted, 
 
 ### Completed preparation: P1.1
 
-P1.1 read PRD §§12–17, 24, 29–30, 32, 36–39 and selected the smallest technical approach for the Welcome → Village → Workshop → Pathwise journey and direct alternative. The decision and validation mapping are in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md), with a concise record in history. P1.2 subsequently defined the art-production workflow; no assets have been produced.
+P1.1 read PRD §§12–17, 24, 29–30, 32, 36–39 and selected the smallest technical approach for the Welcome → Village → Workshop → Pathwise journey and direct alternative. The decision and validation mapping are in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md), with a concise record in history. P1.2 subsequently defined the art-production workflow; P1.3 has now produced a review sample only.
 
 P1.1 was preparation only: no scaffolding or implementation occurred.
 
@@ -68,9 +71,11 @@ P1.1 was preparation only: no scaffolding or implementation occurred.
 
 Creator/tools, editable formats, export process, originality and provenance are documented and validated. Final visual details remain open; completion of the workflow does not approve an unseen sample.
 
-### Exact next task: P1.3 — Create bounded visual sample
+### Completed preparation: P1.3 — Bounded visual sample visually approved
 
-Create one Aditi-with-bunny sample with a simplified village-scale check, one Workshop/shelf sample, an album surface, a control and typography sample, and desktop/mobile composition thumbnails. Review with Aditi and record approved revisions before bulk art. Do not produce a finished Welcome, complete map, five-location set, pose library or coded prototype. P1.3 is not started and was explicitly excluded from P1.2 authorization.
+Revision 03's bounded sample is explicitly approved and P1.3 is DONE. Intended direction: pastel baby-pink pixel art, pixel lettering, cozy village, Aditi with a sort of long diamond-shaped face, middle-parted brunette hair, cat-eye frame glasses and fluffy cream bunny; retain Workshop shelves/album. Exact fonts, color tokens, production pixels/layers/poses, final responsive layout and animation staging remain provisional. No finished Welcome, complete production map, five-location asset set, pose library or coded prototype was produced. Revision 03 is a static desktop concept, not evidence of mobile/runtime validation.
+
+Exact next task after P1.3: **P1.4 — Prepare one real chapter**. Deliver a Pathwise content record conforming to PRD §32, source references, actual contribution, a useful screenshot and known demo limitations; no invented outcomes or credentials. Formal dependency: P0. Status: NOT STARTED. Do not begin it in this update. P1.3's visual-approval dependency is now satisfied; remaining downstream dependencies are unchanged.
 
 ## Phase 2 — First playable prototype
 

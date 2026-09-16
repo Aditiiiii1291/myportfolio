@@ -1,21 +1,43 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-14. Stage: P1.2 art-workflow planning complete; no implementation started.
+Last updated: 2026-09-16. Stage: P1.3 DONE — revision 03 bounded visual sample VISUALLY APPROVED; no application implementation started.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Brainstorming is complete. The user requested conversion into four product-definition documents and explicitly stopped further brainstorming/full implementation.
-- Phase 0 and P1.1 are complete. P1.2 workflow is documented in [ART_WORKFLOW.md](ART_WORKFLOW.md); validation/status is recorded below. P1.3 and later tasks have not started.
-- Initial workspace inspection found no files, application code, original art, package manifest, or `.git` directory in `C:\Users\saksh\Desktop\portfolio`. This task creates documentation only. No framework, dependencies, hosting configuration or asset-generation workflow has been installed.
-- A preliminary Git-status command failed with a working-directory error. No clean Git status, branch, commit or initialized repository is claimed.
-- No fixed launch date. Product direction is a compact but complete V1, preceded by one playable Workshop prototype.
-- React/Vite/TypeScript with React Router and HTML/CSS/image rendering is selected. P1.2 selects a human-directed hybrid art workflow with optional AI concepts, layered cleanup, Krita/Inkscape masters and Squoosh export comparison. No tools installed or artwork produced; visual approval and hosting remain open.
-- Current filesystem also contains an existing `.git` directory and a minimal `README.md`, added after the initial document creation. No Git commands were run during P1.1; branch, remote and commit state were not verified. No `.gitignore` exists yet; ignore rules must be established before later generated/private files are staged.
-- Personal content may be supplied later in stages; required launch content remains a release gate.
+- **P1.3 DONE — revision 03 bounded visual sample VISUALLY APPROVED**, explicitly confirmed by the user on 2026-09-16. Phase 0, P1.1 and P1.2 are also complete.
+- Approved reference: [revision 03 PNG](../assets/sources/reviews/exports/p1-3-direction-v03-pixel.png), with [prompt/provenance](../assets/sources/reviews/p1-3-direction-v03-pixel.md) and [approval record](VISUAL_SAMPLE_REVIEW.md). Revisions 01/02 are preserved historical samples.
+- Intended direction: pastel baby-pink pixel art, pixel typography, cozy village, Aditi and fluffy cream bunny, Workshop shelves/album. Aditi has **a sort of long diamond-shaped face, middle-parted hair and cat-eye frame glasses**. These explicit requirements supersede earlier frame/face ambiguity; no new rendering is claimed.
+- This is bounded-sample completion only. No full production art, editable pixel master, animation sheet, website code, installed app framework or deployment exists. Exact production/font/color/mobile/motion details remain provisional as recorded in the review.
+- Selected future stack remains React/Vite/TypeScript, React Router and HTML/CSS/image rendering. Hosting and missing publication content remain open.
+- Exact next task: **P1.4 — Prepare one real chapter**, NOT STARTED. User explicitly says not to start it yet and not to commit or push. This update changes documentation only.
+- Historical work and checks below retain their original dates; earlier pending-approval language describes those past revisions, not current status.
 
 ## COMPLETED WORK
+
+### P1.3 — explicit bounded-sample completion, 2026-09-16
+
+- User explicitly approved the revised bounded sample and instructed P1.3 be marked complete. Updated roadmap status to DONE — VISUALLY APPROVED; approval is no longer outstanding.
+- Approved direction: pastel baby-pink pixel art and pixel lettering, cozy elevated village, chibi human Aditi with fluffy cream bunny, and Workshop shelf/album treatment. Retain established outfit, pink headphones and pale warm skin.
+- Explicit intended character features: **a sort of long diamond-shaped face, middle-parted hair, cat-eye frame glasses**. Earlier rectangular/rounded interpretations are superseded. These are documented requirements; the existing PNG was not redrawn.
+- Provisional: exact licensed fonts, hex/contrast tokens, pixel geometry and small-scale simplification, layered production assets/poses/frames, final responsive layouts/exports, animation staging/timing and optional idle behavior, bunny markings/name/accessories. Generated slogans and extra decorative bunny are not production requirements.
+- Completed the bounded sample checkpoint only, not full production artwork, runtime/mobile validation or implementation. Exact next task is **P1.4 — Prepare one real chapter**, NOT STARTED. User explicitly excludes starting it, committing and pushing. Documentation-only update; no new artwork or code.
+
+### P1.3 — pixel-art revision 03, 2026-09-16
+
+- Generated one 1536 × 1024 PNG concept through the built-in image generation tool and copied it into the workspace. Inspected the returned image: pink village, Aditi's retained identity, cream bunny, destination labels, project shelf/album and welcome line are present.
+- Updated PRD, design system, art workflow, technical approach, roadmap and visual review with latest user direction and its precedence over old non-pixel language.
+- Saved exact prompt and provenance; recorded soft fine-detail/grid limitations and generator-added incidental copy as nonbinding. No application tests apply to this static sample. No full game, app scaffolding, dependencies, publication or production animation.
+
+### P1.3 — sample creation and self-review, 2026-09-14
+
+- Produced one bounded SVG review board: Aditi holding bunny, shared village-scale check, one Workshop/shelf fragment, album, typography/control/focus concept, desktop and vertical mobile thumbnails. Character definitions and compositions are editable named groups, not embedded raster images.
+- Exported a 1600 × 2400 PNG using local headless Chrome. Inspected the image, enlarged mobile album action independently, adjusted desktop path boundary and rerendered. No application code or animation exists.
+- Provisional face/proportions, cream bunny, exact shades, system typography, geometry and incidental copy are listed in VISUAL_SAMPLE_REVIEW.md. Thumbnail reuse of the held-bunny pose is only a scale check, not a change to the nearby-bunny rule outside Welcome.
+- Original shapes were authored by Codex from the written brief; no image-generation model, copied/reference image, font file or project screenshot used. No claim that Aditi hand-drew the sample. Editable-vector route follows ART_WORKFLOW §§4/7.
+- Created source/review separation and ignore rules. No Git operations or package installations. No P1.4 content work, bulk artwork or full scene production.
+- At this historical revision, self-review was complete and user approval was pending. The subsequent explicit revision 03 approval completes P1.3.
 
 ### Brainstorming and project research
 
@@ -104,16 +126,13 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 
 ## CURRENTLY WORKING ON
 
-P1.2 workflow documentation is complete and validated. No artwork or application implementation is in progress. Next is P1.3 when authorized.
+P1.3 is DONE — bounded sample visually approved. Approval documentation is complete; no next-task work or application implementation is in progress.
 
 ## NEXT TASKS
 
-1. **P1.3 — Create bounded visual sample:** Aditi holding bunny with a small village-scale check, Workshop/shelf, album, control/typography sample and desktop/mobile thumbnails. Review with Aditi before bulk art. Not started.
-2. Preserve the P1.2 workflow and record actual asset sources/approvals as P1.3 work occurs; no complete scene set or pose library yet.
-3. P1.7: select and record the test baseline before P2 foundation; existing budgets and acceptance criteria remain.
-4. P1.4: prepare one real Pathwise chapter with approved media and accurate demo limitations.
-5. Collect missing content progressively; resolve Q-01 before Contact implementation.
-6. Only then begin the P2 playable prototype; do not implement the full village immediately.
+1. Exact next roadmap task: **P1.4 — Prepare one real chapter**. Formal dependency: P0. Deliver a Pathwise content record conforming to PRD §32, source references, actual contribution, a useful screenshot and known demo limitations; no invented outcomes or credentials. Status: NOT STARTED. User explicitly says not to start it yet.
+2. Preserve revision 03's approved direction, including long diamond-shaped face, middle-parted hair and cat-eye frames. Remaining production checks do not reopen P1.3 approval.
+3. Later preparation tasks remain as listed in the roadmap: staged content intake, Mailbox method and test baseline. No later task starts in this documentation update.
 
 The Pathwise deployment issue is an external project issue, not the next authorized portfolio task. Do not fix it or modify its repository without a separate in-scope request.
 
@@ -139,6 +158,15 @@ Public biography/resume/contact, exact education dates, confirmed skill list, mi
 
 ## ASSET INVENTORY
 
+### Approved bounded P1.3 sample — revision 03
+
+- `assets/sources/reviews/exports/p1-3-direction-v03-pixel.png`: 1536 × 1024 generated raster concept, 2026-09-16, built-in imagegen. Prompt/provenance in `assets/sources/reviews/p1-3-direction-v03-pixel.md`. BOUNDED SAMPLE VISUALLY APPROVED; P1.3 DONE. Explicit face/hair/frame requirements supplement the reference without claiming a new rendering. No SVG/layered master or motion pair. All older assets retained.
+
+### Historical P1.3 revision 02
+
+- Source: `assets/sources/reviews/p1-3-direction-v02.svg`; review export: `assets/sources/reviews/exports/p1-3-direction-v02.png` (1600 × 2400). Codex original vector edits, 2026-09-14; same editable group structure and local Chrome export process as revision 01. No new third-party material or packages. Cream fur is accepted; new fluff/frame/part/skin/pink rendition is IN-REVIEW. Revision 01 records below are historical, not the current review target.
+- Inspected exported revision 02: center part, lifted softer glasses, fuller fur, paler skin and baby-pink changes appear in the main and reused small-scale character. Review notes preserve candidate shades and outstanding approval.
+
 ### Existing workspace deliverables
 
 | Path | State | Type |
@@ -149,9 +177,19 @@ Public biography/resume/contact, exact education dates, confirmed skill list, mi
 | `docs/PROJECT_HISTORY.md` | Created | Current state and handoff memory |
 | `docs/TECHNICAL_APPROACH.md` | Created in P1.1 | Selected architecture and planning validation |
 | `docs/ART_WORKFLOW.md` | Created in P1.2 | Original-art production workflow and sample gate |
+| `docs/VISUAL_SAMPLE_REVIEW.md` | Created in P1.3 | Provisional choices, provenance, self-review and approval checkpoint |
+| `.gitignore` | Created in P1.3 | Raw/private/reference/temporary input exclusions |
 | `README.md` | Existing, unchanged in P1.1 | Minimal repository title; not setup instructions |
 
-### Planned visual/media inventory — none created locally
+### P1.3 review asset inventory
+
+| ID / purpose | Editable source | Review export | State / provenance |
+| --- | --- | --- | --- |
+| p1-3-direction-v01 / seven-element direction review | `assets/sources/reviews/p1-3-direction-v01.svg` (19,774 bytes) | `assets/sources/reviews/exports/p1-3-direction-v01.png` (354,522 bytes), 1600 × 2400, lossless screenshot | IN-REVIEW; Codex original vectors, 2026-09-14; no user approval/date; no third-party assets |
+
+The master groups separately identify Aditi, bunny, building, shelves, album, palette, type/control and composition studies. One PNG serves all review elements; no production variants required yet. Still-only, no animation counterpart produced. Suggested review alt: “Aditi holding a cream bunny beside a pastel Workshop, album and UI samples, with desktop and vertical mobile layout sketches.” The record identifies the final revision-01 export; no compression quality setting or installed art-editor version applies. System fonts may substitute in SVG; PNG fixes the reviewed appearance. No external backup claimed; retain master before future destructive edits. Full provenance/temporary choices are in the review notes.
+
+### Planned production visual/media inventory — no production assets created
 
 | Group | Needed | State |
 | --- | --- | --- |
@@ -165,10 +203,16 @@ Public biography/resume/contact, exact education dates, confirmed skill list, mi
 | Project media | Current Pathwise/TrafficIQ/MarketMind screenshots and optional recordings | WAITING FOR CONTENT |
 | Personal assets | Resume; optional paintings/craft photos | WAITING FOR CONTENT |
 
-Browser screenshots were used for inspection but are not saved portfolio assets. Existing project repositories are references, not cloned code in this workspace. Editable art sources, rights and exported variants must be inventoried as they are actually produced.
+Earlier featured-demo browser screenshots were not saved as portfolio assets. The P1.3 PNG is a review rendering of our SVG, not a project screenshot. Existing featured repositories are not cloned in this workspace. Production exports and approvals remain pending.
 
 ## TESTING STATUS
 
+- Completion-documentation validation: checked 46 relative links across all seven changed documents and confirmed P1.3 DONE plus all three explicit character requirements. No broken links. No commit or push; P1.4 remains NOT STARTED.
+
+- 2026-09-16 completion update: documentation-only approval/status reconciliation. No new rendering, runtime, accessibility, responsive, performance or application tests were performed. Earlier checks below describe their original revisions and dates; they do not mean approval is still pending or validate revision 03 as production artwork.
+
+- P1.3 visual self-review: final PNG inspected; mobile action and path-boundary refinements verified. Source editability is represented by native SVG shapes/text/groups/shared references, not an editor UI test. Scores and limits recorded in VISUAL_SAMPLE_REVIEW.md; user approval outstanding. No runtime accessibility/performance/build tests run.
+- P1.3 file validation: SVG parses with 35 unique named IDs and all internal references resolving; zero embedded rasters, scripts, foreignObject or animation elements. PNG integrity verified at 1600 × 2400. All 37 relative Markdown links resolve. Final inventory: eight Markdown files, `.gitignore`, one SVG source and one PNG review export outside Git metadata; no application code, packages or full V1 asset set. P1.4+ untouched.
 - P1.2 documentation validation: **PASSED** on 2026-09-14. All 17 workflow sections present; checked original-art rules, creator/tool/master/export/provenance decisions, preserved Strawberry Cream/blocky direction, layered responsive assets, performance budgets, future still/motion pairs and character approval process against the five baseline documents. Relative links passed and inventory contains only seven Markdown files outside existing Git metadata. No artwork, asset folders, application code, installations or Git operations. P1.3 remains NOT STARTED; visual/runtime quality is not tested.
 - P1.1 documentation validation: **PASSED** on 2026-09-14. Reviewed architectural coverage of P-01–P-08 and V-01–V-12, all 15 technical-document sections, roadmap sequencing and remaining decisions. Checked 21 relative document links with zero missing targets. Workspace inventory contains six documentation files and existing Git metadata; no application/data files, packages, generated art or build output. This is planning support, not runtime proof. No Git commands, installations, builds or application tests were executed in P1.1.
 - Application builds/tests: **NOT RUN — no portfolio code exists.**
@@ -180,8 +224,8 @@ Browser screenshots were used for inspection but are not saved portfolio assets.
 
 ## HANDOFF FOR NEXT SESSION
 
-Read the four baseline documents, TECHNICAL_APPROACH.md and ART_WORKFLOW.md before taking action. Brainstorming is closed: do not reopen the world name, artistic tagline, human host/bunny, separate Welcome, central plaza, shelves/album, notebook menu, Strawberry Cream/blocky art, or vertical mobile layout.
+Read the four baseline documents, TECHNICAL_APPROACH.md, ART_WORKFLOW.md and VISUAL_SAMPLE_REVIEW.md before taking action. Brainstorming is closed: do not reopen the world name, artistic tagline, human host/bunny, separate Welcome, central plaza, shelves/album, notebook menu, Strawberry Cream/blocky art, or vertical mobile layout.
 
-This session's authorized scope is P1.2 planning/documentation only. The exact next task is P1.3 bounded visual sample; it is explicitly excluded from this session and has not begun. Follow with P1.4 real chapter and the required test baseline before P2. Do not jump directly to full artwork, implementation or hosting.
+The user explicitly approved the revised bounded sample and requested **P1.3 complete / visually approved**. P1.3 is DONE. Use pastel pink pixel art, pixel lettering, a sort of long diamond-shaped face, middle-parted hair and cat-eye frame glasses; preserve the cream fluffy bunny and established character identity. Remaining production details do not reopen this checkpoint. Exact next task: **P1.4 — Prepare one real chapter** (Pathwise; PRD §32), NOT STARTED. User explicitly requested no next-task work, commit or push. No implementation, artwork revision or hosting occurred in this update.
 
 Preserve TBDs. Ask for material content when its phase needs it; do not demand all personal information before preparation. Keep project-status claims accurate and all credentials out of saved material. Update this file with actual completed work, checks, open issues and the next concrete task at the end of each development session.

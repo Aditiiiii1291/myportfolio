@@ -1,9 +1,19 @@
 # Aditi's Adventure — Product Requirements Document
 
-Status: Product-definition baseline; implementation has not started.  
+Status: Product-definition baseline with 2026-09-16 pixel-art direction update; implementation has not started.
 Created: 2026-09-13. Document set finalized: 2026-09-14. Owner: Aditi. Release: compact V1, no fixed deadline.
 
 This document defines WHAT to build and WHY. It derives from the completed brainstorming conversation and subsequent project/demo review. It does not authorize implementing or publishing the site. The [master roadmap](docs/PORTFOLIO_MASTER_ROADMAP.md) defines delivery work; the [design system](docs/DESIGN_SYSTEM.md) defines visual rules; [project history](docs/PROJECT_HISTORY.md) records state and evidence.
+
+## Latest user direction — 2026-09-16
+
+**P1.3 DONE — bounded visual sample visually approved.** The user explicitly requests completion of revision 03's sample checkpoint. Approved direction: pastel baby-pink pixel art, pixel-style typography, cozy village atmosphere, chibi Aditi and fluffy cream bunny, and Workshop shelf/album presentation. Aditi must have **a sort of long diamond-shaped face, middle-parted hair, and cat-eye frame glasses**. These override older face/frame descriptions. Exact fonts/licenses, color tokens, pixel geometry, production poses/layers, responsive layouts and animation details remain provisional. This completes a bounded sample, not production artwork or implementation. See [approval record](docs/VISUAL_SAMPLE_REVIEW.md). P1.4 remains NOT STARTED; the user explicitly prohibits starting it in this update.
+
+Subsequent feedback on revision 03: “yes i like the style now”. The visual style is approved. This settles the direction, while exact fonts, production assets and animation details remain implementation/refinement work; it does not expand the sample-only scope.
+
+The user requests a pastel pink pixel-art treatment and pixel typography like the first supplied screenshot, with a cute chibi human character and gentle game-like animation informed by the second screenshot and the exploration idea of Lily Oglesby's portfolio. A complete game is not required. This explicitly supersedes the older rejection of pixel-first/8-bit styling and the smooth-vector interpretation of chunky art wherever those appear below. It does not replace Aditi's character identity, bunny, content or destination structure, and does not make keyboard movement a requirement.
+
+The user chose **revise the design sample first**. Revision 03 is an approved bounded static concept; no app implementation or publication is part of this round. Production pixel refinements, font family, palette values and animation implementation remain provisional/unimplemented. See [visual review](docs/VISUAL_SAMPLE_REVIEW.md).
 
 ## Decision provenance and interpretation
 
@@ -101,6 +111,8 @@ The world is a compact, cozy village representing where Aditi builds, learns, re
 Perspective is gently elevated illustrated 2D: visible building fronts and expressive characters, without strict isometric geometry. Pink, cream, plants, cottages, paths, and warm wood establish the atmosphere. Exact coordinates and the plaza's decorative centerpiece are TBD; a fountain was only an example, not a requirement.
 
 ## 9. Mascot and Human Host
+
+P1.3 approval (2026-09-16): fluffy cream bunny, pastel baby-pink direction and paler warm skin are intended. Aditi has a sort of long diamond-shaped face, middle-parted brunette layers and cat-eye frame glasses. The earlier cat-eye/rectangular compromise is superseded. The bounded sample is visually approved and P1.3 complete; precise pixel geometry and final color tokens remain production refinements.
 
 ### Confirmed human-avatar identity
 
@@ -489,7 +501,7 @@ Settled identity/world decisions are closed. No unanswered question prevents the
 | --- | --- | --- |
 | Q-01 | Confirm links-only Mailbox or explicitly request a form | Resolve before Contact implementation; proposed default is public email/copy/social links |
 | Q-02 | Local prototype resolved by P1.1: React/Vite/TypeScript, HTML/CSS with layered images, React Router and typed static content; see [technical approach](docs/TECHNICAL_APPROACH.md). Eventual hosting remains open | Local architecture documented 2026-09-14; host and clean-route fallback configuration remain P5.3; no game engine |
-| Q-03 | Production workflow resolved in [ART_WORKFLOW.md](docs/ART_WORKFLOW.md): human-directed hybrid, Krita/Inkscape masters and reviewed web exports. Avatar/bunny sample, fonts and exact color tokens remain open | P1.2 planning complete; P1.3 visual review required before bulk art. No artwork created or visual details newly approved |
+| Q-03 | Production workflow resolved; [revision 03 bounded sample](docs/VISUAL_SAMPLE_REVIEW.md) explicitly approved. Pink pixel art, long diamond-shaped face, middle-parted hair, cat-eye frames and fluffy cream bunny are intended; fonts, tokens and production geometry remain provisional | P1.2 and P1.3 DONE. Bounded visual approval is satisfied; full production artwork and implementation are not complete |
 | Q-04 | Provide missing biography, dates, resume, public contact, skills and milestones | Staged content intake; required publication content is a launch gate |
 | Q-05 | Clarify MarketMind's current local-demo interface/version; provide project media and final case-study evidence | Resolve before final project copy/media approval |
 | Q-06 | Resolve Pathwise public-demo access/model issue and verify TrafficIQ workflow | Pre-launch presentation gate: repair separately or clearly provide non-live evidence and accurate status |

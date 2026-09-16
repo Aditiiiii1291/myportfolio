@@ -2,6 +2,12 @@
 
 Status: P1.2 complete — planning/documentation validated; evidence recorded in project history. No artwork produced. Date: 2026-09-14.
 
+## 2026-09-16 update — pixel-art sample
+
+**P1.3 DONE — bounded revision 03 sample visually approved by explicit user instruction.** Intended avatar requirements include a sort of long diamond-shaped face, middle-parted hair and cat-eye frame glasses. Preserve pastel pink pixel art, pixel lettering, established outfit and fluffy cream bunny. Exact production pixel geometry, fonts/licenses, tokens, layers/poses/frames, responsive exports and motion staging remain provisional. This completes the bounded review checkpoint, not full production artwork. The planning-era P1.3 handoff below is historical; the exact current next task is **P1.4 — Prepare one real chapter**, NOT STARTED and not authorized to begin in this update.
+
+Latest user feedback replaces the smooth-vector visual target with pastel pink pixel art. Revision 03 uses the built-in image generation tool for one bounded raster concept. The prompt and provenance are retained in [revision 03 notes](../assets/sources/reviews/p1-3-direction-v03-pixel.md). This is not a layered production master or a sprite/animation sheet. Preserve revisions 01 and 02 as historical samples; do not merely rasterize their smooth outlines and call the result pixel art. Later production should establish a consistent pixel grid, separate reusable layers and animation frames, and use crisp integer scaling where appropriate. No production frames or new font files were created in this revision.
+
 ## 1. Purpose
 
 Define how original art will be created, revised, approved and prepared for the web. Follow the [PRD](../PRD.md), [design system](DESIGN_SYSTEM.md), [technical approach](TECHNICAL_APPROACH.md), [roadmap](PORTFOLIO_MASTER_ROADMAP.md) and [history](PROJECT_HISTORY.md). P1.2 resolves the production-method part of Q-03; visual approval remains P1.3. All asset paths and filenames below are proposals, not existing files.
@@ -159,11 +165,11 @@ No bulk art on assumed approval. Aditi's sample approval is the existing roadmap
 
 ## 16. Deferred decisions and exclusions
 
-Still open: exact face/proportions, bunny color/markings/name/accessories, final fonts/licenses and colors, light direction, precise composition/crops/export sizes, delivery staging/frame needs and optional decorative motion. Tool installation/availability and actual generator provider are not verified by a planning decision.
+Still open: exact pixel proportions within the approved long diamond-shaped face, middle part and cat-eye frame direction; bunny markings/name/accessories; final fonts/licenses and color tokens; light direction; precise composition/crops/export sizes; delivery staging/frame needs and optional decorative motion. Cream bunny fur is approved. The built-in image generation tool produced revision 03; production editor availability is not established by that fact.
 
 Do not produce all five locations, a complete village map, full Welcome artwork, multiple character-pose libraries, detailed UI/icon sets, animation frames or polished Cottage interiors before the bounded direction is approved. No app integration, packages, React scaffolding or UI implementation belongs to P1.2/P1.3.
 
-## 17. Handoff to P1.3 and validation
+## 17. Historical P1.2 handoff to P1.3 and validation
 
 Exact next task: **P1.3 — Create bounded visual sample.** Expected scope: one Aditi-with-bunny sample at Welcome scale plus a simplified village-scale read check, one Workshop/shelf sample, an album surface, one control and typography sample, and desktop/mobile composition thumbnails. These are style-review artifacts, not a finished Welcome scene, complete village or coded prototype. Include still clarity and enough staging notes to assess later bunny delivery; no full animation sequence is needed.
 
