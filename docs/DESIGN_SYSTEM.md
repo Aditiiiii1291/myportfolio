@@ -175,11 +175,11 @@ Focus state must be visible on paper and scenery. Candidate focus ring: 3 px coc
 | Surface | Distinctive treatment | Shared rules |
 | --- | --- | --- |
 | Workshop album | Shelves, Things I've Built cover, paper/bookmark accents | Readable HTML, direct chapter actions, no required page flips |
-| Project chapter | Expanded document, screenshot figures | Comfortable measure, clear links and return |
+| Project chapter | Concise album chapter, primary live/source links, optional single static preview | Comfortable measure, clear links and return |
 | Cottage journal | Personal desk/room context | Main biography immediately visible |
 | Skill packet | Simple illustrated packet with category/name | Names readable before tapping |
 | Adventure Board notice | Pin, category grouping, date | Orderly cards, no overlapping important text |
-| Mailbox letter | Envelope/paper framing | Explicit contact actions; mechanism still Q-01 |
+| Mailbox letter | Envelope/paper framing | P1.6 links-only actions; readable immediately with or without animation; public values require approval |
 
 A different metaphor does not justify different close buttons, keyboard behavior or arbitrary text sizes. Clear labels outweigh ornate decorative treatments.
 

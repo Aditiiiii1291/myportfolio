@@ -127,7 +127,7 @@ For any chosen entry, stage type/title, organization, date(s), role, short contr
 | GitHub profile | AVAILABLE — NEEDS REVIEW | Project-owner namespace is known; confirm desired profile destination/public Mailbox use rather than infer approval from project links |
 | Resume action | MISSING | See Resume above |
 | Other social links, phone, address | NOT REQUIRED FOR V1 | Do not add private contact data or unrequested accounts |
-| Contact method / Q-01 | DEFERRED | **P1.6 — Resolve Mailbox method**; links-only remains proposed, not selected by P1.5 |
+| Contact method / Q-01 | APPROVED | P1.6 selected links-only on 2026-09-17 under the authorized decision task; method only, not approval of public values. Email/visible address/copy, approved GitHub and optional LinkedIn; no form V1 |
 
 ### Supplied project links
 
@@ -153,7 +153,7 @@ P1.5 staging acceptance is complete: all V1 content categories have status, prov
 
 Map approved material simply to the existing profile, skill, milestone, project and contact records in PRD §32. Reuse Pathwise's mapping and keep evidence notes separate from visible copy. No CMS, JSON pipeline or application files are necessary now. The standing simple/readable-code rule remains in history for future implementation.
 
-Exact next roadmap task: **P1.6 — Resolve Mailbox method** (NOT STARTED; Q-01). This task records contact gaps only. It does not choose the method, implement anything or authorize the next task.
+Subsequent P1.6 resolution (2026-09-17): links-only selected; see PRD §21. Public email/profile/resume statuses above remain unchanged. Resume duplication in Mailbox is optional; existing shared resume access remains required. Exact next roadmap task: **P1.7 — Select test baseline**, NOT STARTED. No implementation authorized by this handoff.
 
 ## ADITI NEEDS TO PROVIDE / CONFIRM
 
@@ -162,4 +162,4 @@ Exact next roadmap task: **P1.6 — Resolve Mailbox method** (NOT STARTED; Q-01)
 - [ ] **Skills:** select/correct the small candidate list above to skills you can comfortably discuss; no proficiency scores needed.
 - [ ] **Project review:** review Pathwise's prepared chapter wording; identify MarketMind's local demo interface/version and working flow. For TrafficIQ/MarketMind, provide a short meaningful decision/challenge/lesson if you want your personal reflection included; no ownership breakdown or screenshots needed.
 - [ ] **Board entries, if any:** supply selected work/events/awards/certificates or project milestones with title, organization, date(s), role and accurate outcome; optional public evidence link. Say “none for V1” if these optional entries do not apply.
-- [ ] **Public contact links:** supply/approve the email and GitHub profile destination you want shown, plus LinkedIn only if desired. Contact-method selection stays in P1.6; do not send passwords or admin credentials.
+- [ ] **Public contact links:** supply/approve the email and GitHub profile destination you want shown, plus LinkedIn only if desired. P1.6 has selected links-only; actual values still need approval. Do not send passwords or admin credentials.

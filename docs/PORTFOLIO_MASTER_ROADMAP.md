@@ -3,7 +3,7 @@
 Status: Delivery plan defined; implementation not started.  
 Updated: 2026-09-17. No fixed launch date or assumed weekly availability.
 
-Latest checkpoint: **P1.5 DONE — Stage content intake**, 2026-09-17. [Content intake](CONTENT_INTAKE.md) records approved facts, material needing review, missing inputs and publication boundaries. Staging is complete; actual publication content remains outstanding. Exact next task: **P1.6 — Resolve Mailbox method**, NOT STARTED. No implementation or Git operations.
+Latest checkpoint: **P1.6 DONE — Resolve Mailbox method**, 2026-09-17. Links-only selected; Q-01 resolved in PRD §21. Public contact values remain pending approval. Exact next task: **P1.7 — Select test baseline**, NOT STARTED. No implementation or Git operations.
 
 ## Purpose and authority
 
@@ -23,7 +23,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0 and P1.1–P1.5 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only; no full production artwork, portfolio app or deployment is complete. No later task was started in this session.
+Phase 0 and P1.1–P1.6 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only; no full production artwork, portfolio app or deployment is complete. No later task was started in this session.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -58,7 +58,7 @@ Purpose: Resolve the few execution choices and gather enough real content/art to
 | P1.3 Create bounded visual sample | DONE — VISUALLY APPROVED | P1.2 | [Revision 03 approval](VISUAL_SAMPLE_REVIEW.md), 2026-09-16: bounded pastel pink pixel-art concept, Aditi/bunny, village-scale treatment, Workshop shelf/album and UI direction accepted; long diamond-shaped face, middle-parted hair and cat-eye frames explicitly intended. Raster concept, not final production assets; production/refinement and runtime checks remain later work |
 | P1.4 Prepare one real chapter | DONE | P0 | [Pathwise chapter](projects/PATHWISE_CHAPTER.md): pinned source/claim classification, concise ten-topic copy, end-to-end role, temporal/rule/ML/fusion distinctions, architecture, primary live/source links, dated demo checks and honest limits, static-field mapping. Preview absent and optional; no gallery, code, packages or credentials |
 | P1.5 Stage content intake | DONE | PRD §31 | [Content intake](CONTENT_INTAKE.md): all V1 categories staged with approval/missing status, evidence, privacy boundaries and grouped input checklist. Resume/contact and other publication content remain outstanding; optional media stays optional |
-| P1.6 Resolve Mailbox method | NOT STARTED | Q-01 | Confirm proposed public email/copy/social links before Contact implementation. A requested form requires documented scope/dependency changes |
+| P1.6 Resolve Mailbox method | DONE | Q-01 | Links-only selected; comparison and privacy/accessibility/mobile/direct-route behavior in PRD §21. Public email/profile values still require approval. No form/service or implementation |
 | P1.7 Select test baseline | NOT STARTED | P1.1 | Record tool/browser versions, viewport matrix, measured lab profile and accessible test approach. Preserve PRD budgets or document justified adjustment |
 
 Exit: Prototype architecture and art workflow recorded, visual sample accepted, and one honest project record with live-project/source links available; optional preview media is not an exit requirement. Missing optional biography/milestones must not delay P2. Exact font and shade acceptance follows the sample, not silent assumptions.
@@ -87,7 +87,11 @@ Validation: primary-source claim ledger, concise recruiter scan, content-field m
 
 [CONTENT_INTAKE.md](CONTENT_INTAKE.md) stages About, education, candidate skills, resume, all three projects, milestones/experience, contact and links. Confirmed facts are separate from draft copy; no resume or approved public email was found. Pathwise is linked without duplicating its chapter. Missing optional material may be omitted; existing publication gates remain. No final skill list, biography, contact method or new milestone was inferred.
 
-**Exact next roadmap task: P1.6 — Resolve Mailbox method.** Status: NOT STARTED; dependency Q-01. Confirm proposed public email/copy/social links before Contact implementation. A requested form requires documented scope/dependency changes. Do not start it in the P1.5 session.
+### Completed preparation: P1.6 — Resolve Mailbox method
+
+Selected links-only contact: approved email/visible address/copy, approved GitHub and optional LinkedIn. Village Mailbox, Menu Contact and direct `/contact` share one accessible letter surface. Copy/manual fallback handles mail-app friction; animation never gates controls. Compared form handling, maintenance, privacy, spam and accessibility; a form is NOT REQUIRED FOR V1 and would require new scope approval. No public address invented, no service chosen and no implementation performed. See PRD §21 and the technical approach; content approval remains in intake.
+
+**Exact next roadmap task: P1.7 — Select test baseline.** NOT STARTED; dependency P1.1. Record tool/browser versions, viewport matrix, measured lab profile and accessible test approach. Preserve PRD budgets or document justified adjustment. Do not start it in P1.6.
 
 ## Phase 2 — First playable prototype
 
@@ -117,7 +121,7 @@ Exit: Both exploration and direct entry reach the same real chapter; direct URL 
 | P3.3 Build Cottage | NOT STARTED | P2 exit + About/resume content | One room/journal experience with painting/crafts/tennis/candles; visible resume/GitHub; optional object notes secondary |
 | P3.4 Build Skills Garden | NOT STARTED | P2 exit + confirmed skills | Seed packets, visible technology names, relevant categories, optional project evidence; no proficiency ratings |
 | P3.5 Build Adventure Board | NOT STARTED | P2 exit + approved records | Grouped notices with dates, roles, outcomes; empty categories omitted |
-| P3.6 Build Mailbox | NOT STARTED | P2 exit, P1.6 + approved public links | Readable letter and actual contact actions; proposed copy feedback if links-only confirmed |
+| P3.6 Build Mailbox | NOT STARTED | P2 exit, P1.6 + approved public links | Readable links-only letter with approved values, email/copy feedback and profiles; accessible direct/mobile access per P1.6 |
 | P3.7 Complete shared navigation/content | NOT STARTED | P3.1–P3.6 | All Menu/world destinations work, resume available, route refresh/invalid routes/return states correct |
 | P3.8 Verify complete content journeys | NOT STARTED | P3.7 | V-01–V-05 and V-10/V-12 checked with real content; publication gaps recorded |
 

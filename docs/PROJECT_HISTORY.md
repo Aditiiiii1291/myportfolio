@@ -1,21 +1,29 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-17. Stage: P1.5 DONE — content intake staged; publication inputs remain outstanding. No portfolio application implementation started.
+Last updated: 2026-09-17. Stage: P1.6 DONE — links-only Mailbox selected; public contact values pending. No implementation started.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Phase 0 and P1.1–P1.5 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
+- Phase 0 and P1.1–P1.6 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
 - Live frontend/assets and backend health were reachable on 2026-09-16 (health succeeded after an initial timeout). Protected assessment requires authentication and was not reverified. Prior missing-model error remains historical, not a fresh failure or confirmed fix. No suitable existing optional preview found; no screenshot gate.
 - Current public-source implementation differs from the local Desktop/Pathwise foundation. The chapter uses the pinned public implementation and makes no local-execution claim. Full evidence boundaries are in the chapter.
 - Approved art reference: [revision 03](../assets/sources/reviews/exports/p1-3-direction-v03-pixel.png). Preserve pastel pink pixel art, Aditi's sort of long diamond-shaped face, middle-parted hair, cat-eye frame glasses, cream fluffy bunny and all established P1.1–P1.3 decisions.
 - No full production artwork, portfolio application, packages or deployment exists. No Git commands were performed in P1.4.
 - [Content intake](CONTENT_INTAKE.md) is the current approval/missing-item tracker. Resume, approved public contact, final biography/skills/education and remaining project content are outstanding; staging completion is not publication approval.
-- Exact next task: **P1.6 — Resolve Mailbox method** (NOT STARTED). No later task was started; no implementation, installs or Git operations in P1.5.
+- P1.6 selected links-only Mailbox; Q-01 resolved, actual public email/profile values remain unapproved. See PRD §21 for comparison and behavior.
+- Exact next task: **P1.7 — Select test baseline**, NOT STARTED. No implementation, installs or Git operations in P1.6.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P1.6 — Resolve Mailbox method, 2026-09-17 — DONE
+
+- Selected links-only under the user-authorized decision task. Compared form fields/handling, delivery/error states, maintenance, privacy, spam/validation/abuse and accessibility against the static architecture. Form is NOT REQUIRED FOR V1; no vendor, account, endpoint or infrastructure selected.
+- Email Aditi, visible/selectable public email and Copy Email are the core contact actions; GitHub when approved, LinkedIn optional. Resume uses the existing shared approved file; Mailbox duplication optional. Values remain pending approval, with no private data exposed.
+- Village Mailbox, Menu Contact and direct `/contact` share a readable letter. Semantic controls, visible focus, keyboard access, copy outcome announcements/manual fallback and reduced-motion still state are specified. Same actions reflow on mobile. No waiting for art/animation or mini-game.
+- Updated PRD, technical approach, design-system Mailbox row, content intake, roadmap and history. Standing simple/readable-code rule unchanged. No app code, packages, services, art, Git operations, commit or push. P1.7 not started.
 
 ### P1.5 — Stage content intake, 2026-09-17 — DONE
 
@@ -142,7 +150,7 @@ Use the simplest correct solution that meets the documented requirement. Code mu
 
 ### Proposed baselines and unresolved choices
 
-- Links-only Mailbox is recommended but unconfirmed (Q-01); no form is authorized by this documentation.
+- P1.6 resolves Q-01: links-only Mailbox selected. Public values still require approval; form is not required for V1.
 - Fonts, exact hex acceptance, avatar facial details and bunny markings/name/accessories remain TBD. Candidate token values have not been accepted as final artwork.
 - Q-02 local stack/rendering is resolved in [TECHNICAL_APPROACH.md](TECHNICAL_APPROACH.md); hosting remains P5.3. Q-03 production method is documented in ART_WORKFLOW.md; visual sample/fonts/colors remain P1.3. Numerical spacing/timing/performance/test criteria remain baselines pending validation.
 - First-delivery behavior is operationalized as once per browsing session; repeated visits keep the album open, and reduced motion bypasses the sequence. Record any refinement of session semantics.
@@ -158,15 +166,15 @@ Use the simplest correct solution that meets the documented requirement. Code mu
 6. Human Aditi plus pet bunny supersedes an animal-only protagonist or always-held pet in every scene.
 7. Demo existence and full runtime verification are distinct: MarketMind is local; Pathwise has a demonstrated error; TrafficIQ functionality was not verified.
 8. Optional butterflies, candles and extra poses are not expanded into mandatory large animation inventories. More complex bug antics remain future polish.
-9. The chosen palette direction does not finalize every suggested hex; the proposed contact method does not become a silently accepted requirement.
+9. The chosen palette direction does not finalize every suggested hex. Contact was initially proposed only; P1.6 subsequently selected links-only under explicit authorization to decide.
 
 ## CURRENTLY WORKING ON
 
-P1.5 is DONE — inventory, approval boundaries and missing-item tracking complete. Actual content collection remains open in CONTENT_INTAKE.md. No further task or portfolio implementation is in progress.
+P1.6 is DONE — method selected and documented. Actual content approval remains open in CONTENT_INTAKE.md. No further task or implementation is in progress.
 
 ## NEXT TASKS
 
-1. **P1.6 — Resolve Mailbox method.** NOT STARTED; Q-01. Confirm proposed public email/copy/social links before Contact implementation; any requested form needs scope/dependency changes. Do not start it in P1.5.
+1. **P1.7 — Select test baseline.** NOT STARTED; record tool/browser versions, viewport matrix, measured lab profile and accessible test approach while preserving PRD budgets or documenting justified changes. Do not start it in P1.6.
 2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P1.7 and P2 remain unchanged; staging completion is not permission to implement.
 3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
@@ -242,6 +250,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## TESTING STATUS
 
+- P1.6 documentation validation (2026-09-17): one links-only method selected and Q-01 resolved consistently; static architecture, privacy/spam tradeoffs, semantic/keyboard/focus/copy behavior, direct `/contact`, mobile and reduced motion covered. All 71 relative documentation links resolve. File-hash comparison shows exactly six existing documentation files changed, no new/deleted files or application/art/package changes. No private contact values added. Standing code-quality rule preserved; P1.7 remains NOT STARTED. No Git operations or runtime tests; behavior is specified, not implemented.
+
 - P1.5 documentation validation (2026-09-17): all V1 categories/statuses and six grouped input prompts reviewed; approved facts remain distinct from draft copy, optional categories and missing publication material. No invented personal facts or private values staged. Canonical Pathwise chapter unchanged. All 73 relative documentation links resolve. Pre/post file hashes show only new CONTENT_INTAKE.md plus PRD status pointer, roadmap and history changed; no deletions, code, packages, art changes or Git operations. P1.6 remains NOT STARTED. Standing code-quality rule preserved; no runtime tests apply.
 
 - P1.4 completion: reviewed source evidence/claim classifications, chapter scan and static-field mapping; checked relative links, pinned source-file targets and documentation-only changed-file scope. Source test files/model artifact inspected but not executed. Public HTTP checks passed on retry as recorded in the chapter; authenticated UI/inference, local full-stack execution and actual deployed DB/revision remain unverified. No portfolio runtime tests apply because no application exists.
@@ -267,10 +277,10 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## HANDOFF FOR NEXT SESSION
 
-P1.5 is DONE as a staging task. Read [CONTENT_INTAKE.md](CONTENT_INTAKE.md) for current approved facts, review candidates, missing inputs and privacy/publication boundaries. Resume and approved public contact remain outstanding; optional media and optional milestone categories do not block staging. Completing inventory does not approve all public copy.
+P1.6 is DONE: links-only Mailbox selected, Q-01 resolved; implementation remains P3.6. P1.5 remains complete as staging. Read [CONTENT_INTAKE.md](CONTENT_INTAKE.md) for current approved facts, review candidates, missing inputs and privacy/publication boundaries. Resume and approved public contact remain outstanding; optional media and optional milestone categories do not block staging. Completing inventory does not approve all public copy.
 
-Exact next task: **P1.6 — Resolve Mailbox method**, NOT STARTED, Q-01. No next task is authorized by this handoff alone. Keep the standing simple/readable-code rule and P1.1–P1.4 decisions. P1.3 remains visually approved bounded artwork, not production art.
+Exact next task: **P1.7 — Select test baseline**, NOT STARTED. No next task is authorized by this handoff alone. Keep the standing simple/readable-code rule and P1.1–P1.4 decisions. P1.3 remains visually approved bounded artwork, not production art.
 
 [PATHWISE_CHAPTER.md](projects/PATHWISE_CHAPTER.md) remains the canonical chapter/evidence record. Aditi is the end-to-end builder; no team attribution questions. Preserve primary live/source actions, optional single preview, no gallery, dated verification limits and the distinction between source and runtime evidence. Do not expose administrator credentials or treat its differing local folder as the reviewed public version.
 
-P1.5 performed documentation work only: no app, package installation, artwork, Git command, commit or push. Collect real facts progressively without inventing copy or starting later implementation.
+P1.6 performed decision/documentation work only: no app, package installation, artwork, Git command, commit or push. Collect real facts progressively without inventing copy or starting later implementation.

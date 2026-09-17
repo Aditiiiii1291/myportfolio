@@ -7,7 +7,7 @@ This document defines WHAT to build and WHY. It derives from the completed brain
 
 ## Latest user direction — 2026-09-16
 
-**Current status update (2026-09-17):** P1.5 is DONE as content staging. [Content intake](docs/CONTENT_INTAKE.md) tracks approved facts, review candidates, missing inputs and publication boundaries; actual content remains outstanding. P1.4 remains DONE with its canonical [Pathwise chapter](docs/projects/PATHWISE_CHAPTER.md). Exact next task is P1.6 — Resolve Mailbox method, NOT STARTED. No implementation or Git operations; product, P1.1–P1.4, art and architecture decisions are unchanged.
+**Current status update (2026-09-17):** P1.6 is DONE — links-only Mailbox selected; Q-01 resolved in §21. Public contact values remain pending approval in [content intake](docs/CONTENT_INTAKE.md). P1.1–P1.5 decisions remain intact. Exact next task: P1.7 — Select test baseline, NOT STARTED. No implementation or Git operations.
 
 ### P1.4 scope clarification — authoritative
 
@@ -35,7 +35,7 @@ User selections take precedence over earlier suggestions. A requirement marked *
 | Strong preferences | Pink-led warmth; clear cocoa outlines; handmade detail; Workshop prominence; painting/crafts/tennis/candles in the Cottage; gentle bunny grooming and curiosity; professional content and direct navigation above game mechanics. |
 | Optional within V1 | Personal-object notes, candle glow, cloud/flower movement, butterfly encounter, decorative paper texture, extra contextual avatar poses. None is a prerequisite for reading content. |
 | Future/V2 | Optional character movement, click-to-walk/WASD, deer and fluffy cat residents, richer interiors, additional bunny/bug behaviors, small easter eggs, optional sound off by default. |
-| Unresolved | Exact fonts, final hex tokens, bunny markings/accessories/name, visual sample approval, hosting, final contact method, missing personal content, public demo access. Local stack was resolved in P1.1 and art-production workflow in P1.2; see section 39. |
+| Unresolved | Exact fonts, final hex tokens, bunny markings/accessories/name, visual sample approval, hosting, missing personal content, public demo access. Local stack was resolved in P1.1 and art-production workflow in P1.2; see section 39. |
 | Rejected/superseded | Animal-only protagonist; bunny held in every scene; strict top-down/isometric/platform world; river/bridge as the main layout; immediate village or embedded welcome replacing the title screen; pinned project sheets/cards as the main Workshop metaphor; skills hidden behind mystery plants; freeform cluttered notice board; required game movement; tiny scaled-down mobile map; branch/degree-led welcome copy; generic dark/cyberpunk/desktop/8-bit styling; copied reference/game assets. |
 
 ### Resolved interpretation conflicts
@@ -46,7 +46,7 @@ User selections take precedence over earlier suggestions. A requirement marked *
 4. A full book event on every visit was refined to a first-visit delivery and a ready album on return, accepted by the user. Animations must never gate access.
 5. The gentle-animation direction is confirmed; every proposed idle behavior is not a mandatory launch deliverable. Grooming is the initial idle candidate; butterfly and bug scenes remain lower priority.
 6. The user built all three projects solo. Two have hosted URLs; MarketMind is local. Runtime observations qualify demo readiness, not authorship.
-7. Direct email/social links were recommended, but the user selected the palette in that exchange rather than explicitly choosing contact functionality. Links-only is a proposed default, not a settled form requirement.
+7. Direct email/social links were recommended, but the user selected the palette in that exchange rather than explicitly choosing contact functionality. That earlier proposal was subsequently selected in P1.6 (§21); public values remain unapproved.
 
 ## 1. Product Overview
 
@@ -207,7 +207,7 @@ Exact pathname spellings are an implementation detail; stable slugs and direct p
 - **Visual metaphor:** Mailbox opens into a letter, with a brief flag/envelope interaction.
 - **User interactions:** Open contact, choose an explicitly named action, return.
 - **Required UI:** Contact heading, public actions once supplied, useful copy/open feedback, return/menu.
-- **Proposed default/TBD:** Email Aditi, visible email, Copy Email, LinkedIn and GitHub; final contact mechanism awaits confirmation. A form is not an approved V1 requirement.
+- **Selected V1 method (P1.6):** Links-only: Email Aditi, visible email and Copy Email; GitHub when approved, LinkedIn optional. Actual values remain pending. No contact form; see §21.
 - **Optional decoration:** Flowers, envelope details, a small bunny pose. “Say hello” and “Send a Letter” are candidate copy, not fixed final labels.
 - **Mobile:** Letter occupies available reading width; actions have comfortable targets.
 - **Accessibility:** Letter text is HTML; copied state is announced; icons supplement action names; animation is unnecessary to reach links.
@@ -284,9 +284,25 @@ Within categories, use consistent date order. Essential facts are visible on the
 
 ## 21. Contact
 
-The Mailbox opens a readable letter. Contact labels must explain the actual destination: Email, Copy Email, LinkedIn, GitHub. These constitute the proposed links-only V1 default, pending the explicit choice in Q-01.
+**SELECTED FOR V1: links-only contact.** P1.6 resolves Q-01 on 2026-09-17 under Aditi's authorization to choose the method. Actual public values still require her approval; this decision does not approve or publish an address.
 
-Do not build a contact form, inbox, mail delivery service, or visitor account without resolving Q-01 and documenting scope impact. Public contact values are content TBD. Do not use demo credentials or infer a public email from usernames.
+| Consideration | Links-only — selected | Contact form — NOT REQUIRED FOR V1 |
+| --- | --- | --- |
+| Architecture/maintenance | Static approved links and one small copy action; no submission service, backend, database, account or added dependency | Would need a third-party handler or backend solely for contact, delivery configuration and ongoing service/error monitoring |
+| Visitor reliability/friction | Email opens the visitor's configured mail handler; visible/selectable address and Copy Email support webmail or an absent handler. Opening mail is not proof of sending | Can compose on-site without a mail app, but depends on network/service delivery; needs pending, success, failure and retry states without losing the message |
+| Accessibility | Named links, copy button, focus and announced copy feedback; normal mobile reading | Requires labeled name/reply-email/message fields, accessible validation/errors/status, keyboard operation and an accessible anti-abuse approach |
+| Privacy/spam | Approved public address can be scraped; publish only a deliberately chosen address, optionally a dedicated public alias. No message collection by the portfolio | Could keep destination email out of page content but collects visitor messages/contact data; needs clear processing/retention expectations and review of any third-party processor |
+| Abuse/security | No submission endpoint or service credentials; does not eliminate email spam | Client validation alone is insufficient; handler validation, size limits, rate limiting/bot controls and delivery-abuse handling would be needed. Any service secrets stay server-side, never in the static bundle |
+
+The extra form infrastructure is not justified for this compact V1. No service/vendor, account, CAPTCHA, API or database is selected. A later form would require a new explicit scope decision; it is not a promised follow-up feature.
+
+**Experience:** Village → labeled Mailbox link → `/contact`, a readable stationery/letter surface with immediate professional actions. A small opening/flag response may decorate entry, but content never waits for it. No extra envelope-opening step, drag/drop, typing sequence or mini-game. Menu → Contact and a direct `/contact` URL open the same page without Welcome or village exploration. Back to Village and Menu follow existing navigation/focus rules.
+
+**Minimum content/actions:** an approved public email supplies **Email Aditi**, the visible/selectable address and **Copy Email**. Show **GitHub** when its profile destination is approved; **LinkedIn** only if supplied/approved. Resume remains the existing shared approved document action in Welcome/Menu/Cottage; duplicating it here is optional, not a new content requirement. Never infer contact values from usernames, commits or demo credentials. Public email and profile destinations remain in the intake tracker; no phone, home address or private account is requested.
+
+**Accessibility/mobile:** use semantic links for navigation and a button for copying, descriptive labels, visible focus, logical tab order and readable HTML. Announce copy success only after success; on failure retain the selectable address and explain manual copying without claiming it was copied. Email activation never displays a fake “message sent” state. Reduced motion opens a still letter immediately. On the vertical mobile village, the same Mailbox link opens the same single-column contact surface with comfortable targets and wrapping text; no separate mobile contact system. Controls remain available if artwork fails.
+
+Drafts may state that contact details are pending without fake actions. Publication still requires real approved working contact content. Implementation belongs to P3.6; P1.6 creates documentation only.
 
 ## 22. Desktop Experience
 
@@ -381,7 +397,7 @@ Target LCP ≤2.5 s and CLS ≤0.1 in documented representative mobile testing; 
 | Projects | Three solo projects, repositories, two hosted URLs, one local demo | Final descriptions, decisions/challenges, truthful results and updated verification; screenshots optional; Pathwise end-to-end ownership confirmed |
 | Skills | Candidate technologies observed in projects | User-confirmed claims and evidence links |
 | Board | Education category relevant | Exact education and any genuine work/events/certificates |
-| Contact | GitHub supplied | Approved public email/LinkedIn and Q-01 resolution |
+| Contact | P1.6 links-only method selected; project GitHub links supplied | Approved public email and GitHub profile; LinkedIn optional; Q-01 resolved |
 
 Content can arrive in stages and does not block document creation. Clearly marked draft placeholders are permitted during preparation; do not invent values. Missing optional categories are omitted at launch. Resume, working public contact, and sufficient real project content are release gates.
 
@@ -429,7 +445,7 @@ Accessibility, accurate content, basic error states, deep-link hosting behavior,
 - Collectibles, visitor achievements, multiplayer, visitor registration/accounts.
 - Seasonal worlds, elaborate easter eggs, sound/music, or headphone audio controls.
 - Mandatory page-turn gestures, hidden skills, hidden resume/contact, repeated blocking intros.
-- A contact form unless Q-01 changes scope; a CMS/admin panel without an established need.
+- A contact form (P1.6: not required for V1); a CMS/admin panel without an established need.
 - Fixing/redeploying featured applications as part of portfolio implementation.
 
 ## 35. Future / V2
@@ -509,7 +525,7 @@ Settled identity/world decisions are closed. No unanswered question prevents the
 
 | ID | Unresolved item | Timing / effect |
 | --- | --- | --- |
-| Q-01 | Confirm links-only Mailbox or explicitly request a form | Resolve before Contact implementation; proposed default is public email/copy/social links |
+| Q-01 — RESOLVED | P1.6 selected links-only Mailbox, 2026-09-17 | Email/visible address/copy and approved profiles; no form V1. Actual public values remain content approval items; see §21 |
 | Q-02 | Local prototype resolved by P1.1: React/Vite/TypeScript, HTML/CSS with layered images, React Router and typed static content; see [technical approach](docs/TECHNICAL_APPROACH.md). Eventual hosting remains open | Local architecture documented 2026-09-14; host and clean-route fallback configuration remain P5.3; no game engine |
 | Q-03 | Production workflow resolved; [revision 03 bounded sample](docs/VISUAL_SAMPLE_REVIEW.md) explicitly approved. Pink pixel art, long diamond-shaped face, middle-parted hair, cat-eye frames and fluffy cream bunny are intended; fonts, tokens and production geometry remain provisional | P1.2 and P1.3 DONE. Bounded visual approval is satisfied; full production artwork and implementation are not complete |
 | Q-04 | Provide missing biography, dates, resume, public contact, skills and milestones | Staged content intake; required publication content is a launch gate |

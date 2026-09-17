@@ -6,6 +6,10 @@ Subsequent resolution: P1.2 now defines the production workflow, tools, masters 
 
 Authority: [PRD](../PRD.md) defines the product, [design system](DESIGN_SYSTEM.md) preserves visual rules, [roadmap](PORTFOLIO_MASTER_ROADMAP.md) controls sequencing, and [history](PROJECT_HISTORY.md) records progress. This document resolves the local-prototype part of Q-02. Hosting remains P5.3; art production remains P1.2. All paths and commands below describe future work, not existing application files.
 
+## 2026-09-16 visual update
+
+The user now requests pastel pink pixel art and pixel typography; the current task is a revised static sample only. The selected web stack remains unchanged. Later pixel assets need deliberate native dimensions, nearest-neighbor/integer scaling where suitable, separate interactive HTML labels, and reduced-motion still states. This direction does not require a game engine or mandatory character movement. No prototype, runtime animation or font integration has been implemented.
+
 ## 1. Goals and constraints
 
 Prove Welcome → Central Plaza → Workshop → optional bunny delivery → real Pathwise chapter, alongside immediate Projects and direct chapter access. Keep a maintainable professional website beneath the illustrated world. Do not build the five-location V1 during this task.
@@ -57,7 +61,7 @@ Use no Canvas, WebGL, game engine or simulated world coordinates. Local UI state
 | `/about` | Cottage journal | P3 |
 | `/skills` | Garden packets | P3 |
 | `/adventure` | Board; navigation label Experience & Achievements | P3 |
-| `/contact` | Mailbox letter; mechanism still Q-01 | P3 |
+| `/contact` | Shared links-only Mailbox letter; Q-01 resolved in P1.6 | P3 |
 | Unrecognized pathname/slug | Useful not-found view with Projects and Village links | Prototype foundation |
 
 Resume is an approved document link, not a separate invented route. Until supplied, show clear noninteractive draft availability text. Prototype Menu links only implemented destinations; future entries may be visibly marked unavailable without fake links. V1 exposes every entry required by PRD §15.
@@ -72,6 +76,14 @@ Hosting must serve the app entry for valid client routes while serving real asse
 
 ## 5. Shared content/data strategy
 
+### P1.6 resolution — Mailbox, 2026-09-17
+
+Use the existing `/contact` route for both Village Mailbox and notebook Contact, including direct entry/refresh. Follow the existing heading focus, history and Back to Village behavior; no extra modal or envelope state machine. Render approved static contact records as ordinary named links; use a small Copy Email button with announced success/failure and a visible selectable address as fallback. Email opens the visitor's mail handler, not a portfolio submission service. Copy failure must not prevent manual use. No new library, API, backend, database, authentication or email service is needed.
+
+PRD §21 records the links-versus-form comparison and selected links-only method. Forms are not required for V1. Public values remain pending in CONTENT_INTAKE.md. Same content/controls reflow into a mobile letter; keyboard, visible focus and reduced-motion still presentation remain required. Personality is optional opening feedback with immediate contact access. These are future implementation requirements, not implemented behavior.
+
+P1.4 clarification: Pathwise ownership is settled as Aditi's end-to-end developer/builder role, not a pending intake field. Verify capability claims against the project rather than asking her to allocate team work. Keep the chapter to the ten concise topics in PRD §17, with **Open Live Project** and **View GitHub / Source Code** as primary actions. No Project Moments, gallery, carousel or media-navigation component is required. `previewImage` is optional and singular; omit it cleanly without an empty-media state or completion blocker. These are planning contracts only, not implemented components.
+
 Use **TypeScript data modules** for V1: one source per project plus shared profile, skills and milestone records. This permits checked fields, stable IDs and imported media without JSON schemas, Markdown parsing or executable MDX. Long text is paragraph/list data rendered through a shared chapter template, not JSX embedded in records. Content edits require a rebuild; acceptable for three owner-maintained projects.
 
 Conceptual shape only (not a new data file):
@@ -80,7 +92,7 @@ Conceptual shape only (not a new data file):
 Project = id, slug, title, summary, fullDescription,
           problem, solution, contribution, technologies[], features[],
           architecture, decisions[], result, limitations[], lessons[],
-          screenshots[{src, alt, caption, width, height}], githubUrl,
+          previewImage?{src, alt, caption, width?, height?}, githubUrl,
           demo{type: hosted|local|none, url?, walkthroughUrl?, accessNote,
                verificationStatus, verifiedAt?, limitations[]},
           implementationStatus, featuredOrder, evidence[],
@@ -89,7 +101,7 @@ Project = id, slug, title, summary, fullDescription,
 
 Canonical required sections derive from PRD §32 fields; optional chapterSections add material without duplicating the same prose. A small summary index serves the album; detailed records load on chapter demand so later long chapters/media do not join Welcome startup. Both views reference the same IDs and source records. Skills use id/name/category/projectIds/description; profile holds approved biography, interests, education references, goals, resume and public links; milestones retain dates, type, organization, role and evidence as specified in the PRD. Missing required draft values are explicit pending states, never invented strings or fake URLs; release validation rejects unresolved required content.
 
-Pathwise must preserve the prior observation of dashboard/interventions working and a profile failing for a missing model artifact. Label that evidence as a prior review, not current uptime. Its demo requires login; never expose the supplied administrator account. Display access/limitation text near the link and provide approved screenshots independently. TrafficIQ is not runtime-verified; MarketMind is local with interface/version pending. No runtime requests to featured applications, no credentials, and no implication that synthetic records prove real adoption. P1.4 creates the actual Pathwise record and media, not P1.1.
+Pathwise must preserve the prior observation of dashboard/interventions working and a profile failing for a missing model artifact. Label that evidence as a prior review, not current uptime. Its demo requires login; never expose the supplied administrator account. Display access/limitation text near Open Live Project; View GitHub / Source Code remains available. One approved static preview is optional, not required. TrafficIQ is not runtime-verified; MarketMind is local with interface/version pending. No runtime requests to featured applications, no credentials, and no implication that synthetic records prove real adoption. P1.4 prepares the concise Pathwise record and links, with an optional static preview, not a gallery. Confirmed end-to-end authorship requires no team-attribution intake.
 
 ## 6. Asset strategy
 
@@ -113,7 +125,7 @@ Prefer SVG for simple icons/outlines and flat illustrations; WebP for exported c
 
 Import deployable media from source modules so Vite resolves build URLs; reserve public for stable-name approved documents. Vite copies public files unchanged and imported assets participate in its asset pipeline ([asset guide](https://vite.dev/guide/assets)). Vite does not replace an image-resizing/compression workflow; export/optimization tooling is deferred to P1.2.
 
-Use display-sized variants with srcset/sizes and picture for genuine mobile crops. Reserve width/height or aspect ratio; eager-load only essential above-the-fold art and do not lazy-load the likely LCP image. Defer unused interiors, gallery images and extra poses; lazy-load below-the-fold screenshots. Do not preload all locations or bundle large inline images. Alt text describes meaningful project evidence; redundant destination artwork is decorative beside its HTML label. Supply a concise alternative for identity artwork when it contributes information. Failed images retain captions/text links and stable layout.
+Use display-sized variants with srcset/sizes and picture for genuine mobile crops. Reserve width/height or aspect ratio; eager-load only essential above-the-fold art and do not lazy-load the likely LCP image. Defer unused interiors and extra poses; lazy-load the optional static project preview if below the fold. No project gallery or Project Moments section is planned. Do not preload all locations or bundle large inline images. Alt text describes meaningful project evidence; redundant destination artwork is decorative beside its HTML label. Supply a concise alternative for identity artwork when it contributes information. Failed images retain captions/text links and stable layout.
 
 Preserve PRD budgets: compressed first-view transfer ≤1.5 MB, initial JavaScript ≤250 KB, mobile LCP ≤2.5 s and CLS ≤0.1; INP ≤200 ms only when field measurement exists. Measure representative direct entry as well as Welcome to catch heavy chapter startup. These are targets, not P1.1 measured results; the recorded testing setup belongs to P1.7.
 
@@ -163,7 +175,7 @@ All use the same route registry, labels, content records, chapter view, keyboard
 
 ## 12. Technologies intentionally not used
 
-No game engine, Canvas/WebGL, physics/pathfinding, movement system, global state library, portfolio backend/database/authentication, CMS, runtime content API, embedded featured applications, complex animation framework, separate mobile app, audio engine or service worker/offline subsystem. Static content and a few local/session UI values meet current needs. Q-01 must be resolved before any form/service expansion; a full-stack career goal alone does not justify portfolio server infrastructure.
+No game engine, Canvas/WebGL, physics/pathfinding, movement system, global state library, portfolio backend/database/authentication, CMS, runtime content API, embedded featured applications, complex animation framework, separate mobile app, audio engine or service worker/offline subsystem. Static content and a few local/session UI values meet current needs. P1.6 resolved Q-01 as links-only; a form/service would require a new explicit scope decision. A full-stack career goal alone does not justify portfolio server infrastructure.
 
 ## 13. Tradeoffs
 
@@ -175,8 +187,8 @@ Initial metadata can identify Aditi's portfolio, and route titles can change in 
 
 - P1.2: original-art creator/tools, editable formats, export/compression tooling and provenance workflow.
 - P1.3: approved avatar/bunny details, typography, final tokens, sample composition and physical delivery staging.
-- P1.4/P1.5: actual Pathwise record/screenshots, biography/resume/skills/milestones/contact and other project evidence.
-- P1.6: Mailbox contact mechanism (Q-01).
+- P1.4/P1.5: actual Pathwise record/links, optional static preview, biography/resume/skills/milestones/contact and other project evidence.
+- P1.6: DONE — links-only Mailbox (Q-01 resolved); approved public values still pending in content intake.
 - P1.7: exact testing tools/versions, browser availability and lab setup; existing acceptance targets remain.
 - P2: actual components/routes/state implementation, responsive breakpoints validated with sample art and measured bundle sizes.
 - P5.2/P5.3: demo re-verification/public access and host/domain/rewrite configuration. No project repair is authorized here.
