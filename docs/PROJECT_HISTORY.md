@@ -1,6 +1,6 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-17. Stage: P2.1 DONE — minimal local application foundation verified; P2.2 not started.
+Last updated: 2026-09-17. Stage: P2.2 DONE — VISUALLY APPROVED. P2.3 NOT STARTED.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
@@ -15,9 +15,31 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - [Content intake](CONTENT_INTAKE.md) is the current approval/missing-item tracker. Resume, approved public contact, final biography/skills/education and remaining project content are outstanding; staging completion is not publication approval.
 - P1.6 selected links-only Mailbox; Q-01 resolved, actual public email/profile values remain unapproved. See PRD §21 for comparison and behavior.
 - P1.7 baseline is recorded in technical approach §10. No packages installed, tests written, browser automation or measured performance results.
-- Exact next task: **P2.2 — Implement Welcome**, NOT STARTED. P2.1 is complete; no later task or Git operation performed.
+- P2.2 is DONE / visually approved: Aditi approved Welcome artwork revision 02 and the Times New Roman tagline. Source remains flattened; this approval is specific to the identified Welcome revision. Exact next task: P2.3 — Implement small plaza, NOT STARTED.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P2.2 — explicit visual approval and closure, 2026-09-17 — DONE
+
+Aditi explicitly approved the revised pixel-art Welcome illustration: Aditi holding the bunny, the long diamond-shaped face direction, middle-parted hair, cat-eye frame glasses and the more visibly pixelated cozy game-opening treatment. Times New Roman for the Welcome tagline is also approved; the existing pixel heading, label, Menu and action lettering remain unchanged.
+
+Identified artwork: `assets/sources/welcome/welcome-aditi-v02.png`, with the integrated `src/assets/welcome-aditi.webp` export (1254×1254, 161,200 bytes). This approval applies to this specific Welcome revision and tagline treatment; it does not automatically approve future Aditi variations, poses or assets. The source remains flattened and is not a layered animation master. Historical in-review notes in this history and the asset provenance describe the earlier checkpoint; this explicit approval supersedes their pending-approval status for revision 02 only.
+
+P2.2 is now DONE / VISUALLY APPROVED based on the recorded technical validation plus this explicit user approval. Closure changed only roadmap/history. No artwork, layout, application code, routing or dependencies changed; no new build/browser check needed for this documentation-only closure. P2.3 has NOT started. No Git operations, commit or push.
+
+### P2.2 small pixel revision — 2026-09-17
+
+Edited the existing Welcome illustration through built-in image_gen; retained v01 and saved v02 source/provenance. Replaced only the delivery WebP (161,200 bytes). Tagline already uses Times New Roman; CSS, components, layout, actions and routing unchanged. Desktop 1366×768/mobile 360×800 inspected: readable serif wrapping, no overflow, clearer pixel clusters and retained middle part/cat-eye/tapered face direction. Build passed. P2.2 remains awaiting visual approval of v02; no dependencies, Git operations or P2.3 work.
+
+
+### P2.2 — implementation/checkpoint, 2026-09-17 — awaiting visual approval
+
+- Added one Welcome component with exact approved title/tagline, pink plain-CSS layout and local Pixelify Sans display font. Shared responsive markup; no custom hooks/state or packages. Semantic links navigate to `/village` and `/projects` minimal honest unavailable shells because P-01/P-02 require entry navigation now. These are not plaza/Workshop implementations. Unknown-route recovery preserved.
+- Menu is a native details/summary disclosure with available entry links and Resume status, not the later notebook/modal system. Resume is noninteractive “Resume — not available yet.” No fake download, contact values or professional content duplication. No animation; reduced motion has immediate access by default.
+- Generated only one Aditi-holding-bunny still with built-in image_gen, using the approved owned concept as reference. New revision visibly retains middle part, upswept cat-eye frames, tapered chin, outfit/headphones and cream bunny; long diamond-face likeness still needs user review. No approved-likeness claim. Source/provenance: assets/sources/welcome/PROVENANCE.md and welcome-aditi-v01.png. Source is flattened; no body-part layers/animation master claimed. Local draft integration makes the result reviewable, not approved for publication.
+- Exported original 1254×1254 PNG to same-size WebP quality 0.92: 187,526 bytes versus 1,558,488 source bytes. No art repaint/crop. Local Pixelify Sans TTF and SIL OFL retained. No package changes. Read all changed app files for simplicity; only Welcome extracted to keep routes readable. Removed delivery PNG duplicate; raw source retained.
+- Build passed (24 modules; JS gzip estimate 82.93 kB, CSS 1.04 kB). Headless Chrome screenshots inspected at 1366×768, 768×1024 and 360×800; no horizontal overflow, font/image loaded. Tab sequence: skip link, Menu, Enter My World, View Projects. Space opens native Menu; next Tab reaches its first link. Reduced-motion emulation retains actions with zero animations. Direct route shells and fallback return home; no captured console errors/runtime exceptions. Full screen-reader/performance audit not claimed.
+- P2.2 remains AWAITING USER VISUAL APPROVAL under ART_WORKFLOW §§4/12/13: P1.3 approval covers its exact sample, not this new export. No later scene, full notebook, album, mobile village, test tooling, production asset set, Git operation, commit or push.
 
 ### P2.1 — Create minimal app foundation, 2026-09-17 — DONE
 
@@ -189,11 +211,11 @@ Use the simplest correct solution that meets the documented requirement. Code mu
 
 ## CURRENTLY WORKING ON
 
-P2.1 is DONE — minimal foundation verified. No later task is in progress. Content approval remains open in CONTENT_INTAKE.md.
+P2.2 is DONE / visually approved. No implementation task is in progress. Unrelated content intake gaps remain open.
 
 ## NEXT TASKS
 
-1. **P2.2 — Implement Welcome.** NOT STARTED. Exact title/tagline, avatar holding bunny, Enter My World, direct Projects, honest draft Resume treatment and Menu; P-01/P-02. Do not start it in P2.1.
+1. **P2.3 — Implement small plaza** is the exact next roadmap task, NOT STARTED: recognizable central arrival and active Workshop; other prototype destinations visibly incomplete rather than fake links. Do not begin it in this closure task.
 2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P2.1 is complete; later scene work requires its own authorization.
 3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
@@ -269,6 +291,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## TESTING STATUS
 
+- P2.2 technical checks: strict TypeScript/production build passed; desktop/tablet/mobile browser screenshots visually inspected; no overflow or missing font/image; keyboard Menu and primary links, route shells/fallback recovery and reduced-motion access checked. No captured runtime/console errors. At that technical-check checkpoint, visual approval was outstanding; revision 02 is now explicitly approved in the closure entry above.
+
 - P2.1: dev/build/preview and headless Chrome render/CSS/fallback/home recovery passed; zero captured browser console errors/runtime exceptions. Strict TypeScript build passed. npm install audit reported zero vulnerabilities. No test packages/suite, Lighthouse, full accessibility/responsive or external-demo verification. Prior planning-only entries below remain historical.
 
 - P1.7 planning validation (2026-09-17): selected tools have distinct roles; critical journeys, manual accessibility, responsive/browser coverage, version-recording policy, future commands and unmeasured lab profile documented. Existing PRD budgets/full viewport matrix and standing code-quality rule preserved. All 71 relative documentation links resolve. File hashes show only five existing documents changed (technical approach, roadmap, history, PRD status, intake handoff); no new/deleted files, packages, tests, code or artwork. No browser automation or Git operations. P2.1 remains NOT STARTED. This is documentation validation, not a runtime test pass.
@@ -300,8 +324,6 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## HANDOFF FOR NEXT SESSION
 
-P2.1 is DONE. README contains actual run/build commands. The app is only a semantic temporary heading, route fallback and minimal global CSS, plus staged shared Pathwise metadata. No Welcome scene or future named route is implemented. Planning/art/source records remain preserved.
+P2.2 is DONE / VISUALLY APPROVED. Aditi approved the identified revision 02 Welcome artwork, including its long diamond-shaped face direction, middle part, cat-eye glasses, holding-bunny pose and pixelated cozy treatment, plus Times New Roman tagline. This closure supersedes historical pending-approval notes for revision 02; future variations need their own review. Source PNG remains flattened, not a layered animation master. No artwork/layout/code changes or Git operations.
 
-Exact next task: **P2.2 — Implement Welcome**, NOT STARTED. Follow the approved direction and standing simple/readable-code rule; do not treat the bounded sample as production artwork. Content intake gaps and Pathwise runtime caveats remain unchanged. Test tools selected in P1.7 are not installed; add only when the relevant authorized task needs them.
-
-Local dev and production preview were verified; full accessibility, responsiveness, performance and deployment are later checks. No Git operations, commit or push. No later task started.
+Enter My World and View Projects reach only honest unavailable route shells; no P2.3/P2.5 scene work. Menu is a native disclosure, not P2.4 notebook implementation. Resume remains unavailable. Exact next task: **P2.3 — Implement small plaza**, NOT STARTED. Preserve the standing simplicity rule and approved visual direction.

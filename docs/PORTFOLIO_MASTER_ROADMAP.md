@@ -3,7 +3,7 @@
 Status: P2.1 minimal foundation implemented; scene implementation not started.  
 Updated: 2026-09-17. No fixed launch date or assumed weekly availability.
 
-Latest checkpoint: **P2.1 DONE — Create minimal app foundation**, 2026-09-17. React/Vite/TypeScript, minimal semantic shell, shared Pathwise metadata and route fallback verified locally. Exact next task: **P2.2 — Implement Welcome**, NOT STARTED. No production artwork or Git operations.
+Latest checkpoint: **P2.2 DONE — VISUALLY APPROVED**, 2026-09-17. Aditi explicitly approved Welcome illustration revision 02 and Times New Roman tagline treatment. Approval is specific to this Welcome revision, not future Aditi variations. Exact next task: **P2.3 — Implement small plaza**, NOT STARTED. Documentation only; no artwork/layout or Git changes.
 
 ## Purpose and authority
 
@@ -95,7 +95,7 @@ Selected links-only contact: approved email/visible address/copy, approved GitHu
 
 Baseline in [technical approach §10](TECHNICAL_APPROACH.md): Vitest with React Testing Library/user-event/jsdom, small Playwright journeys and integrated axe scans, manual accessibility/art/responsive checks and Lighthouse/transfer inspection. No overlapping Jest/Cypress suite, visual service, CI or hooks. Existing PRD viewport/metric budgets remain unchanged. Read-only browser file versions recorded; no browser launched. Latest user instruction restricts P1.7 to planning, so the former “measured lab profile” acceptance is clarified as a repeatable unmeasured protocol, with actual versions/results recorded at authorized setup and validation. This is an explicit scope clarification, not a test pass.
 
-P2.1 subsequently completed the minimal foundation. **Exact next roadmap task: P2.2 — Implement Welcome**, NOT STARTED. No scene work is authorized by this handoff alone.
+P2.1 completed the minimal foundation. P2.2 is now DONE / visually approved. **P2.3 — Implement small plaza** is the exact next task; NOT STARTED.
 
 ## Phase 2 — First playable prototype
 
@@ -104,7 +104,7 @@ Purpose: Prove the signature experience with real content before producing all f
 | Task | Status | Dependency | Deliverable / acceptance |
 | --- | --- | --- | --- |
 | P2.1 Create minimal app foundation | DONE | P1.1, P1.7 | React/Vite/strict TypeScript; plain semantic root, minimal CSS, typed Pathwise metadata, BrowserRouter unknown-route fallback. Dev/build/preview and headless Chrome rendering/console checks passed. No scenes, production art or testing packages |
-| P2.2 Implement Welcome | NOT STARTED | P2.1, P1.3 | Exact title/tagline, avatar holding bunny, Enter My World, direct Projects, honest draft Resume treatment and Menu; P-01/P-02 |
+| P2.2 Implement Welcome | DONE — VISUALLY APPROVED | P2.1, P1.3 | Aditi approved Welcome revision 02: more visibly pixelated cozy game-opening illustration, Aditi holding bunny, long diamond-shaped face direction, middle-parted hair, cat-eye frame glasses, and Times New Roman tagline. Existing technical checks passed; entry shells/Resume/native Menu remain as implemented. Approval does not extend to future variations or layered animation assets; full P-02 journey depends on later scenes |
 | P2.3 Implement small plaza | NOT STARTED | P2.1, P1.3 | Recognizable central arrival and active Workshop; other prototype destinations visibly incomplete rather than fake links |
 | P2.4 Implement notebook navigation | NOT STARTED | P2.1 | Semantic controls, correct implemented destinations, focus/close/return behavior; P-05 |
 | P2.5 Implement shelf/album interaction | NOT STARTED | P2.3, P1.3 | Bunny delivery, skip/immediate access, first-session/revisit behavior, single-column mobile album; P-04 |
