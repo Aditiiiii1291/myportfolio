@@ -1,6 +1,6 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-17. Stage: P1.7 DONE — test baseline selected, planning only. No implementation or test execution.
+Last updated: 2026-09-17. Stage: P2.1 DONE — minimal local application foundation verified; P2.2 not started.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
@@ -11,13 +11,23 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - Live frontend/assets and backend health were reachable on 2026-09-16 (health succeeded after an initial timeout). Protected assessment requires authentication and was not reverified. Prior missing-model error remains historical, not a fresh failure or confirmed fix. No suitable existing optional preview found; no screenshot gate.
 - Current public-source implementation differs from the local Desktop/Pathwise foundation. The chapter uses the pinned public implementation and makes no local-execution claim. Full evidence boundaries are in the chapter.
 - Approved art reference: [revision 03](../assets/sources/reviews/exports/p1-3-direction-v03-pixel.png). Preserve pastel pink pixel art, Aditi's sort of long diamond-shaped face, middle-parted hair, cat-eye frame glasses, cream fluffy bunny and all established P1.1–P1.3 decisions.
-- No full production artwork, portfolio application, packages or deployment exists. No Git commands were performed in P1.4.
+- P2.1 now provides a minimal React/Vite/TypeScript app; no production artwork, complete scenes or deployment. Earlier no-application statements below are historical.
 - [Content intake](CONTENT_INTAKE.md) is the current approval/missing-item tracker. Resume, approved public contact, final biography/skills/education and remaining project content are outstanding; staging completion is not publication approval.
 - P1.6 selected links-only Mailbox; Q-01 resolved, actual public email/profile values remain unapproved. See PRD §21 for comparison and behavior.
 - P1.7 baseline is recorded in technical approach §10. No packages installed, tests written, browser automation or measured performance results.
-- Exact next task: **P2.1 — Create minimal app foundation**, NOT STARTED. No implementation or Git operations in P1.7.
+- Exact next task: **P2.2 — Implement Welcome**, NOT STARTED. P2.1 is complete; no later task or Git operation performed.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P2.1 — Create minimal app foundation, 2026-09-17 — DONE
+
+- Inspected the documentation/art-only workspace and existing ignore rules. Created a minimal manual Vite React/TypeScript scaffold, preserving docs and assets/sources. No default logos, counter or starter tutorial were generated. Explicit local stack/scope takes precedence over Sites scaffold/hosting guidance; no Sites setup, UI framework, social card or deployment.
+- Runtime: Node 22.14.0, npm 10.9.2. Exact dependencies: react/react-dom 19.3.0, react-router 7.18.4; dev dependencies: vite 8.3.0, @vitejs/plugin-react 6.1.1, typescript 7.0.2, @types/react/@types/react-dom 19.3.0. Lockfile recorded. Install audit reported zero vulnerabilities at installation time; no test/animation/UI/state packages.
+- P2.1 explicitly includes route fallback/shared content: BrowserRouter supports only temporary `/` heading and catch-all with home recovery; no future named scenes/routes. One inferred readonly Pathwise metadata record preserves ownership/source/demo caveats for later use. It is intentionally not rendered/imported until later chapter/album work; no speculative interfaces or chapter UI.
+- Plain minimal CSS and semantic main/heading/link; strict TypeScript and unused-code checks. Re-read every authored application/config file; no empty architecture, custom helpers, state, duplicate wrappers or starter code. Root neutral styling is temporary, not replacement of approved visual direction.
+- Verified dev at 127.0.0.1:5173, production build, preview at 127.0.0.1:4173. Headless Chrome verified heading/main/CSS on dev and preview, direct `/missing` fallback and home-link recovery; zero captured console errors/runtime exceptions. Browser tool initialization failed, so used isolated headless Chrome/CDP without installing testing packages; isolated Chrome closed afterward.
+- Initial sandbox Node path lookup failed with EPERM; authorized outside-sandbox runs passed. Used npm.cmd for reliable Windows flag forwarding. Build: 22 modules, initial JS gzip estimate 82.32 kB, CSS 0.17 kB; not a full performance/Lighthouse pass. No TypeScript/build warnings. README now contains real setup commands; generated output/local files ignored, artwork exclusions preserved.
+- No P2.2+ scenes, notebook, animation, production art, project rendering, test suite, CI, backend, Git operation, commit or push.
 
 ### P1.7 — Select test baseline, 2026-09-17 — DONE
 
@@ -179,12 +189,12 @@ Use the simplest correct solution that meets the documented requirement. Code mu
 
 ## CURRENTLY WORKING ON
 
-P1.7 is DONE — baseline selected and documented, not executed. Actual content approval remains open in CONTENT_INTAKE.md. No further task or implementation is in progress.
+P2.1 is DONE — minimal foundation verified. No later task is in progress. Content approval remains open in CONTENT_INTAKE.md.
 
 ## NEXT TASKS
 
-1. **P2.1 — Create minimal app foundation.** NOT STARTED; P1.1/P1.7 dependencies satisfied. Chosen local runtime/build, semantic page shell, shared project content and route fallback; no unnecessary service layer. Do not start it in P1.7.
-2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P2 remains unstarted; baseline completion is not permission to implement.
+1. **P2.2 — Implement Welcome.** NOT STARTED. Exact title/tagline, avatar holding bunny, Enter My World, direct Projects, honest draft Resume treatment and Menu; P-01/P-02. Do not start it in P2.1.
+2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P2.1 is complete; later scene work requires its own authorization.
 3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
 
@@ -259,6 +269,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## TESTING STATUS
 
+- P2.1: dev/build/preview and headless Chrome render/CSS/fallback/home recovery passed; zero captured browser console errors/runtime exceptions. Strict TypeScript build passed. npm install audit reported zero vulnerabilities. No test packages/suite, Lighthouse, full accessibility/responsive or external-demo verification. Prior planning-only entries below remain historical.
+
 - P1.7 planning validation (2026-09-17): selected tools have distinct roles; critical journeys, manual accessibility, responsive/browser coverage, version-recording policy, future commands and unmeasured lab profile documented. Existing PRD budgets/full viewport matrix and standing code-quality rule preserved. All 71 relative documentation links resolve. File hashes show only five existing documents changed (technical approach, roadmap, history, PRD status, intake handoff); no new/deleted files, packages, tests, code or artwork. No browser automation or Git operations. P2.1 remains NOT STARTED. This is documentation validation, not a runtime test pass.
 
 - P1.6 documentation validation (2026-09-17): one links-only method selected and Q-01 resolved consistently; static architecture, privacy/spam tradeoffs, semantic/keyboard/focus/copy behavior, direct `/contact`, mobile and reduced motion covered. All 71 relative documentation links resolve. File-hash comparison shows exactly six existing documentation files changed, no new/deleted files or application/art/package changes. No private contact values added. Standing code-quality rule preserved; P1.7 remains NOT STARTED. No Git operations or runtime tests; behavior is specified, not implemented.
@@ -288,10 +300,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## HANDOFF FOR NEXT SESSION
 
-P1.7 is DONE as planning: read technical approach §10 before future setup. No tests were executed. P1.6 remains links-only, Q-01 resolved; implementation remains P3.6. P1.5 remains complete as staging. Read [CONTENT_INTAKE.md](CONTENT_INTAKE.md) for current approved facts, review candidates, missing inputs and privacy/publication boundaries. Resume and approved public contact remain outstanding; optional media and optional milestone categories do not block staging. Completing inventory does not approve all public copy.
+P2.1 is DONE. README contains actual run/build commands. The app is only a semantic temporary heading, route fallback and minimal global CSS, plus staged shared Pathwise metadata. No Welcome scene or future named route is implemented. Planning/art/source records remain preserved.
 
-Exact next task: **P2.1 — Create minimal app foundation**, NOT STARTED. No next task is authorized by this handoff alone. Keep the standing simple/readable-code rule and P1.1–P1.4 decisions. P1.3 remains visually approved bounded artwork, not production art.
+Exact next task: **P2.2 — Implement Welcome**, NOT STARTED. Follow the approved direction and standing simple/readable-code rule; do not treat the bounded sample as production artwork. Content intake gaps and Pathwise runtime caveats remain unchanged. Test tools selected in P1.7 are not installed; add only when the relevant authorized task needs them.
 
-[PATHWISE_CHAPTER.md](projects/PATHWISE_CHAPTER.md) remains the canonical chapter/evidence record. Aditi is the end-to-end builder; no team attribution questions. Preserve primary live/source actions, optional single preview, no gallery, dated verification limits and the distinction between source and runtime evidence. Do not expose administrator credentials or treat its differing local folder as the reviewed public version.
-
-P1.7 performed planning/documentation work only: no app, package installation, artwork, Git command, commit or push. Collect real facts progressively without inventing copy or starting later implementation.
+Local dev and production preview were verified; full accessibility, responsiveness, performance and deployment are later checks. No Git operations, commit or push. No later task started.

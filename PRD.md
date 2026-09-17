@@ -7,7 +7,7 @@ This document defines WHAT to build and WHY. It derives from the completed brain
 
 ## Latest user direction — 2026-09-16
 
-**Current status update (2026-09-17):** P1.7 is DONE as test-baseline planning; see technical approach §10. Existing acceptance criteria/budgets and P1.6 links-only decision remain unchanged. Actual test execution, installed versions and measurements remain future work. Exact next task: P2.1 — Create minimal app foundation, NOT STARTED. No implementation, installations, browser automation or Git operations.
+**Current status update (2026-09-17):** P2.1 is DONE — minimal React/Vite/TypeScript foundation verified locally. No Welcome/scene implementation or production art. Exact next task: P2.2 — Implement Welcome, NOT STARTED. Product decisions, content gaps and test baseline remain unchanged; no Git operations.
 
 ### P1.4 scope clarification — authoritative
 

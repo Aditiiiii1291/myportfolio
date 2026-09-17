@@ -1,0 +1,21 @@
+# Private/raw art inputs and working backups; review SVG/PNG samples remain visible.
+assets/sources/references/
+assets/sources/**/raw/
+assets/sources/**/private/
+assets/sources/**/backups/
+*.kra~
+*.svg~
+*.tmp
+.env
+.env.*
+!.env.example
+
+# Generated application output and local tooling.
+node_modules/
+dist/
+*.tsbuildinfo
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

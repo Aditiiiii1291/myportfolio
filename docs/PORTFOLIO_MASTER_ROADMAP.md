@@ -1,9 +1,9 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
-Status: Delivery plan defined; implementation not started.  
+Status: P2.1 minimal foundation implemented; scene implementation not started.  
 Updated: 2026-09-17. No fixed launch date or assumed weekly availability.
 
-Latest checkpoint: **P1.7 DONE — Select test baseline**, 2026-09-17. Technical approach §10 records selected tools, coverage, browser/version policy, viewports and performance protocol. Planning only; no test execution or measured results. Exact next task: **P2.1 — Create minimal app foundation**, NOT STARTED. No implementation or Git operations.
+Latest checkpoint: **P2.1 DONE — Create minimal app foundation**, 2026-09-17. React/Vite/TypeScript, minimal semantic shell, shared Pathwise metadata and route fallback verified locally. Exact next task: **P2.2 — Implement Welcome**, NOT STARTED. No production artwork or Git operations.
 
 ## Purpose and authority
 
@@ -23,7 +23,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0 and P1.1–P1.7 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only; no full production artwork, portfolio app or deployment is complete. No later task was started in this session.
+Phase 0 and P1.1–P1.7 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only; no full production artwork, complete portfolio or deployment is complete; P2.1 now supplies only a minimal app foundation. No later task was started in this session.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -95,7 +95,7 @@ Selected links-only contact: approved email/visible address/copy, approved GitHu
 
 Baseline in [technical approach §10](TECHNICAL_APPROACH.md): Vitest with React Testing Library/user-event/jsdom, small Playwright journeys and integrated axe scans, manual accessibility/art/responsive checks and Lighthouse/transfer inspection. No overlapping Jest/Cypress suite, visual service, CI or hooks. Existing PRD viewport/metric budgets remain unchanged. Read-only browser file versions recorded; no browser launched. Latest user instruction restricts P1.7 to planning, so the former “measured lab profile” acceptance is clarified as a repeatable unmeasured protocol, with actual versions/results recorded at authorized setup and validation. This is an explicit scope clarification, not a test pass.
 
-**Exact next roadmap task: P2.1 — Create minimal app foundation.** NOT STARTED; dependencies P1.1 and P1.7 are satisfied. Chosen local runtime/build, semantic page shell, shared project content, route fallback; no unnecessary service layer. Do not start it in P1.7.
+P2.1 subsequently completed the minimal foundation. **Exact next roadmap task: P2.2 — Implement Welcome**, NOT STARTED. No scene work is authorized by this handoff alone.
 
 ## Phase 2 — First playable prototype
 
@@ -103,7 +103,7 @@ Purpose: Prove the signature experience with real content before producing all f
 
 | Task | Status | Dependency | Deliverable / acceptance |
 | --- | --- | --- | --- |
-| P2.1 Create minimal app foundation | NOT STARTED | P1.1, P1.7 | Chosen local runtime/build, semantic page shell, shared project content, route fallback; no unnecessary service layer |
+| P2.1 Create minimal app foundation | DONE | P1.1, P1.7 | React/Vite/strict TypeScript; plain semantic root, minimal CSS, typed Pathwise metadata, BrowserRouter unknown-route fallback. Dev/build/preview and headless Chrome rendering/console checks passed. No scenes, production art or testing packages |
 | P2.2 Implement Welcome | NOT STARTED | P2.1, P1.3 | Exact title/tagline, avatar holding bunny, Enter My World, direct Projects, honest draft Resume treatment and Menu; P-01/P-02 |
 | P2.3 Implement small plaza | NOT STARTED | P2.1, P1.3 | Recognizable central arrival and active Workshop; other prototype destinations visibly incomplete rather than fake links |
 | P2.4 Implement notebook navigation | NOT STARTED | P2.1 | Semantic controls, correct implemented destinations, focus/close/return behavior; P-05 |

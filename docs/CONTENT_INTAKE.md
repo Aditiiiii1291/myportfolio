@@ -153,7 +153,7 @@ P1.5 staging acceptance is complete: all V1 content categories have status, prov
 
 Map approved material simply to the existing profile, skill, milestone, project and contact records in PRD §32. Reuse Pathwise's mapping and keep evidence notes separate from visible copy. No CMS, JSON pipeline or application files are necessary now. The standing simple/readable-code rule remains in history for future implementation.
 
-Subsequent P1.6 resolution (2026-09-17): links-only selected; see PRD §21. Public email/profile/resume statuses above remain unchanged. Resume duplication in Mailbox is optional; existing shared resume access remains required. P1.7 subsequently completed baseline planning. Exact next roadmap task: **P2.1 — Create minimal app foundation**, NOT STARTED. No implementation authorized by this handoff.
+Subsequent P1.6 resolution (2026-09-17): links-only selected; see PRD §21. Public email/profile/resume statuses above remain unchanged. Resume duplication in Mailbox is optional; existing shared resume access remains required. P1.7 subsequently completed baseline planning. P2.1 subsequently completed the minimal foundation without changing content approvals. Exact next roadmap task: **P2.2 — Implement Welcome**, NOT STARTED. No implementation authorized by this handoff.
 
 ## ADITI NEEDS TO PROVIDE / CONFIRM
 
