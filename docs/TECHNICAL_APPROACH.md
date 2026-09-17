@@ -151,6 +151,86 @@ Route changes update the document title and focus as described above. Direct con
 
 ## 10. Local development and deployment implications
 
+### P1.7 — selected test baseline, 2026-09-17
+
+**DONE as planning only.** Protect navigation, readable project content, direct routes and accessible interactions with the smallest useful suite. No tests, scripts, packages, browser automation or application files were created/run. The latest P1.7 instruction explicitly limits this to planning: actual installed versions and measured lab results must be recorded during authorized implementation/validation, not invented to satisfy the older roadmap wording. PRD budgets and acceptance IDs are unchanged.
+
+#### Selected tools and alternatives
+
+| Layer | Selection and reason | Alternative / boundary |
+| --- | --- | --- |
+| Unit/component runner | **Vitest**, aligned with the selected Vite build; one runner for meaningful logic and component behavior | Jest is capable but introduces a separate transform/configuration path without a project need. Do not add both |
+| Component interaction | **React Testing Library + user-event**, with **jsdom** and jest-dom matchers; query by accessible role/name and assert visible outcomes | jsdom is a DOM environment, not proof of real layout, native focus behavior or browser compatibility. Required Testing Library DOM peer dependency belongs to the same setup, not a second framework |
+| Browser journeys | **Playwright Test**, a small suite against production preview; real routing, refresh, focus and reduced-motion checks justify it | Cypress is a valid alternative, but one E2E tool is sufficient. No Playwright component runner or Vitest browser-mode layer alongside this setup |
+| Accessibility | **@axe-core/playwright** scans within existing browser journeys, plus manual keyboard/screen-reader/contrast review | No separate accessibility service or duplicate component-level axe suite. Automated scans cannot establish conformance |
+| Visual/responsive | Manual review with browser responsive mode and the existing viewport matrix | No screenshot-diff service, Storybook or snapshot approval pipeline |
+| Performance | Production build, Network transfer inspection and Chrome DevTools Lighthouse | No benchmark framework, performance CI service or score-chasing requirement |
+
+Official references checked for this decision: [Vitest/Vite integration](https://vitest.dev/guide/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), [user-event](https://testing-library.com/docs/user-event/intro/), [Jest setup](https://jestjs.io/docs/getting-started), [Cypress testing types](https://docs.cypress.io/app/core-concepts/testing-types), [Playwright browsers](https://playwright.dev/docs/browsers), [Playwright accessibility guidance](https://playwright.dev/docs/accessibility-testing), [Lighthouse throttling](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md). These establish tool capabilities; the choice and scope are project judgments.
+
+#### Coverage and ownership
+
+**MUST TEST**, when the relevant feature exists:
+
+| Behavior | Primary coverage / acceptance |
+| --- | --- |
+| Welcome → Village → Workshop → Pathwise; skip delivery and immediate return album | Browser journey; P-01–P-04, P-07. Assert destination/content availability, not every animation frame |
+| Welcome → View Projects | Browser journey; P-02. Reaches the same Workshop without a tour |
+| Direct `/projects/pathwise`, refresh, useful return, browser Back; invalid project/route recovery | Browser journey; P-03/P-07, V-10. Verify on preview first and actual host later; preview success does not prove hosting rewrites |
+| Notebook via keyboard: open, focus containment, Escape/close, opener restoration and navigation to heading | Browser journey and manual keyboard pass; P-05. Do not duplicate the entire flow as component tests |
+| Direct `/contact` and Menu → Contact | Browser journey once P3.6 exists; approved link targets, no form, reduced-motion access. Inspect destinations without sending mail or testing third-party profiles |
+| Contact copy success/failure and manual fallback | Focused component tests, narrowly mocking clipboard outcomes; announce actual result, retain selectable address. No real email/address fixture needed |
+| Chapter renderer: required content/actions, local versus hosted demo, optional preview omitted cleanly | Focused component tests; V-02/V-12. Use a small clearly fictional record, not copied credentials/private data or whole-page snapshots |
+| Reduced motion bypasses delivery; content remains available on return and with failed artwork | Small variants of existing browser journeys; P-04, V-07/V-10. Manual review of motion and image fallback remains necessary |
+| Uncaught errors and basic accessibility regressions | Check page errors during journeys; axe scans of Welcome, open notebook, chapter and Contact when available. Review all findings; resolve critical/serious issues and record disposition of the rest; P-08, V-06 |
+
+Keep about five small journey groups (exploration, direct chapter/recovery, direct Projects, keyboard notebook, Contact), reusing existing visits for axe and reduced-motion variants. Do not multiply every journey by every viewport/browser. P2 covers implemented prototype routes only; Contact and remaining V1 destinations join when implemented in P3. Check approved resume destination at V1 completion without fabricating a working draft download. External demo availability must not be a dependency of local tests.
+
+**Unit/logic:** this site has little business logic. Test project lookup's unknown-slug behavior or nontrivial route/context transformations only if extracted logic actually exists and has meaningful branches. Prefer the renderer/route check if it already proves the behavior. Do not invent helpers merely to unit-test them.
+
+**NICE TO TEST:** additional context/scroll restoration edge cases, additional content variants or a browser-specific regression after a real defect. Add tests only when their risk justifies ongoing maintenance.
+
+**NOT WORTH AUTOMATING:** decorative SVGs, palette constants, every label/CSS class, pixel-art alignment, every pose/animation frame, internal state/setter calls, third-party router/library internals or remote featured-app workflows. These exclusions do not remove manual art/identity/content review. No coverage percentage target, giant snapshots, load tests, authentication tests or form tests for features outside V1.
+
+#### Manual accessibility and visual review
+
+For each affected interaction and at phase exit, use keyboard alone: skip link, visible unobscured focus, logical order, notebook trap only while open, Escape/return focus and route-heading focus. Inspect page titles, headings/landmarks, readable HTML and alt quality; axe can detect some missing semantics but cannot judge meaningful descriptions or visual reading order. Perform a short screen-reader pass (Windows Narrator available with the OS; record actual tool/browser at execution, or another available reader) across Menu, chapter and copy feedback. No conformance claim from automated results.
+
+Check rendered contrast against PRD 4.5:1 text / 3:1 large text, distinguishable controls/focus, 44px primary-target goal, text resizing/reflow, reduced motion and pause of sustained ambient movement. Check no hidden professional content or animation prerequisite. Review pastel pixel identity, Aditi/bunny features, scenery placement, font readability, pixel scaling and animation feel manually against the approved bounded sample; it is not production artwork proof.
+
+#### Responsive and browser baseline
+
+Routine prototype review uses **360×800 mobile, 768×1024 tablet, 1366×768 desktop**. Phase/V1 review retains the full existing PRD V-05 matrix: **320×568, 360×800, 390×844, 768×1024, 1024×768, 1366×768, 1920×1080 CSS px**. These are layout categories, not a device-model list. Sweep between widths for collisions, check 200% text enlargement and 400% zoom/reflow where applicable, and inspect focus/menu/letter targets without horizontal page scrolling. Confirm desktop plaza recomposes as the vertical mobile path and shares the same content/actions.
+
+Routine E2E: Chromium desktop; run the exploration/direct-content smoke on the mobile viewport too. At phase/release review, run the same small smoke in Firefox and Playwright WebKit where available, then manually check actual current desktop browsers and mobile Chrome/Safari on available devices per V-09. WebKit coverage is not an actual Safari/iPhone pass; device emulation is not physical-device testing. Record unavailable platforms rather than claiming universal compatibility.
+
+Read-only local inventory on 2026-09-17 (file metadata only, browsers not launched): **Chrome 152.0.7977.83**, **Edge 153.0.4234.32**. Firefox was not found at the standard Program Files path; other installs were not established. Actual Safari/mobile devices are unverified. No project test packages or browser binaries are installed. Recheck actual runtime versions at execution; Edge is optional corroboration, not another mandatory Chromium matrix.
+
+Package versions are **not selected/installed yet**: choose mutually compatible stable Node/Vite/React/TypeScript/test-package versions at authorized setup and record exact versions in the lockfile/history. Record Playwright version and its browser revisions, actual browser/OS, Lighthouse version, viewport/DPR and test date alongside results. Do not confuse these future records with the metadata inventory above.
+
+#### Repeatable performance profile — unmeasured
+
+Use the production build on local preview for early diagnostics and on the intended compressed static host before release. Review Welcome and direct Pathwise separately. Retain the roadmap's **390×844** mobile viewport and three cold-cache Lighthouse mobile runs, with the tool's recorded default mobile CPU/network throttling. Explicitly configure/verify the effective viewport rather than assuming Lighthouse's default device matches it; record DPR, simulation method, numeric CPU/network settings, machine/OS, browser and Lighthouse version from each run. Report median LCP/CLS plus individual results. No run or measurement occurs in P1.7.
+
+Preserve **≤1.5 MB compressed first-view transfer**, **≤250 KB compressed initial JS**, **LCP ≤2.5 s**, **CLS ≤0.1**; **INP ≤200 ms only when field measurement exists**. Lab interaction checks/TBT are diagnostics, not field INP. Inspect actual transferred bytes and content encoding; uncompressed local preview cannot certify compressed-host budgets. Build-size summaries alone are insufficient. Check image dimensions/weight, reserved layout space, font/bundle growth and deferred interiors/optional below-fold preview; do not introduce a gallery. Unavailable external demos must not delay portfolio loading. Budget exceptions require documented justification, not silent waivers. Physical phone checks supplement the lab when available.
+
+#### Future files, commands and completion check
+
+Colocate meaningful `*.test.ts` / `*.test.tsx` beside the logic/component. Keep browser journeys in `tests/e2e/*.spec.ts`. One small shared setup for DOM matchers/cleanup only if needed. Use explicit accessible-role queries and user actions; isolate session state between journeys. Name outcomes, e.g. “opens Pathwise directly from its project URL” and “keeps the email selectable when copying fails.” Do not create a custom framework, page-object hierarchy, huge fixtures, broad mocks or duplicate layers of the same assertion.
+
+Expected commands once authorized setup adds scripts (none exist or were executed now):
+
+| Command | Future meaning |
+| --- | --- |
+| `npm run test` | `vitest run`, one finite unit/component run |
+| `npm run test:e2e` | `playwright test` against built preview; build first; future runner configuration manages preview lifecycle |
+| `npm run build` | Existing planned `tsc -b` then `vite build`; no TypeScript errors |
+| `npm run preview` | Serve built output for manual/production-preview review |
+
+Before completing an implementation task: run build and relevant tests, remove unused/dead code, inspect changed content, and manually check affected keyboard/responsive behavior. Run the small full journey suite at phase exit or when shared navigation changes; perform the full manual matrix/performance pass at their roadmap phases. Record actual results and limitations. No Git hooks, CI workflow, separate visual service, coverage service or automatic Git operations. Aditi performs Git operations manually. The standing simple/readable/explainable-code rule applies equally to test code.
+
+P1.7 planning complete does not mean any test passed. **Exact next task: P2.1 — Create minimal app foundation**, not started here. Installations, configurations, test files and measured evidence remain future authorized work.
+
 Future npm scripts, to be created in P2.1, will support:
 
 | User command | Intended action |
@@ -159,7 +239,7 @@ Future npm scripts, to be created in P2.1, will support:
 | `npm run build` | TypeScript project check (`tsc -b`) followed by `vite build` |
 | `npm run preview` | Vite preview of built `dist` output |
 
-No command above was run; package.json and dist do not exist. Preview requires a successful build and is a local check, not a production server ([Vite deployment guide](https://vite.dev/guide/static-deploy)). Future Node/npm versions must be compatible with the selected packages and recorded in P2.1; environment/test versions are P1.7 work.
+No command above was run; package.json and dist do not exist. Preview requires a successful build and is a local check, not a production server ([Vite deployment guide](https://vite.dev/guide/static-deploy)). Future Node/npm versions must be compatible with the selected packages and recorded in P2.1; P1.7 records the version policy and available-browser inventory; exact installed versions are recorded at authorized setup.
 
 Deploy only static build output to a provider meeting the route contract. No runtime Node service or portfolio API is needed. Provider/domain, redirects, caching details, base path and publication are deferred. Store no secrets in frontend content or build-exposed environment variables. All bundled content is public.
 
@@ -189,7 +269,7 @@ Initial metadata can identify Aditi's portfolio, and route titles can change in 
 - P1.3: approved avatar/bunny details, typography, final tokens, sample composition and physical delivery staging.
 - P1.4/P1.5: actual Pathwise record/links, optional static preview, biography/resume/skills/milestones/contact and other project evidence.
 - P1.6: DONE — links-only Mailbox (Q-01 resolved); approved public values still pending in content intake.
-- P1.7: exact testing tools/versions, browser availability and lab setup; existing acceptance targets remain.
+- P1.7: DONE — selected baseline in §10; tool version policy, available-browser metadata, viewport matrix and unmeasured lab profile recorded. Actual runtime results remain future work.
 - P2: actual components/routes/state implementation, responsive breakpoints validated with sample art and measured bundle sizes.
 - P5.2/P5.3: demo re-verification/public access and host/domain/rewrite configuration. No project repair is authorized here.
 

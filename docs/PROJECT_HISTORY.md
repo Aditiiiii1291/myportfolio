@@ -1,12 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-17. Stage: P1.6 DONE — links-only Mailbox selected; public contact values pending. No implementation started.
+Last updated: 2026-09-17. Stage: P1.7 DONE — test baseline selected, planning only. No implementation or test execution.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Phase 0 and P1.1–P1.6 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
+- Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
 - Live frontend/assets and backend health were reachable on 2026-09-16 (health succeeded after an initial timeout). Protected assessment requires authentication and was not reverified. Prior missing-model error remains historical, not a fresh failure or confirmed fix. No suitable existing optional preview found; no screenshot gate.
 - Current public-source implementation differs from the local Desktop/Pathwise foundation. The chapter uses the pinned public implementation and makes no local-execution claim. Full evidence boundaries are in the chapter.
@@ -14,9 +14,18 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - No full production artwork, portfolio application, packages or deployment exists. No Git commands were performed in P1.4.
 - [Content intake](CONTENT_INTAKE.md) is the current approval/missing-item tracker. Resume, approved public contact, final biography/skills/education and remaining project content are outstanding; staging completion is not publication approval.
 - P1.6 selected links-only Mailbox; Q-01 resolved, actual public email/profile values remain unapproved. See PRD §21 for comparison and behavior.
-- Exact next task: **P1.7 — Select test baseline**, NOT STARTED. No implementation, installs or Git operations in P1.6.
+- P1.7 baseline is recorded in technical approach §10. No packages installed, tests written, browser automation or measured performance results.
+- Exact next task: **P2.1 — Create minimal app foundation**, NOT STARTED. No implementation or Git operations in P1.7.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P1.7 — Select test baseline, 2026-09-17 — DONE
+
+- Added a bounded testing section to TECHNICAL_APPROACH.md rather than a separate strategy document. Selected Vitest/React Testing Library/user-event/jsdom, a small Playwright suite with axe scans, manual keyboard/screen-reader/art/responsive review and production Lighthouse/transfer checks. Compared Jest/Cypress; no overlapping tools, visual service, CI or hooks.
+- Mapped critical journeys and failure/reduced-motion cases to existing acceptance IDs. Kept full PRD viewport matrix and all performance budgets, with a smaller routine review subset. Defined simple file/naming/command conventions and proportional phase checks; standing simplicity rule applies to tests.
+- Recorded Chrome 152.0.7977.83 and Edge 153.0.4234.32 from executable metadata only; no browser launched. Firefox absent at checked standard path; Safari/mobile availability unverified. Package versions remain uninstalled; record exact compatible versions at future authorized setup.
+- Latest user instruction prohibits implementation/testing execution. Explicitly clarified roadmap's former measured-profile wording: P1.7 defines a repeatable unmeasured lab protocol; actual installed versions/measurements belong to later authorized setup/validation. No fabricated result or weakened budget.
+- Consulted official tool documentation; no package installation, test files, application code, browser automation, CI, Git operations, commit or push. P2.1 not started.
 
 ### P1.6 — Resolve Mailbox method, 2026-09-17 — DONE
 
@@ -170,12 +179,12 @@ Use the simplest correct solution that meets the documented requirement. Code mu
 
 ## CURRENTLY WORKING ON
 
-P1.6 is DONE — method selected and documented. Actual content approval remains open in CONTENT_INTAKE.md. No further task or implementation is in progress.
+P1.7 is DONE — baseline selected and documented, not executed. Actual content approval remains open in CONTENT_INTAKE.md. No further task or implementation is in progress.
 
 ## NEXT TASKS
 
-1. **P1.7 — Select test baseline.** NOT STARTED; record tool/browser versions, viewport matrix, measured lab profile and accessible test approach while preserving PRD budgets or documenting justified changes. Do not start it in P1.6.
-2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P1.7 and P2 remain unchanged; staging completion is not permission to implement.
+1. **P2.1 — Create minimal app foundation.** NOT STARTED; P1.1/P1.7 dependencies satisfied. Chosen local runtime/build, semantic page shell, shared project content and route fallback; no unnecessary service layer. Do not start it in P1.7.
+2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P2 remains unstarted; baseline completion is not permission to implement.
 3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
 
@@ -250,6 +259,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## TESTING STATUS
 
+- P1.7 planning validation (2026-09-17): selected tools have distinct roles; critical journeys, manual accessibility, responsive/browser coverage, version-recording policy, future commands and unmeasured lab profile documented. Existing PRD budgets/full viewport matrix and standing code-quality rule preserved. All 71 relative documentation links resolve. File hashes show only five existing documents changed (technical approach, roadmap, history, PRD status, intake handoff); no new/deleted files, packages, tests, code or artwork. No browser automation or Git operations. P2.1 remains NOT STARTED. This is documentation validation, not a runtime test pass.
+
 - P1.6 documentation validation (2026-09-17): one links-only method selected and Q-01 resolved consistently; static architecture, privacy/spam tradeoffs, semantic/keyboard/focus/copy behavior, direct `/contact`, mobile and reduced motion covered. All 71 relative documentation links resolve. File-hash comparison shows exactly six existing documentation files changed, no new/deleted files or application/art/package changes. No private contact values added. Standing code-quality rule preserved; P1.7 remains NOT STARTED. No Git operations or runtime tests; behavior is specified, not implemented.
 
 - P1.5 documentation validation (2026-09-17): all V1 categories/statuses and six grouped input prompts reviewed; approved facts remain distinct from draft copy, optional categories and missing publication material. No invented personal facts or private values staged. Canonical Pathwise chapter unchanged. All 73 relative documentation links resolve. Pre/post file hashes show only new CONTENT_INTAKE.md plus PRD status pointer, roadmap and history changed; no deletions, code, packages, art changes or Git operations. P1.6 remains NOT STARTED. Standing code-quality rule preserved; no runtime tests apply.
@@ -277,10 +288,10 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## HANDOFF FOR NEXT SESSION
 
-P1.6 is DONE: links-only Mailbox selected, Q-01 resolved; implementation remains P3.6. P1.5 remains complete as staging. Read [CONTENT_INTAKE.md](CONTENT_INTAKE.md) for current approved facts, review candidates, missing inputs and privacy/publication boundaries. Resume and approved public contact remain outstanding; optional media and optional milestone categories do not block staging. Completing inventory does not approve all public copy.
+P1.7 is DONE as planning: read technical approach §10 before future setup. No tests were executed. P1.6 remains links-only, Q-01 resolved; implementation remains P3.6. P1.5 remains complete as staging. Read [CONTENT_INTAKE.md](CONTENT_INTAKE.md) for current approved facts, review candidates, missing inputs and privacy/publication boundaries. Resume and approved public contact remain outstanding; optional media and optional milestone categories do not block staging. Completing inventory does not approve all public copy.
 
-Exact next task: **P1.7 — Select test baseline**, NOT STARTED. No next task is authorized by this handoff alone. Keep the standing simple/readable-code rule and P1.1–P1.4 decisions. P1.3 remains visually approved bounded artwork, not production art.
+Exact next task: **P2.1 — Create minimal app foundation**, NOT STARTED. No next task is authorized by this handoff alone. Keep the standing simple/readable-code rule and P1.1–P1.4 decisions. P1.3 remains visually approved bounded artwork, not production art.
 
 [PATHWISE_CHAPTER.md](projects/PATHWISE_CHAPTER.md) remains the canonical chapter/evidence record. Aditi is the end-to-end builder; no team attribution questions. Preserve primary live/source actions, optional single preview, no gallery, dated verification limits and the distinction between source and runtime evidence. Do not expose administrator credentials or treat its differing local folder as the reviewed public version.
 
-P1.6 performed decision/documentation work only: no app, package installation, artwork, Git command, commit or push. Collect real facts progressively without inventing copy or starting later implementation.
+P1.7 performed planning/documentation work only: no app, package installation, artwork, Git command, commit or push. Collect real facts progressively without inventing copy or starting later implementation.

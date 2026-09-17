@@ -7,7 +7,7 @@ This document defines WHAT to build and WHY. It derives from the completed brain
 
 ## Latest user direction — 2026-09-16
 
-**Current status update (2026-09-17):** P1.6 is DONE — links-only Mailbox selected; Q-01 resolved in §21. Public contact values remain pending approval in [content intake](docs/CONTENT_INTAKE.md). P1.1–P1.5 decisions remain intact. Exact next task: P1.7 — Select test baseline, NOT STARTED. No implementation or Git operations.
+**Current status update (2026-09-17):** P1.7 is DONE as test-baseline planning; see technical approach §10. Existing acceptance criteria/budgets and P1.6 links-only decision remain unchanged. Actual test execution, installed versions and measurements remain future work. Exact next task: P2.1 — Create minimal app foundation, NOT STARTED. No implementation, installations, browser automation or Git operations.
 
 ### P1.4 scope clarification — authoritative
 
