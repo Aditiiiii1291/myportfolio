@@ -1,9 +1,9 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
 Status: Delivery plan defined; implementation not started.  
-Updated: 2026-09-16. No fixed launch date or assumed weekly availability.
+Updated: 2026-09-17. No fixed launch date or assumed weekly availability.
 
-Latest checkpoint: **P1.4 DONE — Prepare one real chapter**, 2026-09-16. [Pathwise chapter preparation](projects/PATHWISE_CHAPTER.md) contains the pinned evidence ledger, concise copy, verified links/status and static-record mapping. P1.3 remains DONE / visually approved; its bounded art direction is unchanged. Exact next task: **P1.5 — Stage content intake**, existing status WAITING FOR CONTENT. Do not start it in this task. No implementation or Git operations.
+Latest checkpoint: **P1.5 DONE — Stage content intake**, 2026-09-17. [Content intake](CONTENT_INTAKE.md) records approved facts, material needing review, missing inputs and publication boundaries. Staging is complete; actual publication content remains outstanding. Exact next task: **P1.6 — Resolve Mailbox method**, NOT STARTED. No implementation or Git operations.
 
 ## Purpose and authority
 
@@ -23,7 +23,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0 and P1.1–P1.4 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only; no full production artwork, portfolio app or deployment is complete. No later task was started in this session.
+Phase 0 and P1.1–P1.5 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only; no full production artwork, portfolio app or deployment is complete. No later task was started in this session.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -57,7 +57,7 @@ Purpose: Resolve the few execution choices and gather enough real content/art to
 | P1.2 Define original-art workflow | DONE | P0 + document-set review | [Art workflow](ART_WORKFLOW.md) defines creator roles, optional AI concepts, Krita/Inkscape masters, reviewed exports and provenance; originality and selected avatar identity preserved. Documentation validated; Q-03 visual approval remains P1.3 |
 | P1.3 Create bounded visual sample | DONE — VISUALLY APPROVED | P1.2 | [Revision 03 approval](VISUAL_SAMPLE_REVIEW.md), 2026-09-16: bounded pastel pink pixel-art concept, Aditi/bunny, village-scale treatment, Workshop shelf/album and UI direction accepted; long diamond-shaped face, middle-parted hair and cat-eye frames explicitly intended. Raster concept, not final production assets; production/refinement and runtime checks remain later work |
 | P1.4 Prepare one real chapter | DONE | P0 | [Pathwise chapter](projects/PATHWISE_CHAPTER.md): pinned source/claim classification, concise ten-topic copy, end-to-end role, temporal/rule/ML/fusion distinctions, architecture, primary live/source links, dated demo checks and honest limits, static-field mapping. Preview absent and optional; no gallery, code, packages or credentials |
-| P1.5 Stage content intake | WAITING FOR CONTENT | PRD §31 | Collect resume, About/education, confirmed skills, milestones, contact and project reflection/media progressively; maintain missing/approved status |
+| P1.5 Stage content intake | DONE | PRD §31 | [Content intake](CONTENT_INTAKE.md): all V1 categories staged with approval/missing status, evidence, privacy boundaries and grouped input checklist. Resume/contact and other publication content remain outstanding; optional media stays optional |
 | P1.6 Resolve Mailbox method | NOT STARTED | Q-01 | Confirm proposed public email/copy/social links before Contact implementation. A requested form requires documented scope/dependency changes |
 | P1.7 Select test baseline | NOT STARTED | P1.1 | Record tool/browser versions, viewport matrix, measured lab profile and accessible test approach. Preserve PRD budgets or document justified adjustment |
 
@@ -83,7 +83,11 @@ The [dedicated chapter record](projects/PATHWISE_CHAPTER.md) satisfies the curre
 
 Validation: primary-source claim ledger, concise recruiter scan, content-field mapping, relative links/evidence targets and documentation-only scope. No application implementation, installation, later task or Git operation. Phase 1's content/art preparation gate is satisfied; other task dependencies, including P1.7 before P2.1, are unchanged.
 
-**Exact next roadmap task: P1.5 — Stage content intake.** Existing status: WAITING FOR CONTENT. Progressively gather resume, About/education, confirmed skills, milestones, contact and remaining project reflections/evidence; track missing versus approved content. Screenshots stay optional. **Not started in this session.**
+### Completed preparation: P1.5 — Stage content intake
+
+[CONTENT_INTAKE.md](CONTENT_INTAKE.md) stages About, education, candidate skills, resume, all three projects, milestones/experience, contact and links. Confirmed facts are separate from draft copy; no resume or approved public email was found. Pathwise is linked without duplicating its chapter. Missing optional material may be omitted; existing publication gates remain. No final skill list, biography, contact method or new milestone was inferred.
+
+**Exact next roadmap task: P1.6 — Resolve Mailbox method.** Status: NOT STARTED; dependency Q-01. Confirm proposed public email/copy/social links before Contact implementation. A requested form requires documented scope/dependency changes. Do not start it in the P1.5 session.
 
 ## Phase 2 — First playable prototype
 

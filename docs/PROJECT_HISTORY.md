@@ -1,20 +1,30 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-16. Stage: P1.4 DONE — Pathwise chapter content prepared; no portfolio application implementation started.
+Last updated: 2026-09-17. Stage: P1.5 DONE — content intake staged; publication inputs remain outstanding. No portfolio application implementation started.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Phase 0 and P1.1–P1.4 are DONE. P1.3 remains visually approved; P1.4 is content preparation only.
+- Phase 0 and P1.1–P1.5 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
 - Live frontend/assets and backend health were reachable on 2026-09-16 (health succeeded after an initial timeout). Protected assessment requires authentication and was not reverified. Prior missing-model error remains historical, not a fresh failure or confirmed fix. No suitable existing optional preview found; no screenshot gate.
 - Current public-source implementation differs from the local Desktop/Pathwise foundation. The chapter uses the pinned public implementation and makes no local-execution claim. Full evidence boundaries are in the chapter.
 - Approved art reference: [revision 03](../assets/sources/reviews/exports/p1-3-direction-v03-pixel.png). Preserve pastel pink pixel art, Aditi's sort of long diamond-shaped face, middle-parted hair, cat-eye frame glasses, cream fluffy bunny and all established P1.1–P1.3 decisions.
 - No full production artwork, portfolio application, packages or deployment exists. No Git commands were performed in P1.4.
-- Exact next task: **P1.5 — Stage content intake** (existing status WAITING FOR CONTENT). It was not started. Later tasks remain unchanged.
+- [Content intake](CONTENT_INTAKE.md) is the current approval/missing-item tracker. Resume, approved public contact, final biography/skills/education and remaining project content are outstanding; staging completion is not publication approval.
+- Exact next task: **P1.6 — Resolve Mailbox method** (NOT STARTED). No later task was started; no implementation, installs or Git operations in P1.5.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P1.5 — Stage content intake, 2026-09-17 — DONE
+
+- Created [CONTENT_INTAKE.md](CONTENT_INTAKE.md) with all V1 categories, status legend, confirmed facts versus draft material, education fields, a small evidence-grounded skill candidate list, project gaps, milestone evidence classifications, contact/links and privacy checks.
+- Checked repository files and referenced resume/document material; no accessible resume identified. Recorded **RESUME REQUIRED FROM ADITI**, without searching unrelated private folders or inventing facts.
+- Linked canonical Pathwise content without rewriting it; ownership stays confirmed end-to-end. TrafficIQ and MarketMind are staged, not full chapters. Final copy/skill selection is not automatically approved; no fresh runtime checks or test-pass claims.
+- Added one six-group actionable input checklist. Contact method remains Q-01/P1.6, optional previews remain optional, no gallery. Resume, usable approved public contact and truthful project content remain publication gates.
+- Updated roadmap/history and only the PRD's current status pointer. Standing code-quality rule and P1.1–P1.4 decisions preserved. Documentation only; no application code, packages, art, Git operations, commit or push. P1.6 not started.
+
 
 ### P1.4 — Prepare one real chapter, 2026-09-16 — DONE
 
@@ -152,12 +162,12 @@ Use the simplest correct solution that meets the documented requirement. Code mu
 
 ## CURRENTLY WORKING ON
 
-P1.4 is DONE — chapter content/evidence and validation complete. No further task or portfolio implementation is in progress.
+P1.5 is DONE — inventory, approval boundaries and missing-item tracking complete. Actual content collection remains open in CONTENT_INTAKE.md. No further task or portfolio implementation is in progress.
 
 ## NEXT TASKS
 
-1. **P1.5 — Stage content intake.** Existing status: WAITING FOR CONTENT. Progressively collect resume, About/education, confirmed skills, milestones, public contact and remaining project reflections/evidence; record missing/approved status. Optional screenshots remain optional. Do not start it in the P1.4 session.
-2. Preserve the approved art and architecture. P1.6/P1.7 and P2 tasks remain as documented; P1.4 completion is not permission to implement the portfolio.
+1. **P1.6 — Resolve Mailbox method.** NOT STARTED; Q-01. Confirm proposed public email/copy/social links before Contact implementation; any requested form needs scope/dependency changes. Do not start it in P1.5.
+2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P1.7 and P2 remain unchanged; staging completion is not permission to implement.
 3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
 
@@ -204,6 +214,7 @@ Public biography/resume/contact, exact education dates, confirmed skill list, mi
 | `.gitignore` | Created in P1.3 | Raw/private/reference/temporary input exclusions |
 | `README.md` | Existing, unchanged in P1.1 | Minimal repository title; not setup instructions |
 | `docs/projects/PATHWISE_CHAPTER.md` | Created in P1.4 — DONE | Canonical Pathwise evidence, concise chapter copy and static-record mapping |
+| `docs/CONTENT_INTAKE.md` | Created in P1.5 — DONE | V1 content status, evidence, privacy boundaries and grouped missing-input checklist |
 
 ### P1.3 review asset inventory
 
@@ -231,6 +242,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## TESTING STATUS
 
+- P1.5 documentation validation (2026-09-17): all V1 categories/statuses and six grouped input prompts reviewed; approved facts remain distinct from draft copy, optional categories and missing publication material. No invented personal facts or private values staged. Canonical Pathwise chapter unchanged. All 73 relative documentation links resolve. Pre/post file hashes show only new CONTENT_INTAKE.md plus PRD status pointer, roadmap and history changed; no deletions, code, packages, art changes or Git operations. P1.6 remains NOT STARTED. Standing code-quality rule preserved; no runtime tests apply.
+
 - P1.4 completion: reviewed source evidence/claim classifications, chapter scan and static-field mapping; checked relative links, pinned source-file targets and documentation-only changed-file scope. Source test files/model artifact inspected but not executed. Public HTTP checks passed on retry as recorded in the chapter; authenticated UI/inference, local full-stack execution and actual deployed DB/revision remain unverified. No portfolio runtime tests apply because no application exists.
 
 - P1.4 documentation checks: 58 relative links and 46 pinned source targets passed; all ten chapter topics/classifications present; 531 words in chapter-copy block including labels/editorial placement note. Pre/post file-hash comparison used instead of Git commands. Scope: new chapter plus roadmap/history and PRD status pointer only; no change to P1.1–P1.3 design/architecture files or artwork.
@@ -254,10 +267,10 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## HANDOFF FOR NEXT SESSION
 
-P1.4 is DONE. Read [PATHWISE_CHAPTER.md](projects/PATHWISE_CHAPTER.md) for the canonical pinned evidence, concise chapter copy, model/temporal details, dated demo status and static-record mapping. Do not ask Aditi to allocate team contributions: she is the confirmed end-to-end developer/builder. Primary actions remain Open Live Project and View GitHub / Source Code. No gallery/Project Moments; a static preview is optional and currently omitted.
+P1.5 is DONE as a staging task. Read [CONTENT_INTAKE.md](CONTENT_INTAKE.md) for current approved facts, review candidates, missing inputs and privacy/publication boundaries. Resume and approved public contact remain outstanding; optional media and optional milestone categories do not block staging. Completing inventory does not approve all public copy.
 
-Next task: **P1.5 — Stage content intake**, existing status WAITING FOR CONTENT. It was not begun. No later task is authorized by this handoff alone. Keep the standing simple/readable-code rule above for future implementation, without reopening P1.1–P1.3 decisions. P1.3 stays DONE and visually approved; its sample is not full production artwork.
+Exact next task: **P1.6 — Resolve Mailbox method**, NOT STARTED, Q-01. No next task is authorized by this handoff alone. Keep the standing simple/readable-code rule and P1.1–P1.4 decisions. P1.3 remains visually approved bounded artwork, not production art.
 
-The current chapter distinguishes inspected source from runtime evidence. Public frontend and backend health respond; protected assessment remains unverified, and the previous missing-model error must not be described as fixed or freshly reproduced. The local Desktop/Pathwise folder differs from the public revision. Do not repair either project or expose administrator credentials.
+[PATHWISE_CHAPTER.md](projects/PATHWISE_CHAPTER.md) remains the canonical chapter/evidence record. Aditi is the end-to-end builder; no team attribution questions. Preserve primary live/source actions, optional single preview, no gallery, dated verification limits and the distinction between source and runtime evidence. Do not expose administrator credentials or treat its differing local folder as the reviewed public version.
 
-No portfolio implementation, installs, Git commands, commit or push occurred in P1.4. Preserve genuine open facts without blocking on optional media or inventing personal reflections. Update roadmap/history after future authorized work.
+P1.5 performed documentation work only: no app, package installation, artwork, Git command, commit or push. Collect real facts progressively without inventing copy or starting later implementation.

@@ -7,7 +7,7 @@ This document defines WHAT to build and WHY. It derives from the completed brain
 
 ## Latest user direction — 2026-09-16
 
-**Current status update:** P1.4 is now DONE. [Pathwise chapter preparation](docs/projects/PATHWISE_CHAPTER.md) is the canonical evidence/copy/static-field record. The latest request authorized P1.4 content preparation only, superseding earlier “NOT STARTED / do not start” handoffs. P1.5 is the exact next task and was not begun. Product, P1.1–P1.3, art and application architecture decisions are unchanged.
+**Current status update (2026-09-17):** P1.5 is DONE as content staging. [Content intake](docs/CONTENT_INTAKE.md) tracks approved facts, review candidates, missing inputs and publication boundaries; actual content remains outstanding. P1.4 remains DONE with its canonical [Pathwise chapter](docs/projects/PATHWISE_CHAPTER.md). Exact next task is P1.6 — Resolve Mailbox method, NOT STARTED. No implementation or Git operations; product, P1.1–P1.4, art and architecture decisions are unchanged.
 
 ### P1.4 scope clarification — authoritative
 
