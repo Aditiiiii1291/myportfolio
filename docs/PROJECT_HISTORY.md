@@ -1,6 +1,6 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-17. Stage: P2.2 DONE — VISUALLY APPROVED. P2.3 NOT STARTED.
+Last updated: 2026-09-18. Stage: P2.3 DONE — VISUALLY APPROVED. P2.4 NOT STARTED.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
@@ -15,9 +15,30 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - [Content intake](CONTENT_INTAKE.md) is the current approval/missing-item tracker. Resume, approved public contact, final biography/skills/education and remaining project content are outstanding; staging completion is not publication approval.
 - P1.6 selected links-only Mailbox; Q-01 resolved, actual public email/profile values remain unapproved. See PRD §21 for comparison and behavior.
 - P1.7 baseline is recorded in technical approach §10. No packages installed, tests written, browser automation or measured performance results.
-- P2.2 is DONE / visually approved: Aditi approved Welcome artwork revision 02 and the Times New Roman tagline. Source remains flattened; this approval is specific to the identified Welcome revision. Exact next task: P2.3 — Implement small plaza, NOT STARTED.
+- P2.2 is DONE / visually approved: Aditi approved Welcome artwork revision 02 and the Times New Roman tagline. Source remains flattened; this approval is specific to the identified Welcome revision and does not cover the new plaza assets.
+- P2.3 is DONE / visually approved on 2026-09-18 for identified plaza revision 01 and its current presentation. `/village` has the bounded arrival scene and semantic Workshop link; `/projects` remains the existing unavailable-album shell. Approval does not extend to future village assets. Exact next task: P2.4 — Implement notebook navigation, NOT STARTED.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P2.3 — explicit visual approval and closure, 2026-09-18 — DONE
+
+Aditi explicitly approved the final small plaza: blossom-lined pixel-art plaza, Aditi and bunny placement, winding-path/environment treatment, Project Workshop exterior, integrated Workshop interaction, and desktop/mobile plaza direction.
+
+Identified revision: `assets/sources/plaza/plaza-arrival-v01.png` and `workshop-exterior-v01.png`, delivered as `src/assets/plaza/plaza-arrival.webp` (447,412 bytes) and `workshop-exterior.webp` (329,834 bytes), with the current `src/Plaza.tsx` / `src/plaza.css` presentation. This approval applies only to this plaza revision; it does not automatically approve future village assets, poses or variations. The scene remains a bounded prototype, with flattened source rasters rather than a full production village or layered animation masters. This closure supersedes earlier pending-approval notes for these assets, including the historical provenance checkpoint.
+
+Implementation clarification: the preceding small-revision turn was interrupted before any edit. The current semantic Workshop link wraps the building and its separate visible label and leads to `/projects`; this closure records the user's approval of the integrated Workshop interaction without claiming that a new sign-overlay label or heading-spacing edit was performed. The latest instruction to leave the plaza unchanged controls this closure.
+
+P2.3 is DONE / VISUALLY APPROVED based on the prior recorded technical checks and this explicit approval. Only roadmap/history changed; no artwork, layout, application code, routing or dependencies changed. No build/browser rerun was needed for this documentation-only closure. P2.4 has NOT started. No Git operations, commit or push.
+
+### P2.3 — small plaza implementation/checkpoint, 2026-09-17 — awaiting visual approval
+
+- Replaced only the `/village` placeholder with `Plaza.tsx` and scoped `plaza.css`. Preserved Welcome, `/projects`, fallback and React Router. Reused the current header/Menu CSS and native details/summary behavior; no notebook or second navigation system.
+- Built a bounded Strawberry Cream pixel plaza with blossom trees, cream paving, Aditi standing and bunny nearby, plus one separate Workshop exterior. PRD/design-system plaza host placement informed the single new pose. Preserved intended long diamond/tapered face, middle-parted brunette hair, cat-eye frames, headphones and outfit; new likeness remains for Aditi to review. No other destinations, movement, NPCs, sound, album/interior, Pathwise UI or pose library.
+- Workshop building and visible HTML label form one semantic link to the unchanged `/projects` placeholder. Album and wider-village availability are stated honestly. Background alt describes the scene; building image is decorative within its named link. Desktop/tablet layer the building over scenery; mobile crops the arrival region and places the same building below, beginning a vertical world without duplicating content.
+- Created two revision-01 PNGs with built-in image_gen using only owned approved references; raw sources, exact prompts, export settings and limitations are in [plaza provenance](../assets/sources/plaza/PROVENANCE.md). WebP exports total 777,246 bytes; original dimensions, quality 0.92, transparent Workshop alpha retained. Source files are flattened rasters, not editable animation masters or a finished production asset set. This local review integration does not imply visual/publication approval.
+- Validation: `npm run build` passed (28 modules; JS gzip estimate 83.24 kB, CSS 1.34 kB). Isolated headless Chrome screenshots inspected at 1366×768, 768×1024 and 360×800; supplementary overflow check at 320px also passed. Both images loaded, no horizontal overflow. Keyboard order: skip link, Welcome wordmark, Menu, Workshop. Visible focus screenshot inspected; Enter opens `/projects`. Welcome entry, native Menu Space/Tab/Enter, browser Back/Forward, direct refresh and unknown-route recovery passed. Reduced-motion emulation had zero animations. No captured console/runtime errors or HTTP asset failures. Full screen-reader, cross-browser and measured performance audits were not run.
+- Reread all P2.3 code for simplicity: one scene component, scoped CSS, no state/hooks/helpers, extra dependencies, test packages or speculative scaffolding. Welcome art/layout/copy and Pathwise content unchanged. No secrets/private information introduced. No Git operations, commit or push. P2.4 and later tasks NOT STARTED.
+- Remaining checkpoint: Aditi's visual approval of this identified plaza/Workshop revision, per ART_WORKFLOW §§4/13. Exact next roadmap task after P2.3 is **P2.4 — Implement notebook navigation**; not authorized or started here.
 
 ### P2.2 — explicit visual approval and closure, 2026-09-17 — DONE
 
@@ -211,11 +232,11 @@ Use the simplest correct solution that meets the documented requirement. Code mu
 
 ## CURRENTLY WORKING ON
 
-P2.2 is DONE / visually approved. No implementation task is in progress. Unrelated content intake gaps remain open.
+P2.3 is DONE / VISUALLY APPROVED. No implementation task is in progress. P2.2 remains approved. Unrelated content intake gaps remain open.
 
 ## NEXT TASKS
 
-1. **P2.3 — Implement small plaza** is the exact next roadmap task, NOT STARTED: recognizable central arrival and active Workshop; other prototype destinations visibly incomplete rather than fake links. Do not begin it in this closure task.
+1. The exact next roadmap task is **P2.4 — Implement notebook navigation**, NOT STARTED: semantic controls, correct implemented destinations, focus/close/return behavior; P-05. Do not start in this closure task.
 2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P2.1 is complete; later scene work requires its own authorization.
 3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
@@ -239,6 +260,17 @@ No real-world retention improvement, validated traffic-control capability, comme
 Public biography/resume/contact, exact education dates, confirmed skill list, milestones and final project reflections are pending. Pathwise end-to-end ownership is confirmed and is not an intake gap. Project preview media is optional and never gates P1.4 or publication. Q-01–Q-06 in PRD §39 govern the remaining relevant content requirements.
 
 ## ASSET INVENTORY
+
+### P2.3 plaza revision 01 — visually approved
+
+Created 2026-09-17 by Codex with built-in image_gen. Full prompts, references and source limitations: [PROVENANCE.md](../assets/sources/plaza/PROVENANCE.md). Explicitly visually approved by Aditi on 2026-09-18 for this identified revision only; the closure entry supersedes historical pending-approval provenance notes.
+
+| Asset / purpose | Source | Export | Dimensions / source and export bytes |
+| --- | --- | --- | --- |
+| Arrival ground, host and nearby bunny / meaningful scene image | `assets/sources/plaza/plaza-arrival-v01.png` | `src/assets/plaza/plaza-arrival.webp` | 1536×1024; 2,584,848 / 447,412 |
+| Separate Workshop exterior / decorative image in named navigation link | `assets/sources/plaza/workshop-exterior-v01.png` | `src/assets/plaza/workshop-exterior.webp` | 1254×1254; 1,704,314 / 329,834 |
+
+Still-only; no motion variants required for P2.3. Same assets recomposed responsively; no separate mobile art library. Original flattened sources retained, no layered master or external backup claimed. No third-party game assets copied. Welcome revision 02 remains unchanged and approved.
 
 ### Approved bounded P1.3 sample — revision 03
 
@@ -291,6 +323,7 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## TESTING STATUS
 
+- P2.3 technical checks passed: production build, desktop/tablet/mobile screenshot inspection, 320px supplementary overflow check, keyboard and focus, Menu, Welcome/Workshop routes, Back/Forward, refresh/fallback, reduced motion and captured browser errors. Revision 01 was subsequently visually approved on 2026-09-18. See dated checkpoints above; no new runtime checks during closure and no full performance or accessibility-conformance claim.
 - P2.2 technical checks: strict TypeScript/production build passed; desktop/tablet/mobile browser screenshots visually inspected; no overflow or missing font/image; keyboard Menu and primary links, route shells/fallback recovery and reduced-motion access checked. No captured runtime/console errors. At that technical-check checkpoint, visual approval was outstanding; revision 02 is now explicitly approved in the closure entry above.
 
 - P2.1: dev/build/preview and headless Chrome render/CSS/fallback/home recovery passed; zero captured browser console errors/runtime exceptions. Strict TypeScript build passed. npm install audit reported zero vulnerabilities. No test packages/suite, Lighthouse, full accessibility/responsive or external-demo verification. Prior planning-only entries below remain historical.
@@ -324,6 +357,6 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## HANDOFF FOR NEXT SESSION
 
-P2.2 is DONE / VISUALLY APPROVED. Aditi approved the identified revision 02 Welcome artwork, including its long diamond-shaped face direction, middle part, cat-eye glasses, holding-bunny pose and pixelated cozy treatment, plus Times New Roman tagline. This closure supersedes historical pending-approval notes for revision 02; future variations need their own review. Source PNG remains flattened, not a layered animation master. No artwork/layout/code changes or Git operations.
+P2.2 remains DONE / VISUALLY APPROVED for Welcome revision 02 and Times New Roman tagline only. P2.3 is now independently DONE / VISUALLY APPROVED for its identified arrival/Workshop revision 01 and current presentation, including placement, environment, Workshop interaction and desktop/mobile direction. Neither approval extends to future assets. Source PNGs remain flattened, not layered animation masters. The interrupted presentation-revision request did not produce code edits; closure leaves the plaza unchanged.
 
-Enter My World and View Projects reach only honest unavailable route shells; no P2.3/P2.5 scene work. Menu is a native disclosure, not P2.4 notebook implementation. Resume remains unavailable. Exact next task: **P2.3 — Implement small plaza**, NOT STARTED. Preserve the standing simplicity rule and approved visual direction.
+Enter My World now reaches the small plaza; its Workshop and View Projects reach the unchanged `/projects` unavailable-album shell. Menu remains a native disclosure, not a notebook. Resume remains unavailable. Exact next task after P2.3: **P2.4 — Implement notebook navigation**, NOT STARTED. No P2.4+ work or Git operations occurred. Preserve the standing simplicity rule and approved visual direction.

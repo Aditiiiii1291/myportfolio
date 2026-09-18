@@ -1,0 +1,35 @@
+.plaza-content { max-width: 1120px; margin: auto; padding: 1.5rem; }
+.plaza-intro { text-align: center; margin-bottom: 1.25rem; }
+.plaza-intro h1 { font-size: clamp(2rem, 4vw, 3rem); }
+.plaza-intro p { margin: .75rem 0 0; }
+.plaza-scene { position: relative; border: 3px solid #965d75; background: #f9d8e2; }
+.plaza-arrival { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+.plaza-workshop {
+  position: absolute;
+  top: 8%;
+  right: 3%;
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.plaza-workshop img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+.workshop-label {
+  display: block;
+  padding: .65rem 1rem;
+  border: 2px solid #965d75;
+  background: #fffaf5;
+  box-shadow: 4px 4px #d99aae;
+  font-family: 'Pixelify Sans', monospace;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  text-align: center;
+}
+.plaza-workshop:hover .workshop-label, .plaza-workshop:focus-visible .workshop-label { background: #f3bdcc; }
+.plaza-notes { text-align: center; font-size: .875rem; }
+.plaza-notes p { margin: .75rem 0; }
+@media (max-width: 600px) {
+  .plaza-content { padding: 1.5rem .75rem .75rem; }
+  .plaza-arrival { height: 320px; object-fit: cover; object-position: left center; }
+  .plaza-workshop { position: relative; top: auto; right: auto; width: min(100%, 360px); margin: 0 auto; padding: .5rem .75rem 1.25rem; }
+}
