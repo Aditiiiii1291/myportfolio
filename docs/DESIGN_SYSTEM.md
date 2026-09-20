@@ -132,16 +132,16 @@ Error/success/warning surfaces are not assigned final hues yet. Use explicit tex
 
 ## 7. Typography
 
-Confirmed hierarchy: squared pixel lettering for display and short UI labels, with readable body text. Actual font families remain TBD; the generated sample depicts lettering and does not select or license a font. Choose an appropriately licensed pixel font for implementation and test longer text at reading size; never extract fonts from a reference game or website.
+Standing typography rule, explicitly updated for P2.4 (2026-09-20): use the existing licensed Pixelify Sans for short game-interface titles, location names, buttons and labels. Use `font-family: "Times New Roman", Times, serif;` for readable body content, notebook entries/descriptions, help/tutorial sentences, project descriptions, About text and longer information. Do not set paragraphs in the pixel font. Preserve this rule unless a later explicitly approved design changes it.
 
-Initial family budget: one expressive display family plus one readable sans-serif family, with UI/body differentiated through weight. This is a sample baseline to limit visual and loading complexity.
+The existing local pixel font plus system Times New Roman requires no new font download. This supersedes the earlier proposed sans-serif companion.
 
 | Role | Candidate size/behavior | Rules |
 | --- | --- | --- |
 | Welcome title | Approximately 40–72 px desktop, 32–44 px phone | Responsive wrapping; no clipping; chunky silhouette |
 | Major section/chapter title | Approximately 28–40 px | Brief display text; enough line height for glasses/headings not to overlap art |
 | UI/sign labels | Approximately 16–18 px, bold | Readable HTML, ordinary mixed case for longer labels |
-| Body | At least 16 px starting size; line height 1.5–1.7 | Selectable/resizable HTML; use a legible pixel face only if reading tests pass, otherwise a quiet readable companion |
+| Body | At least 16 px starting size; line height 1.5–1.7 | Selectable/resizable HTML in Times New Roman, Times, serif; no pixel paragraphs |
 | Caption/supporting label | Approximately 14–16 px | Never the only presentation of critical information |
 
 Body measure baseline: about 45–75 characters, narrower naturally on phones. Keep paragraphs off busy art. Essential information must not be shrunk to fit a drawn page. Avoid long all-caps text and decorative handwriting for project details.
@@ -152,7 +152,7 @@ Candidate spacing scale: 4, 8, 12, 16, 24, 32, 48, 64 CSS px. Use a consistent r
 
 Candidate interface borders: 2–3 px cocoa, with 3–4 px for large sign/panel emphasis. Candidate radii: 8 px small controls, 12–16 px ordinary panels, up to 24 px large paper/letter frames. Preserve blocky character through broad edges; do not default to fully pill-shaped controls everywhere.
 
-Use a restrained offset shadow beneath raised controls and panels, such as a 3–5 px downward offset at low opacity. This is a visual sample range, not a fixed global effect. Avoid glassmorphism, luminous outlines, deep floating shadows and high-contrast texture behind text.
+Use a restrained offset shadow beneath raised controls and panels, such as a 3–5 px downward offset at low opacity. P2.4 explicitly permits translucent cream/pink notebook surfaces with slight panel backdrop blur, plus a small introduction with a transparent unblurred backdrop; this supersedes the earlier blanket avoidance of glass-like surfaces. Avoid luminous outlines, deep floating shadows and distracting texture behind text.
 
 Maintain at least the PRD's comfortable target dimensions for primary controls; padding should support touch without making desktop labels oversized.
 
@@ -166,7 +166,21 @@ Candidates for hover: 1–2 px lift or a small shade change. Pressed: slight sha
 
 ### Notebook menu
 
-The external control says **Menu**. Notebook appearance belongs to the panel, not an ambiguous icon replacing the label. Entries match PRD §15. Use a compact desktop panel and a full-width mobile panel constrained to the viewport. Long menus scroll within a predictable surface.
+The external control says **Menu**. Entries match PRD §15. P2.4 uses a small floating translucent cream/pink notebook with a cocoa border, pink spine, restrained shadow and slight backdrop blur. Desktop width is at most 350px; mobile fits within the viewport with safe margins and internal scrolling as needed. Keep the world visible behind it; no giant opaque white rectangle or unrelated navigation page. Native modal focus/Escape/opener-return behavior remains; appearance is compact, not a simulated turning book. Current destination uses aria-current and a visible “Here” marker.
+
+### Welcome title-screen presentation
+
+Welcome presentation revision (2026-09-20): the existing Welcome content now overlays the existing landscape/portrait village hub artwork. Latest user steering makes the background secondary with a 62% Strawberry Cream veil and 3px blur, confined to Welcome. Title, Aditi holding bunny, Menu and actions remain sharp. Local text backing preserves readability without one large opaque card. Copy, fonts, links and artwork files are unchanged; the approved Welcome raster is softly edge-masked in CSS. This new presentation awaits visual review and does not change the prior artwork approval or approve the new hub. P2.5 remains NOT STARTED.
+
+Desktop/tablet retain the title-copy and foreground portrait arrangement; phone layouts stack them, with natural vertical scrolling on short screens. Background art switches to the portrait hub at square/tall aspect ratios. Blur affects only the decorative background, never readable content or controls. The interactive Village retains its sharp, unblurred hub presentation.
+
+### Full-screen Village presentation — P2.4 direction update
+
+The map itself is the `/village` interface. Latest correction (2026-09-20) supersedes the rejected contained-map/blurred-edge approach: one continuous, full-bleed pixel-art world, no decorative duplicate backdrop, no white margins or presentation frame. New landscape and portrait candidates show the five established places, connected paths and central Aditi/bunny. Only peripheral scenery may be cropped; preserve recognizable destinations. On unusually wide/short viewports the scene has a minimum height and may scroll rather than hide locations. HTML signs share the image coordinate system and remain readable. Workshop is a semantic link; future places explicitly say Unavailable. Small floating wordmark/Menu overlays the world. Exterior hub art does not authorize future interiors or P2.5.
+
+First entry per tab session uses a small bottom prompt with a transparent backdrop: no full-screen tint or blur. Confirmation or Escape closes it without changing map framing. View Projects bypasses it; sessionStorage and local-state fallback retain dismissal. Untimed Next hint/Got it and Dismiss controls offer Times New Roman guidance, including the truthful limited availability. Notebook remains secondary, compact and softly translucent; only its own panel retains slight blur.
+
+The uploaded village reference supplies composition principles, not a final asset to trace. New candidate art must be reviewed independently for the long diamond-shaped face, middle part and cat-eye glasses; prior approved character variations do not approve this one.
 
 Focus state must be visible on paper and scenery. Candidate focus ring: 3 px cocoa with a cream separation halo/offset, validated against each background. Do not rely only on a pink glow.
 
@@ -228,7 +242,7 @@ Switch composition based on available space, not device detection. Wide views ma
 
 ### Mobile and very small screens
 
-Welcome remains a separate screen, with normal scrolling if needed. After entry: plaza, then Workshop, Cottage, Garden, Board and Mailbox along a vertical illustrated path. All remain directly reachable through Menu.
+Welcome remains a separate screen, with normal scrolling if needed. The current P2.4 candidate shows the five-location hub together using a portrait composition. Future detailed scenes remain directly reachable through Menu when implemented; the earlier vertical-path expansion is superseded for this hub presentation.
 
 Panels, project chapters, and the album become single-column reading surfaces. Interior art moves above text. Seed packets/notices reflow. Remove tiny decorative props rather than shrinking the entire village. Respect safe areas; fixed navigation must not overlap content or focused controls.
 
@@ -286,3 +300,7 @@ Originality does not mean modifying copied sprites until they look different. Co
 - First/repeat/reduced-motion states show usable content.
 - No decorative excess compromises the initial-transfer budget.
 - Asset inventory and actual test coverage recorded honestly; reference art not copied.
+
+
+
+

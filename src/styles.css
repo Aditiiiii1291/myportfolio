@@ -5,7 +5,7 @@
   font-display: swap;
 }
 :root {
-  font-family: system-ui, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   color: #583448;
   background: #fff0f3;
   line-height: 1.6;
@@ -13,7 +13,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; }
 a { color: inherit; }
-a:focus-visible, summary:focus-visible {
+a:focus-visible, button:focus-visible {
   outline: 3px solid #583448;
   outline-offset: 5px;
 }
@@ -29,6 +29,10 @@ a:focus-visible, summary:focus-visible {
 .skip-link:focus { transform: translateY(0); }
 .welcome { min-height: 100svh; border: 10px solid #f3bdcc; }
 .welcome-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #fff0f3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,29 +42,8 @@ a:focus-visible, summary:focus-visible {
   padding: 1.25rem 2.5rem;
   border-bottom: 1px solid #e7b2c2;
 }
-.wordmark, h1, summary, .entry-link, .resume-status { font-family: 'Pixelify Sans', monospace; }
+.wordmark, h1, .entry-link, .resume-status { font-family: 'Pixelify Sans', monospace; }
 .wordmark { font-size: 1.25rem; }
-.welcome-menu { position: relative; }
-.welcome-menu summary {
-  cursor: pointer;
-  padding: .5rem 1rem;
-  min-height: 44px;
-  border: 2px solid #965d75;
-  background: #fffaf5;
-  font-size: 1.125rem;
-}
-.welcome-menu nav {
-  position: absolute;
-  right: 0;
-  top: calc(100% + .75rem);
-  z-index: 2;
-  width: min(280px, 80vw);
-  padding: 1rem;
-  border: 2px solid #965d75;
-  background: #fffaf5;
-  box-shadow: 4px 4px #e7b2c2;
-}
-.welcome-menu nav a, .welcome-menu nav span { display: block; padding: .65rem .25rem; }
 .welcome-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -72,6 +55,7 @@ a:focus-visible, summary:focus-visible {
   gap: 1.5rem;
 }
 h1 { margin: 0; font-size: clamp(2.75rem, 5.6vw, 5rem); line-height: 1.08; font-weight: 600; }
+h1, #main { scroll-margin-top: 7rem; }
 .welcome-tagline { max-width: 34ch; margin: 1.75rem 0; font-family: "Times New Roman", Times, serif; font-size: 1.125rem; }
 .welcome-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 .entry-link {
@@ -90,11 +74,31 @@ h1 { margin: 0; font-size: clamp(2.75rem, 5.6vw, 5rem); line-height: 1.08; font-
 .entry-link.primary { background: #f3bdcc; }
 .entry-link:hover { background: #f9d8e2; }
 .resume-status { margin-top: 1.75rem; font-size: 1.1rem; }
-.resume-status span { font-family: system-ui, sans-serif; font-size: .875rem; }
+.resume-status span { font-family: "Times New Roman", Times, serif; font-size: .875rem; }
 .welcome-art { width: 100%; height: auto; image-rendering: pixelated; }
 .route-shell { max-width: 760px; margin: auto; padding: 3rem 1.5rem; }
 .route-shell h1 { font-size: 2.5rem; }
 .route-shell a { display: inline-block; padding: .75rem 0; }
+.title-screen { position: relative; isolation: isolate; border: 0; background: #f3bdcc; }
+.title-screen::before {
+  content: '';
+  position: fixed;
+  inset: -8px;
+  filter: blur(3px);
+  z-index: -1;
+  background: linear-gradient(rgb(255 240 243 / 62%), rgb(255 240 243 / 62%)), url('./assets/plaza/village-hub-v01.webp') center top / cover;
+}
+.title-screen .welcome-header { max-width: none; border: 0; background: transparent; padding: 1rem; }
+.title-screen .wordmark { padding: .25rem .5rem; border: 1px solid #965d75; background: rgb(255 240 243 / 94%); }
+.title-screen .welcome-content { min-height: calc(100svh - 78px); grid-template-columns: minmax(0, 460px) minmax(0, 360px); justify-content: space-between; gap: 2rem; }
+.title-screen .welcome-copy { padding: 1.5rem; }
+.title-screen h1 { text-shadow: 2px 2px #fff0f3, -2px -2px #fff0f3, 2px -2px #fff0f3, -2px 2px #fff0f3, 0 0 14px #fff0f3; }
+.title-screen .welcome-tagline { padding: .5rem .75rem; background: rgb(255 240 243 / 94%); }
+.title-screen .resume-status { display: inline-block; padding: .25rem .5rem; background: rgb(255 240 243 / 94%); }
+.title-screen .welcome-art { mask-image: radial-gradient(ellipse 65% 70% at 50% 50%, #000 55%, transparent 78%); }
+@media (max-aspect-ratio: 1/1) {
+  .title-screen::before { background-image: linear-gradient(rgb(255 240 243 / 62%), rgb(255 240 243 / 62%)), url('./assets/plaza/village-hub-portrait-v02.webp'); background-position: center; }
+}
 @media (max-width: 700px) {
   .welcome { border-width: 6px; }
   .welcome-header { padding: 1rem; }
@@ -104,4 +108,13 @@ h1 { margin: 0; font-size: clamp(2.75rem, 5.6vw, 5rem); line-height: 1.08; font-
   .welcome-actions { justify-content: center; }
   .welcome-art { width: min(100%, 340px); justify-self: center; }
   .resume-status { margin-bottom: 0; }
+  .title-screen .welcome-content { grid-template-columns: minmax(0, 1fr); align-content: center; justify-items: center; padding: 1rem; gap: .5rem; }
+  .title-screen .welcome-copy { width: min(100%, 380px); padding: 1rem; }
+  .title-screen .welcome-content h1 { font-size: 2.75rem; }
+  .title-screen .welcome-tagline { margin: .75rem auto; }
+  .title-screen .welcome-actions { gap: .75rem; }
+  .title-screen .entry-link { padding: .5rem .75rem; min-height: 44px; font-size: 1rem; }
+  .title-screen .resume-status { margin-top: .75rem; }
+  .title-screen .welcome-art { width: 180px; }
 }
+

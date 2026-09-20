@@ -1,0 +1,12 @@
+.menu-trigger, .notebook button { font: 1rem 'Pixelify Sans', monospace; color: #583448; background: rgb(255 240 243 / 94%); border: 2px solid #965d75; padding: .5rem .75rem; min-height: 44px; cursor: pointer; }
+.menu-trigger:hover, .notebook button:hover { background: #f9d8e2; }
+.notebook { position: fixed; inset: 4.75rem 1rem auto auto; margin: 0; width: min(350px, calc(100% - 2rem)); max-height: calc(100dvh - 6rem); padding: .75rem 1rem; color: #583448; background: rgb(255 240 243 / 90%); backdrop-filter: blur(3px); border: 2px solid #965d75; border-left: 7px solid #d99aae; box-shadow: 4px 4px rgb(88 52 72 / 25%); overflow-y: auto; }
+.notebook::backdrop { background: rgb(58 32 46 / 8%); }
+body:has(dialog[open]) { overflow: hidden; }
+.notebook-heading { display: flex; align-items: center; gap: .5rem; justify-content: space-between; }
+.notebook h2 { font: 1.25rem/1.2 'Pixelify Sans', monospace; margin: 0; }
+.notebook ul { list-style: none; margin: .5rem 0 0; padding: 0; }
+.notebook li { border-bottom: 1px solid #d99aae; }
+.notebook li a, .notebook li > span { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 44px; padding: .4rem .25rem; line-height: 1.2; }
+.notebook li a:hover, .notebook a[aria-current="page"] { background: #f3bdcc; }
+.notebook small { font-size: .8125rem; }

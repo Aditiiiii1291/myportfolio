@@ -1,9 +1,11 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
-Status: P2.3 DONE — VISUALLY APPROVED; P2.4 NOT STARTED.  
-Updated: 2026-09-18. No fixed launch date or assumed weekly availability.
+Status: P2.4 DONE / VISUALLY APPROVED; P2.5 NOT STARTED. P2.2/P2.3 artwork approvals preserved.  
+Updated: 2026-09-20. No fixed launch date or assumed weekly availability.
 
-Latest checkpoint: **P2.3 DONE — VISUALLY APPROVED**, 2026-09-18. Aditi approved the identified plaza revision 01: blossom-lined pixel-art plaza, Aditi/bunny placement, winding-path/environment treatment, Project Workshop exterior, integrated Workshop interaction and desktop/mobile plaza direction. Approval is specific to this revision, not every future village asset. Existing technical validation remains recorded in history. Exact next task: **P2.4 — Implement notebook navigation**, NOT STARTED. Documentation-only closure; no plaza changes or Git operations.
+Latest checkpoint: **P2.4 DONE / VISUALLY APPROVED**, 2026-09-20. Aditi explicitly approved the current Welcome-over-world treatment, softly faded/blurred village behind Welcome, full village as the main game-world interface, compact floating notebook navigation, first-entry behavior, game-style tutorial hints, Times New Roman readable/body content, Pixelify Sans short game UI/titles/labels/buttons, and desktop/tablet/mobile presentation. Approval is limited to the identified current revision recorded in history; future variations require their own review. Exact next task: **P2.5 — Implement shelf/album interaction**, NOT STARTED. Documentation-only closure; no commit or push.
+
+Approved revision: Welcome uses the existing hub artwork with a 62% Strawberry Cream veil and 3px background-only blur; the foreground Welcome artwork remains revision 02. Interactive Village uses landscape hub v01 / portrait hub v02 with the current HTML signs, notebook, session Start and hints. This approval does not extend automatically to future Aditi, village, notebook or presentation changes.
 
 ## Purpose and authority
 
@@ -23,7 +25,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0 and P1.1–P1.7 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only. P2.1 supplies the app foundation; P2.2 and P2.3 are visually approved. No full production village, complete portfolio or deployment is complete. P2.4 and later tasks have not started.
+Phase 0 and P1.1–P1.7 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only. P2.1 supplies the app foundation; P2.2 and P2.3 are visually approved; P2.4 navigation and final presentation are implemented, verified and explicitly visually approved. No full production village, complete portfolio or deployment is complete. P2.5 and later tasks have not started.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -95,7 +97,7 @@ Selected links-only contact: approved email/visible address/copy, approved GitHu
 
 Baseline in [technical approach §10](TECHNICAL_APPROACH.md): Vitest with React Testing Library/user-event/jsdom, small Playwright journeys and integrated axe scans, manual accessibility/art/responsive checks and Lighthouse/transfer inspection. No overlapping Jest/Cypress suite, visual service, CI or hooks. Existing PRD viewport/metric budgets remain unchanged. Read-only browser file versions recorded; no browser launched. Latest user instruction restricts P1.7 to planning, so the former “measured lab profile” acceptance is clarified as a repeatable unmeasured protocol, with actual versions/results recorded at authorized setup and validation. This is an explicit scope clarification, not a test pass.
 
-P2.1 completed the minimal foundation. P2.2 and P2.3 are DONE / visually approved. **P2.4 — Implement notebook navigation** is the exact next task; NOT STARTED.
+P2.1 completed the minimal foundation. P2.2 and P2.3 are DONE / visually approved. P2.4's final Welcome-over-world and unified-hub presentation is DONE / VISUALLY APPROVED for the identified current revision. **P2.5 — Implement shelf/album interaction** is the exact next task after P2.4; NOT STARTED.
 
 ## Phase 2 — First playable prototype
 
@@ -106,7 +108,7 @@ Purpose: Prove the signature experience with real content before producing all f
 | P2.1 Create minimal app foundation | DONE | P1.1, P1.7 | React/Vite/strict TypeScript; plain semantic root, minimal CSS, typed Pathwise metadata, BrowserRouter unknown-route fallback. Dev/build/preview and headless Chrome rendering/console checks passed. No scenes, production art or testing packages |
 | P2.2 Implement Welcome | DONE — VISUALLY APPROVED | P2.1, P1.3 | Aditi approved Welcome revision 02: more visibly pixelated cozy game-opening illustration, Aditi holding bunny, long diamond-shaped face direction, middle-parted hair, cat-eye frame glasses, and Times New Roman tagline. Existing technical checks passed; entry shells/Resume/native Menu remain as implemented. Approval does not extend to future variations or layered animation assets; full P-02 journey depends on later scenes |
 | P2.3 Implement small plaza | DONE — VISUALLY APPROVED | P2.1, P1.3 | Aditi approved revision 01 on 2026-09-18: blossom-lined pixel plaza, Aditi/bunny placement, winding path/environment, Workshop exterior, integrated Workshop interaction and desktop/mobile direction. Semantic Workshop link leads to existing `/projects` placeholder. Prior responsive, keyboard/focus/navigation, console and build checks passed. Approval applies only to this identified revision, not future village assets |
-| P2.4 Implement notebook navigation | NOT STARTED | P2.1 | Semantic controls, correct implemented destinations, focus/close/return behavior; P-05 |
+| P2.4 Implement notebook navigation | DONE — VISUALLY APPROVED | P2.1 | Explicit approval of current Welcome-over-world with softly faded/blurred background, full village interface, compact floating notebook, first-entry behavior, game-style hints, Times New Roman body/readable content and Pixelify Sans short UI/titles/labels/buttons, desktop/tablet/mobile presentation. Landscape hub v01 / portrait v02 and current implementation only; no automatic future-variation approval. Existing technical checks passed. P2.5 NOT STARTED |
 | P2.5 Implement shelf/album interaction | NOT STARTED | P2.3, P1.3 | Bunny delivery, skip/immediate access, first-session/revisit behavior, single-column mobile album; P-04 |
 | P2.6 Implement Pathwise chapter | NOT STARTED | P2.1, P1.4, P2.5 | Stable URL, concise technical content, primary live-project/source actions and accurate access notes; optional single preview, no gallery; P-03 |
 | P2.7 Implement responsive/state behavior | NOT STARTED | P2.2–P2.6 | Vertical mobile composition, sensible return/Back/scroll handling, loading and asset fallback; P-06/P-07 |
@@ -182,3 +184,6 @@ Optional movement, deer/fluffy-cat residents, more complex bunny interactions, d
 ## Documentation maintenance
 
 After each phase or significant change: update task statuses here; append actual outcomes and next task in history; change PRD only for product decisions; revise design system for accepted visual/token changes. Keep exact tagline, project statuses, pending questions and V1 boundaries aligned across all four files.
+
+
+

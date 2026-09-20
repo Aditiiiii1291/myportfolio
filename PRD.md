@@ -7,6 +7,16 @@ This document defines WHAT to build and WHY. It derives from the completed brain
 
 ## Latest user direction — 2026-09-16
 
+### Welcome over the world — 2026-09-20
+
+Welcome presentation revision (2026-09-20): the existing Welcome content now overlays the existing landscape/portrait village hub artwork. Latest user steering makes the background secondary with a 62% Strawberry Cream veil and 3px blur, confined to Welcome. Title, Aditi holding bunny, Menu and actions remain sharp. Local text backing preserves readability without one large opaque card. Copy, fonts, links and artwork files are unchanged; the approved Welcome raster is softly edge-masked in CSS. This new presentation awaits visual review and does not change the prior artwork approval or approve the new hub. P2.5 remains NOT STARTED.
+
+### P2.4 presentation update — 2026-09-20
+
+The latest user correction rejects contained foreground art over blurred/translucent edge fill. P2.4 now presents one full-bleed pixel village hub with all five established exterior landmarks, small central Aditi and bunny, HTML location signs, and responsive landscape/portrait art. The uploaded image guides composition and world-first presentation only; do not copy or trace it. The Workshop links to the current Projects placeholder; Cottage, Skills Garden, Adventure Board and Mailbox remain visibly unavailable, with no future interiors or chapter work. The compact notebook and Times New Roman body/pixel short-UI rule remain. First-entry prompt has a transparent backdrop and does not blur or reframe the map. This supersedes the previous no-regeneration/contained-map requirements for P2.4 only. The new hub artwork and presentation require explicit visual approval; previous Welcome/plaza approvals do not transfer. P2.5 remains NOT STARTED.
+
+Standing typography: Pixelify Sans for short game UI/titles/location labels; `"Times New Roman", Times, serif` for notebook body/navigation descriptions, normal paragraphs, help sentences and longer project/About content. See design system for the recorded implementation direction. No P2.5+ work is authorized by this update.
+
 **Current status update (2026-09-17):** P2.1 is DONE — minimal React/Vite/TypeScript foundation verified locally. No Welcome/scene implementation or production art. Exact next task: P2.2 — Implement Welcome, NOT STARTED. Product decisions, content gaps and test baseline remain unchanged; no Git operations.
 
 ### P1.4 scope clarification — authoritative
@@ -218,7 +228,7 @@ The canonical homepage is a separate game-like welcome scene. It shows a pastel 
 
 Primary action: **Enter My World**. Secondary actions: **View Projects** and **Resume**. A clearly labeled Menu opens the notebook. Do not insert the branch-led subtitle rejected during brainstorming.
 
-Enter My World triggers a brief soft fade into the plaza. Direct project/section links bypass this transition. No autoplay audio, setup wizard, forced device selection, required mascot dialogue, or artificial loading countdown. Controls remain usable as nonessential artwork loads.
+Enter My World opens the full-screen plaza. On first entry per tab session, a small bottom Start prompt overlays the visible hub with a transparent backdrop; Start or Escape dismisses it without blur or reframing. Direct project links bypass this introduction, including View Projects in the prompt. No autoplay audio, setup wizard, forced device selection, required mascot dialogue or loading countdown. No repeat prompt after starting during the same session.
 
 ## 13. First 10 Seconds
 
@@ -236,7 +246,7 @@ After a section or chapter, explicit return controls restore the relevant collec
 
 A persistent, safely inset **Menu** control opens an adventure notebook. Planned placement is a consistent viewport corner that does not cover content, keyboard focus, or mobile browser controls; exact side is a layout detail to validate.
 
-Entries: Welcome, Village, About, Projects, Skills, Experience & Achievements, Resume, Contact. Desktop uses a compact readable panel; mobile uses a full-width panel within the viewport. The same destinations and labels are available across modes.
+Entries: Welcome, Village, About, Projects, Skills, Experience & Achievements, Resume, Contact. Desktop uses a compact translucent floating notebook; mobile adjusts within the viewport while retaining visible world context where practical. The same destinations and labels are available across modes. Prototype future destinations remain noninteractive and explicitly unavailable.
 
 If presented as a modal, opening moves focus inside, Escape closes, background controls are not reachable, and closing restores focus to the opener. Clearly distinguish navigation links from close/toggle buttons. Do not expose a backpack-only or icon-only ambiguous menu.
 
@@ -533,3 +543,6 @@ Settled identity/world decisions are closed. No unanswered question prevents the
 | Q-06 | Resolve Pathwise public-demo access/model issue and verify TrafficIQ workflow | Pre-launch presentation gate: repair separately or clearly provide non-live evidence and accurate status |
 
 Next authorized deliverable after this PRD is the linked roadmap, design system and history. The next development-preparation task is defined in the roadmap; no portfolio implementation is part of this document-creation stage.
+
+
+
