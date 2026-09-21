@@ -1,10 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-20. Stage: P2.4 final presentation — DONE / VISUALLY APPROVED. P2.5 NOT STARTED. P2.2/P2.3 artwork approvals preserved.
+Last updated: 2026-09-21. Stage: P2.5 shelf/album — DONE / VISUALLY APPROVED. P2.6 NOT STARTED. P2.2–P2.4 approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
+
+- Current work: P2.5 shelf/album is DONE / VISUALLY APPROVED for the identified final refined Workshop/album implementation. P2.4 remains approved. P2.6 — Implement Pathwise chapter is next and NOT STARTED; closure does not authorize starting it. See latest dated entry; previous status statements are historical.
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -17,9 +19,45 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P1.7 baseline is recorded in technical approach §10. No packages installed, tests written, browser automation or measured performance results.
 - P2.2 is DONE / visually approved: Aditi approved Welcome artwork revision 02 and the Times New Roman tagline. Source remains flattened; this approval is specific to the identified Welcome revision and does not cover the new plaza assets.
 - P2.3 is DONE / visually approved on 2026-09-18 for identified plaza revision 01 and its current presentation. At that checkpoint, `/village` had the bounded arrival scene and semantic Workshop link; `/projects` remains the existing unavailable-album shell. Approval does not extend to future village assets.
-- P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 — Implement shelf/album interaction is NOT STARTED.
+- P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P2.5 — explicit final Workshop/album approval and closure, 2026-09-21 — DONE / VISUALLY APPROVED
+
+Aditi explicitly approved:
+
+- The warm Workshop wall/environment treatment and wooden shelf surround.
+- Compact Workshop / Back signs and floating Home and Menu controls.
+- Bunny delivery interaction, its 1.1-second timing, skip behavior, reduced-motion immediate album access and session return behavior.
+- The cream project album, pink binding and subtle binding depth / page edges.
+- Times New Roman for readable content and the pixel font for short game UI / headings.
+
+Identified approved revision: the current 2026-09-21 Workshop/album after the bounded presentation refinement in `src/workshop.css`, with `src/Workshop.tsx`, shell/session behavior in `src/App.tsx`, existing project metadata/placeholders and `src/assets/workshop/bunny-album-v01.webp` (source `assets/sources/workshop/bunny-album-v01.png`). This explicit approval supersedes pending-review statements in earlier checkpoints and provenance notes for this identified revision only. It does not automatically approve future Workshop/album changes or bunny variations. The flattened bunny source is not a layered animation master; no full chapter or elaborate room is implied by this approval.
+
+Closure changes only the roadmap and this history. Approved Workshop, shelf, album, artwork, layout and behavior are untouched. Existing build, four-size responsive and interaction/accessibility checks are recorded in the preceding implementation/refinement entries; no fresh runtime tests were needed for this documentation-only closure.
+
+**P2.6 has NOT started. Exact next task: P2.6 — Implement Pathwise chapter.** Existing roadmap scope: stable URL, concise technical content, primary live-project/source actions and accurate access notes; optional single preview, no gallery; acceptance P-03. Use the prepared P1.4 chapter to explain what Pathwise is, the problem, what Aditi built as its end-to-end developer, how it works, technical architecture, relevant ML/risk intelligence, what makes it interesting, current limitations, and Live Project / GitHub links. Keep the chapter concise within the illustrated album; retain evidence boundaries and access limitations, with no invented features or team-attribution gate. A single static preview is optional/recommended as fallback, never a prerequisite; no Project Moments or screenshot gallery. This scope statement is a handoff only, not implementation authorization. No Git operations, commit or push.
+
+### P2.5 — bounded Workshop visual refinement, 2026-09-21 — AWAITING USER VISUAL APPROVAL
+
+- User liked the shelf/album interaction but explicitly did not approve the initial presentation. This revision changes only `src/workshop.css` in the application. It does not imply approval of the revised Workshop or bunny asset, and does not alter the approved Welcome/Village/notebook presentation elsewhere.
+- Replaced the Workshop's full-width pale header treatment with compact floating semantic Home/wordmark and Menu controls over a continuous warm background. Added restrained wall texture and a low wooden trim, a smaller cream Project Workshop sign, a sign-like Back to Village link, and a wooden shelf surround with shallow depth and decorative brackets. No complete room, new component, scene engine or new artwork.
+- Preserved the album's cream paper, pink binding, bunny and content layout; added a soft binding inset and stacked page-edge shadows. Descriptive text uses Times New Roman; short titles, labels and controls retain the existing pixel font. Shelf project labels and all interaction semantics are unchanged.
+- Validation: inspected shelf and album at 1366×768, 768×1024, 360×800 and 320×568. No horizontal overflow; natural vertical scrolling on small screens. Confirmed transparent header background, no outer frame, controls at least 44px tall and within the viewport, readable content and visible keyboard focus. Corrected CSS specificity so the shared frame border does not reappear on Workshop.
+- Existing browser checks passed for shelf Enter, immediate content and heading focus, Skip, natural 1.1-second completion, chapter placeholders and return, Back/Forward/direct refresh, notebook Enter/Escape/focus restoration, reduced-motion bypass, session/storage-denied fallback and unknown-project recovery. Final visual checks captured no runtime exceptions. No physical-device, screen-reader or full cross-browser conformance claim.
+- `npm run build` passed (35 modules; CSS 14.11 kB / gzip 3.80 kB; JS 270.88 kB / gzip 85.93 kB). Before/after hashes confirm routing, delivery logic, timing, data, links, limitations, approved scenes/shared styles, notebook component, bunny artwork and package files were preserved. No dependencies added. Documentation changes are limited to roadmap/history. P2.5 remains AWAITING USER VISUAL APPROVAL; P2.6 NOT STARTED. No Git operations, commit or push.
+
+### P2.5 — shelf/album implementation, 2026-09-21 — AWAITING USER VISUAL APPROVAL
+
+- Verified roadmap P2.5/P-04 against PRD, design, technical approach, art workflow, sample review and prepared Pathwise content. Existing /projects placeholder becomes one minimal shelf and inline album; no elaborate interior or full chapter. Approved Welcome, Village, notebook, tutorial, typography styles and existing artwork are preserved; before/after hashes of those files plus package manifests match.
+- Shelf album is a semantic button with expanded/controls relationship; an immediate-access button bypasses delivery. Activating the shelf opens all project content immediately and gives the decorative bunny one 1.1-second CSS entrance with a small lift. Skip stops motion; completion uses a bounded timer rather than animationend. Album remains available if art fails. Reduced motion opens it immediately with no animation. User-triggered reveal focuses the album heading and scrolls the complete album below the header; ordinary timer completion does not steal focus except to preserve it if the disappearing Skip control was focused.
+- One shell-owned session flag remembers the ready album across routes, with sessionStorage and in-memory fallback. Returning from a chapter or refreshing a known chapter preserves/open-primes the album; no forced replay. Unknown project URLs have an honest recovery page. No animation library, engine, drag/drop, modal album, page-turn system or global state package.
+- Shared src/content/projects.ts now supplies Pathwise, TrafficIQ and MarketMind names, verified basic summaries, confirmed end-to-end role, main technologies and source/live links. Pathwise chapter preparation and PRD inventory are the evidence; no fresh external workflow verification or invented outcome. MarketMind has no hosted link. Limitations remain adjacent to live actions. All chapter links are selectable but lead to explicit not-yet-available placeholders at /projects/:slug; full Pathwise chapter remains P2.6, other full chapters remain later work. No gallery or Project Moments.
+- New asset: assets/sources/workshop/bunny-album-v01.png, 1254×1254 RGBA, built-in imagegen using only the existing approved Welcome bunny as an identity reference. WebP export src/assets/workshop/bunny-album-v01.webp, 480×480, quality 92, 39.48 kB, true transparency; same still used for normal/reduced motion. Source is flattened, not a layered animation master. CSS shelf/paper and HTML labels are original native UI. Exact prompt, provenance and approval boundary: [Workshop provenance](../assets/sources/workshop/PROVENANCE.md). New pose/presentation is IN REVIEW, not automatically approved.
+- Validation: production build passes (35 modules; JS gzip 85.93 kB, CSS gzip 3.43 kB). Headless Chrome checks cover Village → Workshop, shelf Enter, reveal focus, immediate usable project list, Skip, natural completion, chapter selection, Back/Forward, direct chapter refresh/return, notebook Enter/Escape/focus return, storage denied fallback, reduced motion, unknown slug and runtime exceptions. Four requested sizes: 1366×768, 768×1024, 360×800, 320×568; screenshots inspected, no horizontal overflow, readable single-column album and correct fonts. Adjusted scroll framing and phone title wrapping after visual inspection. Earlier runs encountered stopped preview/browser and test timing/hidden-link selection issues; corrected the test harness. No physical-device, screen-reader or full cross-browser/performance-conformance claim.
+- Simplicity review: reread every changed application file. Added Workshop and one deliberately small chapter-placeholder component, one scoped stylesheet, one shell boolean, one local delivery boolean, one heading ref and bounded effects; one shared project list. No new dependencies. Approved screen/style/art/package hashes match the pre-change snapshot. Only roadmap/history/provenance documentation updated; unrelated plans untouched. P2.5 remains awaiting Aditi's visual approval. P2.6+ NOT STARTED. No Git operations, commit or push.
+
 
 ### P2.4 — explicit final presentation approval and closure, 2026-09-20 — DONE / VISUALLY APPROVED
 
@@ -301,7 +339,7 @@ P2.4 is DONE / VISUALLY APPROVED for the identified current implementation. Earl
 
 ## NEXT TASKS
 
-1. The exact next roadmap task is **P2.5 — Implement shelf/album interaction**, NOT STARTED: bunny delivery, skip/immediate access, first-session/revisit behavior, single-column mobile album; P-04. Do not start as part of P2.4.
+1. Review the P2.5 shelf/album visual interaction before closure. Exact next roadmap task after P2.5: **P2.6 — Implement Pathwise chapter**, NOT STARTED: stable URL, concise technical content, primary live-project/source actions and accurate access notes; optional single preview, no gallery; P-03. Do not start under the P2.5 request.
 2. Preserve approved art/architecture and use [CONTENT_INTAKE.md](CONTENT_INTAKE.md) to collect missing publication content progressively. P2.1 is complete; later scene work requires its own authorization.
 3. Pathwise demo access/model re-verification remains later release work. Do not modify or redeploy Pathwise as part of this portfolio task.
 ## FUTURE BACKLOG
@@ -388,6 +426,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 ## TESTING STATUS
 
+- P2.5 production build and browser interaction/responsive checks recorded in the latest entry. New artwork and interaction await visual approval; no P2.6 chapter implemented.
+
 - P2.4 final presentation is visually approved, based on explicit user approval and the previously recorded production build, responsive screenshots, bounds/overflow, Workshop mouse/keyboard, focus, notebook and session Start checks. Documentation-only closure required no runtime rerun.
 
 - Historical, superseded P2.4 whole-map checks passed: complete foreground bounds and identical before/after Start geometry at all four requested viewports; aligned Workshop link, no hint overlap/white bars/horizontal overflow, keyboard/pointer/notebook/hints/return behavior, label focus, clean application errors and production build. Final visual approval remains outstanding.
@@ -429,7 +469,9 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 
 P2.2 remains DONE / VISUALLY APPROVED for Welcome revision 02 and Times New Roman tagline only. P2.3 is now independently DONE / VISUALLY APPROVED for its identified arrival/Workshop revision 01 and current presentation, including placement, environment, Workshop interaction and desktop/mobile direction. Neither approval extends to future assets. Source PNGs remain flattened, not layered animation masters. The interrupted presentation-revision request did not produce code edits; closure leaves the plaza unchanged.
 
-P2.4 is DONE / VISUALLY APPROVED for the exact Welcome-over-world, landscape v01 / portrait v02 village, notebook, first-entry/hints, typography and responsive implementation identified in the closure entry. Preserve this approved revision; future changes require their own review. P2.5 — Implement shelf/album interaction is NOT STARTED: bunny delivery, skip/immediate access, first-session/revisit behavior and single-column mobile album; P-04. Do not begin it under this closure request. No commit or push.
+P2.2–P2.4 remain DONE / VISUALLY APPROVED. P2.5 shelf/album interaction is implemented and AWAITING USER VISUAL APPROVAL for the current CSS shelf/album, bunny-album-v01 and interaction. Review /projects before closure. Exact next roadmap task after P2.5 is P2.6 — Implement Pathwise chapter: stable URL, concise technical content, primary live-project/source actions, accurate access notes, optional single preview and no gallery; P-03. P2.6+ NOT STARTED. No commit or push.
+
+
 
 
 
