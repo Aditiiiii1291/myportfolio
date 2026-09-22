@@ -132,6 +132,8 @@ Error/success/warning surfaces are not assigned final hues yet. Use explicit tex
 
 ## 7. Typography
 
+Pathwise-only revision (2026-09-22): after simplifying the chapter, Aditi requested typography that better matches the game design. The short Pathwise page now uses the existing Pixelify Sans throughout, with 17px body text and 1.6 line height. This supersedes the Times New Roman body rule only for this chapter and awaits visual approval; approved Welcome, notebook and Workshop typography remains unchanged.
+
 Standing typography rule, explicitly updated for P2.4 (2026-09-20): use the existing licensed Pixelify Sans for short game-interface titles, location names, buttons and labels. Use `font-family: "Times New Roman", Times, serif;` for readable body content, notebook entries/descriptions, help/tutorial sentences, project descriptions, About text and longer information. Do not set paragraphs in the pixel font. Preserve this rule unless a later explicitly approved design changes it.
 
 The existing local pixel font plus system Times New Roman requires no new font download. This supersedes the earlier proposed sans-serif companion.

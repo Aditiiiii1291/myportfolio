@@ -21,7 +21,7 @@ Define how original art will be created, revised, approved and prepared for the 
 | Buildings/locations | Cottage exterior and one creative room; Workshop shelves/workbench; Garden potting bench/packets; grouped Adventure Board; Mailbox/envelope | Only Workshop sample in P1.3; five-location set later |
 | Interface artwork | Things I've Built album/book, notebook navigation decoration, journal/letter/paper frames, sign plaques, small original icons | Album, one control and typography sample first; functional text stays HTML |
 | Decoration | Plants, flowers, clouds, wood/paper accents; Cottage painting/crafts, tennis racket and warm candles | Reuse a few motifs; butterfly and extra ambient details optional |
-| Project media | Genuine Pathwise, TrafficIQ and MarketMind screenshots, approved walkthrough stills | Content evidence, not generated artwork; Pathwise media belongs to P1.4 |
+| Project media | Genuine Pathwise, TrafficIQ and MarketMind screenshots, approved walkthrough stills | Optional single static preview/fallback, not generated artwork; no gallery or P1.4 media dependency |
 
 No walkable interiors, NPC cast, combat assets, sprite movement system, complete animation sheet or sound inventory is required.
 
@@ -89,7 +89,7 @@ Choose dimensions after P1.3 composition review, not now. Start with intended CS
 
 Use shared character masters and rearranged location layers for mobile. Export a genuinely different crop only when it improves composition; do not create a second complete art style. Keep hair/headphones/bunny within safe crop bounds and leave room for HTML copy. Simplify small-scale detail while keeping the silhouette and outline weight coherent.
 
-P2 integration uses srcset/sizes, picture where needed, dimensions/aspect ratios and route-appropriate loading. Do not lazy-load the likely initial LCP image; defer galleries, other interiors and optional motion assets. Review sharpness, halos, gradients, screenshot text and byte sizes against the original. Set compression per asset rather than locking a universal quality percentage.
+P2 integration uses srcset/sizes, picture where needed, dimensions/aspect ratios and route-appropriate loading. Do not lazy-load the likely initial LCP image; defer optional static previews, other interiors and optional motion assets. Review sharpness, halos, gradients, screenshot text and byte sizes against the original. Set compression per asset rather than locking a universal quality percentage.
 
 The total compressed first-view budget remains **1.5 MB including art/fonts/code**, with **250 KB initial JavaScript**, LCP ≤2.5 s and CLS ≤0.1 targets. Allocate artwork within what remains after code/fonts; do not interpret 1.5 MB as an allowance per image. Actual measurements and tooling remain later tasks. No new pixel dimensions or per-asset byte quotas are locked.
 

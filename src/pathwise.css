@@ -1,0 +1,13 @@
+.pathwise-chapter { max-width: 860px; margin: auto; padding: 6.5rem 2rem 3rem; }
+.chapter-return { display: inline-flex; align-items: center; text-decoration: none; }
+.chapter-return:hover, .chapter-page .project-actions a:hover { background: #f9dee5; }
+.chapter-page { margin-top: 1.5rem; font-family: 'Pixelify Sans', monospace; font-size: 1.0625rem; line-height: 1.6; }
+.chapter-page h1 { font-size: clamp(2.5rem, 6vw, 3.5rem); }
+.chapter-page p { margin: .75rem 0; }
+.chapter-summary { font-size: 1.2rem; }
+.chapter-page .project-actions { margin: 1.25rem 0; }
+.chapter-page .chapter-demo-note { padding-left: 1rem; border-left: 3px solid #bd7f96; }
+@media (max-width: 600px) {
+  .pathwise-chapter { padding: 6rem 1rem 2rem; }
+  .chapter-page { margin-top: 1rem; }
+}

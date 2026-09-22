@@ -1,9 +1,17 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
-Status: P2.5 DONE / VISUALLY APPROVED; P2.6 NOT STARTED. P2.2–P2.4 approvals preserved.
-Updated: 2026-09-21. No fixed launch date or assumed weekly availability.
+Status: P2.6 DONE / VISUALLY APPROVED; P2.7 NOT STARTED. P2.2–P2.5 approvals preserved.
+Updated: 2026-09-22. No fixed launch date or assumed weekly availability.
 
-Latest checkpoint: **P2.5 DONE / VISUALLY APPROVED**, 2026-09-21. Aditi explicitly approved the final refined Workshop/shelf/album presentation and interaction. Approval covers the warm Workshop wall/environment, wooden shelf surround, compact Workshop / Back signs, floating Home and Menu controls, bunny delivery and its 1.1-second timing, skip behavior, reduced-motion immediate album access, session return behavior, cream project album, pink binding, subtle binding depth / page edges, Times New Roman readable content and pixel-font short game UI/headings. Four-size browser inspection and build passed before closure. Exact next task: **P2.6 — Implement Pathwise chapter**, NOT STARTED; this closure does not authorize starting it. No Git operations.
+Latest checkpoint: **P2.6 DONE / VISUALLY APPROVED**, 2026-09-22. Real `/projects/pathwise` chapter implemented and simplified at Aditi's request to what it does, languages/main tools, confirmed end-to-end role, live/source actions and a brief honest access note. Detailed workflow/architecture/ML sections are intentionally omitted from the visible page; P1.4 evidence remains internal. Existing album styling is reused. Exact next task: **P2.7 — Implement responsive/state behavior**, NOT STARTED. No Git operations.
+
+P2.6 explicit approval (2026-09-22): Aditi approved the current Pathwise chapter exactly as it is: layout, cream album/book presentation, current Pixelify Sans typography throughout (17px body / 1.6 line height), honest demo limitation, Open Live Project, View GitHub / Source Code, and desktop/mobile presentation. Identified revision: current `src/PathwiseChapter.tsx` and `src/pathwise.css`, after content simplification and the pixel-font refinement, with existing shared metadata and routing. Approval is specific to this revision, not automatic approval of future changes. It supersedes pending-review wording for this revision in earlier documentation.
+
+The approval message also lists problem / implementation / workflow / architecture sections and ML/risk-intelligence explanation. Those detailed visible sections were removed at Aditi's earlier request; the approved current page contains the short purpose description, end-to-end role, languages/tools and actions. Detailed material remains in the P1.4 evidence document. This closure records the approval wording without claiming those sections are present or restoring them. Application files remain untouched. P2.7 has NOT started.
+
+P2.5 is DONE / VISUALLY APPROVED, 2026-09-21. Approval includes the warm Workshop wall/environment, wooden shelf surround, compact Workshop / Back signs, floating Home/Menu, bunny delivery with 1.1-second timing, skip, reduced-motion immediate album access, session return, cream album, pink binding/depth/page edges, Times New Roman readable content and pixel-font short UI/headings. This approval remains intact.
+
+Latest P2.6 typography refinement (2026-09-22): the shortened Pathwise chapter uses existing Pixelify Sans throughout, with 17px body text / 1.6 line height, following Aditi's request to match the game design. Desktop/phone inspection and build passed. P2.6 is now visually approved; P2.7 NOT STARTED.
 
 P2.5 approval boundary: the current 2026-09-21 implementation after the bounded CSS refinement in `src/workshop.css`, with existing `src/Workshop.tsx`, shell/session behavior in `src/App.tsx` and `src/assets/workshop/bunny-album-v01.webp`. This supersedes pending-review statements for this identified revision only; it does not automatically approve future Workshop/album revisions or bunny variations. Closure changes documentation only; approved presentation remains untouched.
 
@@ -27,7 +35,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0 and P1.1–P1.7 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only. P2.1 supplies the app foundation; P2.2 and P2.3 are visually approved; P2.4 navigation and final presentation are implemented, verified and explicitly visually approved. No full production village, complete portfolio or deployment is complete. P2.5 is DONE / VISUALLY APPROVED for the identified final Workshop/album revision; P2.6 and later tasks have not started.
+Phase 0 and P1.1–P1.7 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only. P2.1 supplies the app foundation; P2.2–P2.5 are visually approved for their identified revisions. P2.6 is DONE / VISUALLY APPROVED; P2.7 and later tasks have not started. No full production village, complete portfolio or deployment is complete.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -99,7 +107,7 @@ Selected links-only contact: approved email/visible address/copy, approved GitHu
 
 Baseline in [technical approach §10](TECHNICAL_APPROACH.md): Vitest with React Testing Library/user-event/jsdom, small Playwright journeys and integrated axe scans, manual accessibility/art/responsive checks and Lighthouse/transfer inspection. No overlapping Jest/Cypress suite, visual service, CI or hooks. Existing PRD viewport/metric budgets remain unchanged. Read-only browser file versions recorded; no browser launched. Latest user instruction restricts P1.7 to planning, so the former “measured lab profile” acceptance is clarified as a repeatable unmeasured protocol, with actual versions/results recorded at authorized setup and validation. This is an explicit scope clarification, not a test pass.
 
-P2.1 completed the minimal foundation. P2.2 and P2.3 are DONE / visually approved. P2.4's final Welcome-over-world and unified-hub presentation is DONE / VISUALLY APPROVED for the identified current revision. **P2.5 — Implement shelf/album interaction** is DONE / VISUALLY APPROVED for the identified final Workshop/album revision. The exact next task is **P2.6 — Implement Pathwise chapter**, NOT STARTED.
+P2.1 completed the minimal foundation. P2.2–P2.5 are DONE / VISUALLY APPROVED for their identified revisions. **P2.6 — Implement Pathwise chapter** is DONE / VISUALLY APPROVED. The exact next task is **P2.7 — Implement responsive/state behavior**, NOT STARTED.
 
 ## Phase 2 — First playable prototype
 
@@ -111,8 +119,8 @@ Purpose: Prove the signature experience with real content before producing all f
 | P2.2 Implement Welcome | DONE — VISUALLY APPROVED | P2.1, P1.3 | Aditi approved Welcome revision 02: more visibly pixelated cozy game-opening illustration, Aditi holding bunny, long diamond-shaped face direction, middle-parted hair, cat-eye frame glasses, and Times New Roman tagline. Existing technical checks passed; entry shells/Resume/native Menu remain as implemented. Approval does not extend to future variations or layered animation assets; full P-02 journey depends on later scenes |
 | P2.3 Implement small plaza | DONE — VISUALLY APPROVED | P2.1, P1.3 | Aditi approved revision 01 on 2026-09-18: blossom-lined pixel plaza, Aditi/bunny placement, winding path/environment, Workshop exterior, integrated Workshop interaction and desktop/mobile direction. Semantic Workshop link leads to existing `/projects` placeholder. Prior responsive, keyboard/focus/navigation, console and build checks passed. Approval applies only to this identified revision, not future village assets |
 | P2.4 Implement notebook navigation | DONE — VISUALLY APPROVED | P2.1 | Explicit approval of current Welcome-over-world with softly faded/blurred background, full village interface, compact floating notebook, first-entry behavior, game-style hints, Times New Roman body/readable content and Pixelify Sans short UI/titles/labels/buttons, desktop/tablet/mobile presentation. Landscape hub v01 / portrait v02 and current implementation only; no automatic future-variation approval. Existing technical checks passed; approval scope preserved. |
-| P2.5 Implement shelf/album interaction | DONE — VISUALLY APPROVED | P2.3, P1.3 | Explicit approval of the identified 2026-09-21 refined Workshop/album: warm wall/environment, wooden shelf surround, compact Workshop / Back signs, floating Home/Menu, bunny delivery with 1.1s timing, skip, reduced-motion immediate access, session return, cream album, pink binding, binding depth/page edges, Times New Roman readable content and pixel short UI/headings. Existing build and four-size interaction/responsive checks recorded in history; P-04. No automatic future-revision approval. P2.6 NOT STARTED |
-| P2.6 Implement Pathwise chapter | NOT STARTED | P2.1, P1.4, P2.5 | Stable URL, concise technical content, primary live-project/source actions and accurate access notes; optional single preview, no gallery; P-03 |
+| P2.5 Implement shelf/album interaction | DONE — VISUALLY APPROVED | P2.3, P1.3 | Explicit approval of the identified 2026-09-21 refined Workshop/album: warm wall/environment, wooden shelf surround, compact Workshop / Back signs, floating Home/Menu, bunny delivery with 1.1s timing, skip, reduced-motion immediate access, session return, cream album, pink binding, binding depth/page edges, Times New Roman readable content and pixel short UI/headings. Existing build and four-size interaction/responsive checks recorded in history; P-04. No automatic future-revision approval. P2.6 has since been separately implemented |
+| P2.6 Implement Pathwise chapter | DONE — VISUALLY APPROVED | P2.1, P1.4, P2.5 | Real `/projects/pathwise`; latest user scope is short purpose description, languages/main tools, end-to-end role, primary live/source links and concise access note in the album. Detailed technical sections omitted per 2026-09-22 instruction; evidence retained in P1.4. Direct/refresh/return, keyboard and four-size checks; build passed. No gallery/media/dependencies; P-03. P2.7 NOT STARTED |
 | P2.7 Implement responsive/state behavior | NOT STARTED | P2.2–P2.6 | Vertical mobile composition, sensible return/Back/scroll handling, loading and asset fallback; P-06/P-07 |
 | P2.8 Verify prototype | NOT STARTED | P2.2–P2.7 | P-01–P-08 evidence, initial transfer measurements, art/usability review, no uncaught app errors |
 
@@ -186,6 +194,8 @@ Optional movement, deer/fluffy-cat residents, more complex bunny interactions, d
 ## Documentation maintenance
 
 After each phase or significant change: update task statuses here; append actual outcomes and next task in history; change PRD only for product decisions; revise design system for accepted visual/token changes. Keep exact tagline, project statuses, pending questions and V1 boundaries aligned across all four files.
+
+
 
 
 

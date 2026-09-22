@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="2400" viewBox="0 0 1600 2400">
+<title>Aditi's Adventure — P1.3 bounded direction sample, revision 01</title>
+<desc>Original editable vector study: Aditi holding a bunny, Workshop shelf, album, type and controls, and rough desktop/mobile compositions. All visual choices remain awaiting user approval.</desc>
+<defs>
+  <g id="bunny" stroke="#44312F" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path fill="#FFF7EB" d="M21 51 Q2 34 10 4 Q14 -5 22 4 L35 40 L43 38 L47 4 Q50 -8 58 0 Q69 15 58 47 Q76 49 83 66 L92 71 L85 79 Q97 105 75 120 L23 121 Q0 112 9 84 L2 78 L10 71 Q9 57 21 51Z"/>
+    <path d="M19 11 L27 36 M55 8 L53 32" fill="none" stroke="#EFA3B6" stroke-width="6"/>
+    <path d="M25 119 Q24 108 34 110 M57 119 Q58 108 69 110" fill="none"/>
+    <circle cx="29" cy="73" r="3" fill="#44312F" stroke="none"/><circle cx="63" cy="73" r="3" fill="#44312F" stroke="none"/>
+    <path d="M41 82 L49 82 L45 86Z" fill="#EFA3B6" stroke-width="2"/><path d="M45 86 Q42 93 38 89 M45 86 Q49 93 53 89" fill="none" stroke-width="2"/>
+    <path d="M17 93 Q22 88 27 92 M64 92 Q71 88 77 94" fill="none" stroke="#E8DDCB" stroke-width="4"/>
+  </g>
+  <g id="aditi" stroke="#44312F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <g id="aditi-hair-back">
+      <path fill="#704B3D" d="M42 60 Q41 3 105 7 Q168 1 179 70 L183 155 L197 210 L179 208 L184 233 L162 222 L153 247 L131 228 L64 236 L48 218 L30 226 L35 207 L17 213 Q35 174 32 115Z"/>
+      <path fill="#92634B" stroke="none" d="M57 117 Q43 176 47 202 L61 193 L60 215 L76 206 L82 225 L84 145Z M160 107 L173 172 L171 198 L155 186 L157 214 L143 203 L142 140Z"/>
+    </g>
+    <g id="aditi-jeans">
+      <path fill="#7F9FBE" d="M65 231 L151 231 L153 288 L171 366 Q146 380 119 368 L108 290 L99 370 Q76 381 48 366 L64 291Z"/>
+      <path d="M106 239 L109 290 M73 240 L72 267 L87 267 M138 240 L141 267 L128 267" fill="none" stroke="#526D8F" stroke-width="3"/>
+      <path d="M63 304 L59 354 M143 305 L154 355" fill="none" stroke="#ADC2D7" stroke-width="5"/>
+    </g>
+    <g id="aditi-sneakers">
+      <path fill="#3C3740" d="M52 364 L93 369 L92 390 L33 390 Q28 379 52 364Z M124 370 L163 365 Q187 379 183 390 L124 390Z"/>
+      <path d="M33 385 L91 385 M126 385 L181 385 M59 375 L74 375 M141 375 L157 375" fill="none" stroke="#FFF7EB" stroke-width="3"/>
+    </g>
+    <g id="aditi-top">
+      <path fill="#302D32" d="M89 126 L128 126 L130 148 L153 161 L148 229 Q110 243 62 229 L63 162 L86 150Z"/>
+      <path d="M89 147 L128 147" fill="none" stroke="#5B5055" stroke-width="3"/>
+    </g>
+    <g id="aditi-face">
+      <path fill="#F4DCA9" d="M97 112 L120 112 L124 134 Q108 145 91 134Z"/>
+      <path fill="#F4DCA9" d="M57 55 Q56 21 108 24 Q157 20 159 61 L155 98 Q147 132 110 134 Q72 131 60 98Z"/>
+      <path fill="#704B3D" d="M53 68 Q44 20 85 14 Q129 -1 157 23 Q181 42 165 82 L150 64 L144 39 Q113 65 74 54 L63 78Z"/>
+      <path d="M69 37 Q98 29 116 26 M134 30 Q125 46 91 49" fill="none" stroke="#A77858" stroke-width="4"/>
+      <rect x="63" y="70" width="39" height="28" rx="10" fill="#FFF7EB" fill-opacity="0.22"/>
+      <rect x="113" y="70" width="39" height="28" rx="10" fill="#FFF7EB" fill-opacity="0.22"/>
+      <path d="M103 79 Q108 76 113 79 M58 76 L63 78 M152 78 L160 76" fill="none"/>
+      <path d="M81 82 L81 87 M132 82 L132 87" fill="none" stroke-width="4"/>
+      <path d="M106 92 L103 101 L109 101 M99 113 Q108 120 119 112" fill="none" stroke-width="2.5"/>
+      <path d="M70 104 L80 106 M136 106 L146 103" fill="none" stroke="#DEAB91" stroke-width="5"/>
+    </g>
+    <g id="aditi-headphones">
+      <path d="M46 74 Q42 3 107 2 Q174 -2 174 76" fill="none" stroke-width="12"/>
+      <path d="M46 74 Q42 3 107 2 Q174 -2 174 76" fill="none" stroke="#EFA3B6" stroke-width="7"/>
+      <rect x="37" y="66" width="17" height="37" rx="7" fill="#EFA3B6"/><rect x="165" y="66" width="17" height="37" rx="7" fill="#EFA3B6"/>
+    </g>
+    <g id="aditi-arms-back" fill="#F4DCA9">
+      <path d="M63 158 Q48 157 46 173 L39 214 Q40 232 61 235 L101 226 L98 210 L64 211 L73 180Z"/>
+      <path d="M149 158 Q165 158 169 178 L176 207 Q182 226 163 233 L122 225 L122 209 L151 211 L141 181Z"/>
+    </g>
+    <g id="held-bunny" transform="translate(76 125) scale(.85)"><use xlink:href="#bunny"/></g>
+    <g id="aditi-hands-front" fill="#F4DCA9">
+      <path d="M51 217 Q65 219 81 210 Q95 202 98 211 Q98 216 88 219 Q108 213 111 221 Q113 230 96 234 L65 239 Q54 238 51 230Z"/>
+      <path d="M165 217 Q150 220 143 212 Q134 203 130 210 L137 219 Q118 215 116 223 Q116 231 132 235 L156 238 Q168 235 165 217Z"/>
+    </g>
+  </g>
+  <g id="plant" stroke="#44312F" stroke-width="3" stroke-linejoin="round">
+    <path fill="#B8CFAE" d="M27 49 Q1 45 2 24 Q22 21 27 42 Q23 6 43 2 Q57 27 34 44 Q52 25 65 35 Q62 55 32 57Z"/>
+    <path fill="#F4C6A6" d="M13 52 L53 52 L48 81 L20 81Z"/><path d="M13 58 L53 58" fill="none"/>
+  </g>
+  <g id="workshop" stroke="#44312F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <g id="workshop-building">
+      <path fill="#F0E5CD" d="M60 107 L369 107 L369 289 L60 289Z"/>
+      <path fill="#DDCBAE" d="M369 107 L399 86 L399 269 L369 289Z"/>
+      <path fill="#EFA3B6" d="M34 110 L96 27 L335 27 L396 110Z"/>
+      <path fill="#CD8599" d="M335 27 L367 12 L429 93 L396 110Z"/>
+      <path d="M70 90 L355 90 M88 65 L336 65 M106 42 L323 42" fill="none" stroke="#CD8599" stroke-width="3"/>
+      <path fill="#D8C7EB" d="M297 26 L297 2 L321 2 L321 26"/>
+      <rect x="113" y="99" width="210" height="37" rx="5" fill="#FFF7EB"/>
+      <text x="218" y="124" text-anchor="middle" font-family="Arial" font-weight="700" font-size="19" stroke="none" fill="#44312F">Project Workshop</text>
+    </g>
+    <g id="workshop-shelves">
+      <rect x="90" y="155" width="248" height="112" rx="5" fill="#A87959"/>
+      <path fill="#73503F" d="M102 165 L326 165 L326 250 L102 250Z"/>
+      <rect x="108" y="185" width="35" height="58" rx="3" fill="#C7E3F2"/>
+      <rect x="147" y="173" width="41" height="70" rx="3" fill="#EFA3B6"/>
+      <path fill="#D8C7EB" d="M197 184 L229 175 L247 237 L216 246Z"/>
+      <rect x="252" y="192" width="29" height="51" rx="3" fill="#B8CFAE"/>
+      <path d="M118 196 L134 196 M157 186 L178 186 M157 220 L178 220 M117 229 L133 229" fill="none" stroke="#FFF7EB" stroke-width="4"/>
+      <rect x="81" y="244" width="268" height="17" rx="3" fill="#C39975"/>
+      <rect x="109" y="267" width="218" height="30" rx="5" fill="#FFF7EB"/>
+      <text x="218" y="288" font-family="Arial" text-anchor="middle" font-size="16" font-weight="700" stroke="none" fill="#44312F">Open project album →</text>
+    </g>
+    <g id="workshop-decoration"><use xlink:href="#plant" transform="translate(10 218) scale(.8)"/></g>
+  </g>
+  <g id="album" stroke="#44312F" stroke-width="4" stroke-linejoin="round">
+    <path fill="#D8C7EB" d="M16 17 L272 17 L272 184 L25 195 L10 181Z"/>
+    <rect x="15" y="8" width="253" height="176" rx="8" fill="#FFF7EB"/>
+    <path d="M36 174 L253 174 M36 179 L253 179" stroke="#C7BDAA" stroke-width="2"/>
+    <path fill="#EFA3B6" d="M14 0 L266 0 L266 165 L14 165 Q4 165 4 153 L4 12 Q4 0 14 0Z"/>
+    <path fill="#CF8EA0" d="M14 0 L32 0 L32 165 L14 165Z" stroke="none"/>
+    <rect x="55" y="28" width="183" height="106" rx="7" fill="#FFF7EB" stroke-width="2.5"/>
+    <text x="147" y="68" font-family="Arial" font-size="25" font-weight="900" text-anchor="middle" fill="#44312F" stroke="none">Things I've</text>
+    <text x="147" y="103" font-family="Arial" font-size="32" font-weight="900" text-anchor="middle" fill="#44312F" stroke="none">Built</text>
+    <path fill="#B8CFAE" d="M203 165 L225 165 L225 204 L214 195 L203 204Z"/>
+  </g>
+  <g id="flower" fill="#EFA3B6"><rect x="9" width="13" height="31" rx="6"/><rect y="9" width="31" height="13" rx="6"/><circle cx="15.5" cy="15.5" r="5" fill="#FFF7EB"/></g>
+</defs>
+<g id="board-background" inkscape:groupmode="layer" inkscape:label="Paper and panels">
+  <rect width="1600" height="2400" fill="#FFF7EB"/>
+  <rect x="40" y="206" width="486" height="704" rx="20" fill="#F4EBDC"/>
+  <rect x="550" y="206" width="1010" height="444" rx="20" fill="#E9EDDF"/>
+  <rect x="550" y="674" width="480" height="236" rx="20" fill="#F3E3E7"/>
+  <rect x="1054" y="674" width="506" height="236" rx="20" fill="#EEE6F2"/>
+  <rect x="40" y="934" width="1520" height="382" rx="20" fill="#F4EBDC"/>
+  <path d="M40 1398 L1560 1398" stroke="#D9CDBB" stroke-width="2"/>
+</g>
+<g id="board-labels" inkscape:groupmode="layer" inkscape:label="Editable review labels" fill="#44312F" font-family="Arial">
+  <text x="44" y="56" font-size="15" letter-spacing="3" font-weight="700">ADITI'S ADVENTURE / DIRECTION STUDY 01</text>
+  <text x="40" y="120" font-size="54" font-family="Arial Black, Arial" font-weight="900">A little world, made personal.</text>
+  <text x="44" y="165" font-size="21">P1.3 · Bounded sample · Provisional artwork, proportions and typography · Awaiting your visual approval</text>
+  <text x="68" y="248" font-size="15" font-weight="700" letter-spacing="2">01 / HOST + COMPANION</text>
+  <text x="582" y="248" font-size="15" font-weight="700" letter-spacing="2">02 / ONE WORKSHOP FRAGMENT</text>
+  <text x="582" y="715" font-size="15" font-weight="700" letter-spacing="2">03 / THE PROJECT ALBUM</text>
+  <text x="1086" y="715" font-size="15" font-weight="700" letter-spacing="2">04 / PALETTE RELATIONSHIP</text>
+  <text x="70" y="980" font-size="15" font-weight="700" letter-spacing="2">05 / TYPE + CONTROLS — REPRESENTATIVE ONLY</text>
+</g>
+<g id="character-study" inkscape:groupmode="layer" inkscape:label="Character and held bunny">
+  <ellipse cx="270" cy="773" rx="143" ry="22" fill="#DCCDBD"/>
+  <use xlink:href="#aditi" transform="translate(130 279) scale(1.25)"/>
+  <g font-family="Arial" fill="#44312F" font-size="18"><text x="70" y="831">One pose. Identity details stay visible.</text><text x="70" y="861">Cream bunny + face shape: provisional.</text></g>
+</g>
+<g id="workshop-study" inkscape:groupmode="layer" inkscape:label="Workshop fragment">
+  <path d="M742 605 Q843 566 1094 595" fill="none" stroke="#DDCBAE" stroke-width="24" stroke-linecap="round"/>
+  <use xlink:href="#workshop" transform="translate(697 274) scale(1.02)"/>
+  <use xlink:href="#aditi" transform="translate(1223 438) scale(.36)"/>
+  <use xlink:href="#flower" transform="translate(1398 576)"/>
+  <g font-family="Arial" fill="#44312F" font-size="17"><text x="1200" y="327">Same host,</text><text x="1200" y="352">village scale.</text><text x="1198" y="388">Quiet space around</text><text x="1198" y="413">the project action.</text><text x="585" y="625">Shelves, book spines and a readable action — not a complete interior.</text></g>
+</g>
+<g id="album-study" inkscape:groupmode="layer" inkscape:label="Album object and note">
+  <use xlink:href="#album" transform="translate(586 744) scale(.66)"/>
+  <g fill="#44312F" font-family="Arial" font-size="17"><text x="800" y="781">A small book,</text><text x="800" y="807">a clear invitation.</text><text x="800" y="850">Separate from bunny;</text><text x="800" y="876">no book physics.</text></g>
+</g>
+<g id="palette-study" inkscape:groupmode="layer" inkscape:label="Candidate palette">
+  <rect x="1086" y="747" width="66" height="57" rx="8" fill="#EFA3B6"/><rect x="1166" y="747" width="66" height="57" rx="8" fill="#FFF7EB"/><rect x="1246" y="747" width="66" height="57" rx="8" fill="#D8C7EB"/><rect x="1326" y="747" width="66" height="57" rx="8" fill="#B8CFAE"/><rect x="1406" y="747" width="66" height="57" rx="8" fill="#44312F"/>
+  <g fill="#44312F" font-family="Arial" font-size="17"><text x="1086" y="838">Strawberry / cream / lavender / sage / cocoa</text><text x="1086" y="874">Existing candidate colors, not final tokens.</text></g>
+</g>
+<g id="ui-study" inkscape:groupmode="layer" inkscape:label="Editable typography and control concept" fill="#44312F" font-family="Arial">
+  <text x="70" y="1039" font-size="38" font-family="Arial Black, Arial" font-weight="900">Things I've Built</text>
+  <text x="70" y="1081" font-size="20">A little world of things I build, ideas I explore,</text><text x="70" y="1111" font-size="20">and things I love.</text>
+  <text x="70" y="1170" font-size="16">Display: Arial Black · Reading: Arial</text><text x="70" y="1197" font-size="16">Temporary system fonts; no font files shipped.</text>
+  <text x="70" y="1268" font-size="17">Text is editable here. Website text will be HTML.</text>
+  <g id="primary-control"><rect x="680" y="1021" width="260" height="62" rx="10" fill="#44312F"/><rect x="680" y="1015" width="260" height="62" rx="10" fill="#EFA3B6" stroke="#44312F" stroke-width="3"/><text x="810" y="1053" text-anchor="middle" font-weight="700" font-size="21">Enter My World →</text></g>
+  <g id="secondary-control"><rect x="974" y="1015" width="227" height="62" rx="10" fill="#FFF7EB" stroke="#44312F" stroke-width="3"/><text x="1088" y="1053" text-anchor="middle" font-weight="700" font-size="21">View Projects</text></g>
+  <g id="notebook-control"><rect x="1233" y="1015" width="257" height="62" rx="10" fill="#FFF7EB" stroke="#44312F" stroke-width="3"/><path d="M1254 1032 L1271 1032 L1271 1060 L1254 1060Z M1259 1032 L1259 1060" fill="#D8C7EB" stroke="#44312F" stroke-width="2"/><text x="1354" y="1053" text-anchor="middle" font-weight="700" font-size="21">Menu</text></g>
+  <g id="focus-control"><rect x="672" y="1122" width="276" height="78" rx="15" fill="none" stroke="#44312F" stroke-width="3"/><rect x="680" y="1130" width="260" height="62" rx="10" fill="#FFF7EB" stroke="#44312F" stroke-width="3"/><text x="810" y="1168" text-anchor="middle" font-weight="700" font-size="21">View Projects</text></g>
+  <text x="981" y="1161" font-size="19">Focus: cocoa outline + cream gap.</text><text x="981" y="1190" font-size="17">A state sketch, not a keyboard test.</text>
+  <text x="680" y="1268" font-size="17">No ornamental paragraph font. No invisible hotspots. No motion required.</text>
+</g>
+<g id="layout-board-labels" inkscape:groupmode="layer" inkscape:label="Composition review labels" fill="#44312F" font-family="Arial">
+  <text x="44" y="1450" font-size="15" font-weight="700" letter-spacing="3">SAME WORLD / TWO COMPOSITIONS</text>
+  <text x="40" y="1507" font-size="42" font-family="Arial Black, Arial" font-weight="900">Room to explore. Room to read.</text>
+  <text x="44" y="1547" font-size="20">Village arrival thumbnails only. Welcome remains a separate scene; other locations are labels, not artwork.</text>
+  <text x="44" y="1600" font-size="15" font-weight="700" letter-spacing="2">06 / DESKTOP — A COMPOSED CORNER</text>
+  <text x="1160" y="1600" font-size="15" font-weight="700" letter-spacing="2">07 / MOBILE — VERTICAL PATH</text>
+</g>
+<g id="desktop-thumbnail" inkscape:groupmode="layer" inkscape:label="Rough desktop composition">
+  <rect x="40" y="1627" width="1060" height="565" rx="18" fill="#E9EDDF" stroke="#44312F" stroke-width="2"/>
+  <rect x="41" y="1628" width="1058" height="68" rx="18" fill="#FFF7EB"/>
+  <g font-family="Arial" fill="#44312F"><text x="67" y="1670" font-size="24" font-weight="700">Aditi's Adventure</text><text x="778" y="1669" font-size="18">View Projects</text><rect x="941" y="1643" width="132" height="39" rx="7" fill="#FFF7EB" stroke="#44312F" stroke-width="2"/><text x="1007" y="1669" font-size="18" text-anchor="middle">Menu</text></g>
+  <path d="M263 2157 Q513 2123 503 2015 Q493 1915 740 1986 Q947 2045 998 2151" fill="none" stroke="#E4D5BA" stroke-width="65" stroke-linecap="round"/>
+  <use xlink:href="#workshop" transform="translate(506 1740) scale(1.02)"/>
+  <use xlink:href="#aditi" transform="translate(236 1893) scale(.51)"/>
+  <g font-family="Arial" fill="#44312F"><text x="81" y="1753" font-size="29" font-weight="700">Start with what I build.</text><text x="81" y="1787" font-size="18">A small arrival area, not a full map.</text><text x="81" y="1820" font-size="18">Workshop is the strongest destination.</text></g>
+  <g id="future-labels-desktop" font-family="Arial" font-size="17" fill="#44312F" stroke="#B7B4A4" stroke-width="1.5">
+    <rect x="85" y="2116" width="145" height="40" rx="6" fill="#FFF7EB" stroke-dasharray="5 5"/><text x="157" y="2142" stroke="none" text-anchor="middle">Cottage · later</text>
+    <rect x="443" y="2116" width="145" height="40" rx="6" fill="#FFF7EB" stroke-dasharray="5 5"/><text x="515" y="2142" stroke="none" text-anchor="middle">Garden · later</text>
+    <rect x="613" y="2116" width="200" height="40" rx="6" fill="#FFF7EB" stroke-dasharray="5 5"/><text x="713" y="2142" stroke="none" text-anchor="middle">Adventure Board · later</text>
+    <rect x="839" y="2116" width="155" height="40" rx="6" fill="#FFF7EB" stroke-dasharray="5 5"/><text x="916" y="2142" stroke="none" text-anchor="middle">Mailbox · later</text>
+  </g>
+</g>
+<g id="mobile-thumbnail" inkscape:groupmode="layer" inkscape:label="Rough vertical mobile composition">
+  <rect x="1160" y="1627" width="400" height="677" rx="18" fill="#E9EDDF" stroke="#44312F" stroke-width="2"/>
+  <rect x="1161" y="1628" width="398" height="62" rx="18" fill="#FFF7EB"/>
+  <g font-family="Arial" fill="#44312F"><text x="1180" y="1666" font-size="18" font-weight="700">Aditi's Adventure</text><rect x="1456" y="1642" width="85" height="34" rx="5" fill="#FFF7EB" stroke="#44312F" stroke-width="2"/><text x="1498" y="1665" font-size="16" text-anchor="middle">Menu</text></g>
+  <path d="M1373 1760 Q1470 1820 1363 1962 Q1276 2061 1363 2248" fill="none" stroke="#E4D5BA" stroke-width="53" stroke-linecap="round"/>
+  <use xlink:href="#aditi" transform="translate(1200 1712) scale(.27)"/>
+  <g font-family="Arial" fill="#44312F"><text x="1302" y="1736" font-size="22" font-weight="700">Come on in.</text><text x="1302" y="1766" font-size="16">Start with my projects.</text><text x="1302" y="1801" font-size="17" text-decoration="underline">View Projects →</text></g>
+  <use xlink:href="#workshop" transform="translate(1197 1850) scale(.7)"/>
+  <g id="mobile-independent-action" font-family="Arial" fill="#44312F"><rect x="1210" y="2034" width="308" height="40" rx="6" fill="#FFF7EB" stroke="#44312F" stroke-width="2"/><text x="1364" y="2060" font-size="18" font-weight="700" text-anchor="middle">Open project album →</text></g>
+  <g font-family="Arial" font-size="16" fill="#44312F" text-anchor="middle">
+    <rect x="1200" y="2080" width="318" height="37" rx="6" fill="#FFF7EB" stroke="#B7B4A4" stroke-dasharray="5 5"/><text x="1359" y="2104">Cottage · later</text>
+    <rect x="1200" y="2130" width="318" height="37" rx="6" fill="#FFF7EB" stroke="#B7B4A4" stroke-dasharray="5 5"/><text x="1359" y="2154">Garden · later</text>
+    <rect x="1200" y="2180" width="318" height="37" rx="6" fill="#FFF7EB" stroke="#B7B4A4" stroke-dasharray="5 5"/><text x="1359" y="2204">Adventure Board · later</text>
+    <rect x="1200" y="2230" width="318" height="37" rx="6" fill="#FFF7EB" stroke="#B7B4A4" stroke-dasharray="5 5"/><text x="1359" y="2254">Mailbox · later</text>
+  </g>
+</g>
+<g id="review-notes" inkscape:groupmode="layer" inkscape:label="Scope and layer notes" fill="#44312F" font-family="Arial" font-size="18">
+  <text x="44" y="2238">One host pose reused at smaller scales; no second pose library.</text>
+  <text x="44" y="2272">Layer plan: ground / building / shelf / character / bunny / book / text.</text>
+  <text x="44" y="2306">Desktop gives space around the Workshop; mobile stacks the journey.</text>
+  <text x="44" y="2354" font-size="16" font-weight="700">REVIEW ONLY · No animation, route, working control or final asset library · Revision 01 is not approved.</text>
+</g>
+</svg>

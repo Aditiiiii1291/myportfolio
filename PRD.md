@@ -7,6 +7,12 @@ This document defines WHAT to build and WHY. It derives from the completed brain
 
 ## Latest user direction — 2026-09-16
 
+### Pathwise chapter simplification — 2026-09-22
+
+Subsequent typography request: the short Pathwise chapter now uses the existing Pixelify Sans throughout to match the game presentation. This local exception to the Times New Roman body rule awaits visual approval; other approved screens retain their typography.
+
+Aditi explicitly requests a short description of what Pathwise does and which languages she used. For the visible P2.6 chapter, this supersedes the earlier detailed ten-topic/case-study presentation: show a brief purpose description, JavaScript/Python, main verified tools, confirmed end-to-end role, live/source links and a short honest access note inside the existing album. Omit the separate problem, workflow diagram, architecture, ML/temporal and feature sections. The detailed prepared chapter remains the internal evidence source; no gallery or new media is required. P-03 still requires a stable direct URL, verified content, correct repository and accurate demo access. The simplified visual revision awaits approval; P2.7 is not started.
+
 ### Welcome over the world — 2026-09-20
 
 Welcome presentation revision (2026-09-20): the existing Welcome content now overlays the existing landscape/portrait village hub artwork. Latest user steering makes the background secondary with a 62% Strawberry Cream veil and 3px blur, confined to Welcome. Title, Aditi holding bunny, Menu and actions remain sharp. Local text backing preserves readability without one large opaque card. Copy, fonts, links and artwork files are unchanged; the approved Welcome raster is softly edge-masked in CSS. This new presentation awaits visual review and does not change the prior artwork approval or approve the new hub. P2.5 remains NOT STARTED.

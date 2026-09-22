@@ -1,12 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-21. Stage: P2.5 shelf/album — DONE / VISUALLY APPROVED. P2.6 NOT STARTED. P2.2–P2.4 approvals preserved.
+Last updated: 2026-09-22. Stage: P2.6 Pathwise chapter — DONE / VISUALLY APPROVED. P2.7 NOT STARTED. P2.2–P2.5 approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Current work: P2.5 shelf/album is DONE / VISUALLY APPROVED for the identified final refined Workshop/album implementation. P2.4 remains approved. P2.6 — Implement Pathwise chapter is next and NOT STARTED; closure does not authorize starting it. See latest dated entry; previous status statements are historical.
+- Current work: P2.6 Pathwise chapter is DONE / VISUALLY APPROVED for the current shortened revision with Pixelify Sans throughout. P2.2–P2.5 approvals remain intact. P2.7 — Implement responsive/state behavior is next and NOT STARTED. See latest dated entry; previous status statements are historical.
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -22,6 +22,29 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P2.6 — explicit approval and closure, 2026-09-22 — DONE / VISUALLY APPROVED
+
+- Aditi approved the current Pathwise chapter exactly as it is: its layout, album/book presentation, current typography treatment, honest demo limitation, Open Live Project action, View GitHub / Source Code action and responsive desktop/mobile presentation.
+- Identified revision: `src/PathwiseChapter.tsx` and `src/pathwise.css` after the short-content revision and Pixelify Sans refinement (17px body, 1.6 line height), using existing shared metadata and `/projects/pathwise` routing. Approval applies only to this current revision; it does not automatically approve future chapter/content/typography variations. It supersedes earlier pending-review statements in history, PRD and design notes for this revision only.
+- The approval request also names problem / implementation / workflow / architecture sections and ML/risk-intelligence explanation. Record that wording with its factual boundary: the current visible chapter intentionally omits those detailed sections after Aditi requested just what the project does and its languages. Their verified material remains in the prepared P1.4 document. The approval of the current page exactly as it is does not restore absent sections or establish that they are implemented.
+- Documentation-only closure: roadmap/history updated; no application, content, CSS, artwork or layout changes. Existing build, responsive and navigation checks are recorded in the implementation/refinement entries; no fresh runtime tests needed for this closure.
+- Exact next task: **P2.7 — Implement responsive/state behavior**. Roadmap scope: vertical mobile composition, sensible return/Back/scroll handling, loading and asset fallback; acceptance **P-06/P-07**. P2.7 has NOT started. This closure does not authorize it. No Git operations, commit or push.
+
+
+### P2.6 — chapter typography refinement, 2026-09-22 — AWAITING USER VISUAL APPROVAL
+
+- Aditi found the chapter font inconsistent with the rest of the design. Updated only `.chapter-page` in `src/pathwise.css` to use existing Pixelify Sans throughout the short page, with 17px body text and 1.6 line height. Copy, layout structure, links, artwork and behavior are unchanged; no new font/dependency. This local exception is recorded in PRD/design system and roadmap; other screens' approved typography is preserved.
+- Inspected 1366×768, 360×800 and 320×568: computed pixel font confirmed, readable wrapping and no horizontal overflow. Viewport override reset. `npm run build` passed (37 modules). P2.6 awaits visual approval; P2.7+ NOT STARTED. No commit or push.
+
+### P2.6 — Pathwise chapter and requested simplification, 2026-09-22 — AWAITING USER VISUAL APPROVAL
+
+- Read the requested documents, prepared Pathwise chapter, shared metadata, routes and Workshop code. Implemented `/projects/pathwise` with one component and a small scoped stylesheet. Aditi then explicitly requested only what it does and the languages used; the current simplified chapter supersedes the initial longer technical presentation. PRD records that scope change; the detailed P1.4 evidence document is unchanged.
+- Visible content: brief purpose/summary, confirmed end-to-end role, JavaScript/Python, main React/FastAPI/SQLAlchemy/scikit-learn tools, live/source links and short demo note. Title, summary, role, tools and URLs reuse shared project metadata. No workflow diagram, architecture/risk essays, feature list, screenshot/gallery, invented metrics or additional primary action.
+- Exact demo note: “Sign-in required. Student assessment previously encountered a missing-model error and has not been reverified.” During the 2026-09-21 browser checks, both supplied external URLs returned HTTP 200; the live frontend showed its startup/service-check screen and GitHub showed the public repository. No sign-in, protected assessment verification or backend repair occurred. This does not establish that the earlier issue is fixed.
+- Reuses the approved cream album, pink binding, page-edge shadows, Times New Roman body, pixel title/short UI and floating Home/Menu. Approved artwork and shared styles are unchanged. App adds one explicit route; Workshop changes only the obsolete Pathwise “Chapter not available yet” label. TrafficIQ/MarketMind remain placeholders. Direct chapter entry marks the existing album session ready; return does not replay delivery. No new state, dependencies, content framework or animation.
+- Validation of the shortened revision: direct entry/refresh, album keyboard entry, Back/Forward, return to ready album, Menu Enter/Escape with visible focus and opener restoration passed. Inspected 1366×768, 768×1024, 360×800 and 320×568: no horizontal overflow, readable normal-flow content and 44px controls; temporary viewport overrides reset. Earlier unchanged route/session logic also passed reduced-motion and storage-denied checks. In-app dev preview logged Vite hot-reload connection warnings; the built production preview at port 4173 rendered the shortened chapter correctly with no captured console errors. No screen-reader, physical-device or full conformance claim.
+- Final shortened build passed: 37 modules, CSS 14.71 kB / gzip 3.92 kB, JS 272.52 kB / gzip 86.32 kB. Removed all unused workflow/section styles and duplicate footer navigation after simplification. P2.6 remains AWAITING USER VISUAL APPROVAL, not DONE. Exact next task: P2.7 — Implement responsive/state behavior (vertical mobile composition, return/Back/scroll handling, loading and asset fallback; P-06/P-07). P2.7+ NOT STARTED. No Git operations, commit or push.
 
 ### P2.5 — explicit final Workshop/album approval and closure, 2026-09-21 — DONE / VISUALLY APPROVED
 
@@ -470,6 +493,8 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 P2.2 remains DONE / VISUALLY APPROVED for Welcome revision 02 and Times New Roman tagline only. P2.3 is now independently DONE / VISUALLY APPROVED for its identified arrival/Workshop revision 01 and current presentation, including placement, environment, Workshop interaction and desktop/mobile direction. Neither approval extends to future assets. Source PNGs remain flattened, not layered animation masters. The interrupted presentation-revision request did not produce code edits; closure leaves the plaza unchanged.
 
 P2.2–P2.4 remain DONE / VISUALLY APPROVED. P2.5 shelf/album interaction is implemented and AWAITING USER VISUAL APPROVAL for the current CSS shelf/album, bunny-album-v01 and interaction. Review /projects before closure. Exact next roadmap task after P2.5 is P2.6 — Implement Pathwise chapter: stable URL, concise technical content, primary live-project/source actions, accurate access notes, optional single preview and no gallery; P-03. P2.6+ NOT STARTED. No commit or push.
+
+
 
 
 

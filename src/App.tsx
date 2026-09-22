@@ -5,6 +5,7 @@ import Plaza from './Plaza'
 import NotebookNav from './NotebookNav'
 import Workshop from './Workshop'
 import ProjectPlaceholder from './ProjectPlaceholder'
+import PathwiseChapter from './PathwiseChapter'
 
 export default function App() {
   const location = useLocation()
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/village" element={<Plaza entered={enteredVillage} onEnter={enterVillage} />} />
         <Route path="/projects" element={<Workshop albumReady={albumReady} onAlbumReady={openAlbum} />} />
+        <Route path="/projects/pathwise" element={<PathwiseChapter onAlbumReady={openAlbum} />} />
         <Route path="/projects/:slug" element={<ProjectPlaceholder onAlbumReady={openAlbum} />} />
         <Route path="*" element={
           <main id="main" className="route-shell">

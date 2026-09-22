@@ -63,7 +63,7 @@ export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boo
             <p>{project.summary}</p>
             <p className="project-role">{project.role}</p>
             <p className="project-tech">{project.technologies.join(' · ')}</p>
-            <p className="chapter-status">Chapter not available yet.</p>
+            {project.slug !== 'pathwise' && <p className="chapter-status">Chapter not available yet.</p>}
             <div className="project-actions">
               {project.demo.type === 'hosted' && <a href={project.demo.url}>Open Live Project</a>}
               <a href={project.githubUrl}>View GitHub / Source Code</a>
