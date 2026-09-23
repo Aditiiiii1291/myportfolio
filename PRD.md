@@ -1,17 +1,23 @@
 # Aditi's Adventure — Product Requirements Document
 
-Status: Product-definition baseline with 2026-09-16 pixel-art direction update; implementation has not started.
+Status: P2.6 DONE / VISUALLY APPROVED, including shared visual refinement; P2.7 NOT STARTED.
 Created: 2026-09-13. Document set finalized: 2026-09-14. Owner: Aditi. Release: compact V1, no fixed deadline.
 
 This document defines WHAT to build and WHY. It derives from the completed brainstorming conversation and subsequent project/demo review. It does not authorize implementing or publishing the site. The [master roadmap](docs/PORTFOLIO_MASTER_ROADMAP.md) defines delivery work; the [design system](docs/DESIGN_SYSTEM.md) defines visual rules; [project history](docs/PROJECT_HISTORY.md) records state and evidence.
 
-## Latest user direction — 2026-09-16
+## Latest user direction — 2026-09-23
+
+P2.6 final closure — 2026-09-23: DONE / VISUALLY APPROVED. Aditi approved the completed Pathwise chapter, album/book presentation, Pixelify Sans throughout the site, floating Aditi's Adventure pixel label, removal of the rectangular branding block, small cream notebook-style Menu with pink binding, and current responsive desktop/mobile presentation. Identified implementation: src/PathwiseChapter.tsx, src/pathwise.css and the shared refinement in src/styles.css, src/plaza.css and src/workshop.css. Approval applies only to this revision, not automatically to future variations. Keep comfortable font sizes, readable line-height, sufficient spacing and appropriate contrast. No application or artwork changes during closure. P2.7 has NOT started; no commit or push.
+
+### Site-wide pixel typography and navigation refinement — 2026-09-23
+
+Aditi requests the Pathwise-style game font everywhere and a better-fitting Home/Menu presentation. Use the existing Pixelify Sans for all visible text, including Welcome tagline, notebook, help, album descriptions and captions. This supersedes earlier Times New Roman requirements and the Pathwise-only exception. Home is a borderless floating pixel wordmark with a cream text outline; Menu is a compact cream notebook control with pink binding/page depth. Preserve semantic controls, focus, routing, artwork and content. This current presentation is visually approved; approval remains specific to this revision. P2.7 has not started.
 
 ### Pathwise chapter simplification — 2026-09-22
 
-Subsequent typography request: the short Pathwise chapter now uses the existing Pixelify Sans throughout to match the game presentation. This local exception to the Times New Roman body rule awaits visual approval; other approved screens retain their typography.
+Subsequent typography request: the short Pathwise chapter now uses the existing Pixelify Sans throughout to match the game presentation. The chapter is visually approved; Pixelify Sans is now approved throughout the site, not a chapter-only exception.
 
-Aditi explicitly requests a short description of what Pathwise does and which languages she used. For the visible P2.6 chapter, this supersedes the earlier detailed ten-topic/case-study presentation: show a brief purpose description, JavaScript/Python, main verified tools, confirmed end-to-end role, live/source links and a short honest access note inside the existing album. Omit the separate problem, workflow diagram, architecture, ML/temporal and feature sections. The detailed prepared chapter remains the internal evidence source; no gallery or new media is required. P-03 still requires a stable direct URL, verified content, correct repository and accurate demo access. The simplified visual revision awaits approval; P2.7 is not started.
+Aditi explicitly requests a short description of what Pathwise does and which languages she used. For the visible P2.6 chapter, this supersedes the earlier detailed ten-topic/case-study presentation: show a brief purpose description, JavaScript/Python, main verified tools, confirmed end-to-end role, live/source links and a short honest access note inside the existing album. Omit the separate problem, workflow diagram, architecture, ML/temporal and feature sections. The detailed prepared chapter remains the internal evidence source; no gallery or new media is required. P-03 still requires a stable direct URL, verified content, correct repository and accurate demo access. The simplified visual revision is approved; P2.7 is not started.
 
 ### Welcome over the world — 2026-09-20
 
@@ -19,9 +25,9 @@ Welcome presentation revision (2026-09-20): the existing Welcome content now ove
 
 ### P2.4 presentation update — 2026-09-20
 
-The latest user correction rejects contained foreground art over blurred/translucent edge fill. P2.4 now presents one full-bleed pixel village hub with all five established exterior landmarks, small central Aditi and bunny, HTML location signs, and responsive landscape/portrait art. The uploaded image guides composition and world-first presentation only; do not copy or trace it. The Workshop links to the current Projects placeholder; Cottage, Skills Garden, Adventure Board and Mailbox remain visibly unavailable, with no future interiors or chapter work. The compact notebook and Times New Roman body/pixel short-UI rule remain. First-entry prompt has a transparent backdrop and does not blur or reframe the map. This supersedes the previous no-regeneration/contained-map requirements for P2.4 only. The new hub artwork and presentation require explicit visual approval; previous Welcome/plaza approvals do not transfer. P2.5 remains NOT STARTED.
+The latest user correction rejects contained foreground art over blurred/translucent edge fill. P2.4 now presents one full-bleed pixel village hub with all five established exterior landmarks, small central Aditi and bunny, HTML location signs, and responsive landscape/portrait art. The uploaded image guides composition and world-first presentation only; do not copy or trace it. The Workshop links to the current Projects placeholder; Cottage, Skills Garden, Adventure Board and Mailbox remain visibly unavailable, with no future interiors or chapter work. The compact notebook remains; typography follows the approved site-wide Pixelify Sans rule. First-entry prompt has a transparent backdrop and does not blur or reframe the map. This supersedes the previous no-regeneration/contained-map requirements for P2.4 only. The new hub artwork and presentation require explicit visual approval; previous Welcome/plaza approvals do not transfer. P2.5 remains NOT STARTED.
 
-Standing typography: Pixelify Sans for short game UI/titles/location labels; `"Times New Roman", Times, serif` for notebook body/navigation descriptions, normal paragraphs, help sentences and longer project/About content. See design system for the recorded implementation direction. No P2.5+ work is authorized by this update.
+Standing typography: Pixelify Sans throughout the site, including all body/readable content, notebook, descriptions, help, headings, labels and buttons. The approved 2026-09-23 rule supersedes all earlier serif requirements. Keep comfortable sizes, readable line-height, sufficient spacing and appropriate contrast.
 
 **Current status update (2026-09-17):** P2.1 is DONE — minimal React/Vite/TypeScript foundation verified locally. No Welcome/scene implementation or production art. Exact next task: P2.2 — Implement Welcome, NOT STARTED. Product decisions, content gaps and test baseline remain unchanged; no Git operations.
 

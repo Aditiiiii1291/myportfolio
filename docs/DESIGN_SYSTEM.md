@@ -132,18 +132,16 @@ Error/success/warning surfaces are not assigned final hues yet. Use explicit tex
 
 ## 7. Typography
 
-Pathwise-only revision (2026-09-22): after simplifying the chapter, Aditi requested typography that better matches the game design. The short Pathwise page now uses the existing Pixelify Sans throughout, with 17px body text and 1.6 line height. This supersedes the Times New Roman body rule only for this chapter and awaits visual approval; approved Welcome, notebook and Workshop typography remains unchanged.
+Approved standing rule (2026-09-23): use existing local Pixelify Sans throughout the site, including all body/readable content, headings, labels, buttons, Welcome tagline, notebook, hints and descriptions. This supersedes the former Times New Roman rule and Pathwise-only exception. No serif body requirement remains. Preserve comfortable font sizes, readable line-height, sufficient spacing and appropriate contrast. Current Pathwise body uses 17px / 1.6 line-height. No new font dependency.
 
-Standing typography rule, explicitly updated for P2.4 (2026-09-20): use the existing licensed Pixelify Sans for short game-interface titles, location names, buttons and labels. Use `font-family: "Times New Roman", Times, serif;` for readable body content, notebook entries/descriptions, help/tutorial sentences, project descriptions, About text and longer information. Do not set paragraphs in the pixel font. Preserve this rule unless a later explicitly approved design changes it.
-
-The existing local pixel font plus system Times New Roman requires no new font download. This supersedes the earlier proposed sans-serif companion.
+P2.6 final closure — 2026-09-23: DONE / VISUALLY APPROVED. Aditi approved the completed Pathwise chapter, album/book presentation, Pixelify Sans throughout the site, floating Aditi's Adventure pixel label, removal of the rectangular branding block, small cream notebook-style Menu with pink binding, and current responsive desktop/mobile presentation. Identified implementation: src/PathwiseChapter.tsx, src/pathwise.css and the shared refinement in src/styles.css, src/plaza.css and src/workshop.css. Approval applies only to this revision, not automatically to future variations. Keep comfortable font sizes, readable line-height, sufficient spacing and appropriate contrast. No application or artwork changes during closure. P2.7 has NOT started; no commit or push.
 
 | Role | Candidate size/behavior | Rules |
 | --- | --- | --- |
 | Welcome title | Approximately 40–72 px desktop, 32–44 px phone | Responsive wrapping; no clipping; chunky silhouette |
 | Major section/chapter title | Approximately 28–40 px | Brief display text; enough line height for glasses/headings not to overlap art |
 | UI/sign labels | Approximately 16–18 px, bold | Readable HTML, ordinary mixed case for longer labels |
-| Body | At least 16 px starting size; line height 1.5–1.7 | Selectable/resizable HTML in Times New Roman, Times, serif; no pixel paragraphs |
+| Body | At least 16 px starting size; line height 1.5–1.7 | Selectable/resizable HTML in Pixelify Sans; preserve readable spacing and contrast |
 | Caption/supporting label | Approximately 14–16 px | Never the only presentation of critical information |
 
 Body measure baseline: about 45–75 characters, narrower naturally on phones. Keep paragraphs off busy art. Essential information must not be shrunk to fit a drawn page. Avoid long all-caps text and decorative handwriting for project details.
@@ -180,7 +178,7 @@ Desktop/tablet retain the title-copy and foreground portrait arrangement; phone 
 
 The map itself is the `/village` interface. Latest correction (2026-09-20) supersedes the rejected contained-map/blurred-edge approach: one continuous, full-bleed pixel-art world, no decorative duplicate backdrop, no white margins or presentation frame. New landscape and portrait candidates show the five established places, connected paths and central Aditi/bunny. Only peripheral scenery may be cropped; preserve recognizable destinations. On unusually wide/short viewports the scene has a minimum height and may scroll rather than hide locations. HTML signs share the image coordinate system and remain readable. Workshop is a semantic link; future places explicitly say Unavailable. Small floating wordmark/Menu overlays the world. Exterior hub art does not authorize future interiors or P2.5.
 
-First entry per tab session uses a small bottom prompt with a transparent backdrop: no full-screen tint or blur. Confirmation or Escape closes it without changing map framing. View Projects bypasses it; sessionStorage and local-state fallback retain dismissal. Untimed Next hint/Got it and Dismiss controls offer Times New Roman guidance, including the truthful limited availability. Notebook remains secondary, compact and softly translucent; only its own panel retains slight blur.
+First entry per tab session uses a small bottom prompt with a transparent backdrop: no full-screen tint or blur. Confirmation or Escape closes it without changing map framing. View Projects bypasses it; sessionStorage and local-state fallback retain dismissal. Untimed Next hint/Got it and Dismiss controls offer Pixelify Sans guidance, including the truthful limited availability. Notebook remains secondary, compact and softly translucent; only its own panel retains slight blur.
 
 The uploaded village reference supplies composition principles, not a final asset to trace. New candidate art must be reviewed independently for the long diamond-shaped face, middle part and cat-eye glasses; prior approved character variations do not approve this one.
 
