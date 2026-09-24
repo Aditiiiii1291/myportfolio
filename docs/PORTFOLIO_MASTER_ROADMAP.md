@@ -1,9 +1,17 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
-Status: P2.7 DONE; P2.8 NOT STARTED. P2.2–P2.6 revision-specific visual approvals preserved.
+Status: P2.8 DONE; Phase 2 prototype exit verified. P3.1 has not started. P2.2–P2.6 revision-specific visual approvals preserved.
 Updated: 2026-09-24. No fixed launch date or assumed weekly availability.
 
-## Current checkpoint — P2.7 DONE, 2026-09-24
+## Current checkpoint — P2.8 DONE, 2026-09-24
+
+Verified P-01–P-08 against the current production build: main/fast/direct journeys, actual keyboard-only navigation, notebook and return context, four responsive sizes, reduced-motion application simulation, slow/failed portrait resilience, visual/content/usability review and no observed uncaught application errors. Build and production preview passed. No application code changes were required. Full methods, evidence, limitations and issue dispositions: [PROTOTYPE_VERIFICATION.md](PROTOTYPE_VERIFICATION.md).
+
+Raw production output is 1,934,079 bytes; measured preview gzip response bodies are 86,029 bytes JS and 4,081 bytes CSS. Calculated Welcome response-body baseline is approximately 0.986–1.039 MB, not a measured browser waterfall or release-host certification. Public Pathwise source opens; the live frontend remained at startup during the bounded check, with authenticated assessment still unverified. Existing honest limitation is retained. Native OS reduced-motion switching and broader device/browser/accessibility certification are not claimed. No prototype-blocking defects found; approved visual revisions are unchanged.
+
+Exact next task: **P3.1 — Complete village composition**. Scope: five identifiable locations, short loop, prominent Workshop; mobile route reflows without shrinking labels. Dependencies are satisfied by the verified Phase 2 exit and P1.3; status READY, execution has NOT started. Other project chapters, destination interiors, release optimization and deployment belong to later numbered tasks. No Git operations, commit or push.
+
+## Historical checkpoint — P2.7 DONE, 2026-09-24
 
 Implemented only responsive/state behavior for the existing prototype. Retained the approved portrait village, stacked mobile Welcome/album and Pixelify Sans presentation; no visual redesign or artwork changes. Added shell-local scroll/focus context per history entry, explicit Workshop/Village return restoration with safe direct-entry fallbacks, scroll clearance for floating controls, image-failure fallbacks, and a live reduced-motion preference listener. Existing session entry/hint/delivery behavior remains.
 
@@ -49,7 +57,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0 and P1.1–P1.7 are DONE. Revision 03 remains the approved bounded raster concept. P1.4 prepared Pathwise content only. P2.1 supplies the app foundation; P2.2–P2.5 are visually approved for their identified revisions. P2.6 is DONE / VISUALLY APPROVED; P2.7 is DONE; P2.8 and later tasks have not started. No full production village, complete portfolio or deployment is complete.
+Phase 0, P1.1–P1.7 and P2.1–P2.8 are DONE. Revision 03 remains the approved bounded raster concept; P2.2–P2.6 retain their identified visual approvals. P2.8 verifies the first playable prototype, not the complete portfolio. P3.1 is READY but has not started; no Phase 3 or later work or deployment is complete.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -121,7 +129,7 @@ Selected links-only contact: approved email/visible address/copy, approved GitHu
 
 Baseline in [technical approach §10](TECHNICAL_APPROACH.md): Vitest with React Testing Library/user-event/jsdom, small Playwright journeys and integrated axe scans, manual accessibility/art/responsive checks and Lighthouse/transfer inspection. No overlapping Jest/Cypress suite, visual service, CI or hooks. Existing PRD viewport/metric budgets remain unchanged. Read-only browser file versions recorded; no browser launched. Latest user instruction restricts P1.7 to planning, so the former “measured lab profile” acceptance is clarified as a repeatable unmeasured protocol, with actual versions/results recorded at authorized setup and validation. This is an explicit scope clarification, not a test pass.
 
-P2.1 completed the minimal foundation. P2.2–P2.5 are DONE / VISUALLY APPROVED for their identified revisions. **P2.6 — Implement Pathwise chapter** is DONE / VISUALLY APPROVED. **P2.7 — Implement responsive/state behavior** is DONE. The exact next task is **P2.8 — Verify prototype**, NOT STARTED.
+P2.1 completed the minimal foundation. P2.2–P2.6 are DONE / VISUALLY APPROVED for their identified revisions. **P2.7 — Implement responsive/state behavior** and **P2.8 — Verify prototype** are DONE. The exact next task is **P3.1 — Complete village composition**, READY but not started.
 
 ## Phase 2 — First playable prototype
 
@@ -134,9 +142,9 @@ Purpose: Prove the signature experience with real content before producing all f
 | P2.3 Implement small plaza | DONE — VISUALLY APPROVED | P2.1, P1.3 | Aditi approved revision 01 on 2026-09-18: blossom-lined pixel plaza, Aditi/bunny placement, winding path/environment, Workshop exterior, integrated Workshop interaction and desktop/mobile direction. Semantic Workshop link leads to existing `/projects` placeholder. Prior responsive, keyboard/focus/navigation, console and build checks passed. Approval applies only to this identified revision, not future village assets |
 | P2.4 Implement notebook navigation | DONE — VISUALLY APPROVED | P2.1 | Explicit approval of current Welcome-over-world with softly faded/blurred background, full village interface, compact floating notebook, first-entry behavior, game-style hints, historical serif treatment (superseded by approved site-wide Pixelify Sans on 2026-09-23) body/readable content and Pixelify Sans short UI/titles/labels/buttons, desktop/tablet/mobile presentation. Landscape hub v01 / portrait v02 and current implementation only; no automatic future-variation approval. Existing technical checks passed; approval scope preserved. |
 | P2.5 Implement shelf/album interaction | DONE — VISUALLY APPROVED | P2.3, P1.3 | Explicit approval of the identified 2026-09-21 refined Workshop/album: warm wall/environment, wooden shelf surround, compact Workshop / Back signs, floating Home/Menu, bunny delivery with 1.1s timing, skip, reduced-motion immediate access, session return, cream album, pink binding, binding depth/page edges, historical serif treatment (superseded by approved site-wide Pixelify Sans on 2026-09-23) readable content and pixel short UI/headings. Existing build and four-size interaction/responsive checks recorded in history; P-04. No automatic future-revision approval. P2.6 has since been separately implemented |
-| P2.6 Implement Pathwise chapter | DONE — VISUALLY APPROVED | P2.1, P1.4, P2.5 | Real `/projects/pathwise`; latest user scope is short purpose description, languages/main tools, end-to-end role, primary live/source links and concise access note in the album. Detailed technical sections omitted per 2026-09-22 instruction; evidence retained in P1.4. Direct/refresh/return, keyboard and four-size checks; build passed. No gallery/media/dependencies; P-03. Final chapter and shared visual refinement approved 2026-09-23 as identified above. P2.7 NOT STARTED |
-| P2.7 Implement responsive/state behavior | DONE | P2.2–P2.6 | Approved mobile composition retained; history/explicit-return scroll and focus restoration, stable loading space and image fallbacks, session behavior and reduced-motion access. P-06/P-07 browser checks and build passed; 2026-09-24 evidence in history. P2.8 NOT STARTED |
-| P2.8 Verify prototype | NOT STARTED | P2.2–P2.7 | P-01–P-08 evidence, initial transfer measurements, art/usability review, no uncaught app errors |
+| P2.6 Implement Pathwise chapter | DONE — VISUALLY APPROVED | P2.1, P1.4, P2.5 | Real `/projects/pathwise`; latest user scope is short purpose description, languages/main tools, end-to-end role, primary live/source links and concise access note in the album. Detailed technical sections omitted per 2026-09-22 instruction; evidence retained in P1.4. Direct/refresh/return, keyboard and four-size checks; build passed. No gallery/media/dependencies; P-03. Final chapter and shared visual refinement approved 2026-09-23 as identified above. |
+| P2.7 Implement responsive/state behavior | DONE | P2.2–P2.6 | Approved mobile composition retained; history/explicit-return scroll and focus restoration, stable loading space and image fallbacks, session behavior and reduced-motion access. P-06/P-07 browser checks and build passed; 2026-09-24 evidence in history; full verification completed separately in P2.8. |
+| P2.8 Verify prototype | DONE | P2.2–P2.7 | P-01–P-08 PASS in the tested environment; production build/preview, four-size responsive and keyboard checks, simulated reduced motion, image resilience, art/content/usability review, transfer baseline and no observed uncaught app errors. Evidence/limitations: PROTOTYPE_VERIFICATION.md, 2026-09-24. No application code changes |
 
 Deliverable: One coherent playable corner of Aditi's Adventure, not a finished five-location site.
 
@@ -146,7 +154,7 @@ Exit: Both exploration and direct entry reach the same real chapter; direct URL 
 
 | Task | Status | Dependency | Deliverable / acceptance |
 | --- | --- | --- | --- |
-| P3.1 Complete village composition | NOT STARTED | P2 exit, P1.3 | Five identifiable locations, short loop, prominent Workshop; mobile route reflows without shrinking labels |
+| P3.1 Complete village composition | READY — NOT STARTED | P2 exit, P1.3 | Five identifiable locations, short loop, prominent Workshop; mobile route reflows without shrinking labels |
 | P3.2 Complete three-project collection | NOT STARTED | P2.6 + approved project content | Pathwise, TrafficIQ, MarketMind chapters; hosted/local status explicit; no automatic Live Demo for local work |
 | P3.3 Build Cottage | NOT STARTED | P2 exit + About/resume content | One room/journal experience with painting/crafts/tennis/candles; visible resume/GitHub; optional object notes secondary |
 | P3.4 Build Skills Garden | NOT STARTED | P2 exit + confirmed skills | Seed packets, visible technology names, relevant categories, optional project evidence; no proficiency ratings |

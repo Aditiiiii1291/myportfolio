@@ -1,12 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-24. Stage: P2.7 DONE; P2.8 NOT STARTED. P2.2–P2.6 revision-specific visual approvals preserved.
+Last updated: 2026-09-24. Stage: P2.8 DONE; Phase 2 prototype exit verified. P3.1 has not started. P2.2–P2.6 revision-specific visual approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Current work: P2.7 responsive/state behavior is DONE. Exact next task: P2.8 — Verify prototype, NOT STARTED. Earlier dated status statements are historical.
+- Current work: P2.8 — Verify prototype is DONE. Exact next task: P3.1 — Complete village composition, READY but NOT STARTED. Earlier dated status statements are historical. See [prototype verification evidence](PROTOTYPE_VERIFICATION.md).
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -22,6 +22,23 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P2.8 — Verify prototype — DONE, 2026-09-24
+
+The attached user request explicitly authorized verification only. Read the required planning/evidence documents and current application; preserved all identified visual approvals and the short Pathwise content. **No application code changes were required.** P-01–P-08 pass within the tested local prototype environment; full criterion matrix, procedures, measurements, findings and limits are in [PROTOTYPE_VERIFICATION.md](PROTOTYPE_VERIFICATION.md).
+
+- Actual production preview main journey, fresh fast Projects bypass, direct Pathwise load/refresh and return passed. Main journey was completed with Tab/Enter alone, including first-entry confirmation, hints, shelf, chapter and return. Visible focus, native notebook containment/Escape/opener return, current route and unavailable destinations checked. Browser Back/Forward and explicit returns restored useful album/Village context; fresh direct chapter return focused the ready album.
+- Fresh delivery observed at 1.1 seconds with content immediately available. Pre-delivery skip, active-animation skip, session return and reload worked. Reduced-motion application branch rechecked through a temporary pre-mount matchMedia simulation: album immediate, animation none, Menu/Village/return usable. Actual OS/native media switching unavailable and not claimed.
+- Top-level viewport measurements and visual inspection covered Welcome, Village, Workshop/album, Pathwise and notebook at 1366×768, 768×1024, 360×800 and 320×568. No horizontal overflow or essential-control clipping found; vertical scrolling retained access. Identified minor item: inline album project-name links are about 33.6px tall, below the preferred 44px goal; isolated and usable, so approved styling was not changed.
+- Temporary loopback server served unchanged built assets with a 15-second delayed Welcome portrait or deliberate portrait HTTP 503. Reserved space/readable fallback and navigation to Pathwise worked. Server stopped and temporary `.p28-check.cjs` removed; viewport override reset. No source/index/config/asset overrides remain.
+- Normal production keyboard/fast/responsive console logs contained no captured warnings/errors; zero uncaught application errors observed. Transient browser capture/click-tool failures were recovered by reinspection. Initial sandbox build EPERM was resolved by the authorized outside-sandbox run; production build passed 37 modules. `npm run preview -- --host 127.0.0.1 --port 4173` verified actual built routes.
+- Current shortened Pathwise page matches the authoritative later user scope. Detailed problem/workflow/architecture/ML sections remain intentionally omitted, with evidence retained in the canonical preparation document. No silent restoration. Public GitHub link opened the expected repository at b386704; live frontend resolved but remained on Starting Pathwise during the bounded check. No login/protected probing; authenticated assessment remains unverified and the historical missing-model caveat remains. Back from both external sites recovered the chapter.
+- Raw production total 1,934,079 bytes; JS 274,616; CSS 15,557; images 1,564,344; font 79,160. Measured preview gzip response bodies: JS 86,029 and CSS 4,081, distinct from Vite gzip estimates 86.90/4.10 kB. Calculated Welcome body sum 986,132–1,039,268 bytes, direct chapter 169,672; these are asset-response sums, not a browser waterfall/Lighthouse/hosting pass. Largest assets are the two responsive village exports. No bundle growth from the P2.7 output; broad optimization deferred.
+- No prototype-blocking findings. Native preference, additional browser/device/screen-reader coverage, cold-browser/release performance measurement and external-demo operation remain explicitly unverified/deferred. Phase 2 success does not certify complete V1.
+
+Permanent files changed: roadmap, project history and new prototype verification document. Build regenerated ignored dist output; no application, artwork, package or configuration changes. No later feature, new chapter/interior, hosting/deployment, Git operation, commit or push.
+
+Exact next task: **P3.1 — Complete village composition** — five identifiable locations, short loop, prominent Workshop; mobile route reflows without shrinking labels. Dependencies satisfied; READY but execution has **NOT STARTED**. Other project chapters/interiors, final content, optimization and deployment remain later tasks. This verification does not authorize starting P3.1.
 
 ### P2.7 — Implement responsive/state behavior — DONE, 2026-09-24
 
