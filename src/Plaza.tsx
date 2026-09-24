@@ -14,6 +14,7 @@ export default function Plaza({ entered, onEnter }: { entered: boolean; onEnter:
   const intro = useRef<HTMLDialogElement>(null)
   const workshop = useRef<HTMLAnchorElement>(null)
   const [hint, setHint] = useState<number | null>(entered ? null : 0)
+  const [artFailed, setArtFailed] = useState(false)
 
   function dismissHint() {
     setHint(null)
@@ -29,16 +30,17 @@ export default function Plaza({ entered, onEnter }: { entered: boolean; onEnter:
   }, [entered])
 
   return (
-    <main id="main" className="plaza-content">
+    <main id="main" className={`plaza-content${artFailed ? ' art-unavailable' : ''}`}>
       <h1 className="visually-hidden">Aditi's village</h1>
       <div className="plaza-scene">
+        {artFailed && <p role="status">The village illustration couldn't load. You can still enter the Workshop or use Menu.</p>}
         <picture>
           <source media="(max-aspect-ratio: 1/1)" srcSet={portraitArt} />
           <img className="plaza-arrival" src={hubArt} width="1536" height="1024"
             alt="Aditi and her cream bunny in a blossom-filled village, with paths joining the Workshop, Cottage, Skills Garden, Adventure Board and Mailbox."
-            fetchPriority="high" />
+            fetchPriority="high" onError={() => setArtFailed(true)} />
         </picture>
-        <Link className="hub-place hub-workshop" ref={workshop} to="/projects" aria-label="Enter Project Workshop">
+        <Link id="village-workshop" className="hub-place hub-workshop" ref={workshop} to="/projects" aria-label="Enter Project Workshop">
           <span className="hub-sign">Project Workshop</span>
         </Link>
         <div className="hub-place hub-cottage"><span className="hub-sign">Aditi's Cottage<small>About · Unavailable</small></span></div>

@@ -1,12 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-23. Stage: P2.6 DONE / VISUALLY APPROVED; latest site-wide typography/navigation refinement also visually approved. P2.7 NOT STARTED. Earlier revision-specific approvals preserved.
+Last updated: 2026-09-24. Stage: P2.7 DONE; P2.8 NOT STARTED. P2.2–P2.6 revision-specific visual approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Current work: P2.6 Pathwise chapter is DONE / VISUALLY APPROVED for the current shortened revision with Pixelify Sans throughout. P2.2–P2.5 approvals remain intact. P2.7 — Implement responsive/state behavior is next and NOT STARTED. See latest dated entry; previous status statements are historical.
+- Current work: P2.7 responsive/state behavior is DONE. Exact next task: P2.8 — Verify prototype, NOT STARTED. Earlier dated status statements are historical.
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -22,6 +22,38 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 ## COMPLETED WORK
+
+### P2.7 — Implement responsive/state behavior — DONE, 2026-09-24
+
+Scope was explicitly authorized by the attached continuation request. Read the PRD acceptance criteria, roadmap/history, design/technical approach and current routes/components. Work stayed within existing Welcome, Village, Workshop, album, Pathwise and placeholder recovery. Approved visual direction, text content, artwork, fonts, 1.1-second delivery and routing destinations are preserved.
+
+Implementation:
+- App keeps small in-memory history-entry scroll/focus records and the last visited key for each route. New destinations begin at the top. Browser Back/Forward restores the matching entry. Explicit chapter/Workshop return links request destination context; missing context falls back to the ready album heading or Workshop entrance. Refresh has a safe top fallback; browser history is not intercepted or replaced. The notebook still closes on route changes but no longer competes with shell focus restoration. Focus is not moved on initial document load.
+- Existing vertical portrait village and single-column phone Welcome/album/chapter already satisfied the inspected sizes, so no normal composition redesign was needed. Added CSS scroll clearance for the floating controls. Normal image dimensions remain reserved.
+- Welcome portrait failure displays a brief readable alternative in its reserved area. Failed village artwork reflows the same HTML signs into a simple vertical fallback, retaining the named semantic Workshop link and Menu. Failed decorative bunny is hidden without collapsing its reserved space or affecting album access. Pastel scene backgrounds and HTML navigation remain visible during image loading.
+- Existing sessionStorage flags and their shell-memory fallback remain unchanged. Added a local reduced-motion preference value/listener so the Workshop also reacts to preference changes without a new hook or library.
+
+P-06: “At 360×800, 768×1024 and 1366×768 CSS px, no essential text/control is clipped or overlapped; no unintended horizontal page scroll.” PASS for the inspected local prototype. Welcome, Village, Workshop/open album and Pathwise inspected at those three sizes plus 320×568. DOM width checks showed no horizontal overflow; mobile content scrolls naturally rather than shrinking the whole UI. Notebook at 320×568 fit from y=76 to y=524.8 and remained internally scrollable if needed. Desktop/tablet/phone screenshots inspected; no physical-device or cross-browser claim.
+
+P-07: “Return to Workshop/Village restores context; browser Back and direct-entry return both lead somewhere useful.” PASS for the checked local flows. Welcome → Village → Workshop → Pathwise → browser Back restored the open album (approximately y=490 on the tested phone) and project-pathwise focus. Explicit chapter return restored the same context. Workshop → Village restored village-workshop focus with no repeat intro/hints. Back to Welcome restored the entry-link focus; Forward worked normally. Welcome → View Projects → Pathwise and return also passed. Direct /projects/pathwise refresh followed by explicit return opened the album and focused album-title without belated delivery.
+
+Additional bounded checks:
+- Fresh entry prompt, Escape, Next hint/Got it/Dismiss and session returns checked. Delivery observed with CSS duration 1.1s and immediately available album; Skip animation removed delivery and focused album-title. Return visits did not replay it.
+- Menu Enter opened the native dialog, Escape returned visible focus to Menu, and choosing a route closed the notebook and focused the destination heading. Keyboard Workshop/chapter entry and pointer navigation both checked.
+- Direct load and refresh passed for /, /village, /projects and /projects/pathwise. /projects/trafficiq remained its existing unavailable chapter; /contact and /not-a-page used existing Page not found recovery. No new pages were implemented.
+- Temporary broken image URLs exercised the Welcome, village and bunny fallbacks. Village failure retained a 44px semantic Workshop destination, keyboard navigation and readable text, with no horizontal overflow or application crash.
+- Temporary local server middleware delayed image responses by 15 seconds. Welcome portrait and village image both had naturalWidth=0 / complete=false while HTML actions remained readable and usable; navigation to Projects worked before image completion. Welcome retained its 360×360 reserved portrait box in the inspected desktop viewport. This was a bounded loading check, not a performance audit.
+- Reduced-motion application branch tested using a temporary matchMedia preference simulation before mounting: fresh Workshop showed the album immediately, no delivery/skip control, computed animation name none; chapter return retained ready access. Existing CSS reduced-motion rule reviewed. Actual OS preference toggling and physical-device behavior were not tested.
+- In-app viewport control initially stayed at 320×568 despite changes; a temporary same-origin iframe test page supplied verified 1366×768, 768×1024, 360×800 and 320×568 layout viewports for the screenshot/overflow matrix. Session/navigation checks used the top-level app. Later direct 320×568 notebook check also passed. No iframe was added to the product.
+- Preview server stopped during continuation; restarted before valid refresh checks. Temporary middleware restart/restoration produced Vite HMR reload errors; after restoring original paths/config and a clean reload, the final Welcome → Projects → Pathwise → return journey produced no captured console warnings/errors. No remaining React/routing errors observed.
+- Final npm run build passed: 37 modules; CSS 15.55 kB (gzip 4.10 kB), JS 274.61 kB (gzip 86.90 kB). No testing dependencies installed. Removed the temporary viewport page, media-preference/session overrides, failure URLs and delayed-image middleware; restored index.html and vite.config.ts exactly.
+
+Simplicity review: reread all changed code. Three App refs (positions, last route entry, previous entry) and two effects handle the documented restoration without a generic manager, provider or new component. Welcome/Plaza each add one failure boolean; Workshop adds one media-preference state/effect. Existing session state is reused. No persistent scroll tracking, new packages, state library, loading framework, service worker, backend or speculative features. Artwork and package hashes match the pre-change snapshot.
+
+Changed files: src/App.tsx, src/NotebookNav.tsx, src/Welcome.tsx, src/Plaza.tsx, src/Workshop.tsx, src/PathwiseChapter.tsx, src/ProjectPlaceholder.tsx, src/styles.css, src/plaza.css, docs/PORTFOLIO_MASTER_ROADMAP.md, docs/PROJECT_HISTORY.md.
+
+Exact next task: **P2.8 — Verify prototype**, NOT STARTED: P-01–P-08 evidence, initial transfer measurements, art/usability review, no uncaught app errors. No visual redesign, expanded project chapters, new interiors, later roadmap features, full P2.8 verification, deployment or Git operations. User will commit manually.
+
 
 ### Final P2.6 and shared visual approval — 2026-09-23
 

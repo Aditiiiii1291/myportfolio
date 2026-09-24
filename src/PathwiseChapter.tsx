@@ -15,7 +15,7 @@ export default function PathwiseChapter({ onAlbumReady }: { onAlbumReady: () => 
 
   return (
     <main id="main" className="pathwise-chapter">
-      <Link className="workshop-button chapter-return" to="/projects">← Back to Things I've Built</Link>
+      <Link className="workshop-button chapter-return" to="/projects" state={{ restoreContext: true }}>← Back to Things I've Built</Link>
       <article className="project-album chapter-page" aria-labelledby="pathwise-title">
         <p className="workshop-eyebrow">Things I've Built · Chapter 01</p>
         <h1 id="pathwise-title">{project.title}</h1>

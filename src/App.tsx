@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link, Route, Routes, useLocation } from 'react-router'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Link, Route, Routes, useLocation, useNavigationType } from 'react-router'
 import Welcome from './Welcome'
 import Plaza from './Plaza'
 import NotebookNav from './NotebookNav'
@@ -9,6 +9,54 @@ import PathwiseChapter from './PathwiseChapter'
 
 export default function App() {
   const location = useLocation()
+  const navigationType = useNavigationType()
+  const positions = useRef(new Map<string, { y: number; focusId: string }>())
+  const lastVisit = useRef(new Map<string, string>())
+  const previousEntry = useRef(location.key)
+
+  useEffect(() => {
+    const previous = window.history.scrollRestoration
+    window.history.scrollRestoration = 'manual'
+    return () => { window.history.scrollRestoration = previous }
+  }, [])
+
+  useLayoutEffect(() => {
+    const navigated = previousEntry.current !== location.key
+    previousEntry.current = location.key
+    const savedKey = navigationType === 'POP' ? location.key
+      : location.state?.restoreContext ? lastVisit.current.get(location.pathname) : undefined
+    const saved = savedKey ? positions.current.get(savedKey) : undefined
+    const position = { y: saved?.y ?? 0, focusId: saved?.focusId ?? '' }
+    positions.current.set(location.key, position)
+    lastVisit.current.set(location.pathname, location.key)
+
+    function saveScroll() { position.y = window.scrollY }
+    function saveFocus() {
+      const active = document.activeElement
+      if (active instanceof HTMLElement && active.closest('main') && active.id) position.focusId = active.id
+    }
+    const frame = requestAnimationFrame(() => {
+      const fallback = location.state?.restoreContext
+        ? document.getElementById(location.pathname === '/projects' ? 'album-title' : 'village-workshop') : null
+      const target = (saved?.focusId ? document.getElementById(saved.focusId) : null)
+        ?? fallback ?? document.querySelector<HTMLElement>('main h1')
+      if (navigated && target && !document.querySelector('dialog[open]')) {
+        if (!target.matches('a, button')) target.tabIndex = -1
+        target.focus({ preventScroll: true })
+      }
+      window.scrollTo(0, saved?.y ?? 0)
+      if (!saved && fallback) fallback.scrollIntoView({ block: 'start' })
+      saveScroll()
+      saveFocus()
+      window.addEventListener('scroll', saveScroll, { passive: true })
+      document.addEventListener('focusin', saveFocus)
+    })
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', saveScroll)
+      document.removeEventListener('focusin', saveFocus)
+    }
+  }, [location.key, location.pathname, location.state, navigationType])
   const [albumReady, setAlbumReady] = useState(() => {
     try { return sessionStorage.getItem('workshop-album-ready') === 'true' }
     catch { return false }

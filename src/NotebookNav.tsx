@@ -23,11 +23,6 @@ export default function NotebookNav() {
     if (previousLocation.current === location.key) return
     previousLocation.current = location.key
     dialog.current?.close()
-    const heading = document.querySelector('main h1')
-    if (heading instanceof HTMLElement && !document.querySelector('dialog[open]')) {
-      heading.tabIndex = -1
-      heading.focus()
-    }
   }, [location.key])
 
   return (

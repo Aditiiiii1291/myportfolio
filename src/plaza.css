@@ -27,6 +27,11 @@
 .world-hint { position: absolute; bottom: .5rem; left: 50%; transform: translateX(-50%); width: min(430px, calc(100% - 2rem)); padding: .5rem .75rem; color: #583448; background: #fff0e9; border: 2px solid #986b62; }
 .world-hint p { font-size: 1rem; line-height: 1.2; margin: 0; }
 .world-hint button { color: inherit; background: transparent; border: 0; text-decoration: underline; }
+.plaza-content.art-unavailable { height: auto; min-height: 100svh; overflow: visible; padding-bottom: 1rem; }
+.art-unavailable .plaza-scene { position: static; transform: none; width: min(100%, 600px); height: auto; margin: auto; padding: 6rem 1rem 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.art-unavailable picture { display: none; }
+.art-unavailable .hub-place { position: static; width: 100%; height: auto; min-height: 44px; }
+.art-unavailable .world-caption, .art-unavailable .world-hint { position: static; transform: none; margin: 1rem auto; width: fit-content; max-width: calc(100% - 2rem); white-space: normal; }
 @media (max-aspect-ratio: 1/1) {
   .plaza-scene { width: max(100%, 66.6667svh); height: max(100%, 150vw); top: 50%; transform: translate(-50%, -50%); }
   .hub-place { width: 30%; height: 18%; }

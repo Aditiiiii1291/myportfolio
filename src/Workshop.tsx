@@ -7,8 +7,15 @@ import './workshop.css'
 export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boolean; onAlbumReady: () => void }) {
   const [delivering, setDelivering] = useState(false)
   const albumHeading = useRef<HTMLHeadingElement>(null)
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   const open = albumReady || reducedMotion
+
+  useEffect(() => {
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => { setReducedMotion(preference.matches); if (preference.matches) setDelivering(false) }
+    preference.addEventListener('change', update)
+    return () => preference.removeEventListener('change', update)
+  }, [])
 
   useEffect(() => {
     if (reducedMotion && !albumReady) onAlbumReady()
@@ -34,7 +41,7 @@ export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boo
       <div className="workshop-heading">
         <p className="workshop-eyebrow">A little room for things I've made</p>
         <h1>Project Workshop</h1>
-        <Link to="/village">← Back to Village</Link>
+        <Link to="/village" state={{ restoreContext: true }}>← Back to Village</Link>
       </div>
       <div className="workshop-shelf" aria-label="Project shelf">
         <div className="shelf-books" aria-hidden="true">
@@ -52,14 +59,15 @@ export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boo
       <section id="project-album" className="project-album" hidden={!open} aria-labelledby="album-title">
         <div className="album-heading">
           <div><p className="workshop-eyebrow">The project collection</p><h2 id="album-title" tabIndex={-1} ref={albumHeading}>Things I've Built</h2></div>
-          <img className={delivering ? 'album-bunny delivering' : 'album-bunny'} src={bunnyAlbum} alt="" width="160" height="160" />
+          <img className={delivering ? 'album-bunny delivering' : 'album-bunny'} src={bunnyAlbum} alt="" width="160" height="160"
+            onError={event => { event.currentTarget.style.visibility = 'hidden' }} />
         </div>
         <p className="album-status" role="status">{delivering ? 'The bunny is bringing your album. All projects are already available below.' : 'Your album is open. Pick a project to explore.'}</p>
         {delivering && <button className="workshop-button skip-delivery" onClick={() => { setDelivering(false); albumHeading.current?.focus() }}>Skip animation</button>}
         <ol className="album-projects">
           {projects.map((project, index) => <li key={project.slug}>
             <p className="project-number">Chapter {String(index + 1).padStart(2, '0')}</p>
-            <h3><Link to={`/projects/${project.slug}`}>{project.title} <span aria-hidden="true">↗</span></Link></h3>
+            <h3><Link id={`project-${project.slug}`} to={`/projects/${project.slug}`}>{project.title} <span aria-hidden="true">↗</span></Link></h3>
             <p>{project.summary}</p>
             <p className="project-role">{project.role}</p>
             <p className="project-tech">{project.technologies.join(' · ')}</p>

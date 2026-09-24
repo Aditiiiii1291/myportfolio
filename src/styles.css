@@ -12,6 +12,7 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
+html { scroll-padding-top: 6rem; }
 a { color: inherit; }
 a:focus-visible, button:focus-visible {
   outline: 3px solid #583448;
@@ -98,6 +99,7 @@ h1, #main { scroll-margin-top: 7rem; }
 .title-screen .welcome-tagline { padding: .5rem .75rem; background: rgb(255 240 243 / 94%); }
 .title-screen .resume-status { display: inline-block; padding: .25rem .5rem; background: rgb(255 240 243 / 94%); }
 .title-screen .welcome-art { mask-image: radial-gradient(ellipse 65% 70% at 50% 50%, #000 55%, transparent 78%); }
+.title-screen .art-fallback { mask-image: none; aspect-ratio: 1; display: grid; place-content: center; padding: 1rem; margin: 0; background: #fff0f3; }
 @media (max-aspect-ratio: 1/1) {
   .title-screen::before { background-image: linear-gradient(rgb(255 240 243 / 62%), rgb(255 240 243 / 62%)), url('./assets/plaza/village-hub-portrait-v02.webp'); background-position: center; }
 }

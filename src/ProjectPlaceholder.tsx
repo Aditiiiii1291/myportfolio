@@ -10,7 +10,7 @@ export default function ProjectPlaceholder({ onAlbumReady }: { onAlbumReady: () 
     <main id="main" className="route-shell">
       <h1>{project ? project.title : 'Project not found'}</h1>
       <p>{project ? 'This project chapter is not available yet. Its live/source links are in the album.' : 'There is no project at this address.'}</p>
-      <Link to="/projects">← Back to Workshop</Link>
+      <Link to="/projects" state={{ restoreContext: true }}>← Back to Workshop</Link>
     </main>
   )
 }
