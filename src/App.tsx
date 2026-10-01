@@ -6,6 +6,9 @@ import NotebookNav from './NotebookNav'
 import Workshop from './Workshop'
 import ProjectPlaceholder from './ProjectPlaceholder'
 import PathwiseChapter from './PathwiseChapter'
+import ProjectChapter from './ProjectChapter'
+import Cottage from './Cottage'
+import { projects } from './content/projects'
 
 export default function App() {
   const location = useLocation()
@@ -37,7 +40,7 @@ export default function App() {
     }
     const frame = requestAnimationFrame(() => {
       const fallback = location.state?.restoreContext
-        ? document.getElementById(location.pathname === '/projects' ? 'album-title' : 'village-workshop') : null
+        ? document.getElementById(location.state?.returnFocus ?? (location.pathname === '/projects' ? 'album-title' : 'village-workshop')) : null
       const target = (saved?.focusId ? document.getElementById(saved.focusId) : null)
         ?? fallback ?? document.querySelector<HTMLElement>('main h1')
       if (navigated && target && !document.querySelector('dialog[open]')) {
@@ -76,7 +79,7 @@ export default function App() {
     catch { /* Local state remembers entry if storage is unavailable. */ }
   }
   return (
-    <div className={location.pathname === '/village' ? 'world' : location.pathname === '/' ? 'welcome title-screen' : location.pathname.startsWith('/projects') ? 'welcome workshop-page' : 'welcome'}>
+    <div className={location.pathname === '/village' ? 'world' : location.pathname === '/' ? 'welcome title-screen' : location.pathname === '/about' ? 'welcome cottage-page' : location.pathname.startsWith('/projects') ? 'welcome workshop-page' : 'welcome'}>
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="welcome-header">
         {location.pathname === '/' ? <span className="wordmark">Aditi's Adventure</span>
@@ -86,8 +89,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/village" element={<Plaza entered={enteredVillage} onEnter={enterVillage} />} />
+        <Route path="/about" element={<Cottage />} />
         <Route path="/projects" element={<Workshop albumReady={albumReady} onAlbumReady={openAlbum} />} />
         <Route path="/projects/pathwise" element={<PathwiseChapter onAlbumReady={openAlbum} />} />
+        <Route path="/projects/trafficiq" element={<ProjectChapter project={projects[1]} onAlbumReady={openAlbum} />} />
+        <Route path="/projects/marketmind" element={<ProjectChapter project={projects[2]} onAlbumReady={openAlbum} />} />
         <Route path="/projects/:slug" element={<ProjectPlaceholder onAlbumReady={openAlbum} />} />
         <Route path="*" element={
           <main id="main" className="route-shell">

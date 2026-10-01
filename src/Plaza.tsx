@@ -2,10 +2,18 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import hubArt from './assets/plaza/village-hub-v01.webp'
 import portraitArt from './assets/plaza/village-hub-portrait-v02.webp'
+import workshopArt from './assets/plaza/locations/workshop-mobile-v01.webp'
+import cottageArt from './assets/plaza/locations/cottage-exterior-v01.webp'
+import gardenArt from './assets/plaza/locations/skills-garden-v01.webp'
+import boardArt from './assets/plaza/locations/adventure-board-v01.webp'
+import mailboxArt from './assets/plaza/locations/mailbox-v01.webp'
+import hostArt from './assets/plaza/locations/aditi-village-host-v02.webp'
 import './plaza.css'
 
+const mobileScenePixel = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+
 const hints = [
-  'The Workshop opens the Projects preview. Other places are still being built.',
+  'Explore Projects in the Workshop and About in the Cottage. Other places are still being built.',
   'Open Menu anytime to jump somewhere directly.',
   'Use Tab and Enter to explore with a keyboard.',
 ]
@@ -34,19 +42,52 @@ export default function Plaza({ entered, onEnter }: { entered: boolean; onEnter:
       <h1 className="visually-hidden">Aditi's village</h1>
       <div className="plaza-scene">
         {artFailed && <p role="status">The village illustration couldn't load. You can still enter the Workshop or use Menu.</p>}
-        <picture>
+        <picture className="plaza-background">
+          <source media="(max-width: 700px)" srcSet={mobileScenePixel} />
           <source media="(max-aspect-ratio: 1/1)" srcSet={portraitArt} />
           <img className="plaza-arrival" src={hubArt} width="1536" height="1024"
-            alt="Aditi and her cream bunny in a blossom-filled village, with paths joining the Workshop, Cottage, Skills Garden, Adventure Board and Mailbox."
+            alt="" aria-hidden="true"
             fetchPriority="high" onError={() => setArtFailed(true)} />
         </picture>
         <Link id="village-workshop" className="hub-place hub-workshop" ref={workshop} to="/projects" aria-label="Enter Project Workshop">
+          <picture className="mobile-place-art">
+            <source media="(max-width: 700px)" srcSet={workshopArt} />
+            <img src={mobileScenePixel} width="600" height="600" alt="" />
+          </picture>
           <span className="hub-sign">Project Workshop</span>
         </Link>
-        <div className="hub-place hub-cottage"><span className="hub-sign">Aditi's Cottage<small>About · Unavailable</small></span></div>
-        <div className="hub-place hub-garden"><span className="hub-sign">Skills Garden<small>Unavailable</small></span></div>
-        <div className="hub-place hub-board"><span className="hub-sign">Adventure Board<small>Unavailable</small></span></div>
-        <div className="hub-place hub-mailbox"><span className="hub-sign">Mailbox<small>Contact · Unavailable</small></span></div>
+        <Link id="village-cottage" className="hub-place hub-cottage" to="/about" aria-label="Enter Aditi's Cottage">
+          <picture className="mobile-place-art">
+            <source media="(max-width: 700px)" srcSet={cottageArt} />
+            <img src={mobileScenePixel} width="600" height="548" alt="" />
+          </picture>
+          <span className="hub-sign">Aditi's Cottage<small>About</small></span>
+        </Link>
+        <picture className="mobile-place-art mobile-village-host">
+          <source media="(max-width: 700px)" srcSet={hostArt} />
+          <img src={mobileScenePixel} width="460" height="491" alt="Aditi and her cream bunny welcoming visitors to the village." />
+        </picture>
+        <div className="hub-place hub-garden">
+          <picture className="mobile-place-art">
+            <source media="(max-width: 700px)" srcSet={gardenArt} />
+            <img src={mobileScenePixel} width="600" height="480" alt="" />
+          </picture>
+          <span className="hub-sign">Skills Garden<small>Unavailable</small></span>
+        </div>
+        <div className="hub-place hub-board">
+          <picture className="mobile-place-art">
+            <source media="(max-width: 700px)" srcSet={boardArt} />
+            <img src={mobileScenePixel} width="600" height="548" alt="" />
+          </picture>
+          <span className="hub-sign">Adventure Board<small>Experience &amp; Achievements · Unavailable</small></span>
+        </div>
+        <div className="hub-place hub-mailbox">
+          <picture className="mobile-place-art">
+            <source media="(max-width: 700px)" srcSet={mailboxArt} />
+            <img src={mobileScenePixel} width="400" height="400" alt="" />
+          </picture>
+          <span className="hub-sign">Mailbox<small>Contact · Unavailable</small></span>
+        </div>
       </div>
       <p className="world-caption">Pick a place to explore</p>
       <dialog className="world-intro" ref={intro} aria-labelledby="world-intro-title"

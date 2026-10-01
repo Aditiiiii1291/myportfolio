@@ -1,12 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-09-24. Stage: P2.8 DONE; Phase 2 prototype exit verified. P3.1 has not started. P2.2–P2.6 revision-specific visual approvals preserved.
+Last updated: 2026-10-01. Stage: P3.3 implemented and awaiting user visual/content approval; P3.1/P3.2 approvals remain pending. P2.2–P2.6 revision-specific visual approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Current work: P2.8 — Verify prototype is DONE. Exact next task: P3.1 — Complete village composition, READY but NOT STARTED. Earlier dated status statements are historical. See [prototype verification evidence](PROTOTYPE_VERIFICATION.md).
+- Current work: P3.3 — Build Cottage is implemented and AWAITING USER VISUAL/CONTENT APPROVAL. P3.1/P3.2 approvals remain pending; no approval inferred from continuation instructions. P3.4 has NOT started. Earlier dated status statements are historical. See the current checkpoint below and [prototype verification evidence](PROTOTYPE_VERIFICATION.md) for the Phase 2 baseline.
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -21,6 +21,62 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P2.3 is DONE / visually approved on 2026-09-18 for identified plaza revision 01 and its current presentation. At that checkpoint, `/village` had the bounded arrival scene and semantic Workshop link; `/projects` remains the existing unavailable-album shell. Approval does not extend to future village assets.
 - P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
+
+## CURRENT CHECKPOINT — P3.3 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-01
+
+The user explicitly authorized the Cottage, including polished education placeholders and honest unavailable resume rather than blocking on missing intake. Implemented `/about`, connected both the existing village Cottage and notebook About destination. Room/journal composition uses Strawberry Cream, Pixelify Sans, cocoa outlines and the existing cream/pink album styling. Desktop is two columns; below 900px it stacks naturally. New artwork is decorative and static; source/export and exact prompt in [Cottage provenance](../assets/sources/cottage/PROVENANCE.md). Existing village exterior and character art, Welcome, Workshop, chapters, branding and notebook styles were not redesigned.
+
+Content evidence: CONTENT_INTAKE.md's approved About/education facts and PRD's confirmed solo authorship. Biography says Aditi studies Electronics and Telecommunications engineering, pursues full-stack roles, built Pathwise/TrafficIQ/MarketMind end to end and enjoys painting, crafts, tennis and animals. No surname, institution, formal degree, study/graduation dates, availability, grades, employment or personal anecdote inferred. Education fields say “Not added yet”; resume says “Resume — not available yet” as text, without a fake link/button. Career section links to Projects and the already-approved Pathwise repository (labelled specifically “Pathwise on GitHub”); it does not infer an approved public GitHub profile. Exact final biography wording, institution, degree/program title, dates and public-safe resume remain needed. No separate specialization inferred.
+
+Navigation: one new Cottage component and CSS file, no new application state or dependencies. Cottage entrance is a named semantic Link with its existing HTML sign and art coordinates; notebook About activates `/about`. Shared shell uses an optional returnFocus value for the direct-entry Village fallback so the Cottage return targets village-cottage. Existing saved Back/return contexts retain priority. Tutorial wording now truthfully identifies both Workshop and Cottage as available; other three destinations remain unavailable. Room has no animation; Cottage hover displacement is removed under prefers-reduced-motion. All content remains available without movement or object interactions.
+
+Browser evidence on production preview: direct `/about` load and refresh passed; village keyboard Enter and pointer entry passed; notebook About keyboard activation reached Cottage, closed the notebook and focused cottage-title. Browser Back restored village-cottage focus; Forward returned to `/about`. After direct refresh, Back to Village restored the Cottage fallback with no repeated intro once session entry was completed. A fresh first Village visit still showed its existing entry dialog; an initial test action was blocked by that expected modal and succeeded after normal confirmation/dismissal. At 320×568, Menu fit and Escape returned visible focus to Menu; current About showed “Here”. No captured warnings/errors. Desktop 1366×768, tablet 768×1024, phone 360×800 and 320×568 screenshots/DOM checked: no horizontal overflow, loaded room image, natural one-column tablet/mobile reflow, 17px journal / 27.2px line-height, and 44px journal/return targets. Village Cottage target is substantially larger than 44px. Cottage computed animations were none; native OS reduced-motion toggling was not tested, and no physical-device/cross-browser/screen-reader certification is claimed. Viewport override reset.
+
+Production `npm run build` passed (47 modules; CSS 19.12 kB / gzip 4.74 kB; JS 282.49 kB / gzip 88.50 kB). New WebP is 146,978 bytes; flattened PNG master is outside application assets. No new package or testing framework. Files: src/Cottage.tsx, src/cottage.css, src/App.tsx, src/Plaza.tsx, src/plaza.css, src/NotebookNav.tsx; source/export/provenance under assets/sources/cottage and src/assets/cottage; roadmap, history and intake clarification. No Skills Garden, Adventure Board, Mailbox, movement or P3.4+ implementation; no commit or push. P3.3 remains **AWAITING USER VISUAL/CONTENT APPROVAL** for this identified room/journal revision.
+
+Exact next task: **P3.4 — Build Skills Garden** — seed packets, visible technology names, relevant categories, optional project evidence; no proficiency ratings. NOT STARTED; confirmed display skills remain a prerequisite.
+
+## PREVIOUS CHECKPOINT — P3.2 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-01
+
+The user explicitly authorized completing the three-project collection using existing evidence and the approved Pathwise styling. PathwiseChapter.tsx and its CSS/content remain unchanged, including the concise approved text, end-to-end role, hosted/source URLs and honest missing-model/sign-in note. Its earlier detailed-section removal is preserved.
+
+Added one shared ProjectChapter view for TrafficIQ/MarketMind and explicit stable routes. Content sections in the existing project metadata cover purpose, what Aditi built, implementation, notable features and status/limitations. The album consumes the same metadata and no longer says these chapters are unavailable. No new state, dependencies, artwork or CSS redesign. Existing chapter return state and album-ready behavior are reused.
+
+Evidence is the PRD project inventory, CONTENT_INTAKE.md staged records and historical public-source review. No fresh full source audit or featured-project tests were run. TrafficIQ copy is limited to traffic-video analytics, simulated priority, React/TypeScript, FastAPI, database integration and CV processing; no actual signal control, test totals or measured outcomes. MarketMind distinguishes Python backend/analytics and Streamlit prototype work from React auth/dashboard and the previously reviewed placeholder Products/Uploads/Analysis views. Its exact local interface/version remains unconfirmed. No seamless integrated workflow or commercial prediction claim.
+
+| Project | Links and represented status |
+| --- | --- |
+| Pathwise | Preserved `https://pathwise-1-sibf.onrender.com` live action and `https://github.com/Aditiiiii1291/Pathwise` source. Sign-in required; authenticated assessment not reverified after prior missing-model error. No fresh hosted verification in P3.2. |
+| TrafficIQ | Source `https://github.com/Aditiiiii1291/TrafficIQ`. Supplied hosted URL `https://ai-emergency-vehicle-priority-system.onrender.com` retained in metadata but no live action in album/chapter because a working hosted workflow is unverified. Current web-tool attempt returned inaccessible; this is a tool observation, not proof of an origin outage. Earlier check reached Render startup only. |
+| MarketMind | Source `https://github.com/Aditiiiii1291/MarketMind`. Local/unhosted; no hosted URL or live action. Local interface/version and complete integrated workflow unconfirmed. |
+
+Validation: production `npm run build` passed (44 modules; CSS 17.31 kB / gzip 4.42 kB; JS 279.28 kB / gzip 87.85 kB). Direct load and refresh of `/projects/pathwise`, `/projects/trafficiq` and `/projects/marketmind` produced the correct chapter/title. Album lists all three stable routes and only Pathwise's live action. Pointer and keyboard chapter entry worked; explicit direct-entry return opened the ready album. Browser Back restored project-trafficiq focus; Forward returned to TrafficIQ. At 320×568, the notebook fit, Enter opened it and Escape returned focus to Menu. Return links had visible keyboard outlines. Desktop TrafficIQ (1366×768), tablet MarketMind (768×1024), phone MarketMind (360×800), and small-phone TrafficIQ/Pathwise (320×568) had no horizontal overflow in inspected layouts; new chapter screenshots reviewed. No captured browser warnings/errors. A locator initially included the decorative aria-hidden arrow; correcting the accessible name resolved the test lookup without a product change. Viewport override reset. No physical-device/cross-browser/screen-reader certification claimed.
+
+Files changed: src/App.tsx, src/Workshop.tsx, src/content/projects.ts, new src/ProjectChapter.tsx, roadmap, this history and CONTENT_INTAKE.md's chapter-status clarification. No featured-project repair/deployment, interiors, game mechanics or P3.3+ work. No commit or push. This identified implementation remains **AWAITING USER VISUAL/CONTENT APPROVAL**; it does not approve unresolved project facts or silently approve P3.1.
+
+Exact next task: **P3.3 — Build Cottage** — one room/journal experience with painting/crafts/tennis/candles; visible resume/GitHub; optional object notes secondary. NOT STARTED; About/resume content remains a prerequisite.
+
+## PREVIOUS CHECKPOINT — P3.1 — IMPLEMENTED, AWAITING USER VISUAL APPROVAL — 2026-10-01
+
+Implemented the five documented village destinations as one connected short-loop world. Desktop/tablet retain the existing full-map art, landmark placement and HTML sign positions. On narrow screens the scene reflows into a vertically scrollable journey of transparent location illustrations, Aditi with her bunny, and readable text plaques. The signs remain normal HTML; unavailable destinations are text, not false links. The Project Workshop retains its semantic `/projects` link, accessible name, pointer hover and visible keyboard focus.
+
+| Location | Current representation and behavior |
+| --- | --- |
+| Project Workshop | Prominent existing desktop/tablet Workshop; mobile Workshop cutout and full-place link to the existing Projects preview. |
+| Aditi's Cottage | Cottage landmark and “About · Unavailable” sign; noninteractive. |
+| Skills Garden | Garden landmark and unavailable sign; noninteractive. |
+| Adventure Board | Board landmark and “Experience & Achievements · Unavailable” sign; noninteractive. |
+| Mailbox | Mailbox landmark and “Contact · Unavailable” sign; noninteractive. |
+
+Aditi and the cream bunny remain together as the village host on mobile; existing hub art continues to show them in the desktop/tablet world. The new art consists of five place cutouts plus one host cutout. PNG source masters and WebP web exports, sizes, output IDs and prompt-summary limits are recorded in [location provenance](../assets/sources/locations/PROVENANCE.md). The six WebP exports total 420,166 bytes (~410 KiB); the existing 655 KB landscape and 708 KB portrait village files remain unchanged. No new dependency was added.
+
+Validation passed on the local production preview: visual/browser inspection at 1366×768, 768×1024, 360×800 and 320×568 showed no horizontal overflow. All five signs fit desktop/tablet; mobile retains 16px place names and 14px status text with vertical scrolling. All visible scene images loaded. A desktop sign displacement caused by mobile image placeholders was corrected by hiding all mobile pictures outside the narrow-screen layout, then the corrected build was inspected again.
+
+Workshop pointer and keyboard Enter navigation reached `/projects`; browser Back restored visible Workshop focus and Forward reached Projects again. The Workshop is a semantic, named link with a target substantially larger than 44px; the four unavailable places are noninteractive text. At 320×568, Menu opened with Enter, the notebook fit within the viewport, Escape returned visible focus to Menu, and its Projects link closed the notebook and navigated correctly. No captured browser warnings/errors in the tested session. Production `npm run build` passed (43 modules; CSS 17.31 kB / gzip 4.42 kB, JS 276.13 kB / gzip 87.19 kB). The initial sandbox EPERM was resolved with the authorized outside-sandbox build. Only the requested build/browser checks were used; no test dependencies or new tests were added. This is bounded in-app browser evidence, not physical-device, screen-reader, cross-browser or release performance certification. Viewport override was reset after checks.
+
+Code simplicity review: extended the existing Plaza markup and CSS with responsive pictures and a normal-flow mobile route; no new components, state, navigation framework or dependencies. Source PNGs stay outside application exports. Mobile selects six small WebPs instead of the full-map background; desktop/tablet retain their existing map exports. No network performance audit was performed. This work changes no approved P2.4 art or the Welcome, notebook, or Workshop/album visuals. No interiors, player movement, P3.2 or later scope were started. No commit or push. This P3.1 revision is **AWAITING USER VISUAL APPROVAL**.
+
+**Exact next task:** **P3.2 — Complete three-project collection** — implement Pathwise, TrafficIQ and MarketMind chapters, with hosted/local status stated honestly and no automatic Live Demo action for local work. It does not include the later Cottage, Skills Garden, Adventure Board or Mailbox interiors/content, or P3.3–P3.8 tasks. P3.2 has NOT started.
 ## COMPLETED WORK
 
 ### P2.8 — Verify prototype — DONE, 2026-09-24

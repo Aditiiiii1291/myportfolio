@@ -1,9 +1,39 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
-Status: P2.8 DONE; Phase 2 prototype exit verified. P3.1 has not started. P2.2–P2.6 revision-specific visual approvals preserved.
-Updated: 2026-09-24. No fixed launch date or assumed weekly availability.
+Status: P3.3 IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL. P3.1/P3.2 approvals remain pending; P2.2–P2.6 revision-specific visual approvals preserved.
+Updated: 2026-10-01. No fixed launch date or assumed weekly availability.
 
-## Current checkpoint — P2.8 DONE, 2026-09-24
+## Current checkpoint — P3.3 IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL
+
+Implemented `/about` as Aditi's Cottage: a static pixel-art room beside an open cream/pink-bound journal. Tablet/mobile stack scene and readable journal without shrinking desktop content. Confirmed facts only: Aditi, studying Electronics and Telecommunications engineering, pursuing full-stack roles, solo/end-to-end builder of the three projects, painting/crafts/tennis/animals. Missing institution, formal degree title and dates have explicit “Not added yet” states. Resume is “Resume — not available yet”, with no fabricated download. A supplied/approved Pathwise source link provides GitHub access without inferring a public profile destination.
+
+Village Cottage is now a named semantic `/about` link with hover/focus feedback; notebook About is active. Existing Home/Menu and history behavior remain. Direct-entry return has a Cottage focus fallback. Skills Garden, Adventure Board and Mailbox remain unavailable. No P3.4+ work started; no dependencies, mechanics or Git operations added.
+
+Production build and bounded browser checks passed: direct `/about` loading/refresh, village and notebook entry, keyboard/pointer, visible focus, Back/Forward, direct-entry return, and desktop/tablet/mobile at 1366×768, 768×1024, 360×800 and 320×568 without horizontal overflow. Room image loaded; action targets are at least 44px. Static Cottage has no animation; reduced-motion suppresses the Cottage sign hover displacement. No captured browser warnings/errors. Artwork provenance and export size (~147 KB) are recorded in [Cottage provenance](../assets/sources/cottage/PROVENANCE.md). This implementation is not yet visually/content approved; final biography wording, education details and a public-safe resume remain outstanding.
+
+Exact next task: **P3.4 — Build Skills Garden** — seed packets, visible technology names, relevant categories and optional project evidence; no proficiency ratings. NOT STARTED; confirmed skills are required.
+
+## Previous checkpoint — P3.2 IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL
+
+Implemented the three-project collection at `/projects/pathwise`, `/projects/trafficiq` and `/projects/marketmind`. Pathwise's approved chapter, styling, hosted/source links and limitation remain unchanged. TrafficIQ and MarketMind use one shared chapter view and the existing album/book CSS, with concise purpose, implementation, features and honest status based on the existing PRD/content-intake evidence. Album metadata and chapter links match; obsolete unavailable-chapter labels were removed.
+
+Pathwise retains Open Live Project and source actions. TrafficIQ's supplied hosted URL has not been verified as a working demo; its album and chapter therefore show source access only. MarketMind is local/unhosted and has no live action. Source/README limitations and the unconfirmed local interface remain explicit. No metrics, new deployment or fully working workflow claims were added.
+
+Production build passed (44 modules). Direct loading/refresh of all three chapters, album navigation, keyboard entry/return focus, browser Back/Forward, notebook Escape, and inspected desktop/tablet/mobile layouts passed; no captured browser warnings/errors. Full evidence/limits are in [project history](PROJECT_HISTORY.md). No dependencies, artwork, interiors, mechanics or P3.3+ work added. No commit or push. P3.2 is implemented, not visually/content approved.
+
+Exact next task: **P3.3 — Build Cottage** — one room/journal experience with painting/crafts/tennis/candles; visible resume/GitHub; optional object notes secondary. NOT STARTED; it requires About/resume content as well as the Phase 2 exit.
+
+## Previous checkpoint — P3.1 IMPLEMENTED, AWAITING USER VISUAL APPROVAL
+
+P3.1 implements the five documented village locations in a connected short-loop composition. Desktop and tablet retain the identified full-map presentation and approved artwork. Mobile uses the same locations in a scrollable vertical route with transparent pixel-art place cutouts and readable HTML signs; label text is not reduced to fit a miniature map. The Workshop remains the only active destination and still opens `/projects`; the other four places remain clear, noninteractive future placeholders. No interiors or player movement were added. New art is original built-in imagegen output, with its source/export inventory in [location provenance](../assets/sources/locations/PROVENANCE.md).
+
+P3.1 status is **AWAITING USER VISUAL APPROVAL**, not DONE. The approval, if given, applies to this identified composition and its listed assets only. P3.2 was subsequently implemented as recorded in the current checkpoint above.
+
+The corrected production build and bounded browser checks passed at 1366×768, 768×1024, 360×800 and 320×568: readable signs, no horizontal overflow, loaded scene assets, Workshop pointer/keyboard navigation and visible focus, browser Back/Forward and notebook opening/Escape/Projects route. No captured warnings/errors. New mobile WebP exports total 420,166 bytes (~410 KiB); no dependencies added. Methods, limits and the CSS correction are recorded in [project history](PROJECT_HISTORY.md).
+
+Next task at that checkpoint: **P3.2 — Complete three-project collection**. Scope: implement the Pathwise, TrafficIQ and MarketMind chapters; state hosted/local access accurately; do not add automatic “Live Demo” actions for local work. It must not absorb Cottage, Skills Garden, Adventure Board or Mailbox interiors/content, nor later P3.3–P3.8 work.
+
+## Historical checkpoint — P2.8 DONE, 2026-09-24
 
 Verified P-01–P-08 against the current production build: main/fast/direct journeys, actual keyboard-only navigation, notebook and return context, four responsive sizes, reduced-motion application simulation, slow/failed portrait resilience, visual/content/usability review and no observed uncaught application errors. Build and production preview passed. No application code changes were required. Full methods, evidence, limitations and issue dispositions: [PROTOTYPE_VERIFICATION.md](PROTOTYPE_VERIFICATION.md).
 
@@ -57,7 +87,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0, P1.1–P1.7 and P2.1–P2.8 are DONE. Revision 03 remains the approved bounded raster concept; P2.2–P2.6 retain their identified visual approvals. P2.8 verifies the first playable prototype, not the complete portfolio. P3.1 is READY but has not started; no Phase 3 or later work or deployment is complete.
+Phase 0, P1.1–P1.7 and P2.1–P2.8 are DONE. Revision 03 remains the approved bounded raster concept; P2.2–P2.6 retain their identified visual approvals. P2.8 verifies the first playable prototype, not the complete portfolio. P3.1–P3.3 are implemented and awaiting their identified visual/content approvals. P3.4 and later tasks have not started. No deployment is complete.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -129,7 +159,7 @@ Selected links-only contact: approved email/visible address/copy, approved GitHu
 
 Baseline in [technical approach §10](TECHNICAL_APPROACH.md): Vitest with React Testing Library/user-event/jsdom, small Playwright journeys and integrated axe scans, manual accessibility/art/responsive checks and Lighthouse/transfer inspection. No overlapping Jest/Cypress suite, visual service, CI or hooks. Existing PRD viewport/metric budgets remain unchanged. Read-only browser file versions recorded; no browser launched. Latest user instruction restricts P1.7 to planning, so the former “measured lab profile” acceptance is clarified as a repeatable unmeasured protocol, with actual versions/results recorded at authorized setup and validation. This is an explicit scope clarification, not a test pass.
 
-P2.1 completed the minimal foundation. P2.2–P2.6 are DONE / VISUALLY APPROVED for their identified revisions. **P2.7 — Implement responsive/state behavior** and **P2.8 — Verify prototype** are DONE. The exact next task is **P3.1 — Complete village composition**, READY but not started.
+P2.1 completed the minimal foundation. P2.2–P2.6 are DONE / VISUALLY APPROVED for their identified revisions. **P2.7 — Implement responsive/state behavior** and **P2.8 — Verify prototype** are DONE. P3.1–P3.3 are implemented and awaiting their identified visual/content approvals. The next implementation task is **P3.4 — Build Skills Garden**, NOT STARTED.
 
 ## Phase 2 — First playable prototype
 
@@ -154,9 +184,9 @@ Exit: Both exploration and direct entry reach the same real chapter; direct URL 
 
 | Task | Status | Dependency | Deliverable / acceptance |
 | --- | --- | --- | --- |
-| P3.1 Complete village composition | READY — NOT STARTED | P2 exit, P1.3 | Five identifiable locations, short loop, prominent Workshop; mobile route reflows without shrinking labels |
-| P3.2 Complete three-project collection | NOT STARTED | P2.6 + approved project content | Pathwise, TrafficIQ, MarketMind chapters; hosted/local status explicit; no automatic Live Demo for local work |
-| P3.3 Build Cottage | NOT STARTED | P2 exit + About/resume content | One room/journal experience with painting/crafts/tennis/candles; visible resume/GitHub; optional object notes secondary |
+| P3.1 Complete village composition | IMPLEMENTED — AWAITING USER VISUAL APPROVAL | P2 exit, P1.3 | Five identifiable locations, short loop, prominent Workshop; mobile route reflows without shrinking labels. Build/browser evidence and new art provenance are recorded in current history |
+| P3.2 Complete three-project collection | IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL | P2.6 + approved project content | Pathwise preserved; TrafficIQ/MarketMind chapters implemented from available evidence; source-only actions for unverified/local work; outstanding demo/content uncertainties recorded |
+| P3.3 Build Cottage | IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL | P2 exit + About/resume content | `/about` room/journal with confirmed facts, explicit education gaps, unavailable resume and approved project-source GitHub access; village/notebook routes work; final content remains outstanding |
 | P3.4 Build Skills Garden | NOT STARTED | P2 exit + confirmed skills | Seed packets, visible technology names, relevant categories, optional project evidence; no proficiency ratings |
 | P3.5 Build Adventure Board | NOT STARTED | P2 exit + approved records | Grouped notices with dates, roles, outcomes; empty categories omitted |
 | P3.6 Build Mailbox | NOT STARTED | P2 exit, P1.6 + approved public links | Readable links-only letter with approved values, email/copy feedback and profiles; accessible direct/mobile access per P1.6 |

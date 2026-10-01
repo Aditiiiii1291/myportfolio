@@ -5,7 +5,7 @@ import './notebook.css'
 const destinations = [
   { label: 'Welcome', to: '/' },
   { label: 'Village', to: '/village' },
-  { label: 'About' },
+  { label: 'About', to: '/about' },
   { label: 'Projects', to: '/projects' },
   { label: 'Skills' },
   { label: 'Experience & Achievements' },

@@ -6,7 +6,8 @@
 /* One full-bleed scene; only peripheral scenery is cropped. Signs share its coordinates. */
 .plaza-scene { position: absolute; width: max(100%, 150svh); height: max(100%, 66.6667vw); top: 0; left: 50%; transform: translateX(-50%); }
 .plaza-arrival { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
-.plaza-scene picture { display: block; width: 100%; height: 100%; }
+.plaza-scene > .plaza-background { display: block; width: 100%; height: 100%; }
+.mobile-place-art { display: none; }
 .hub-place { position: absolute; display: flex; align-items: flex-end; justify-content: center; text-decoration: none; width: 23%; height: 25%; }
 .hub-workshop { left: 17%; top: 9%; height: 31%; }
 .hub-cottage { left: 61%; top: 12%; height: 28%; }
@@ -15,9 +16,13 @@
 .hub-mailbox { left: 71.5%; top: 44%; width: 15%; height: 13%; }
 .hub-sign { display: block; padding: .25rem .65rem; color: #583448; background: #fff0d9; border: 2px solid #986b62; box-shadow: 2px 3px #795646; text-align: center; font: clamp(.875rem, 1.25vw, 1.25rem)/1.1 'Pixelify Sans', monospace; max-width: 100%; }
 .hub-sign small { display: block; margin-top: .2rem; max-width: 22ch; font: .75rem/1.1 'Pixelify Sans', monospace; }
-.hub-workshop:hover .hub-sign { background: #ffdae5; transform: translateY(-2px); }
-.hub-workshop:focus-visible { outline: none; }
-.hub-workshop:focus-visible .hub-sign { outline: 3px solid #583448; outline-offset: 3px; box-shadow: 0 0 0 6px #fffaf5; }
+.hub-workshop:hover .hub-sign, .hub-cottage:hover .hub-sign { background: #ffdae5; transform: translateY(-2px); }
+.hub-workshop:focus-visible, .hub-cottage:focus-visible { outline: none; }
+.hub-workshop:focus-visible .hub-sign, .hub-cottage:focus-visible .hub-sign { outline: 3px solid #583448; outline-offset: 3px; box-shadow: 0 0 0 6px #fffaf5; }
+.hub-workshop:focus-visible .mobile-place-art, .hub-cottage:focus-visible .mobile-place-art { filter: drop-shadow(0 0 3px #583448); }
+@media (prefers-reduced-motion: reduce) {
+  .hub-cottage:hover .hub-sign { transform: none; }
+}
 .world-caption { position: absolute; bottom: .5rem; left: 50%; transform: translateX(-50%); margin: 0; padding: .25rem .65rem; background: #fff0d9; border: 1px solid #986b62; white-space: nowrap; font: 1rem 'Pixelify Sans', monospace; }
 .world-intro { inset: auto 0 1rem; margin: 0 auto; width: min(360px, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); padding: .75rem; text-align: center; color: #583448; background: rgb(255 240 243 / 96%); border: 2px solid #965d75; box-shadow: 3px 3px rgb(88 52 72 / 25%); }
 .world-intro::backdrop { background: transparent; }
@@ -29,7 +34,7 @@
 .world-hint button { color: inherit; background: transparent; border: 0; text-decoration: underline; }
 .plaza-content.art-unavailable { height: auto; min-height: 100svh; overflow: visible; padding-bottom: 1rem; }
 .art-unavailable .plaza-scene { position: static; transform: none; width: min(100%, 600px); height: auto; margin: auto; padding: 6rem 1rem 1rem; display: flex; flex-direction: column; gap: 1rem; }
-.art-unavailable picture { display: none; }
+.art-unavailable .plaza-background { display: none; }
 .art-unavailable .hub-place { position: static; width: 100%; height: auto; min-height: 44px; }
 .art-unavailable .world-caption, .art-unavailable .world-hint { position: static; transform: none; margin: 1rem auto; width: fit-content; max-width: calc(100% - 2rem); white-space: normal; }
 @media (max-aspect-ratio: 1/1) {
@@ -41,10 +46,75 @@
   .hub-board { left: 53.5%; top: 50%; }
   .hub-mailbox { left: 35%; top: 66%; height: 10%; }
   .hub-sign { font-size: .875rem; padding: .2rem .35rem; }
-  .hub-sign small { font-size: .6875rem; }
+  .hub-sign small { font-size: .75rem; }
 }
 @media (max-width: 380px) {
   .world .wordmark { font-size: 1rem; }
-  .hub-sign { flex-shrink: 0; max-width: none; font-size: .75rem; padding: .2rem .3rem; }
+}
+@media (max-width: 700px) {
+  .plaza-content { height: auto; min-height: 100svh; overflow: visible; padding: 5.25rem 0 1.5rem; }
+  .plaza-scene {
+    position: relative;
+    inset: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    isolation: isolate;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 1.5rem 1rem 1rem;
+  }
+  .plaza-scene::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 2.5rem;
+    bottom: 1rem;
+    left: 50%;
+    width: .5rem;
+    transform: translateX(-50%);
+    border: 2px solid #e3a2b4;
+    border-radius: 999px;
+    background: repeating-linear-gradient(to bottom, #fff0d9 0 1.25rem, #f4c5d0 1.25rem 2.25rem);
+  }
+  .plaza-scene > .plaza-background { display: none; }
+  .plaza-scene .mobile-place-art { display: block; width: 100%; height: auto; }
+  .mobile-place-art img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+  .hub-place, .hub-workshop, .hub-cottage, .hub-garden, .hub-board, .hub-mailbox {
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .25rem;
+    width: min(88%, 430px);
+    height: auto;
+    min-height: 44px;
+  }
+  .hub-workshop { order: 1; }
+  .hub-cottage { order: 2; align-self: flex-start; }
+  .plaza-scene > .mobile-village-host { order: 3; width: min(70%, 300px); }
+  .hub-garden { order: 4; align-self: flex-end; }
+  .hub-board { order: 5; align-self: flex-start; }
+  .hub-mailbox { order: 6; align-self: flex-end; width: min(60%, 260px); }
+  .hub-sign { flex-shrink: 0; max-width: 100%; padding: .3rem .55rem; font-size: 1rem; line-height: 1.2; }
+  .hub-sign small { font-size: .875rem; line-height: 1.25; }
+  .world-caption, .world-hint {
+    position: static;
+    inset: auto;
+    transform: none;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+    margin: 1rem auto;
+    white-space: normal;
+    text-align: center;
+  }
+  .world-caption { padding: .35rem .65rem; }
+  .world-hint { width: min(430px, calc(100% - 2rem)); }
+  .world-hint button { min-height: 44px; }
 }
 

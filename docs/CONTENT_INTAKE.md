@@ -22,6 +22,8 @@ Task completion and content approval are separate. A missing optional category i
 
 ## About — Cottage/profile
 
+P3.3 implemented the `/about` Cottage journal on 2026-10-01 using confirmed facts only. Its concise biography is a draft awaiting visual/content approval, not supplied personal prose. Institution, formal program title and study dates remain explicitly unfilled; resume remains unavailable. Existing missing-detail classifications below are retained as final-publication needs.
+
 | Item | Status | Confirmed facts / remaining work |
 | --- | --- | --- |
 | Public first name | APPROVED | Aditi. No surname or expansion inferred from account names |
@@ -87,7 +89,9 @@ All three titles and **solo ownership are APPROVED** by Aditi. Do not ask for te
 | Personal reflection/event story | NOT REQUIRED FOR V1 | Chapter already has evidence-grounded technical takeaways. Personal anecdotes or event details only if Aditi supplies them |
 | Static preview | NOT REQUIRED FOR V1 | Optional/recommended fallback if useful; none staged. No Project Moments or gallery |
 
-### TrafficIQ and MarketMind — staged material, not finished chapters
+### TrafficIQ and MarketMind — evidence intake and chapter review
+
+P3.2 implemented concise chapters on 2026-10-01 from the available evidence below; visual/content approval is pending. The original intake classifications remain useful evidence boundaries, not current route-availability statements. TrafficIQ has source access only until a working hosted demo is verified; MarketMind stays local/unhosted. See the current [project-history checkpoint](PROJECT_HISTORY.md) for implementation and validation.
 
 | Item | TrafficIQ | MarketMind |
 | --- | --- | --- |
@@ -99,7 +103,7 @@ All three titles and **solo ownership are APPROVED** by Aditi. Do not ask for te
 | Technical highlights / implemented scope | AVAILABLE — NEEDS REVIEW — analytics and simulated priority are candidate highlights; no real traffic-signal control claim | AVAILABLE — NEEDS REVIEW — backend/prototype work exists; React Products, Uploads and Analysis pages were placeholders in prior review |
 | Limitations / results | AVAILABLE — NEEDS REVIEW — dated runtime limit plus older README architecture/test-count inconsistencies; no verified traffic-control or measured outcome claim | AVAILABLE — NEEDS REVIEW — distinguish prototype/backend from incomplete React views; no validated commercial prediction or adoption claim |
 | Decisions, challenges, lessons | MISSING — personal reflection not supplied; later source review can establish technical decisions without inventing motivations | MISSING — personal reflection not supplied; later chapter must use identified demo scope and evidence |
-| Full chapter preparation | DEFERRED — later roadmap work, not P1.5 | DEFERRED — later roadmap work, not P1.5 |
+| Full chapter preparation | IMPLEMENTED in P3.2 — awaiting visual/content approval; working demo unverified | IMPLEMENTED in P3.2 — awaiting visual/content approval; local interface/version unconfirmed |
 | Preview media | NOT REQUIRED FOR V1 — one optional static fallback only | NOT REQUIRED FOR V1 — optional static preview; no fake live action or compulsory gallery |
 
 Existing evidence: [history's research and known issues](PROJECT_HISTORY.md), PRD project requirements. Implementation detail can be inspected during later chapter work; Aditi need not reconstruct a complete technology inventory. New numerical results require evidence. Keep final chapters short enough for the album.
