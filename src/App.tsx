@@ -8,6 +8,7 @@ import ProjectPlaceholder from './ProjectPlaceholder'
 import PathwiseChapter from './PathwiseChapter'
 import ProjectChapter from './ProjectChapter'
 import Cottage from './Cottage'
+import SkillsGarden from './SkillsGarden'
 import { projects } from './content/projects'
 
 export default function App() {
@@ -79,7 +80,7 @@ export default function App() {
     catch { /* Local state remembers entry if storage is unavailable. */ }
   }
   return (
-    <div className={location.pathname === '/village' ? 'world' : location.pathname === '/' ? 'welcome title-screen' : location.pathname === '/about' ? 'welcome cottage-page' : location.pathname.startsWith('/projects') ? 'welcome workshop-page' : 'welcome'}>
+    <div className={location.pathname === '/village' ? 'world' : location.pathname === '/' ? 'welcome title-screen' : location.pathname === '/about' || location.pathname === '/skills' ? 'welcome cottage-page' : location.pathname.startsWith('/projects') ? 'welcome workshop-page' : 'welcome'}>
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="welcome-header">
         {location.pathname === '/' ? <span className="wordmark">Aditi's Adventure</span>
@@ -90,6 +91,7 @@ export default function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/village" element={<Plaza entered={enteredVillage} onEnter={enterVillage} />} />
         <Route path="/about" element={<Cottage />} />
+        <Route path="/skills" element={<SkillsGarden />} />
         <Route path="/projects" element={<Workshop albumReady={albumReady} onAlbumReady={openAlbum} />} />
         <Route path="/projects/pathwise" element={<PathwiseChapter onAlbumReady={openAlbum} />} />
         <Route path="/projects/trafficiq" element={<ProjectChapter project={projects[1]} onAlbumReady={openAlbum} />} />

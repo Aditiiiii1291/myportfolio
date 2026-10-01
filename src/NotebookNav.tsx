@@ -7,7 +7,7 @@ const destinations = [
   { label: 'Village', to: '/village' },
   { label: 'About', to: '/about' },
   { label: 'Projects', to: '/projects' },
-  { label: 'Skills' },
+  { label: 'Skills', to: '/skills' },
   { label: 'Experience & Achievements' },
   { label: 'Resume' },
   { label: 'Contact' },

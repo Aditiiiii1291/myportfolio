@@ -1,12 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-10-01. Stage: P3.3 implemented and awaiting user visual/content approval; P3.1/P3.2 approvals remain pending. P2.2–P2.6 revision-specific visual approvals preserved.
+Last updated: 2026-10-01. Stage: P3.4 implemented and awaiting user visual/content approval; P3.1–P3.3 approvals remain pending. P2.2–P2.6 revision-specific visual approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Current work: P3.3 — Build Cottage is implemented and AWAITING USER VISUAL/CONTENT APPROVAL. P3.1/P3.2 approvals remain pending; no approval inferred from continuation instructions. P3.4 has NOT started. Earlier dated status statements are historical. See the current checkpoint below and [prototype verification evidence](PROTOTYPE_VERIFICATION.md) for the Phase 2 baseline.
+- Current work: P3.4 — Build Skills Garden is implemented and AWAITING USER VISUAL/CONTENT APPROVAL. P3.1–P3.3 approvals remain pending; no approval inferred from continuation instructions. P3.5 has NOT started. Earlier dated status statements are historical. See the current checkpoint below and [prototype verification evidence](PROTOTYPE_VERIFICATION.md) for the Phase 2 baseline.
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -22,7 +22,37 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 
-## CURRENT CHECKPOINT — P3.3 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-01
+## CURRENT CHECKPOINT — P3.4 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-01
+
+### P3.4 entry revision — 2026-10-01
+
+At the user's request, added a small title card over the existing garden artwork: “Skills Garden” / “A little garden of things I've learned.” A 1.1-second CSS animation ends through onAnimationEnd and reveals the journal at full opacity; no JavaScript timer or countdown. “Continue · skip opening” immediately ends the opening and focuses the journal heading. Keyboard focus on Continue pauses the entrance so the control does not disappear while being read; focus moving into journal content dismisses it. The content stays in normal layout and remains keyboard-accessible throughout. Header/Menu/Back remain available, and saved project-link focus on browser Back dismisses the opening without changing scroll/history handling.
+
+Reduced motion is checked before initial render and listened to for changes; it skips the opening immediately. CSS also hides the card and disables the journal fade under reduced motion. Existing skills, evidence links, artwork, route, responsive dimensions and later-task scope are unchanged. Code: SkillsGarden.tsx plus new scoped skills-garden.css; no dependencies, assets, movement, collectibles, sound, game engine or timers.
+
+Validation: production village → Garden and notebook → Skills both mounted the opening; direct /skills load/refresh completed normally. A temporary loopback fixture serving the built app paused CSS solely to inspect/capture the short card and exercise Continue by mouse and keyboard, including its visible focus and 44px desktop / 62.4px wrapped mobile target. A separate observation fixture recorded garden-entry start/end and 1.1-second elapsed time, then no card and journal opacity 1. A pre-mount reduced-motion matchMedia simulation, with animation paused to rule out incidental completion, showed no card and immediate opacity 1. This verifies the application branch, not a physical OS preference toggle. At 320×568, the card and final content had no horizontal overflow; desktop opening and completed journal inspected. Back from TrafficIQ restored skills-0-trafficiq focus with no opening; Forward worked. No captured browser warnings/errors. Screenshots show the paused-for-capture entry and normal final content. Temporary fixture was removed and stopped; viewport reset after validation.
+
+Final `npm run build` passed: 49 modules; CSS 19.94 kB / gzip 4.93 kB; JS 285.91 kB / gzip 89.15 kB. This revision remains **AWAITING USER VISUAL/CONTENT APPROVAL**. P3.5 has NOT started; no commit or push. Earlier static-page implementation/checks below describe the pre-opening checkpoint.
+
+Explicitly authorized `/skills`, village Garden and notebook Skills entry. Added one SkillsGarden component, reusing Cottage CSS, shared album/button styles, the existing garden WebP and project metadata for chapter names/routes. No additional CSS file, image generation, assets, packages or state. Existing shared return-focus support targets village-garden; evidence links have stable IDs for Back restoration. Generalized the existing identical active-place hover/focus rules to semantic village links and removed hover displacement under reduced motion. Tutorial copy reflects the three available destinations. Board and Mailbox remain unavailable. Approved earlier typography/art/layouts were not redesigned.
+
+Content is a small “Tools I've used” collection supported by documented implementation, not a claim of personal proficiency or an approved skill ranking. CONTENT_INTAKE.md still distinguishes final display approval from evidence; user authorized using existing documented project skills, and exact selection remains pending review.
+
+| Group | Tools | Existing evidence / chapter links |
+| --- | --- | --- |
+| Web interfaces | React, JavaScript, TypeScript | Pathwise canonical chapter S03–S07 and intake frontend row; TrafficIQ React/TypeScript in PRD project inventory and shared project metadata. Links to Pathwise/TrafficIQ. |
+| Backend & data | Python, FastAPI, SQLAlchemy | Pathwise chapter S09–S15, S22, S39–S41 and intake API/database rows; MarketMind Python backend in current project chapter/metadata. Wording separates Pathwise API/records from MarketMind backend. Links to Pathwise/MarketMind. |
+| Analysis & prototypes | pandas, scikit-learn, Streamlit | Pathwise intake data/ML rows and canonical S12–S20; MarketMind Streamlit prototype in PRD/project inventory. Wording separates project uses. Links to Pathwise/MarketMind. |
+
+No skills inferred from dependency lists alone. No Git/cloud expertise, PostgreSQL deployment claim, commercial prediction, proficiency scale, badges, measurements or test-pass claims. Omitted testing/delivery and additional labels to keep the garden concise. No new external source/runtime audit: existing documented evidence and chapter limitations remain the boundary.
+
+Browser checks passed on the local production preview: direct `/skills` load/refresh with correct document title; image loaded; village pointer and Enter entry; named link with visible sign focus; Back restored village-garden focus and Forward reached skills-title; direct-refresh return used the Garden fallback. Notebook Skills Enter closed the dialog and focused the page heading. Desktop 1366×768, tablet 768×1024, phone 360×800 and 320×568 screenshots and DOM inspection showed no horizontal overflow; tablet/phone stack scene/journal naturally; 17px journal text and 44px actions. TrafficIQ evidence link keyboard activation reached its chapter and Back returned to Skills; stable IDs added for exact source-link focus restoration. Page computed animation names were none. Reduced-motion village rule inspected; native OS preference switching not claimed. Final verification passed: at 320×568 the notebook fit within the viewport, Skills showed Here, Escape returned visible focus to Menu, and Back from TrafficIQ restored skills-0-trafficiq focus. No captured warnings/errors; viewport override reset. Final npm run build passed: 48 modules, CSS 18.97 kB / gzip 4.72 kB, JS 285.01 kB / gzip 88.97 kB. These are bounded in-app browser checks, not physical-device, screen-reader or cross-browser certification.
+
+Files changed: src/SkillsGarden.tsx (new), src/App.tsx, src/Plaza.tsx, src/plaza.css, src/NotebookNav.tsx; roadmap, history, content-intake clarification and existing garden provenance use record. Existing garden export is 87,194 bytes; no additional art or package. P3.4 remains **AWAITING USER VISUAL/CONTENT APPROVAL** for this identified revision. No Adventure Board, Mailbox, game mechanics or later tasks; no commit/push.
+
+Exact next task: **P3.5 — Build Adventure Board** — grouped notices with dates, roles, outcomes; empty categories omitted. NOT STARTED; approved records remain a prerequisite.
+
+## PREVIOUS CHECKPOINT — P3.3 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-01
 
 The user explicitly authorized the Cottage, including polished education placeholders and honest unavailable resume rather than blocking on missing intake. Implemented `/about`, connected both the existing village Cottage and notebook About destination. Room/journal composition uses Strawberry Cream, Pixelify Sans, cocoa outlines and the existing cream/pink album styling. Desktop is two columns; below 900px it stacks naturally. New artwork is decorative and static; source/export and exact prompt in [Cottage provenance](../assets/sources/cottage/PROVENANCE.md). Existing village exterior and character art, Welcome, Workshop, chapters, branding and notebook styles were not redesigned.
 

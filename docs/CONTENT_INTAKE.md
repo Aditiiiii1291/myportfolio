@@ -50,6 +50,8 @@ Approved visual identity stays in the design system: long diamond-shaped face, m
 
 ## Skills — candidates for the Garden
 
+P3.4 implemented a concise project-use display on 2026-10-01: React/JavaScript/TypeScript; Python/FastAPI/SQLAlchemy; pandas/scikit-learn/Streamlit, grouped into web interfaces, backend/data and analysis/prototypes. These names are tied to existing documented implementation and chapter links. The user authorized building from that evidence; final displayed selection and visual/content approval are still pending. This does not claim proficiency or silently approve every candidate below.
+
 **Confirmed skill list:** no final display list has been explicitly approved. End-to-end project ownership is confirmed; selecting discussable skill labels is a separate review. Every row below is **AVAILABLE — NEEDS REVIEW / NEEDS ADITI CONFIRMATION**. Select a small useful subset, with project evidence instead of ratings.
 
 | Candidate area / labels | Evidence of meaningful use |
