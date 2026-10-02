@@ -13,7 +13,7 @@ import './plaza.css'
 const mobileScenePixel = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 
 const hints = [
-  'Explore Projects in the Workshop, About in the Cottage and Skills in the Garden. Other places are still being built.',
+  'Explore the Workshop, Cottage, Skills Garden and Adventure Board. The Mailbox is still being built.',
   'Open Menu anytime to jump somewhere directly.',
   'Use Tab and Enter to explore with a keyboard.',
 ]
@@ -74,13 +74,13 @@ export default function Plaza({ entered, onEnter }: { entered: boolean; onEnter:
           </picture>
           <span className="hub-sign">Skills Garden<small>Skills</small></span>
         </Link>
-        <div className="hub-place hub-board">
+        <Link id="village-board" className="hub-place hub-board" to="/adventures" aria-label="Enter Adventure Board">
           <picture className="mobile-place-art">
             <source media="(max-width: 700px)" srcSet={boardArt} />
             <img src={mobileScenePixel} width="600" height="548" alt="" />
           </picture>
-          <span className="hub-sign">Adventure Board<small>Experience &amp; Achievements · Unavailable</small></span>
-        </div>
+          <span className="hub-sign">Adventure Board<small>Experience &amp; Achievements</small></span>
+        </Link>
         <div className="hub-place hub-mailbox">
           <picture className="mobile-place-art">
             <source media="(max-width: 700px)" srcSet={mailboxArt} />

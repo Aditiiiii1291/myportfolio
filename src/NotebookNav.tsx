@@ -8,7 +8,7 @@ const destinations = [
   { label: 'About', to: '/about' },
   { label: 'Projects', to: '/projects' },
   { label: 'Skills', to: '/skills' },
-  { label: 'Experience & Achievements' },
+  { label: 'Experience & Achievements', to: '/adventures' },
   { label: 'Resume' },
   { label: 'Contact' },
 ]

@@ -1,9 +1,19 @@
 # Aditi's Adventure — Portfolio Master Roadmap
 
-Status: P3.4 IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL. P3.1–P3.3 approvals remain pending; P2.2–P2.6 revision-specific visual approvals preserved.
-Updated: 2026-10-01. No fixed launch date or assumed weekly availability.
+Status: P3.5 IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL. P3.1–P3.3 approvals remain pending; P2.2–P2.6 revision-specific visual approvals preserved.
+Updated: 2026-10-02. No fixed launch date or assumed weekly availability.
 
-## Current checkpoint — P3.4 IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL
+## Current checkpoint — P3.5 IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL
+
+Implemented `/adventures` with existing Board artwork, a wooden pinned-note presentation, and the shared 1.1-second Skills Garden opening. Continue skips immediately; reduced motion reveals content immediately. Village Board and notebook Experience & Achievements reach this route. Home/Menu, semantic navigation and history/return focus are preserved. No dependencies, new art, JavaScript timers, sound or game mechanics.
+
+Confirmed CONTENT_INTAKE.md facts only: end-to-end ownership of Pathwise, TrafficIQ and MarketMind; Electronics and Telecommunications engineering study; painting, arts/crafts, tennis and animals. Shared project metadata supplies chapter summaries/links. Project work, academic context and interests remain distinct; unsupported dates, events, awards and employment are omitted. More adventures coming soon is the fallback. The user's approval reference covers the Skills Garden entry pattern, not all earlier content/assets.
+
+Build and bounded route, opening, keyboard, history and desktop/tablet/320px checks passed; evidence and final-session browser limitations are recorded in PROJECT_HISTORY.md. This identified revision awaits visual/content approval.
+
+Exact next task: **P3.6 — Build Mailbox** — readable links-only letter with approved values, email/copy feedback and profiles; accessible direct/mobile access per P1.6. NOT STARTED; approved public email/profile values remain required.
+
+## Previous checkpoint — P3.4 IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL
 
 Implemented `/skills` with the existing garden cutout and shared Cottage scene/journal styling. Three concise project-use groups: Web interfaces (React, JavaScript, TypeScript); Backend & data (Python, FastAPI, SQLAlchemy); Analysis & prototypes (pandas, scikit-learn, Streamlit). Source evidence is the existing CONTENT_INTAKE.md, canonical Pathwise chapter and PRD/project inventory. The presentation says “Tools I've used”, not expertise, ratings, percentages or professional competency certification. Final displayed selection remains subject to review; older intake labels remain historical evidence boundaries.
 
@@ -95,7 +105,7 @@ Do not treat writing this roadmap as authorization to implement or deploy the fu
 - **BLOCKED:** A concrete unresolved dependency prevents the task; explain it in history.
 - **DEFERRED:** Explicitly outside V1, not secretly added to the release gate.
 
-Phase 0, P1.1–P1.7 and P2.1–P2.8 are DONE. Revision 03 remains the approved bounded raster concept; P2.2–P2.6 retain their identified visual approvals. P2.8 verifies the first playable prototype, not the complete portfolio. P3.1–P3.4 are implemented and awaiting their identified visual/content approvals. P3.5 and later tasks have not started. No deployment is complete.
+Phase 0, P1.1–P1.7 and P2.1–P2.8 are DONE. Revision 03 remains the approved bounded raster concept; P2.2–P2.6 retain their identified visual approvals. P2.8 verifies the first playable prototype, not the complete portfolio. P3.1–P3.5 are implemented and awaiting their identified visual/content approvals. P3.6 and later tasks have not started. No deployment is complete.
 
 Keep requirements traceable through PRD section numbers and acceptance IDs P-01–P-08 / V-01–V-12. Numeric visual/performance baselines are documented proposals for implementation validation, not historical user quotes. Record any necessary change and its reason in all affected documents.
 
@@ -167,7 +177,7 @@ Selected links-only contact: approved email/visible address/copy, approved GitHu
 
 Baseline in [technical approach §10](TECHNICAL_APPROACH.md): Vitest with React Testing Library/user-event/jsdom, small Playwright journeys and integrated axe scans, manual accessibility/art/responsive checks and Lighthouse/transfer inspection. No overlapping Jest/Cypress suite, visual service, CI or hooks. Existing PRD viewport/metric budgets remain unchanged. Read-only browser file versions recorded; no browser launched. Latest user instruction restricts P1.7 to planning, so the former “measured lab profile” acceptance is clarified as a repeatable unmeasured protocol, with actual versions/results recorded at authorized setup and validation. This is an explicit scope clarification, not a test pass.
 
-P2.1 completed the minimal foundation. P2.2–P2.6 are DONE / VISUALLY APPROVED for their identified revisions. **P2.7 — Implement responsive/state behavior** and **P2.8 — Verify prototype** are DONE. P3.1–P3.4 are implemented and awaiting their identified visual/content approvals. The next implementation task is **P3.5 — Build Adventure Board**, NOT STARTED.
+P2.1 completed the minimal foundation. P2.2–P2.6 are DONE / VISUALLY APPROVED for their identified revisions. **P2.7 — Implement responsive/state behavior** and **P2.8 — Verify prototype** are DONE. P3.1–P3.5 are implemented and awaiting their identified visual/content approvals. The next implementation task is **P3.6 — Build Mailbox**, NOT STARTED.
 
 ## Phase 2 — First playable prototype
 
@@ -196,7 +206,7 @@ Exit: Both exploration and direct entry reach the same real chapter; direct URL 
 | P3.2 Complete three-project collection | IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL | P2.6 + approved project content | Pathwise preserved; TrafficIQ/MarketMind chapters implemented from available evidence; source-only actions for unverified/local work; outstanding demo/content uncertainties recorded |
 | P3.3 Build Cottage | IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL | P2 exit + About/resume content | `/about` room/journal with confirmed facts, explicit education gaps, unavailable resume and approved project-source GitHub access; village/notebook routes work; final content remains outstanding |
 | P3.4 Build Skills Garden | IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL | P2 exit + confirmed skills | Illustrated garden and three concise project-use groups, chapter evidence links, active village/notebook entry; no proficiency ratings; displayed selection awaits review |
-| P3.5 Build Adventure Board | NOT STARTED | P2 exit + approved records | Grouped notices with dates, roles, outcomes; empty categories omitted |
+| P3.5 Build Adventure Board | IMPLEMENTED — AWAITING USER VISUAL/CONTENT APPROVAL | P2 exit + confirmed records | Illustrated board, short skippable opening, undated project/academic/interest notes and chapter links; unsupported dates/awards omitted |
 | P3.6 Build Mailbox | NOT STARTED | P2 exit, P1.6 + approved public links | Readable links-only letter with approved values, email/copy feedback and profiles; accessible direct/mobile access per P1.6 |
 | P3.7 Complete shared navigation/content | NOT STARTED | P3.1–P3.6 | All Menu/world destinations work, resume available, route refresh/invalid routes/return states correct |
 | P3.8 Verify complete content journeys | NOT STARTED | P3.7 | V-01–V-05 and V-10/V-12 checked with real content; publication gaps recorded |
@@ -254,6 +264,7 @@ Optional movement, deer/fluffy-cat residents, more complex bunny interactions, d
 ## Documentation maintenance
 
 After each phase or significant change: update task statuses here; append actual outcomes and next task in history; change PRD only for product decisions; revise design system for accepted visual/token changes. Keep exact tagline, project statuses, pending questions and V1 boundaries aligned across all four files.
+
 
 
 

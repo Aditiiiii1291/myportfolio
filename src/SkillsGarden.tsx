@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
+import { useLocationOpening } from './useLocationOpening'
 import { Link } from 'react-router'
 import { projects } from './content/projects'
 import gardenArt from './assets/plaza/locations/skills-garden-v01.webp'
@@ -30,22 +31,7 @@ const skillGroups = [
 ] as const
 
 export default function SkillsGarden() {
-  const [opening, setOpening] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
-  const continueButton = useRef<HTMLButtonElement>(null)
-  const journalTitle = useRef<HTMLHeadingElement>(null)
-
-  function revealJournal(advance = false) {
-    const transferFocus = document.activeElement === continueButton.current
-    setOpening(false)
-    if (advance || transferFocus) journalTitle.current?.focus({ preventScroll: !advance })
-  }
-
-  useEffect(() => {
-    const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const update = () => { if (preference.matches) revealJournal() }
-    preference.addEventListener('change', update)
-    return () => preference.removeEventListener('change', update)
-  }, [])
+  const { opening, dismiss, continueButton, contentTitle, revealContent } = useLocationOpening()
 
   useEffect(() => {
     const previousTitle = document.title
@@ -64,17 +50,17 @@ export default function SkillsGarden() {
         <figure className="cottage-scene skills-scene">
           <img src={gardenArt} width="600" height="480" alt="" onError={event => { event.currentTarget.hidden = true }} />
           {opening && <div className="skills-entry" onAnimationEnd={event => {
-            if (event.target === event.currentTarget) revealJournal()
+            if (event.target === event.currentTarget) revealContent()
           }}>
             <p className="skills-entry-title">Skills Garden</p>
             <p>A little garden of things I've learned.</p>
-            <button ref={continueButton} className="workshop-button" onClick={() => revealJournal(true)}>Continue · skip opening</button>
+            <button ref={continueButton} className="workshop-button" onClick={() => revealContent(true)}>Continue · skip opening</button>
           </div>}
           <figcaption>A few seeds, grown through building.</figcaption>
         </figure>
-        <article className="project-album cottage-journal skills-journal" aria-labelledby="skills-journal-title" onFocusCapture={() => setOpening(false)}>
+        <article className="project-album cottage-journal skills-journal" aria-labelledby="skills-journal-title" onFocusCapture={dismiss}>
           <p className="workshop-eyebrow">My garden journal</p>
-          <h2 id="skills-journal-title" tabIndex={-1} ref={journalTitle}>Tools I've used</h2>
+          <h2 id="skills-journal-title" tabIndex={-1} ref={contentTitle}>Tools I've used</h2>
           <p>A small collection of technologies used in my projects. Follow a project to see what I built with them.</p>
           {skillGroups.map((group, index) => <section key={group.title} aria-labelledby={`skill-group-${index}`}>
             <h2 id={`skill-group-${index}`}>{group.title}</h2>

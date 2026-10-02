@@ -1,12 +1,12 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-10-01. Stage: P3.4 implemented and awaiting user visual/content approval; P3.1–P3.3 approvals remain pending. P2.2–P2.6 revision-specific visual approvals preserved.
+Last updated: 2026-10-02. Stage: P3.5 implemented and awaiting user visual/content approval; P3.1–P3.3 approvals remain pending. P2.2–P2.6 revision-specific visual approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
 ## CURRENT PROJECT STATE
 
-- Current work: P3.4 — Build Skills Garden is implemented and AWAITING USER VISUAL/CONTENT APPROVAL. P3.1–P3.3 approvals remain pending; no approval inferred from continuation instructions. P3.5 has NOT started. Earlier dated status statements are historical. See the current checkpoint below and [prototype verification evidence](PROTOTYPE_VERIFICATION.md) for the Phase 2 baseline.
+- Current work: P3.5 — Build Adventure Board is implemented and AWAITING USER VISUAL/CONTENT APPROVAL. Earlier unclosed approvals remain pending; the Skills Garden entry pattern was explicitly referenced as approved. P3.6 has NOT started. Earlier dated status statements are historical. See the current checkpoint below and [prototype verification evidence](PROTOTYPE_VERIFICATION.md) for the Phase 2 baseline.
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -22,7 +22,21 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 
-## CURRENT CHECKPOINT — P3.4 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-01
+## CURRENT CHECKPOINT — P3.5 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-02
+
+Built `/adventures` using the existing Board WebP unchanged, wooden surround and cream pinned notes. CONTENT_INTAKE.md supports three distinct notes: solo/end-to-end project ownership (Pathwise, TrafficIQ, MarketMind), Electronics and Telecommunications engineering study, and painting/arts/crafts/tennis/animals. Shared project metadata supplies chapter names, summaries and links. No fabricated dates, awards, rankings, events, organizations or employment. More adventures coming soon covers missing milestones; real event/role/date/outcome details can be supplied later.
+
+Opening: Adventure Board / A little board of things I've built and things I love. Shared useLocationOpening extracts the existing Skills Garden boolean/ref behavior, with 1.1-second CSS completion, Continue/skip, focus pause/transfer and reduced-motion immediate access. Added the route, active semantic village-board and notebook entry, and updated tutorial copy. Stable chapter IDs and village return fallback preserve navigation context. No new art, dependencies, JavaScript timers, sound or mechanics.
+
+Final-code npm run build passed: 52 modules; CSS 21.36 kB / gzip 5.21 kB; JS 289.29 kB / gzip 89.61 kB. Direct loading/refresh, village/notebook keyboard entry, explicit return focus, TrafficIQ link and browser Back/Forward passed. Desktop 1366×768, tablet 768×1024 and mobile 320×568 inspected without horizontal overflow; links have at least 44px targets. Mobile title was slightly reduced so Continue fits within the viewport (bottom approximately 548px of 568px).
+
+Temporary loopback QA fixture paused CSS to inspect/capture the short opening and test Continue by pointer and keyboard; both dismissed it and transferred focus to board-notes-title. Animation observation recorded 1.1-second completion and journal opacity 1. Pre-mount reduced-motion matchMedia simulation with paused animation verified immediate content; native OS preference switching is not claimed. Shared Skills Garden Continue/reduced-motion regression passed. Saved screenshots: p35-board-desktop.jpg, p35-board-mobile.jpg and p35-board-opening.jpg in the task visualization directory; opening capture intentionally paused.
+
+A supplemental final browser/log sweep was interrupted by a usage limit. On continuation, the preview had stopped; Vite restart succeeded, but the in-app browser remained on a connection-refused error page and navigation was blocked by its URL policy. No fresh console-clean claim is made; earlier successful checks above remain the evidence. Temporary fixture removed; its previous process session no longer existed. No source changes after the successful build.
+
+This identified P3.5 revision awaits visual/content approval. P3.6 — Build Mailbox has NOT started. Next scope: links-only letter with approved public values, email/copy feedback and profiles, accessible direct/mobile access per P1.6. No commit or push.
+
+## PREVIOUS CHECKPOINT — P3.4 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-01
 
 ### P3.4 entry revision — 2026-10-01
 
@@ -643,6 +657,7 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 P2.2 remains DONE / VISUALLY APPROVED for Welcome revision 02 and Times New Roman [historical; superseded by site-wide Pixelify Sans approval, 2026-09-23] tagline only. P2.3 is now independently DONE / VISUALLY APPROVED for its identified arrival/Workshop revision 01 and current presentation, including placement, environment, Workshop interaction and desktop/mobile direction. Neither approval extends to future assets. Source PNGs remain flattened, not layered animation masters. The interrupted presentation-revision request did not produce code edits; closure leaves the plaza unchanged.
 
 P2.2–P2.4 remain DONE / VISUALLY APPROVED. P2.5 shelf/album interaction is implemented and AWAITING USER VISUAL APPROVAL for the current CSS shelf/album, bunny-album-v01 and interaction. Review /projects before closure. Exact next roadmap task after P2.5 is P2.6 — Implement Pathwise chapter: stable URL, concise technical content, primary live-project/source actions, accurate access notes, optional single preview and no gallery; P-03. P2.6+ NOT STARTED. No commit or push.
+
 
 
 
