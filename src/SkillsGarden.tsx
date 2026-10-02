@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useLocationOpening } from './useLocationOpening'
+import LocationWorld from './LocationWorld'
 import { Link } from 'react-router'
 import { projects } from './content/projects'
-import gardenArt from './assets/plaza/locations/skills-garden-v01.webp'
 import './workshop.css'
 import './cottage.css'
 import './skills-garden.css'
@@ -31,7 +31,8 @@ const skillGroups = [
 ] as const
 
 export default function SkillsGarden() {
-  const { opening, dismiss, continueButton, contentTitle, revealContent } = useLocationOpening()
+  const entry = useLocationOpening()
+  const { dismiss, contentTitle } = entry
 
   useEffect(() => {
     const previousTitle = document.title
@@ -40,25 +41,9 @@ export default function SkillsGarden() {
   }, [])
 
   return (
-    <main id="main" className="cottage-content">
-      <Link className="workshop-button cottage-return" to="/village" state={{ restoreContext: true, returnFocus: 'village-garden' }}>← Back to Village</Link>
-      <div className="cottage-heading">
-        <p className="workshop-eyebrow">A little garden of things I've learned</p>
-        <h1 id="skills-title">Skills Garden</h1>
-      </div>
-      <div className={`cottage-room skills-room${opening ? ' skills-opening' : ''}`}>
-        <figure className="cottage-scene skills-scene">
-          <img src={gardenArt} width="600" height="480" alt="" onError={event => { event.currentTarget.hidden = true }} />
-          {opening && <div className="skills-entry" onAnimationEnd={event => {
-            if (event.target === event.currentTarget) revealContent()
-          }}>
-            <p className="skills-entry-title">Skills Garden</p>
-            <p>A little garden of things I've learned.</p>
-            <button ref={continueButton} className="workshop-button" onClick={() => revealContent(true)}>Continue · skip opening</button>
-          </div>}
-          <figcaption>A few seeds, grown through building.</figcaption>
-        </figure>
-        <article className="project-album cottage-journal skills-journal" aria-labelledby="skills-journal-title" onFocusCapture={dismiss}>
+    <LocationWorld title="Skills Garden" subtitle="A little garden of things I've learned." entry={entry} returnFocus="village-garden">
+      <h1>Skills Garden</h1>
+        <article className="location-content" aria-labelledby="skills-journal-title" onFocusCapture={dismiss}>
           <p className="workshop-eyebrow">My garden journal</p>
           <h2 id="skills-journal-title" tabIndex={-1} ref={contentTitle}>Tools I've used</h2>
           <p>A small collection of technologies used in my projects. Follow a project to see what I built with them.</p>
@@ -70,7 +55,6 @@ export default function SkillsGarden() {
           </section>)}
           <p>Project use is shown here, not a proficiency rating. Demo status and limitations are recorded in each chapter.</p>
         </article>
-      </div>
-    </main>
+    </LocationWorld>
   )
 }

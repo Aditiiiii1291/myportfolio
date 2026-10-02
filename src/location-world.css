@@ -1,0 +1,15 @@
+.location-world .mailbox-backdrop { position: fixed; height: 100svh; }
+.location-world .location-content { padding: 0; border: 0; background: transparent; box-shadow: none; }
+.location-world .location-content section { margin-top: 1.5rem; }
+.location-world .workshop-heading { margin: 0 0 1.5rem; }
+.location-world .workshop-heading a { display: none; }
+.location-world .workshop-shelf { width: 100%; max-width: 100%; }
+.location-world .project-album { width: 100%; margin: 1.5rem 0; padding: 1rem; box-sizing: border-box; }
+.location-world .shelf-invitation { max-width: 100%; }
+.location-world .adventure-note { margin: 1rem 0; }
+@media (max-width: 600px) {
+  .location-world .mailbox-backdrop { height: 100svh; }
+  .location-world .workshop-shelf { padding-left: .4rem; padding-right: .4rem; }
+  .location-world .shelf-books { display: none; }
+  .location-world .shelf-album { max-width: 100%; }
+}

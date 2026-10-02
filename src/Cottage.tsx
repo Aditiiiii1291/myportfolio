@@ -1,30 +1,23 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router'
-import roomArt from './assets/cottage/cottage-room-v01.webp'
+import { useLocationOpening } from './useLocationOpening'
+import LocationWorld from './LocationWorld'
 import './workshop.css'
 import './cottage.css'
 
 export default function Cottage() {
+  const entry = useLocationOpening()
   useEffect(() => {
     const previousTitle = document.title
     document.title = "Aditi's Cottage · Aditi's Adventure"
     return () => { document.title = previousTitle }
   }, [])
   return (
-    <main id="main" className="cottage-content">
-      <Link className="workshop-button cottage-return" to="/village" state={{ restoreContext: true, returnFocus: 'village-cottage' }}>← Back to Village</Link>
-      <div className="cottage-heading">
-        <p className="workshop-eyebrow">A little corner of my world</p>
-        <h1 id="cottage-title">Aditi's Cottage</h1>
-      </div>
-      <div className="cottage-room">
-        <figure className="cottage-scene">
-          <img src={roomArt} width="900" height="822" alt="" onError={event => { event.currentTarget.hidden = true }} />
-          <figcaption>Painting, crafts, tennis &amp; a cozy place to pause.</figcaption>
-        </figure>
-        <article className="project-album cottage-journal" aria-labelledby="journal-title">
+    <LocationWorld title="Aditi's Cottage" subtitle="A little corner of my world." entry={entry} returnFocus="village-cottage">
+      <h1>Aditi's Cottage</h1>
+        <article className="location-content" aria-labelledby="journal-title" onFocusCapture={entry.dismiss}>
           <p className="workshop-eyebrow">My open journal</p>
-          <h2 id="journal-title">Hello, I'm Aditi</h2>
+          <h2 id="journal-title" tabIndex={-1} ref={entry.contentTitle}>Hello, I'm Aditi</h2>
           <p>I'm studying Electronics and Telecommunications engineering and pursuing full-stack development roles.</p>
           <p>I built Pathwise, TrafficIQ and MarketMind end to end. Outside building projects, I enjoy painting, arts and crafts, tennis, and animals.</p>
           <section aria-labelledby="education-title">
@@ -51,7 +44,6 @@ export default function Cottage() {
             <p>Resume — not available yet</p>
           </section>
         </article>
-      </div>
-    </main>
+    </LocationWorld>
   )
 }

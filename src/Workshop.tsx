@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { projects } from './content/projects'
+import { useLocationOpening } from './useLocationOpening'
+import LocationWorld from './LocationWorld'
 import bunnyAlbum from './assets/workshop/bunny-album-v01.webp'
 import './workshop.css'
 
 export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boolean; onAlbumReady: () => void }) {
+  const entry = useLocationOpening()
   const [delivering, setDelivering] = useState(false)
   const albumHeading = useRef<HTMLHeadingElement>(null)
   const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
@@ -37,17 +40,17 @@ export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boo
   }
 
   return (
-    <main id="main" className="workshop-content">
+    <LocationWorld title="Project Workshop" subtitle="A little room for things I've made." entry={entry} returnFocus="village-workshop">
       <div className="workshop-heading">
         <p className="workshop-eyebrow">A little room for things I've made</p>
-        <h1>Project Workshop</h1>
+        <h1 tabIndex={-1} ref={entry.contentTitle}>Project Workshop</h1>
         <Link to="/village" state={{ restoreContext: true }}>← Back to Village</Link>
       </div>
       <div className="workshop-shelf" aria-label="Project shelf">
         <div className="shelf-books" aria-hidden="true">
           {projects.map(project => <span key={project.slug}>{project.title}</span>)}
         </div>
-        <button className="shelf-album" onClick={() => openAlbum(!open)} aria-controls="project-album" aria-expanded={open}>
+        <button className="shelf-album skills-journal" onFocus={entry.dismiss} onClick={() => openAlbum(!open)} aria-controls="project-album" aria-expanded={open}>
           <span>Things I've Built</span>
           <small>{open ? 'Return to the album' : 'Open the project album'}</small>
         </button>
@@ -56,7 +59,7 @@ export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boo
         <p>Choose the album on the shelf. The bunny will bring it over.</p>
         <button className="workshop-button" onClick={() => openAlbum(false)}>Skip delivery · open album now</button>
       </div>}
-      <section id="project-album" className="project-album" hidden={!open} aria-labelledby="album-title">
+      <section id="project-album" className="project-album skills-journal" hidden={!open} aria-labelledby="album-title" onFocusCapture={entry.dismiss}>
         <div className="album-heading">
           <div><p className="workshop-eyebrow">The project collection</p><h2 id="album-title" tabIndex={-1} ref={albumHeading}>Things I've Built</h2></div>
           <img className={delivering ? 'album-bunny delivering' : 'album-bunny'} src={bunnyAlbum} alt="" width="160" height="160"
@@ -71,7 +74,6 @@ export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boo
             <p>{project.summary}</p>
             <p className="project-role">{project.role}</p>
             <p className="project-tech">{project.technologies.join(' · ')}</p>
-            {project.slug !== 'pathwise' && <p className="chapter-status">Chapter not available yet.</p>}
             <div className="project-actions">
               {project.demo.type === 'hosted' && <a href={project.demo.url}>Open Live Project</a>}
               <a href={project.githubUrl}>View GitHub / Source Code</a>
@@ -80,6 +82,6 @@ export default function Workshop({ albumReady, onAlbumReady }: { albumReady: boo
           </li>)}
         </ol>
       </section>
-    </main>
+    </LocationWorld>
   )
 }

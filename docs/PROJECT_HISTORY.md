@@ -1,12 +1,44 @@
 # Aditi's Adventure — Project History
 
-Last updated: 2026-10-02. Stage: P3.5 implemented and awaiting user visual/content approval; P3.1–P3.3 approvals remain pending. P2.2–P2.6 revision-specific visual approvals preserved.
+## 2026-10-02 — Location journals inside the village world
+
+User requested the current Mailbox presentation as the reference for all five locations. Added LocationWorld.tsx and location-world.css to reuse Mailbox panel/arrival styles with the chunky village background. Cottage, Skills Garden, Adventure Board and Workshop now place their existing content inside that cream journal overlay. Removed the separate side-by-side framed illustrations from the first three pages; source artwork remains retained. Workshop shelf, album, bunny delivery, session behavior and project content remain inside the panel. Mailbox component, styles, background and contact actions are unchanged. Existing opening component/hook, typography, routes, navigation and confirmed content retained. No dependencies or later phases; no commit/push. This revision awaits visual review.
+
+Validation: npm run build passed (57 modules). Direct routes for all five locations checked at 1366px desktop and 320px mobile; cream overlays and world backgrounds rendered without horizontal overflow. Keyboard Continue revealed content across all five mobile routes. Settled journal opacity is 1. Workshop album/project actions remain accessible and Back restored village-workshop focus. Reduced-motion behavior remains in the unchanged shared opening hook/CSS; native preference toggle not exercised.
+
+## 2026-10-02 — Shared location opening and chunky artwork
+
+User requested the same entry pattern across all five locations and simpler, larger pixel shapes. Added shared LocationOpening.tsx using the existing useLocationOpening hook and 1.1-second CSS animation. Workshop, Cottage, Skills Garden, Adventure Board and Mailbox now use that component with Continue/Skip, immediate reduced-motion bypass and the same content reveal. Automatic route-heading focus no longer dismisses the card; focusing content controls can still bypass it. Workshop's existing bunny delivery/session behavior and Mailbox's contact actions remain unchanged. No routes, confirmed content, notebook navigation, dependencies or later phases changed; no commit/push.
+
+Replaced five village cutouts with chunky v03/v02 assets (65,036 bytes total), updated landscape v03 and portrait v04 landmark artwork, Cottage room v02 and Mailbox scene v02. Retained original Aditi/bunny assets and protected map character regions. Earlier Mailbox-unchanged scope is superseded by this explicit request. New artwork remains awaiting visual review. Inventory/export settings: assets/sources/locations/PROVENANCE.md, hub/PROVENANCE.md, cottage/PROVENANCE.md and mailbox/PROVENANCE.md; exact prompts: assets/sources/locations/CHUNKY_STYLE_PROMPTS.md. Generated flattened masters and repeatable exporters retained.
+
+Validation: npm run build passed (56 modules). Browser checked all five routes and graphics at 1366×900 and 320×568: shared title cards, 1.1s duration, mouse/keyboard Continue, focus transfer, automatic reveal on all five routes, loaded imagery and no horizontal overflow. All five village links entered the expected shared opening. Mailbox return restored focus to village-mailbox; keyboard content focus remained visible. Copy Email returned “Email copied!”. No browser console errors. Reduced-motion path remains shared and was reviewed in hook/CSS; native OS reduced-motion toggle was not exercised by the available browser API. Preview port 4176. No new automated test framework added.
+
+## 2026-10-02 — Village artwork matched to approved Mailbox
+
+User identified the current Mailbox graphic as approved and requested matching Workshop, Cottage, Skills Garden and Adventure Board artwork; explicitly extended the scope to desktop/tablet maps. Integrated four transparent v02 cutouts and landscape v02/portrait v03 maps in `src/Plaza.tsx`. No CSS, content, routes, navigation or functionality changed. Mailbox assets and Aditi/bunny cutout hashes are unchanged; protected map character/Mailbox pixels are restored from originals in the final PNG masters. WebP compression is lossy. New artwork remains awaiting its own visual review; no later roadmap phase started.
+
+Asset inventory for this revision: [location masters, exports and sizes](../assets/sources/locations/PROVENANCE.md), [map masters and exports](../assets/sources/hub/PROVENANCE.md), [exact imagegen prompts](../assets/sources/locations/MAILBOX_STYLE_PROMPTS.md). Four cutouts total 202,020 bytes; landscape 461,402 bytes; portrait 497,544 bytes. Flattened generated masters and repeatable export scripts retained outside application assets. No new dependency, commit or push.
+
+Validation: `npm run build` passed (57 modules) after Windows sandbox EPERM required an escalated rerun. Browser inspected all five locations at 1366×900 desktop, 768×1024 tablet and 320×568 mobile: new intended assets loaded, readable labels, no clipped locations or horizontal overflow. Existing semantic destination links remain `/projects`, `/about`, `/skills`, `/adventures`, `/contact`. Preview used port 4176 after a port conflict. Existing standalone location pages and Welcome visuals were not revised.
+
+Last updated: 2026-10-02. Stage: P3.6 implemented and awaiting user visual/content approval; P3.1–P3.3 approvals remain pending. P2.2–P2.6 revision-specific visual approvals preserved.
 
 This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PORTFOLIO_MASTER_ROADMAP.md](PORTFOLIO_MASTER_ROADMAP.md), and [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Update it after meaningful development work, accepted decisions, tests, or blockers. Do not store credentials here.
 
+## P3.6 pixel mailbox-corner redesign — implementation awaiting visual approval
+
+User approved the pixel mailbox-corner concept and explicitly requested implementation. Replaced the isolated mailbox/letter columns with a full pixel village-corner background and a compact cream game-dialogue panel. Live HTML email, Copy Email, GitHub, LinkedIn, project and return controls overlay the artwork; no text is baked into the background. Existing opening hook, reduced-motion behavior, Home/Menu and routes remain. Mobile crops toward mailbox/bunny, then reflows contact actions into one column; the email fits at 320px. This supersedes the previous unimplemented-concept statement, not final visual approval.
+
+Changed src/Mailbox.tsx, src/mailbox.css and added src/assets/mailbox/mailbox-corner-v01.png. Built-in imagegen edited the approved concept exec-3d63c2a7-a3d9-4e04-a1e9-1c9485496c8e.png: remove all UI/text, reconstruct pink ground/path underneath, retain crisp pixel cottage/mailbox/bunny/tree composition and palette. Output exec-6259f82b-4c48-4936-bb60-88d1b61d60e0.png copied into the project; original retained. PNG is approximately 1.745 MB; further asset optimization is not claimed.
+
+Final production build passed (55 modules). Desktop 1366×768 and 320×568 mobile visually inspected; tablet 768×1024 overflow check passed. No horizontal overflow; mobile actions at least 44px. Direct refresh, keyboard Continue focus to mailbox-title, village entry, notebook Contact and Back/Forward checked. Copy Email displayed Email copied; browser clipboard readback was unavailable/empty, so actual OS clipboard contents are not independently certified. Existing reduced-motion hook and CSS preserved; prior application-branch simulation remains evidence, no fresh native OS test. No dependencies, later features, commit or push. Final implementation still awaits user visual approval.
+## P3.6 contact-details update
+
+User explicitly supplied public Mailbox values: aditisingh29sep@gmail.com, https://github.com/Aditiiiii1291 and https://www.linkedin.com/in/aditi-singh-23a6a428a/. These supersede earlier missing-contact statements. Added visible email, mailto action, Copy Email with polite text success/failure feedback, and the supplied profile links. No form/service or dependencies. User preferred the pixel mailbox-corner concept; that visual revision is approved as a concept only and remains unimplemented. P3.6 still awaits final visual approval; no P3.7 work, commit or push.
 ## CURRENT PROJECT STATE
 
-- Current work: P3.5 — Build Adventure Board is implemented and AWAITING USER VISUAL/CONTENT APPROVAL. Earlier unclosed approvals remain pending; the Skills Garden entry pattern was explicitly referenced as approved. P3.6 has NOT started. Earlier dated status statements are historical. See the current checkpoint below and [prototype verification evidence](PROTOTYPE_VERIFICATION.md) for the Phase 2 baseline.
+- Current work: P3.6 — Build Mailbox is implemented and AWAITING USER VISUAL/CONTENT APPROVAL. Earlier unclosed approvals remain pending. Public contact values remain missing. P3.7 has NOT started. Earlier dated status statements are historical. See the current checkpoint below and [prototype verification evidence](PROTOTYPE_VERIFICATION.md) for the Phase 2 baseline.
 
 - Phase 0 and P1.1–P1.7 are DONE. P1.3 remains visually approved; P1.4 prepared a chapter and P1.5 staged content only.
 - Canonical Pathwise deliverable: [prepared chapter](projects/PATHWISE_CHAPTER.md), with pinned public-source evidence, concise copy, confirmed end-to-end role, primary live/source actions and static-record mapping.
@@ -22,7 +54,19 @@ This file is the project's handoff memory. Read it with [PRD.md](../PRD.md), [PO
 - P2.4 is DONE / VISUALLY APPROVED on 2026-09-20 for the identified final Welcome-over-world and full village implementation. Approval includes notebook navigation, first entry, hints, typography and desktop/tablet/mobile presentation. See explicit closure below. P2.5 has since been implemented and separately visually approved on 2026-09-21.
 - Older dated entries below retain historical scope/status statements; this current state supersedes them.
 
-## CURRENT CHECKPOINT — P3.5 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-02
+## CURRENT CHECKPOINT — P3.6 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-02
+
+Created Mailbox.tsx and mailbox.css: existing mailbox-v01.webp beside a cream/pink-edged letter, Pixelify Sans, shared Cottage layout, floating Home/Menu and useLocationOpening. Opening reads Mailbox / A little place to leave a note, uses existing 1.1-second CSS animation, Continue/skip and reduced-motion bypass. Contact remains accessible throughout; explicit Continue transfers focus to contact-title. Activated `/contact`, village-mailbox and notebook Contact, with village return fallback and stable work-link IDs. Updated the exploration hint. No new assets/dependencies, JavaScript timers, sound, game mechanics, contact forms, services or analytics.
+
+Contact evidence: CONTENT_INTAKE.md Contact and links section and PRD §21. No approved public email, GitHub profile or LinkedIn URL exists there; each has an honest unavailable state. Copy Email is intentionally absent because no address exists, so clipboard success/failure is not applicable to this revision. Only external action is the already-approved https://github.com/Aditiiiii1291/Pathwise, labelled Pathwise source on GitHub, not a profile. Internal Open Project Workshop points to `/projects`. Public email and desired GitHub profile approval remain needed; LinkedIn is optional. No private values or inferred URLs were published.
+
+Validation: npm run build exited 0, 54 modules; CSS 21.86 kB / gzip 5.32 kB, JS 292.11 kB / gzip 89.98 kB. Browser direct load/refresh displayed the Mailbox; automatic opening completion produced no card and letter opacity 1. Village keyboard entry and notebook Contact worked. Keyboard Enter and pointer Continue both removed the card and focused contact-title. Back/Forward restored contact-github focus; visible solid keyboard outline verified. Desktop 1366×768 visually inspected; tablet 768×1024 and mobile 320×568 had no horizontal overflow. Mobile full-page screenshot inspected; main action heights were 44/62/62px. Existing artwork loaded. No captured browser warnings/errors in final sweep; viewport reset and production Mailbox left open.
+
+Reduced-motion application branch checked through a temporary localhost fixture injecting the preference before app startup while pausing the opening animation: no opening card and immediate letter opacity 1. This verifies application behavior, not native OS preference switching. Fixture stopped and removed. No new tests/dependencies; requested build/browser checks used. Final screenshot: p36-mailbox.jpg in the task visualization directory.
+
+P3.6 is implemented, awaiting approval of this identified revision; missing public contact values remain an explicit limitation, not a working contact claim. P3.7 — Complete shared navigation/content has NOT started. No commit or push.
+
+## PREVIOUS CHECKPOINT — P3.5 — IMPLEMENTED, AWAITING USER VISUAL/CONTENT APPROVAL — 2026-10-02
 
 Built `/adventures` using the existing Board WebP unchanged, wooden surround and cream pinned notes. CONTENT_INTAKE.md supports three distinct notes: solo/end-to-end project ownership (Pathwise, TrafficIQ, MarketMind), Electronics and Telecommunications engineering study, and painting/arts/crafts/tennis/animals. Shared project metadata supplies chapter names, summaries and links. No fabricated dates, awards, rankings, events, organizations or employment. More adventures coming soon covers missing milestones; real event/role/date/outcome details can be supplied later.
 
@@ -657,6 +701,9 @@ Earlier featured-demo browser screenshots were not saved as portfolio assets. Th
 P2.2 remains DONE / VISUALLY APPROVED for Welcome revision 02 and Times New Roman [historical; superseded by site-wide Pixelify Sans approval, 2026-09-23] tagline only. P2.3 is now independently DONE / VISUALLY APPROVED for its identified arrival/Workshop revision 01 and current presentation, including placement, environment, Workshop interaction and desktop/mobile direction. Neither approval extends to future assets. Source PNGs remain flattened, not layered animation masters. The interrupted presentation-revision request did not produce code edits; closure leaves the plaza unchanged.
 
 P2.2–P2.4 remain DONE / VISUALLY APPROVED. P2.5 shelf/album interaction is implemented and AWAITING USER VISUAL APPROVAL for the current CSS shelf/album, bunny-album-v01 and interaction. Review /projects before closure. Exact next roadmap task after P2.5 is P2.6 — Implement Pathwise chapter: stable URL, concise technical content, primary live-project/source actions, accurate access notes, optional single preview and no gallery; P-03. P2.6+ NOT STARTED. No commit or push.
+
+
+
 
 
 

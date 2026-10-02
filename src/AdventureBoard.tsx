@@ -2,14 +2,15 @@ import { useEffect } from 'react'
 import { Link } from 'react-router'
 import { projects } from './content/projects'
 import { useLocationOpening } from './useLocationOpening'
-import boardArt from './assets/plaza/locations/adventure-board-v01.webp'
+import LocationWorld from './LocationWorld'
 import './workshop.css'
 import './cottage.css'
 import './skills-garden.css'
 import './adventure-board.css'
 
 export default function AdventureBoard() {
-  const { opening, dismiss, continueButton, contentTitle, revealContent } = useLocationOpening()
+  const entry = useLocationOpening()
+  const { dismiss, contentTitle } = entry
   useEffect(() => {
     const previousTitle = document.title
     document.title = "Adventure Board · Aditi's Adventure"
@@ -17,25 +18,9 @@ export default function AdventureBoard() {
   }, [])
 
   return (
-    <main id="main" className="cottage-content">
-      <Link className="workshop-button cottage-return" to="/village" state={{ restoreContext: true, returnFocus: 'village-board' }}>← Back to Village</Link>
-      <div className="cottage-heading">
-        <p className="workshop-eyebrow">Little notes from my journey</p>
-        <h1 id="adventures-title">Adventure Board</h1>
-      </div>
-      <div className={`cottage-room${opening ? ' skills-opening' : ''}`}>
-        <figure className="cottage-scene skills-scene">
-          <img src={boardArt} width="600" height="548" alt="" onError={event => { event.currentTarget.hidden = true }} />
-          {opening && <div className="skills-entry adventure-entry" onAnimationEnd={event => {
-            if (event.target === event.currentTarget) revealContent()
-          }}>
-            <p className="skills-entry-title">Adventure Board</p>
-            <p>A little board of things I've built and things I love.</p>
-            <button ref={continueButton} className="workshop-button" onClick={() => revealContent(true)}>Continue · skip opening</button>
-          </div>}
-          <figcaption>A few notes, with room for the next adventure.</figcaption>
-        </figure>
-        <section className="adventure-notices skills-journal" aria-labelledby="board-notes-title" onFocusCapture={dismiss}>
+    <LocationWorld title="Adventure Board" subtitle="A little board of things I've built and things I love." entry={entry} returnFocus="village-board">
+      <h1>Adventure Board</h1>
+        <section className="location-content" aria-labelledby="board-notes-title" onFocusCapture={dismiss}>
           <h2 id="board-notes-title" tabIndex={-1} ref={contentTitle}>Pinned along the way</h2>
           <article className="adventure-note" aria-labelledby="board-projects-title">
             <p className="workshop-eyebrow">Project work</p>
@@ -61,7 +46,6 @@ export default function AdventureBoard() {
           </article>
           <p className="adventure-coming">More adventures coming soon.</p>
         </section>
-      </div>
-    </main>
+    </LocationWorld>
   )
 }
